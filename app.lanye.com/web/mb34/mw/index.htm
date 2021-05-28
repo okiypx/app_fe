@@ -1,0 +1,1709 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>▒▒ MEGA WIN ▒▒</title>
+<meta name="viewport" content="width=1600,minimum-scale=0,maximum-scale=5,target-densitydpi=device-dpi">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="js/showid.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/animations.css"><!-- CSS animations1 -->
+<link rel="stylesheet" href="css/logo.css"><!-- CSS logo -->
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script><!-- 기본 1.11.3 -->
+<script type="text/javascript" src="js/common2.js"></script><!-- script -->
+<script type="text/javascript" src="js/common.js"></script>
+<!-- slideshow5 -->
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle2.carousel.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/popup.js"></script><!-- script -->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+<!-- 슬롯 -->
+<link rel="stylesheet" href="css/slot.css?=1">
+<script type="text/javascript" src="js/slot.js"></script>
+
+<!-- main_visual { -->
+<link rel="stylesheet" type="text/css" href="css/style2.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css?m=1">
+<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+
+
+
+
+<script type="text/javascript" src="js/sweetalert.min.js"></script>
+
+<script type="text/javascript" src="js/ajax_utf_8.js"></script>
+<script type="text/javascript" src="js/play6.js?v=1.0.0.8"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/script.js?v=1"></script>
+<script type="text/javascript" src="js/paging.min.js"></script>
+<script type="text/javascript" src="js/jsRolling.js"></script>
+<script type="text/javascript" src="js/numeric.js"></script>
+
+<link rel="stylesheet" href="css/odometer-theme-default.css">
+<script src="js/odometer.min.js"></script>
+
+<style>
+.popupbox_ajax {width:100%; float:left; background:url(images/popup_bg.jpg); min-height:calc(100vh - 78px); border-radius:10px; padding:40px; position:relative }
+</style>
+</head>
+<script type="text/javascript">
+// 자바스크립트에서 사용하는 전역변수 선언
+var g4_path      = ".";
+var g4_bbs       = "bbs";
+var g4_bbs_img   = "img";
+var g4_url       = "http://mws909.com";
+var g4_is_member = "";
+var g4_is_admin  = "";
+var g4_bo_table  = "";
+var g4_sca       = "";
+var g4_charset   = "utf-8";
+var g4_cookie_domain = "";
+var g4_is_gecko  = navigator.userAgent.toLowerCase().indexOf("gecko") != -1;
+var g4_is_ie     = navigator.userAgent.toLowerCase().indexOf("msie") != -1;
+</script>
+
+
+<script type="text/javascript">
+
+	$("#login_pw").keypress(function(e) { 
+	
+	    if (e.keyCode == 13){
+	        LoginProc('pc');
+	
+	    }    
+	});
+	
+	$("#login_id").keypress(function(e) { 
+	
+	    if (e.keyCode == 13){
+	        LoginProc('pc');
+	
+	    }    
+	});
+	
+	function LoginProc(p){
+		
+
+		var token = $("#login_token").val();
+		var cmdMode = $("#login_cmdmode").val();
+		var userid = $("#login_id").val();
+		var userpw = $("#login_pw").val();
+		
+
+		if(p == 'mobile'){
+			userid = $("#login_id_mobile").val();
+			userpw = $("#login_pw_mobile").val();
+		}
+		
+		if(userid.length < 1){
+			//swal('아이디를 입력 해 주세요.');
+			alert('아이디를 입력 해 주세요.');
+			return false;
+		}else if(userpw.length < 1){
+			//swal('비밀번호를 입력 해 주세요.');
+			alert('비밀번호를 입력 해 주세요.');
+			return false;
+		}
+		
+		var data = {CmdMode: cmdMode, TOKEN: token, input_id: userid, input_pw: userpw}
+		
+		$.ajax({
+            type: "POST",
+            url: "../_proc/_login.asp",
+            data: data,
+            cache: false,
+            async : false,
+            beforeSend: function(){
+	            
+            },
+            success: function(response, status){
+	            if(response.result == 'success'){
+		            location.reload();
+	            }else if(response.result == 'safe'){
+					swal(response.message)
+					.then(function(value){
+						parent.location.href = response.domain;
+					});
+				}else{
+		            swal(response.message);
+	            }
+            },
+            error: function(err, xhr){
+	            
+            }
+        });
+	}
+	
+	function LogOutProc(){
+		
+		var cmdMode = '87ABBAAFC70BB1DA';
+		
+		var data = {CmdMode: cmdMode}
+		
+		$.ajax({
+            type: "POST",
+            url: "../_proc/_logout.asp",
+            data: data,
+            cache: false,
+            async : false,
+            
+            beforeSend: function(){
+	            
+            },
+            success: function(response, status){
+	            if(response.result == 'success'){
+		            location.href = response.redirect;
+	            }
+            },
+            error: function(err, xhr){
+	            
+            }
+        });
+	}
+
+
+
+	function toggleRealtime(e) {
+		if(e == 'deposit'){
+			$("#realtimeWithdraw").hide();
+			$("#realtimeDeposit").show().css("display", "table");
+			$("#dp_list_btn").attr("src", "images/main_con3_1_title_on.png");
+			$("#wd_list_btn").attr("src", "images/main_con3_2_title.png");
+			$('.main_con2_title1').removeClass('taboff');
+			$('.main_con2_title2').removeClass('taboff');
+			$('.main_con2_title1').addClass('tabon');
+			$('.main_con2_title2').addClass('taboff');
+
+
+		}else {
+			$("#realtimeDeposit").hide();
+			$("#realtimeWithdraw").show().css("display", "table");
+			$("#dp_list_btn").attr("src", "images/main_con3_1_title.png");
+			$("#wd_list_btn").attr("src", "images/main_con3_2_title_on.png");
+
+			$('.main_con2_title1').removeClass('taboff');
+			$('.main_con2_title2').removeClass('taboff');
+			$('.main_con2_title2').addClass('tabon');
+			$('.main_con2_title1').addClass('taboff');
+
+
+
+		}
+	}
+	
+	function toggleBoard(e) {
+		if(e == 'notice'){
+			$("#EventTab").hide();
+			$("#NoticeTab").show().css("display", "table");
+			$("#notice_list_btn").attr('src', 'images/main_con1_1_title_on.png');
+			$("#event_list_btn").attr('src', 'images/main_con1_2_title.png');
+
+
+			$('.toggle_n').addClass('main_board_tab_on');
+			$('.toggle_n').removeClass('main_board_tab_off');
+			$('.toggle_e').addClass('main_board_tab_off');
+			$('.toggle_e').removeClass('main_board_tab_on');
+
+		}else {
+			$("#NoticeTab").hide();
+			$("#EventTab").show().css("display", "table");
+			$("#notice_list_btn").attr('src', 'images/main_con1_1_title.png');
+			$("#event_list_btn").attr('src', 'images/main_con1_2_title_on.png');
+
+			$('.toggle_n').addClass('main_board_tab_off');
+			$('.toggle_n').removeClass('main_board_tab_on');
+			$('.toggle_e').addClass('main_board_tab_on');
+			$('.toggle_e').removeClass('main_board_tab_off');
+
+		}
+	}
+	
+
+
+	var roller;
+	var roller2;
+	
+	function roll(rows) {
+		var table = $('#realtimeDeposit');
+		var allRows = table[0].rows;
+		console.log(allRows);
+		table.animate (
+			{ 'marginTop': '-30px'}, 
+			1000, 
+			function () {
+				for (var i = 0; i < rows; i++) {
+					var targetRow = allRows[0];
+					$('#realtimeDeposit').append(targetRow);
+				}
+				$(this).css("marginTop", 0);
+		});
+	}
+	
+	function roll2(rows) {
+		var table = $('#realtimeWithdraw');
+		var allRows = table[0].rows;
+		table.animate (
+			{ 'marginTop': '0px'}, 
+			1000, 
+			function () {
+				for (var i = 0; i < rows; i++) {
+					var targetRow = allRows[0];
+					$('#realtimeWithdraw').append(targetRow);
+				}
+				$(this).css("marginTop", 0);
+		});
+	}
+	
+	function startRepeat() {
+		roller = setInterval(function () { roll(1); }, 3000);
+	}
+	function stopRepeat() {
+		clearInterval(roller);
+	}
+	function init() {
+		roller = setInterval(function () { roll(1); }, 3000);
+	}
+	
+	function startRepeat2() {
+		roller2 = setInterval(function () { roll2(1); }, 3000);
+	}
+	function stopRepeat2() {
+		clearInterval(roller2);
+	}
+	function init2() {
+		roller2 = setInterval(function () { roll2(1); }, 3000);
+	}
+
+	
+	function GetRealtimeWD(){
+
+		$.ajax({
+            type: "GET",
+            url: "../_proc/_realtime.asp",
+            
+            beforeSend: function(){
+	            //$("#realtimeDeposit").html('<tr><td height="26" style="text-align:left">로딩중...</td></tr>')
+            },
+            success: function(response, status){
+	            console.log(response);
+	            if(response.result == 'success'){
+		            var html_deposit = "";
+		            var html_withdraw = "";
+		            var i = 0;
+		            var q = 0;
+		            
+		            $.each(response.data, function(k, v){
+			            RealtimeHouseMoney = 0;
+			            if(v != null){
+				            var rData = v.split('^');
+				            if(rData[0] == '입금' && i < 7){
+					            
+					            if(uncomma(rData[2]) < 20000){
+						            rData[2] = comma(parseInt(uncomma(rData[2])) + 40000);
+					            }
+					            
+					            if(uncomma(rData[2]) > 20000 && uncomma(rData[2]) < 30000){
+						            rData[2] = comma(parseInt(uncomma(rData[2])) + 30000);
+					            }
+					            
+					            if(uncomma(rData[2]) > 30000 && uncomma(rData[2]) < 40000){
+						            rData[2] = comma(parseInt(uncomma(rData[2])) + 20000);
+					            }
+					            
+					            if(uncomma(rData[2]) > 20000 && uncomma(rData[2]) < 50000){
+						            rData[2] = comma(parseInt(uncomma(rData[2])) + 10000);
+					            }
+					            
+
+					            html_deposit += '<tr>';							
+					            //html_deposit += '<tr><td height="30">[' + rData[0] + ']</td>';
+			                    html_deposit += '<td class="td03">' + rData[1] + '</td>';                                                        
+
+			                    //html_deposit += '<td class="board_right_td1">' + rData[5] + '</td>';                            
+			                    html_deposit += '<td class="td04">' + rData[2] + '</td>';
+
+			                    html_deposit += '<td class="td05">' + rData[3] + '</td>';                            
+
+					            html_deposit += '</tr>';							
+
+					            i++;
+				            }else if(rData[0] == '출금' && q < 20){
+
+					            html_withdraw += '<tr><td><div class="jack_list"><table cellpadding="0" cellspacing="0" width="100%"><tr>';
+					            //html_withdraw += '<td height="30">[' + rData[0] + ']</td>';
+			                    html_withdraw += '<td class="jack_td1" style="text-align:left;padding-left:80px">' + rData[1] + '</td>';                                                        
+
+			                    //html_withdraw += '<td class="board_right_td1">' + rData[5] + '</td>';                            
+			                    html_withdraw += '<td class="jack_td2" style="text-align:right;">' + rData[2] + '</td>';
+
+			                    html_withdraw += '<td class="jack_td3" style="text-align:right;">' + rData[3].substring(5,10) + " " + rData[5] + '</td>';                            
+
+			                    html_withdraw += '</tr></table></div></td></tr>';
+					            
+
+					            q++;
+				            }
+			            }
+			            
+		            });
+		            
+		            
+		            $("#realtimeDeposit").html(html_deposit).css('display', 'table');
+		            $("#realtimeWithdraw").html(html_withdraw).css('display', 'table');
+		            startRepeat();
+		            startRepeat2();
+		           
+					//$("#realtimeWithdraw").hide();
+					//$("#realtimeDeposit").hide();
+	            }
+	            
+            },
+            error: function(err, xhr){
+	            console.log(err);
+            }
+        });
+	}
+
+	
+
+
+	
+	function GetRealtimeWD_Mobile(){
+		$.ajax({
+            type: "GET",
+            url: "../_proc/_realtime.asp",
+            
+            beforeSend: function(){
+	            //$("#realtimeDeposit").html('<tr><td height="26" style="text-align:left">로딩중...</td></tr>')
+            },
+            success: function(response, status){
+	            console.log(response);
+	            if(response.result == 'success'){
+		            var html_deposit = "";
+		            var html_withdraw = "";
+		            var i = 0;
+		            var q = 0;
+		            
+		            $.each(response.data, function(k, v){
+			            RealtimeHouseMoney = 0;
+			            if(v != null){
+				            var rData = v.split('^');
+
+			            }
+			            
+		            });
+		            
+		            
+		            $("#realtimeDeposit").html(html_deposit).css('display', 'table');
+		            $("#realtimeWithdraw").html(html_withdraw).css('display', 'table');
+		            startRepeat();
+		            startRepeat2();
+		           
+					//$("#realtimeWithdraw").hide();
+					//$("#realtimeDeposit").hide();
+	            }
+	            
+            },
+            error: function(err, xhr){
+	            console.log(err);
+            }
+        });
+	}
+	
+
+</script>
+
+ <script type="text/javascript">
+
+$(function() {
+
+timer = setInterval( function () {
+
+    $.ajax ({
+
+        type : "GET",
+        url : "../money.php",
+        dataType : "text",
+        error : function() {
+          //alert('통신실패!!');
+        },
+        success : function(data) {
+          $('#CPoint').html(data);
+        }
+
+    });
+
+    }, 5000);
+
+});
+
+</script>
+<body>
+
+<div id="fade_1" class="expandOpen popup_none">
+	<div class="popup_wrap">
+		<div class="close_box">
+			<a href="#" class="fade_1_close"><img src="images/popup_close.png"></a>
+		</div>
+		<div class="popupbox">
+			<div class="popup_tab_wrap">
+				<ul class="popup_tab">
+					<li class="tab1 popupactive" data-target="#popuptab_cont1">
+						<a href="javascript:;" onclick="javascript:swal('로그인 하여 주세요.');return false;">
+							<span><img src="images/gnb01.png"> 입금신청</span>
+						</a>
+					</li>
+					<li class="tab2" data-target="#popuptab_cont2">
+						<a href="javascript:;" onclick="javascript:swal('로그인 하여 주세요.');return false;">
+							<span><img src="images/gnb02.png"> 출금신청</span>
+						</a>
+					</li>
+					<li class="tab3" data-target="#popuptab_cont3">
+						<a href="javascript:;" onclick="javascript:swal('로그인 하여 주세요.');return false;">
+							<span><img src="images/gnb03.png"> 머니이동</span>
+						</a>
+					</li>
+					<li class="tab4" data-target="#popuptab_cont4">
+						<a href="javascript:;" onclick="javascript:swal('로그인 하여 주세요.');return false;">
+							<span><img src="images/gnb04.png"> 쿠폰발급현황</span>
+						</a>
+					</li>
+					<li class="tab5" data-target="#popuptab_cont5">
+						<a href="javascript:;" onclick="javascript:swal('로그인 하여 주세요.');return false;">
+							<span><img src="images/gnb05.png"> 콤프신청</span>
+						</a>
+					</li>
+					<li class="tab6" data-target="#popuptab_cont6">
+						<a href="javascript:;" onclick="tabActionProc('tab6','event');">
+							<span><img src="images/gnb06.png"> 이벤트</span>
+						</a>
+					</li>
+					<li class="tab7" data-target="#popuptab_cont7">
+						<a href="javascript:;" onclick="tabActionProc('tab7','notice');">
+							<span><img src="images/gnb07.png"> 공지사항</span>
+						</a>
+					</li>
+					<li class="tab8" data-target="#popuptab_cont8">
+						<a href="javascript:;" onclick="tabActionProc('tab8','mypage');">
+							<span><img src="images/gnb08.png"> 마이페이지</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="popuptab_cont1" class="popuptab_cont"></div>
+			<div id="popuptab_cont2" class="popuptab_cont popupvis_hidden"></div>
+			<div id="popuptab_cont3" class="popuptab_cont popupvis_hidden"></div>
+			<div id="popuptab_cont4" class="popuptab_cont popupvis_hidden"></div>
+			<div id="popuptab_cont5" class="popuptab_cont popupvis_hidden"></div>
+			<div id="popuptab_cont6" class="popuptab_cont popupvis_hidden"></div>
+			<div id="popuptab_cont7" class="popuptab_cont popupvis_hidden"></div>
+			<div id="popuptab_cont8" class="popuptab_cont popupvis_hidden"></div>
+		</div>
+	</div>
+</div>
+
+
+<div id="fade_2" class="slideDown popup_none">
+
+		
+	<div class="login_wrap">
+			<div class="login_close_box">
+			<a href="#" class="fade_2_close"><img src="images/popup_close.png"></a>
+		</div>
+		<div class="login_box_wrap">
+			<div class="login_tit"><img src="images/in_login_logo2.png"></div>
+			<div class="login">
+			<form name="fhead" method="post" action="./bbs/login_check.php">
+			<input type="hidden" name="ret_url" value="">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="login_table">
+					<tr>
+						<td class="login_td1"><input name="mb_id" id="login_id" type="text" class="input_login" placeholder="아이디"></td>
+					</tr>
+					<tr>
+						<td class="login_td2"><input type="password" name="mb_password" id="login_pw" onkeypress="if(event.keyCode == 13) LoginProc('pc');" class="input_login" placeholder="비밀번호"></td>
+					</tr>
+					<tr>
+						<td class="login_td3"><a href="javascript:LoginProc('pc');"><img src="images/login_btn.png" onclick="javascript:document.fhead.submit();"></a></td>
+					</tr>
+				</table>
+			</form></div>
+			</form>
+		</div>
+		</div><!-- login_wrap --> 
+
+
+
+</div>
+
+
+<div id="fade_3" class="expandOpen popup_none">
+	<div class="popup_wrap">
+		<div class="close_box">
+			<a href="#" class="fade_3_close"><img src="images/popup_close.png"></a>
+		</div>
+		<div class="popupbox_ajax"></div>
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript">
+<!--
+
+ function event2() {
+ alert("준비중입니다.");
+ }
+
+ function event3() {
+ alert("점검중입니다.");
+ }
+
+ function event4() {
+ alert("미확인 쪽지를 확인바랍니다.");
+ }
+
+ function event1() {
+ alert("로그인후 이용 가능합니다.");
+ }
+
+// -->
+</script>
+
+<div id="wrap" style="z-index:-10">
+<div id="header_wrap">
+	<div class="util_wrap">
+		<div class="header_box">
+			<div class="util_left">
+				<img src="images/top_icon.png" style="position:relative;top:-94px"><marquee width="400px">&nbsp;&nbsp;&nbsp;입금시 매장에 문의 해 주세요</marquee>
+			</div>
+			<a href="index.htm" class="bs-logo">
+				<img class="dias-ray" src="images/dias-ray.png">
+				<div class="dias-cont">
+					<img class="diamond" src="images/diamond.png">
+					<img class="dias-glow" src="images/dias-glow.png">
+				</div>
+				<img class="fruits" src="images/fruits.png">
+				<img class="play" src="images/play3.png">
+				<img class="kr" src="images/kr3.png">
+			</a>
+
+
+			
+			<div class="util_right" style="position:relative;right:-100px;">
+				<div class="my" style="font-family: 'nanumsquare', sans-serif;font-size: 16px;font-weight: 600;">
+									<a href="#" class="fade_2_open"><img src="images/top_btn_001.png"></a> <a href="javascript:void(0);" onclick="javascript:window.open('../bbs/register_form.php','exc12341232','width=700,height=600,top=100,left=300,scrollbars=yes,resizable=no')"><img src="images/top_btn_002.png"></a>
+								</div>
+			</div>
+
+			
+
+		</div>
+	</div>
+	<div class="gnb_wrap">
+		<div class="gnb">
+			<ul>
+				<li><a href="#" onclick="javascript:swal('로그인 하여 주세요.');return false;"><img src="images/gnb01.png"> 입금신청</a></li>
+				<li><a href="#" onclick="javascript:swal('로그인 하여 주세요.');return false;"><img src="images/gnb02.png"> 출금신청</a></li>
+				<!--<li><a href="#" onclick="javascript:swal('로그인 하여 주세요.');return false;" ><img src="images/gnb03.png"> 머니이동</a></li>-->
+				<li><a href="#" onclick="javascript:swal('로그인 하여 주세요.');return false;"><img src="images/gnb04.png"> 쿠폰발급현황</a></li>
+				<li><a href="#" onclick="javascript:swal('로그인 하여 주세요.');return false;"><img src="images/gnb06.png"> 이벤트</a></li>
+				<li><a href="#" onclick="javascript:swal('로그인 하여 주세요.');return false;"><img src="images/gnb05.png"> 고객센터</a></li>
+				<li><a href="#" onclick="javascript:swal('로그인 하여 주세요.');return false;"><img src="images/gnb07.png"> 공지사항</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- header_wrap -->
+	                                                                                                                                                
+
+<div class="visual_ling_1"></div><!-- 비주얼 -->
+<div class="visual_wrap">
+	<div class="visual">
+		<div class="jack_wrap">
+			<div class="jack_tit">
+				<img src="images/jack_tit.png">
+			</div>
+			<div class="jack_num" style="height:50px">
+				<iframe src="iframe_jacpot.php.html" frameborder="0" width="900px" height="80" scrolling="auto" style="position:absolute;margin-left:-890px;margin-top:-15px"></iframe>
+
+			</div>
+
+			<div style="width:1000px; height: 180px;overflow: hidden; position: relative;">
+				<table id="realtimeWithdraw" style="margin-left:370px;position: absolute;"></table>
+			</div>
+
+		</div>
+		<div class="container demo-2">
+			<div id="slider" class="sl-slider-wrapper">
+<style type="text/css">
+	/*board*/
+	.main_board {width: 100%; height: 380px; background: url('/img/customer_back.png'); position:relative;}
+	.main_board {width: 100%; height: 380px;position:relative;}
+	.main_board > ul {width: 1150px; position:absolute; left: 50%; margin-left: -300px;top:60px;}
+	.main_board ul li.cs_center {display:block; background:#222; width: 100%; height: 60px; border: 1px solid #333; margin: 15px 0 20px 0;}
+	.main_board ul li.cs_center dd {display:inline-block; vertical-align:top;}
+	.main_board ul li.cs_center dd.txt {font-size: 20px; font-weight:bold; padding-left: 80px; text-shadow: 0px 0px 10px #ffed43; color: #fff;}
+	.main_board ul li.cs_center dd.txt img { position: relative; float: left; top: -5px; right: 5px; }
+	.main_board ul li.cs_center dd.txt span {font-size: 11px; font-weight:normal; padding-left: 20px;}
+	.main_board ul li.cs_center dd.msg {background: url('/img/cs_box2.jpg') no-repeat; width: 145px; height: 50px; float: right; position:relative; top: -11px; right: 5px; margin-left: 3px; padding: 0 0 0 55px; line-height: 50px; font-size: 17px; font-weight:bold;}
+	.main_board ul li.cs_center dd.skype {background-position: 0 0;}
+	.main_board ul li.cs_center dd.kakao {background-position: -200px 0; color: #240b00;}
+	.main_board ul li.cs_center dd.call {background-position: -400px 0; color: #dec481;}	
+
+
+	.main_board ul li.board {display: inline-block; vertical-align:top; background: url('images/main_board.png') no-repeat; width: 370px; height: 270px !important; position:relative !important;}
+	.main_board ul li.board.notice {background-position: 0 0; width: 385px; margin-left: 10px;}
+	.main_board ul li.board.out_now {background-position: -400px 0; }
+	.main_board ul li.board.out_rank {background-position: -800px 0;}
+	.main_board ul li.board.notice .morebtn {position:absolute; width: 50px; height: 20px; right: 18px; top: 13px; cursor:pointer;}
+	.main_board ul li.board ul {padding: 42px 22px 0 12px;}
+
+	.main_board ul li.board ul li {height: 35px; line-height: 35px; width: 351px;}
+	.main_board ul li.out_now ul, .main_board ul li.out_rank ul { padding: 0 22px 0 9px !important;}
+	.main_board ul li.out_now ul li, .main_board ul li.out_rank ul li {height: 34px; line-height: 34px;}
+	.main_board ul li.out_now ul li, .main_board ul li.out_rank ul li {width: 340px;}
+	.main_board ul li.notice ul li:nth-child(2n-1) {background: rgba(40,40,40,0.5);}
+	.main_board ul li.board ul li div {	display:inline-block; vertical-align:top; font-size: 13px; }
+	.main_board ul li.board ul li div:first-child {text-overflow: ellipsis; white-space: nowrap; word-break: break-all; width: 80%; overflow: hidden; padding-left: 3%;}
+	.main_board ul li.board ul li div:first-child::before {content: "- "}
+	.main_board ul li.board ul li div.date {width: 10%; font-size: 11px; float: right; position:relative; color: #ccc;}
+
+	.main_board ul li.board ul li div.user {width: 30%;}
+	.main_board ul li.board ul li div.amount {width: 50%; text-align:right; color: #fee7b5; }
+
+	.board.out_now > div, .board.out_rank > div {top: 41px;}
+	.main_board ul li.out_now ul li, .main_board ul li.out_rank ul li {border-bottom: 1px solid #333}
+
+	.main_board ul li.out_rank ul li div.rank {width: 20%;}
+	.main_board ul li.out_rank ul li div.user {width: 20%;}
+	.main_board ul li.out_rank ul li div.amount {width: 40%; text-align:right; color: #fee7b5; }
+	
+</style>
+
+<script type="text/javascript" src="js/jquery.vticker.min.js"></script>
+<script type="text/javascript" src="js/m4_common.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+	c_initLoginCheck();
+
+	$('.out_now > div').vTicker('init', {speed: 400, 
+		pause: 1500,
+		showItems: 6
+	});
+	$('.out_rank > div').vTicker('init', {speed: 400, 
+		pause: 4000,
+		showItems: 6
+	});
+	$('.outlist_gamebtn').vTicker( {speed: 400, 
+		pause: 3000,
+		showItems: 1
+	});
+
+	//window.setTimeout("check_out_event();", 5000);	//5초마다 출금이벤트 체크
+
+});
+
+</script>
+<div class="main_board" style="z-index:1">
+		<ul>
+			<li class="board out_now">
+				<div style="overflow: hidden; position: relative; height: 204px;">
+					<ul style="position: absolute; margin: 0px; padding: 0px; top: 0px;">	
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">bbx***</div>
+							<div class="amount">420,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">asa***</div>
+							<div class="amount">600,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">asa***</div>
+							<div class="amount">500,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">bbx***</div>
+							<div class="amount">500,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">asa***</div>
+							<div class="amount">290,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">bbx***</div>
+							<div class="amount">700,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">bbx***</div>
+							<div class="amount">300,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">asa***</div>
+							<div class="amount">300,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">bbx***</div>
+							<div class="amount">660,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">bbx***</div>
+							<div class="amount">100,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">asa***</div>
+							<div class="amount">200,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">bbx***</div>
+							<div class="amount">100,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">asa***</div>
+							<div class="amount">1,800,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">asa***</div>
+							<div class="amount">300,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">bbx***</div>
+							<div class="amount">650,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">bbx***</div>
+							<div class="amount">200,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">asa***</div>
+							<div class="amount">270,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">bbx***</div>
+							<div class="amount">1,100,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">asa***</div>
+							<div class="amount">190,000원</div>
+							<div class="date">03-22</div>
+						</li>
+							
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="user">bbx***</div>
+							<div class="amount">2,000,000원</div>
+							<div class="date">03-22</div>
+						</li>
+											</ul>
+				</div>
+			</li>
+			<li class="board out_rank">
+				<div style="overflow: hidden; position: relative; height: 204px;" class="">
+					<ul style="position: absolute; margin: 0px; padding: 0px; top: 0px;">	
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">1위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">4,900,000원</div>
+							<div class="date">03-19</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">2위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">2,000,000원</div>
+							<div class="date">03-21</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">3위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">2,000,000원</div>
+							<div class="date">03-22</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">4위</div>
+							<div class="user">asa***</div>
+							<div class="amount">1,800,000원</div>
+							<div class="date">03-22</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">5위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">1,500,000원</div>
+							<div class="date">03-21</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">6위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">1,450,000원</div>
+							<div class="date">03-20</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">7위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">1,250,000원</div>
+							<div class="date">03-16</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">8위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">1,200,000원</div>
+							<div class="date">03-22</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">9위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">1,100,000원</div>
+							<div class="date">03-22</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">10위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">1,050,000원</div>
+							<div class="date">03-22</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">11위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">1,000,000원</div>
+							<div class="date">03-18</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">12위</div>
+							<div class="user">asa***</div>
+							<div class="amount">1,000,000원</div>
+							<div class="date">03-19</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">13위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">900,000원</div>
+							<div class="date">03-16</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">14위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">820,000원</div>
+							<div class="date">03-18</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">15위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">800,000원</div>
+							<div class="date">03-16</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">16위</div>
+							<div class="user">asa***</div>
+							<div class="amount">800,000원</div>
+							<div class="date">03-18</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">17위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">760,000원</div>
+							<div class="date">03-17</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">18위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">730,000원</div>
+							<div class="date">03-21</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">19위</div>
+							<div class="user">asa***</div>
+							<div class="amount">700,000원</div>
+							<div class="date">03-17</div>
+						</li>
+								
+						<li style="margin: 0px; padding: 0px; height: 34px;">
+							<div class="rank">20위</div>
+							<div class="user">bbx***</div>
+							<div class="amount">700,000원</div>
+							<div class="date">03-20</div>
+						</li>
+											</ul>
+				</div>
+			</li>
+		</ul>
+</div>
+				<!--
+				<div class="sl-slider">
+					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-1"></div>
+						</div>
+					</div>
+					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-2"></div>
+						</div>
+					</div>
+					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-3"></div>
+						</div>
+					</div>
+				</div>
+				-->
+				<!-- /sl-slider -->
+				<nav id="nav-dots" class="nav-dots">
+					<span class="nav-dot-current"></span>
+					<span></span>
+					<span></span>
+				</nav>
+			</div><!-- /slider-wrapper -->
+		</div>	
+	</div>
+	<script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
+	<script type="text/javascript" src="js/jquery.slitslider.js"></script>
+	<script type="text/javascript">	
+	$(function() {
+		var Page = (function() {
+			var $nav = $( '#nav-dots > span' ),
+				slitslider = $( '#slider' ).slitslider( {
+					onBeforeChange : function( slide, pos ) {
+						$nav.removeClass( 'nav-dot-current' );
+						$nav.eq( pos ).addClass( 'nav-dot-current' );
+					}
+				} ),
+				init = function() {
+					initEvents();
+				},
+				initEvents = function() {
+					$nav.each( function( i ) {
+						$( this ).on( 'click', function( event ) {
+							var $dot = $( this );
+							if( !slitslider.isActive() ) {
+								$nav.removeClass( 'nav-dot-current' );
+								$dot.addClass( 'nav-dot-current' );
+							}
+							slitslider.jump( i + 1 );
+							return false;
+						} );
+					} );
+				};
+				return { init : init };
+		})();
+		Page.init();
+	});
+	</script>
+</div>
+<div class="visual_ling_2"></div><!-- 비주얼 -->
+
+<div id="contents_wrap">
+	<div class="sc-inner">
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game01.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game11.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game05.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game29.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game001.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game002.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game003.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game03.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game06.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game004.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game12.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game18.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game005.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game006.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game007.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game008.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game009.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game010.png">
+				</div>
+			</div>
+		</a>
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game011.png">
+				</div>
+			</div>
+		</a>
+
+		<a href="javascript:void(0);" onclick="event1();" class="slot-btn gl-title-click">
+			<div class="inner">
+				<img class="slot-bg" src="images/slot-bg.png">
+				<div class="hover-bg">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				<div class="slot-cont">
+					<img class="slot-img" src="images/game02.png">
+				</div>
+			</div>
+		</a>
+	</div>
+</div><!-- contents_wrap -->
+
+
+<script type="text/javascript">
+	// 탭 처리
+	function tabActive(obj) {
+		var tab = obj.closest(".sub_tab li");
+		tab.siblings().removeClass("active");
+		tab.addClass("active");
+
+		var target = $(tab.attr("data-target")+".tab_cont");
+		$(".tab_cont").addClass("vis_hidden");
+		target.removeClass("vis_hidden");
+	}
+
+	function tabActive2(obj) {
+		var tab = obj.closest(".popup_tab > li");
+		tab.siblings().removeClass("popupactive");
+		tab.addClass("popupactive");
+
+		var target = $(tab.attr("data-target")+".popuptab_cont");
+		$(".popuptab_cont").addClass("popupvis_hidden");
+		target.removeClass("popupvis_hidden");
+	}
+
+	function tabActive3(obj) {
+		var tab = obj.closest(".popup_tab2 > li");
+		tab.siblings().removeClass("popupactive2");
+		tab.addClass("popupactive2");
+
+		var target = $(tab.attr("data-target")+".popuptab_cont2");
+		$(".popuptab_cont2").addClass("popupvis_hidden2");
+		target.removeClass("popupvis_hidden2");
+	}
+
+
+
+
+
+	function tabActionCas(obj, pid) {
+
+		if(obj) {
+			var tab = $(".sub_tab li." + obj).closest(".sub_tab li");
+			tab.siblings().removeClass("active");
+			tab.addClass("active");
+
+			var target = $(tab.attr("data-target")+".tab_cont");
+			$(".tab_cont").addClass("vis_hidden");
+			target.removeClass("vis_hidden");
+			target.html("");
+
+		} else {
+			$(".tab_cont").html("");
+		}
+
+
+		$.ajax({
+            type: "GET",
+            url: "./_pages/_"+pid+".asp?" + Math.random(),
+            cache: false,
+			async : false,
+            data: {pid:pid},
+            success: function(data){
+
+				if(obj) { //menu
+					target.html(data);
+				} else { //단일
+					$(".tab_cont").html(data);
+					//$(".popupbox").html(data);
+				}
+
+            },
+            error: function(err, xhr){
+				alert(err.responseText);
+            }
+        });
+	}
+
+
+
+
+	function tabActionProc(obj, pid) {
+
+		if(obj) {
+			var tab = $(".popup_tab li." + obj).closest(".popup_tab > li");
+			tab.siblings().removeClass("popupactive");
+			tab.addClass("popupactive");
+
+			var target = $(tab.attr("data-target")+".popuptab_cont");
+			$(".popuptab_cont").addClass("popupvis_hidden");
+			target.removeClass("popupvis_hidden");
+			target.html("");
+
+		} else {
+			$(".popuptab_cont").html("");
+		}
+
+
+		$.ajax({
+            type: "GET",
+            url: "./_pages/_"+pid+".asp?" + Math.random(),
+            cache: false,
+			async : false,
+            data: {pid:pid},
+            success: function(data){
+
+				if(obj) { //menu
+					target.html(data);
+				} else { //단일
+					$(".popuptab_cont").html(data);
+					//$(".popupbox_ajax").html(data);
+				}
+
+            },
+            error: function(err, xhr){
+				alert(err.responseText);
+            }
+        });
+	}
+
+
+
+	function tabActionMy(obj, pid) {
+
+		if(obj) {
+			var tab = $(".popup_tab2 li." + obj).closest(".popup_tab2 > li");
+			tab.siblings().removeClass("popupactive2");
+			tab.addClass("popupactive2");
+
+			var target = $(tab.attr("data-target")+".popuptab_cont2");
+			$(".popuptab_cont2").addClass("popupvis_hidden2");
+			target.removeClass("popupvis_hidden2");
+			target.html("");
+
+		} else {
+			$(".popuptab_cont").html("");
+		}
+
+
+		$.ajax({
+            type: "GET",
+            url: "./_pages/_"+pid+".asp?" + Math.random(),
+            cache: false,
+			async : false,
+            data: {pid:pid},
+            success: function(data){
+
+				if(obj) { //menu
+					target.html(data);
+				} else { //단일
+					$(".popuptab_cont").html(data);
+					//$(".popupbox_ajax").html(data);
+				}
+
+            },
+            error: function(err, xhr){
+				alert(err.responseText);
+            }
+        });
+	}
+
+
+
+
+	function tabActionPop(obj, pid) {
+
+		$.ajax({
+            type: "GET",
+            url: pid+".php?" + Math.random(),
+            cache: false,
+			async : false,
+            data: {pid:pid},
+            success: function(data){
+				$(".popupbox_ajax").html(data);
+            },
+            error: function(err, xhr){
+				alert(err.responseText);
+            }
+        });
+	}
+
+	function tabActionPop2(obj, pid) {
+
+		$.ajax({
+            type: "GET",
+            url: "../bbs/board.php?bo_table="+pid,
+            cache: false,
+			async : false,
+            data: {pid:pid},
+            success: function(data){
+				$(".popupbox_ajax").html(data);
+            },
+            error: function(err, xhr){
+				alert(err.responseText);
+            }
+        });
+	}
+
+
+	function tabActionChange(pid) {
+		$('#fade_7').popup('hide');
+		//window.setTimeout(function() {
+			$('#fade_1').popup('show');
+			tabActionPop('',pid);
+		//}, 100);
+	}
+
+
+	function tabActClose() {
+		$('#fade_3').popup('hide');
+
+	}
+
+
+	function tabActionSlot(plat, pid) {
+
+		//메인 슬롯 팝업안떠서 추가
+		$("#fade_3").popup('show');
+
+		$.ajax({
+            type: "GET",
+            url: "slot_go.php?kind="+pid,
+            cache: false,
+			async : false,
+            data: "platnm=" + encodeURI(plat , "UTF-8"),
+            success: function(data){
+				$(".popupbox_ajax").html(data);
+            },
+            error: function(err, xhr){
+				alert(err.responseText);
+            }
+        });
+	}
+
+
+
+	function tabActionPopView(obj, pid, idx) {
+
+
+		$.ajax({
+            type: "GET",
+            url: "./_pages/_"+pid+".asp?" + Math.random(),
+            cache: false,
+			async : false,
+            data: "pid=" + pid + "&notice_idx=" + idx + "&event_idx=" + idx,
+            success: function(data){
+				$(".popuptab_cont").html(data);
+            },
+            error: function(err, xhr){
+				alert(err.responseText);
+            }
+        });
+	}
+
+
+
+
+</script>
+
+<script>
+$(document).on('scroll', function() {
+   if ($(document).scrollTop() > 10) {
+      $('.top_banner_wrap').addClass('top_banner_scroll');
+   } else {
+      $('.top_banner_wrap').removeClass('top_banner_scroll');
+   }
+});
+</script>
+
+<div class="customer">
+	<span class="kakao">MEGAWIN</span> <span class="tele">MEGAWIN</span>
+</div>
+<div id="footer">
+	<img src="images/partner.png"><br><br>Copyright ⓒ 2018~2020 MEGAWIN All rights reserved.
+</div><!-- footer -->
+</div><!-- wrap -->
+
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		GetRealtimeWD();
+	});
+</script>
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+<!--
+.style1pop2 {
+	font-family: 돋움;
+	font-size: 14px;
+	color: #bbb5ac;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.style1pop {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 18px;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body>
+
+
+<script type="text/javascript">
+
+		$(".draggable01").draggable();
+
+</script>
+
+
+<script type="text/javascript">
+<!--
+
+function setCookie( name, value, expiredays ) {
+	var todayDate = new Date();
+		todayDate.setDate( todayDate.getDate() + expiredays );
+		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	}
+function closePopup1(popupid) {
+	$("#divpopup" + popupid).hide();
+}
+
+function closePopup(popupid) {
+	setCookie( "divpopup" + popupid, "close" , 1 );
+	$("#divpopup" + popupid).hide();
+}
+//-->
+</script>
+</body>
+</html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+<!--
+.style1pop2 {
+	font-family: 돋움;
+	font-size: 14px;
+	color: #bbb5ac;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.style1pop {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 18px;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body>
+
+
+
+<script type="text/javascript">
+
+		$(".draggable02").draggable();
+
+</script>
+
+
+<script type="text/javascript">
+<!--
+
+function setCookie( name, value, expiredays ) {
+	var todayDate = new Date();
+		todayDate.setDate( todayDate.getDate() + expiredays );
+		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	}
+function closePopup1(popupid) {
+	$("#divpopup" + popupid).hide();
+}
+
+function closePopup(popupid) {
+	setCookie( "divpopup" + popupid, "close" , 1 );
+	$("#divpopup" + popupid).hide();
+}
+//-->
+</script>
+</body>
+</html>
+
+
+
+
+</body>
+</html>
+
+<!-- --------------------------------------------------------- 레이어 팝업 소스 시작 --------------------------------------------------------- -->
+    
+	
+	
+	<!-- --------------------------------------------------------- 레이어 팝업 소스 끝 --------------------------------------------------------- -->

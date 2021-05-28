@@ -1,0 +1,3849 @@
+*,*:before,*:after{
+   margin: 0px;
+   padding: 0px;
+}
+*:focus{
+   outline: none;
+}
+a{
+   text-decoration: none;
+}
+li{
+   list-style: none;
+}
+
+/*输入框*/
+input::placeholder{
+    color: #8a8a8a;
+}
+input::-webkit-input-placeholder{
+    color: #b1b1b1;
+}
+input:focus,
+textarea:focus{
+    outline: none;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear:after{
+    display: block;
+    clear: both;
+    content: '';
+}
+.hover:hover{
+    opacity: 0.85;
+}
+.container {
+    /*width: 100%;*/
+    max-width: 1400px;
+    display: table;
+    margin: 0 auto;
+}
+input, textarea, select, button {
+    font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+
+
+
+/*头部*/
+.weihuan-reg{
+    background-color: #0d113a;
+    color: #fff;
+    font-size: 14px;
+}
+.weihuan-reg .character_img {
+    position: absolute;
+    right: 0px;
+    top: 210px;
+}
+.weihuan-reg .body .container {
+    padding: 45px 0;
+}
+.weihuan-reg .body .container > h1 {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #cf0404;
+}
+.weihuan-reg .body .container > p {
+    color: #979797;
+    line-height: 25px;
+}
+.weihuan-reg .body .container .reg-form {
+    font-size: 17px;
+    display: flex;
+    margin-top: 29px;
+}
+.weihuan-reg .body .container .reg-form > div > div {
+    margin-bottom: 25px;
+    text-align: left;
+    margin-right: 85px;
+    position: relative;
+}
+.weihuan-reg .body .container .reg-form label {
+    margin-right: 14px;
+    display: inline-block;
+    text-align: left;
+    width: 75px;
+    color: #fff;
+}
+.weihuan-reg .body .container .reg-form input {
+    border: solid 1px #ffa71d;
+    background: transparent;
+    vertical-align: middle;
+    border-radius: 2px;
+    padding: 0 10px;
+    color: #ffd360;
+    width: 248px;
+    height: 33px;
+}
+.weihuan-reg .body .container .reg-form > div > div > .detstatus {
+    vertical-align: middle;
+    position: absolute;
+    top: 12%;
+    right: -6%;
+}
+.weihuan-reg .body .container .reg-form > div > div > .detstatus span{
+    color: red;
+}
+.weihuan-reg .body .container .reg-form .captcha {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.weihuan-reg .body .container .reg-form .captcha img{
+    width: 90px;
+}
+.weihuan-reg .switch {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 18px;
+    margin-top: 6px;
+}
+.weihuan-reg .switch input {
+    display: none;
+}
+.weihuan-reg .toggle-checked:checked + .slider {
+    background: linear-gradient(90deg, #ffbb44 15%, #ba7f00 40%, #ffb311, #a97300);
+}
+.weihuan-reg .slider {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s;
+    cursor: pointer;
+    position: absolute;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+}
+.weihuan-reg .slider.round {
+    border-radius: 20px;
+}
+.weihuan-reg .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0;
+    bottom: -1px;
+    background-color: white;
+    border: 1px solid #bcbab7;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.weihuan-reg .slider.round:before {
+    border-radius: 50%;
+}
+.weihuan-reg .toggle-checked:checked + .slider:before {
+    -webkit-transform: translateX(12px);
+    -ms-transform: translateX(12px);
+    transform: translateX(12px);
+}
+.weihuan-reg .switch-text {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 18px;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+.weihuan-reg .body .container .reg-btn {
+    height: 40px;
+    width: 165px;
+    color: #cf0404;
+    font-size: 21px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 900;
+    line-height: 40px;
+    margin-top: 22px;
+    background-image: linear-gradient(62deg, #ffbb44 15%, #ba7f00 50%, #ffb311, #a97300);
+}
+.weihuan-header{
+    user-select: none;
+    color: #fff;
+    font-size: 14px;
+}
+.weihuan-header a{
+    color: #fff;
+    display: inline-block;
+}
+.weihuan-header .top{
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #000000;
+    margin-right: 10px;
+}
+.weihuan-header .top ul{
+    display: flex;
+    max-width: 1400px;
+    margin-right: 20px;
+}
+.weihuan-header .top ul li{
+    cursor: pointer;
+    border-right: 1px solid #383838;
+}
+.weihuan-header .top ul li a {
+    padding: 0 20px;
+}
+.weihuan-header .top .languages{
+    cursor: pointer;
+    position: relative;
+    margin-right: 40px;
+}
+.weihuan-header .top .languages img{
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.weihuan-header .top .languages .list{
+    position: absolute;
+    border-radius: 4px;
+    background: #000;
+    top: 150%;
+    width: 130px;
+    z-index: 8;
+    display: none;
+}
+.weihuan-header .top .languages .list:before{
+    content: '';
+    width: 0;
+    height: 0;
+    top: -8px;
+    left: 5px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid #000;
+}
+.weihuan-header .top .languages .list li{
+    border: none;
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid #383838;
+}
+.weihuan-header .top .languages .list li:last-child{
+    border: none;
+}
+.weihuan-header .info{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    position: relative;
+    z-index: 5;
+    background-image: linear-gradient(360deg, #cd0303 10%, #e41313 50%);
+    background: -o-linear-gradient(360deg, #cd0303 10%, #e41313 50%);
+    background: -moz-linear-gradient(360deg, #cd0303 10%, #e41313 50%);
+}
+.weihuan-header .info .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.weihuan-header .info .container .logo{
+    height: 76px;
+    width: 202px;
+}
+.weihuan-header .info .container .logo img{
+    width: 100%;
+}
+.weihuan-header .info .container .menu{
+    display: flex;
+    align-items: center;
+}
+.weihuan-header .info .container .menu input{
+    width: 130px;
+    height: 26px;
+    border: 0;
+    padding: 0 10px;
+    margin: 0 25px 0 5px;
+    background-color: #dad0d0;
+}
+.weihuan-header .info .container .menu input[name="code"] {
+    width: 59px !important;
+}
+.weihuan-header .info .container .menu button{
+    cursor: pointer;
+    width: 69px;
+    height: 26px;
+    border-radius: 3px;
+}
+.weihuan-header .info .container .menu .login{
+    border: 0;
+    margin-right: 5px;
+    background-image: linear-gradient(90deg, #feb32f 0%, #ffe6ba 50%, #feb32f 100%), linear-gradient(#fed52f, #fed52f);
+    box-shadow: 0 3px 5px 0 rgba(6, 0, 1, 0.2), inset 0 1px 0 0 #fff1b8;
+}
+.weihuan-header .info .container .menu .reg{
+    color: #fff;
+    margin-right: 20px;
+    border: solid 1px #feb32f;
+    background-color: transparent;
+    margin-left: 15px;
+    padding: 4px;
+    font-size: 13px;
+    border-radius: 3px;
+}
+.weihuan-header .info .container .menu a{
+    color: #fff;
+}
+.weihuan-header .info .container .menu .code-img {
+    margin-right: 30px;
+    margin-left: -15px;
+    height: 26px;
+    width: 68px;
+}
+.weihuan-header .info .container .menu .code-img img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.weihuan-header .info .container .menu .user{
+    margin-right: 50px;
+}
+.weihuan-header .info .container .menu .user span{
+    display: block;
+    font-size: 14px;
+}
+.weihuan-header .info .container .menu .user span img {
+    cursor: pointer;
+    vertical-align: -5px;
+}
+.weihuan-header .info .container .menu .other button,
+.weihuan-header .info .container .menu .other .logout{
+    margin-right: 16px;
+    width: 69px;
+    height: 27px;
+    background: transparent;
+    color: #fcd654;
+    border: 0;
+    font-size: 14px;
+}
+.weihuan-header .nav{
+    height: 36px;
+    background-color: #8c0000;
+    position: relative;
+    z-index: 3;
+}
+.weihuan-header .nav .container{
+/*    display: flex;
+    align-items: center;
+    justify-content: space-between;*/
+}
+.weihuan-header .nav .container ul{
+    display: flex;
+    align-items: center;
+}
+.weihuan-header .nav .container li{
+    height: 36px;
+    cursor: pointer;
+    line-height: 36px;
+    margin-right: 44px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-bottom: 2px solid transparent;
+}
+.weihuan-header .nav .container li:last-child{
+    margin-right: 0;
+}
+.weihuan-header .nav .container .right li{
+    margin: 0 15px;
+}
+.weihuan-header .nav .container li.on,
+.weihuan-header .nav .container li:hover{
+    border-bottom: 2px solid #fed52f;
+}
+.weihuan-header .nav .container .right li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: -4px;
+}
+.weihuan-home-slider .swiper-slide img{
+    width: 100%;
+}
+.weihuan-home-game {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.weihuan-home-game .list{
+    margin-bottom: 30px;
+}
+.weihuan-home-game .list .left {
+    width: 80%;
+}
+.weihuan-home-game .list .right{
+    width: 19.62%;
+}
+.weihuan-home-game .list .left li{
+    float: left;
+    width: 49.5%;
+    margin-right: 0.5%;
+    margin-bottom: 0.5%;
+}
+.weihuan-home-game .list .left .b li{
+    width: 24.5%;
+    margin-right: 0.5%;
+}
+.weihuan-home-game .list .left li:last-child{
+    margin-right: 0;
+}
+.weihuan-home-game .list a{
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.weihuan-home-game .list .left a{
+    height: 206px;
+}
+.weihuan-home-game .list img{
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+.weihuan-home-game .list .title{
+    line-height: 43px;
+    position: absolute;
+    z-index: 1;
+    font-size: 20px !important;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #fff;
+}
+.weihuan-home-game .list .btn,
+.weihuan-home-game .other .video .btn{
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weihuan-home-game .list .btn button{
+    background: linear-gradient(360deg, #cd0303 10%, #e41313 50%);
+    border-radius: 4px;
+    padding: 7px 41px;
+    color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(6, 0, 1, 0.3);
+    border: 0;
+    cursor: pointer;
+    font-size: 18px !important;
+    z-index: 1;
+}
+.weihuan-home-game .list a:hover .btn,
+.weihuan-home-game .other .video:hover .btn{
+    opacity: 1;
+}
+.weihuan-home-game .list a:hover img{
+    transform: rotate(-2deg) scale(1.2);
+}
+.weihuan-home-game .other > div{
+    float: left;
+}
+.weihuan-home-game .other .video{
+    width: 28%;
+    position: relative;
+}
+.weihuan-home-game .other .video .btn img{
+    width: 63px;
+}
+.weihuan-home-game .other .pool{
+    width: 40%;
+    margin: 0 0.5%;
+    position: relative;
+}
+.weihuan-home-game .other .pool-num{
+    width: 95%;
+    height: 161px;
+    color: #fff;
+    z-index: 3;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 30%;
+    left: 3%;
+}
+.weihuan-home-game .other .pool-num div{
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.weihuan-home-game .other .pool-num span{
+    width: 10%;
+    color: #fff;
+    float: left;
+    font-size: 28px;
+    line-height: 161px;
+    font-weight: bolder;
+    text-align: center;
+}
+.weihuan-home-game .other .news{
+    width: 31%;
+}
+.weihuan-home-game .other .news .news-list{
+    height: 200px;
+    overflow: hidden;
+    background-color: #282944;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.weihuan-home-game .other .news ul li{
+    color: #fff;
+    height: 40px;
+    width: 100%;
+    font-size: 0;
+    line-height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #3c3d5a;
+}
+.weihuan-home-game .other .news ul span{
+    float: left;
+    font-size: 10px;
+    text-align: left;
+}
+.weihuan-home-game .other .news ul span:nth-child(1){
+    width: 16%;
+    text-indent: 10px;
+}
+.weihuan-home-game .other .news ul span:nth-child(2){
+    width: 24%;
+}
+.weihuan-home-game .other .news ul span:nth-child(3){
+    width: 24%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.weihuan-home-game .other .news ul span:nth-child(4){
+    width: 36%;
+    color: #ffd800;
+}
+.weihuan-home-game .other .title{
+    text-align: center;
+    color: #ffd620;
+    font-size: 20px;
+    background-image: linear-gradient(180deg, #32334a, #1b1b35);
+    box-shadow: 0 2px 5px 0 rgba(6, 0, 1, 0.3);
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px 4px 0 0;
+}
+.weihuan-home-game .other img{
+    width: 100%;
+}
+.weihuan-home-game .other .bg{
+    height: 200px;
+}
+.weihuan-home-notice .container,
+.weihuan-offer .nav .container,
+.weihuan-offer .noticetips .container{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    color: #444;
+}
+.weihuan-home-notice .container img{
+    padding-right: 20px;
+}
+.weihuan-home-notice .container ul{
+    width: 100%;
+    overflow: hidden;
+    color: #060606;
+}
+.weihuan-home-notice .container ul marquee{
+    float: left;
+}
+#notice {
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+}
+#innotice {
+    float: left;
+    width: 800%;
+}
+#notice1,#notice2{
+    float: left;
+}
+#innotice span{
+    margin: 0 30px;
+}
+#innotice span u {
+    display: none;
+    text-decoration: none;
+}
+
+
+/*ag실제 사람视讯*/
+.weihuan-ag-game{
+    padding: 70px 0 10px;
+}
+.weihuan-ag-game li{
+    float: left;
+    width: 32%;
+    height: 389px;
+    margin-right: 2%;
+    margin-bottom: 60px;
+    border-radius: 4px;
+    position: relative;
+    background-size: 100% 100%;
+}
+.weihuan-ag-game li:nth-child(3n){
+    margin-right: 0;
+}
+.weihuan-ag-game li>div{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.weihuan-ag-game .btn{
+    display: block;
+    position: relative;
+    bottom: -35px;
+    width: 40%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    left: 30%;
+    border-radius: 5px;
+    background: linear-gradient(to right, #ff008a, #aa00c3);
+}
+.weihuan-ag-game .tag{
+    transition: all 0.3s ease;
+    position: absolute;
+    font-size: 16px;
+    opacity: 0;
+    height: 70px;
+    width: 30%;
+    right: 6%;
+    top: 0%;
+}
+.weihuan-ag-game .tag img{
+    position: relative;
+    width: 10%;
+    left: 12px;
+    top: 23.5px;
+}
+.weihuan-ag-game .tag span{
+    border: 1px solid #fff;
+    display: inline-block;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 30px;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+}
+.weihuan-ag-game .move{
+    left: 0;
+    bottom: 0;
+    width: 70.3%;
+    cursor: pointer;
+    position: absolute;
+    transition: all 1000ms ease 0s;
+}
+.weihuan-ag-game .logo{
+    z-index: 3;
+    height: 72px;
+    width: 100%;
+    bottom: 0px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    position: absolute;
+    transition: 1000ms;
+    border-radius: 5px;
+    background: linear-gradient(to right, #261b5a, #302c63);
+}
+.weihuan-ag-game .logo img,
+.weihuan-ag-game .logo2 img{
+    width: 29%;
+    transition: 1000ms;
+}
+.weihuan-ag-game .logo2{
+    z-index: 33;
+    height: 170px;
+    width: 100%;
+    bottom: 0px;
+    opacity: 0;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    transition: 1000ms;
+    position: absolute;
+    border-radius: 5px;
+    background: linear-gradient(to right, #261b5a, #302c63);
+}
+.weihuan-ag-game .logo2 img{
+    margin-top: 25px;
+    margin-bottom: -25px;
+}
+.weihuan-ag-game .logo2 span{
+    display: block;
+    position: relative;
+    bottom: -35px;
+    left: 30%;
+    width: 40%;
+    height: 45px;
+    cursor: pointer;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    background: linear-gradient(to right, #ff008a, #aa00c3);
+}
+.weihuan-ag-game li:hover .move{
+    left: 15%;
+}
+.weihuan-ag-game li:hover .tag{
+    opacity: 1;
+}
+.weihuan-ag-game li:hover .logo{
+    opacity: 0;
+}
+.weihuan-ag-game li:hover .logo2{
+    opacity: 0.8;
+}
+
+
+/*pt전자游艺*/
+.weihuan-pt-msk{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.45);
+}
+.weihuan-pt-msk .ptload {
+    left: 30%;
+    top: 50%;
+    z-index: 103;
+    width: 770px;
+    position: fixed;
+}
+.weihuan-pt-msk .ptload .loading {
+    width: 600px;
+    height: 12px;
+    background: #2d1406;
+    border: 1px solid #1b0707;
+}
+.weihuan-pt-msk .ptload .loading .progress {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+.weihuan-pt-msk .ptload .loading .progress > div {
+    height: 14px;
+    float: left;
+}
+.weihuan-pt-msk .ptload .loading .progress span {
+    background: linear-gradient(#ffe553 40%, #ff6c00);
+    height: 14px;
+    display: block;
+    width: 100%;
+    margin-top: -1px;
+}
+.weihuan-pt-msk .ptload .loading .progress img {
+    float: left;
+    margin-left: -75px;
+    margin-top: -99px;
+}
+.weihuan-pt-msk .ptload p {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: center;
+    margin-left: -150px;
+    color: #ffe553;
+    background: -webkit-linear-gradient(#ffe553 35%, #ff6c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.weihuan-pt .nav {
+    background: #f5f5f5;
+}
+.weihuan-pt .nav .container{
+/*    display: flex;
+    align-items: center;
+    justify-content: space-between;*/
+}
+.weihuan-pt .nav .container li{
+    float: left;
+    color: #000;
+    height: 70px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+}
+.weihuan-pt .nav .container li.on{
+    background: #fff;
+}
+.weihuan-pt .nav .container li img{
+    padding-bottom: 5px;
+}
+.weihuan-pt .nav .container li img.hot-pt{
+    left: 0px;
+    top: 11px;
+    position: relative;
+}
+.weihuan-pt .nav .container li img.hot{
+    position: relative;
+    bottom: 21px;
+    left: 73px;
+}
+.weihuan-pt .nav .container li .hot-title{
+    position: relative;
+    top: -12px;
+}
+.weihuan-pt .body{
+    background: #e8e8e8;
+}
+.weihuan-pt .body .container{
+    text-align: center;
+}
+.weihuan-pt .body iframe {
+    border: 0;
+    width: 80%;
+    display: none;
+    height: 900px;
+    margin: auto;
+    padding: 50px 0;
+}
+.weihuan-pt .body iframe:nth-child(1){
+    display: block;
+}
+
+
+
+
+/*sb沙巴체육*/
+.weihuan-sb{
+    background-size: 100%;
+    background-color: #fff;
+    text-align: left;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.weihuan-sb .banner {
+    background-color: #000;
+    text-align: center;
+    position: relative;
+    font-size: 0;
+}
+.weihuan-sb .banner img{
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+}
+.weihuan-sb .container{
+    text-align: center;
+}
+.weihuan-sb iframe {
+    margin: 2px 0 0;
+    height: 668px;
+    width: 1144px;
+}
+
+
+/*pk체스游戏*/
+.weihuan-pk{
+    text-align: center;
+    background: #1e2539;
+}
+.weihuan-pk iframe{
+    height: 800px;
+    width: 1407.56px;
+    margin: 0 auto;
+}
+.weihuan-pk-pop{
+    position: relative;
+    background: transparent !important;
+}
+.pk-pop{
+    z-index: 101;
+    background: #fff;
+    border-radius: 4px;
+}
+.weihuan-pk-pop .layui-layer-setwin,
+.weihuan-offer-pop .layui-layer-setwin,
+.weihuan-pop-login .layui-layer-setwin{
+    right: 25px !important;
+    top: -10px !important;
+}
+.weihuan-pk-pop .pop-header{
+    background: linear-gradient(#fd2525, #cd0303);
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+    padding: 11px 0;
+    font-size: 16px;
+    color: #fff;
+}
+.weihuan-pk-pop .pop-body {
+    padding: 30px 0 20px;
+    text-align: center;
+}
+.weihuan-pk-pop .pop-body .buttons{
+    width: 132px;
+    height: 41px;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 41px;
+    color: #fff;
+    margin-top: 33px;
+    cursor: pointer;
+    user-select: none;
+}
+.weihuan-pk-pop .pop-body .buttons.dep{
+    margin-right: 15px;
+    background: linear-gradient(#fe2525, #cc0202);
+}
+.weihuan-pk-pop .pop-body .buttons.entr{
+    background: linear-gradient(#ffcf00, #ff9000);
+}
+.weihuan-pk-pop .balamt {
+    background: #f4f4f4;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px 9px;
+}
+.weihuan-pk-pop .balamt span {
+    top: -4px;
+    color: #000;
+    font-size: 14px;
+    margin-left: 30px;
+    position: relative;
+}
+.weihuan-pk-pop .balamt span:first-child{
+    margin-left: 0;
+}
+.weihuan-pk-pop .balamt img{
+    width: 26px;
+    cursor: pointer;
+    vertical-align: -4px;
+    padding-left: 3px;
+}
+
+
+/*gf어업游戏*/
+.weihuan-gf{
+    font-size: 0;
+    position: relative;
+}
+.weihuan-gf>img{
+    height: 100%;
+    width: 100%;
+}
+.weihuan-gf .fishing{
+    position: absolute;
+    top: 20%;
+    left: 21%;
+}
+.weihuan-gf .fishing li{
+    width: 32%;
+    cursor: pointer;
+    float: left;
+    height: 350px;
+}
+
+/*ep泛亚游戏*/
+.weihuan-ep .ep{
+    position: relative;
+}
+.weihuan-ep .ep > img {
+    width: 100%;
+}
+.weihuan-ep .ep .content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 99%;
+}
+.weihuan-ep .ep .content .pull{
+    transition: 0.8s;
+}
+.weihuan-ep .ep .content .pull img {
+    position: absolute;
+}
+.weihuan-ep .ep .content .left.pull img:nth-child(1){
+    left: 0;
+    top: -8%;
+    width: 31%;
+}
+.weihuan-ep .ep .content .left.pull img:nth-child(2){
+    left: 0;
+    bottom: 0;
+    width: 37%;
+}
+.weihuan-ep .ep .content .left.pull img:nth-child(3){
+    left: 16%;
+    bottom: 0;
+    width: 35%;
+}
+.weihuan-ep .ep .content .right.pull img:nth-child(1){
+    top: -6%;
+    width: 25%;
+    right: 0px;
+}
+.weihuan-ep .ep .content .right.pull img:nth-child(2){
+    bottom: 18%;
+    width: 30%;
+    right: 3%;
+}
+.weihuan-ep .ep .content .right.pull img:nth-child(3){
+    bottom: 0;
+    width: 41%;
+    right: 0px;
+}
+.weihuan-ep .ep .content .button{
+    top: 54%;
+    left: 43.5%;
+    width: 200px;
+    height: 85px;
+    cursor: pointer;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*lt天成운*/
+.weihuan-lt{
+    position: relative;
+}
+.weihuan-lt img{
+    width: 100%;
+}
+.weihuan-lt img.button{
+    top: 45%;
+    right: 19%;
+    width: 12%;
+    cursor: pointer;
+    position: absolute;
+}
+.weihuan-lt img.button.two{
+    top: 55%;
+}
+.weihuan-lt img.button.three{
+    top: 65%;
+}
+
+
+/*offer最新优惠*/
+.weihuan-offer .header{
+    position: relative;
+}
+.weihuan-offer .header .banner img {
+    width: 100%;
+    height: 265px;
+    max-width: 1920px;
+}
+.weihuan-offer .title{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    top: 0;
+}
+.weihuan-offer .title img{
+    width: 362px;
+    height: 68px;
+    display: block;
+    margin: 80px auto 0;
+}
+.weihuan-offer .noticetips{
+    color: #fff;
+    height: 40px;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    top: 180px;
+    left: 0;
+}
+#offer_notice{
+    margin-left: 13px;
+    margin-top: 0;
+    overflow: hidden;
+    color: #fff;
+    width: 100%;
+}
+.weihuan-offer .game{
+    background: #f1f1f1;
+    padding-bottom: 44px;
+}
+.weihuan-offer .game .nav .container{
+    margin-top: -44px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid #db000a;
+}
+.weihuan-offer .game .nav .container span{
+    color: #222;
+    float: left;
+    width: 16.6%;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    background: #fff;
+    line-height: 40px;
+    text-align: center;
+    user-select: none;
+    border-right: 1px solid #d0d0d0;
+}
+.weihuan-offer .game .nav .container span:last-child{
+    border-right: 0;
+}
+.weihuan-offer .game .nav .container span:last-child a{
+    color: #222;
+    display: block;
+}
+.weihuan-offer .game .nav .container span.on{
+    background: #af0202;
+    color: #fff;
+}
+.weihuan-offer .game .nav .container span.on:last-child a{
+    color: #fff;
+}
+.weihuan-offer .game .body .list{
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+.weihuan-offer .game .body .list > div{
+    display: none;
+}
+.weihuan-offer .game .body .list > div:nth-child(1){
+    display: block;
+}
+.weihuan-offer .game .body .list li{
+    float: left;
+    width: 32.6%;
+    color: #232323;
+    font-size: 14px;
+    background: #fff;
+    margin-right: 1%;
+    position: relative;
+    margin-bottom: 1.5%;
+    transition: all 0.3s ease;
+}
+.weihuan-offer .game .body .list li:nth-child(3n){
+    margin-right: 0;
+}
+.weihuan-offer .game .body .list li:hover{
+    box-shadow: 0 0 50px #d4d4d4;
+}
+.weihuan-offer .game .body .list li .icons{
+    position: absolute;
+    top: 24px;
+    left: -4px;
+    z-index: 1;
+    width: 120px;
+}
+.weihuan-offer .game .body .list li .item-bg{
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.weihuan-offer .game .body .list li h2{
+    font-size: 15px;
+    color: #232323;
+    font-weight: bolder;
+    padding: 14px 0;
+    text-indent: 3.75%;
+}
+.weihuan-offer .game .body .list li p{
+    color: #424242;
+    text-indent: 3.75%;
+    padding-bottom: 12px;
+}
+.weihuan-offer .game .body .list li p a{
+    margin-left: 18px;
+}
+.weihuan-offer .game .body .list li .item-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    display: none;
+}
+.weihuan-offer .game .body .list li .item-hover h1{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 800;
+    margin-top: 20%;
+    margin-bottom: 28px;
+}
+.weihuan-offer .game .body .list li .item-hover a{
+    color: #fff;
+    width: 200px;
+    height: 52px;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    line-height: 52px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-size: 18px;
+    margin: 0 auto;
+}
+.weihuan-offer .game .body .list li:hover .item-hover{
+    display: block;
+}
+.weihuan-offer .game .body .info{
+    border-top: 2px solid #db0c0c;
+    padding: 20px 30px;
+    background: #fff;
+}
+.weihuan-offer .game .body .info h1 {
+    color: #f53333;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 50px;
+}
+.weihuan-offer .game .body .info p{
+    color: #444;
+    line-height: 2.3;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+.weihuan-offer-pop{
+    top: 100px !important;
+}
+.weihuan-offer-pop .pop-header img {
+    width: 100%;
+}
+.weihuan-offer-pop .layui-layer-content{
+    height: auto !important;
+}
+.weihuan-offer-pop .pop-content{
+    padding: 2%;
+    background: #f5f5f5;
+}
+.weihuan-offer-pop .pop-content h3{
+    width: 100%;
+    font-size: 14px;
+    text-indent: 15px;
+    line-height: 44px;
+    background: #ececec;
+    font-weight: bolder;
+    margin-bottom: 28px;
+}
+.weihuan-offer-pop .pop-content table{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.weihuan-offer-pop .pop-content table tr.head{
+    color: #fff;
+    background: linear-gradient(#fd2525, #cd0303);
+}
+.weihuan-offer-pop .pop-content table td{
+    font-size: 14px;
+    line-height: 28px;
+    border: 1px solid #cd0303;
+}
+.weihuan-offer-pop .pop-content p {
+    color: #333;
+    line-height: 2;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+
+/*vip俱乐部*/
+.weihuan-vip .body{
+    background-size: 100%;
+    background-color: #120d29;
+    background-repeat: no-repeat;
+}
+.weihuan-vip .container .title{
+    width: 265px;
+    margin: 0 auto;
+    margin-top: 290px;
+    margin-bottom: 15px;
+}
+.weihuan-vip .container .title span{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    height: 60px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 46px;
+    text-align: center;
+}
+.weihuan-vip .grade{
+    margin-top: 80px
+}
+.weihuan-vip .grade .list{
+    float: left;
+    width: 223px;
+    height: 360px;
+    cursor: pointer;
+    margin-left: 23px;
+    margin-bottom: 60px;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px 0 #000;
+    background: linear-gradient(130deg, #584a4a, #1f1613);
+}
+.weihuan-vip .grade .list.current {
+    border: 1px solid #e7b478;
+    box-shadow: 0px 1px 12px 0 #e7b478;
+}
+.weihuan-vip .grade .list .lck {
+    position: absolute;
+    font-weight: 700;
+    color: #e7b478;
+    right: 2.8%;
+    top: 1.2%;
+}
+.weihuan-vip .grade .list .logo{
+    position: absolute;
+    top: -14%;
+    left: 26%;
+}
+.weihuan-vip .grade .list .name{
+    background: #8e7f6d;
+    text-align: center;
+    margin-top: 50px;
+    color: #000;
+}
+.weihuan-vip .grade .list.current .name{
+    background: linear-gradient(#ffad4c 12%, #ffd75d, #ffee93, #ffbe4c 70%);
+}
+.weihuan-vip .grade .list .info{
+    overflow: hidden;
+    padding: 13px 15px;
+    border-bottom: 1px solid #000;
+}
+.weihuan-vip .grade .list .info:nth-child(5){
+    border: 0;
+}
+.weihuan-vip .grade .list .name img {
+    vertical-align: 1px;
+}
+.weihuan-vip .grade .list .name img:nth-child(1){
+    margin-right: 27px;
+}
+.weihuan-vip .grade .list .name img:nth-child(3){
+    margin-left: 27px;
+    transform: rotate(180deg);
+}
+.weihuan-vip .grade .list .name p{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+}
+.weihuan-vip .grade .list .name p span{
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 10px;
+    text-transform: uppercase;
+}
+.weihuan-vip .grade .list .info p{
+    line-height: 36px;
+    color: #8e7f6d;
+}
+.weihuan-vip .grade .list.current .info p{
+    color: #e7b478;
+}
+.weihuan-vip .title.two{
+    margin: 0 auto 35px;
+}
+.weihuan-vip table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.weihuan-vip table tr {
+    border-bottom: 1px solid #212933;
+}
+.weihuan-vip table tr td {
+    padding: 8px 0;
+    color: #fff;
+    text-align: center;
+}
+.weihuan-vip table tr td:nth-child(odd) {
+    background: #2d3346;
+}
+.weihuan-vip table tr td:nth-child(even) {
+    background: #18152b;
+}
+.weihuan-vip table tr td:first-child {
+    text-align: left;
+    padding-left: 20px;
+    color: #beb092;
+}
+.weihuan-vip table tr:first-child td {
+    background: #1b1b2c;
+    color: #beb092;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 20px;
+}
+.weihuan-vip table tr:nth-child(2) td {
+    color: #beb092;
+}
+.weihuan-vip .dec{
+    margin: 40px 0;
+}
+.weihuan-vip .dec p {
+    color: #beb092;
+    font-size: 20px;
+    font-weight: 700;
+}
+.weihuan-vip .dec ol {
+    margin-left: 14px;
+}
+.weihuan-vip .dec ol li {
+    color: #beb092;
+    font-size: 14px;
+    line-height: 30px;
+    list-style-type: decimal;
+}
+
+
+/*下载中心*/
+.weihuan-download .a{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.weihuan-download .a .items{
+    height: 525px;
+    margin-top: 50px;
+    visibility: visible;
+    overflow: inherit !important;
+}
+.weihuan-download .b{
+    background-repeat: no-repeat;
+    background-position-y: 50px;
+    background-color: #131922;
+    background-size: 100%;
+    position: relative;
+    text-align: center;
+    padding: 115px 0;
+    width: 100%;
+}
+.weihuan-download .b .left{
+    width: 60%;
+}
+.weihuan-download .b .right{
+    width: 40%;
+    text-align: left;
+}
+.weihuan-download .b .left img{
+    width: 100%;
+    margin-top: -90px;
+}
+.weihuan-download .b .right img{
+    width: 55%;
+    margin-left: 100px;
+}
+.weihuan-download .circle {
+    display: block;
+    margin: -35px auto -10px;
+}
+#threephone {
+    height: 525px;
+    margin-top: 50px;
+    visibility: visible;
+    overflow: inherit !important;
+}
+#threephone img {
+    opacity: .5;
+}
+#threephone .cloud9-item.active img {
+    opacity: 1;
+}
+.weihuan-download .download-top-title{
+    display: block;
+    margin: auto;
+}
+
+
+/*最新优惠详情*/
+.weihuan-info .bgContent_hb{
+    width: 100%;
+    height: 808px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.weihuan-info .bgcenterText {
+    width: 40%;
+    min-width: 600px;
+    min-height: 803px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-right: 10%;
+    float: right;
+}
+.weihuan-info .live_title {
+    margin: 12% auto 0;
+    width: 84%;
+}
+.weihuan-info .live_title h2 {
+    position: relative;
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    overflow: hidden;
+    color: #ffc28d;
+    font-size: 20px;
+}
+.weihuan-info .live_title h2::before {
+    left: 0;
+}
+.weihuan-info .live_title h2::after {
+    right: 0;
+}
+.weihuan-info .live_title h2::before,
+.weihuan-info .live_title h2::after {
+    content: '';
+    position: absolute;
+    width: 22%;
+    height: 1px;
+    display: block;
+    top: 11px;
+}
+.weihuan-info .bgcenterText table {
+    width: 90%;
+    margin: 26px auto 16px;
+    text-align: center;
+}
+.weihuan-info .bgcenterText table tr td {
+    font-size: 14px;
+    color: #ffc38f;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #ffc38f;
+}
+.weihuan-info .bgcenterText .live-info {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #ffd7b4;
+}
+.weihuan-info .bgcenterText .live-info span {
+    font-weight: bold;
+    display: block;
+    margin-top: 7px;
+}
+.weihuan-info .bgcenterText .live-info p {
+    line-height: 26px;
+}
+.weihuan-info .tiger{
+    color: #ffc600 !important;
+}
+.weihuan-info .sport{
+    color: #48f4ff !important;
+}
+.weihuan-info table tr .tiger{
+    border: 1px solid #ffc600 !important;
+}
+.weihuan-info table tr .sport{
+    border: 1px solid #48f4ff !important;
+}
+.weihuan-info.tiger .live_title h2:before
+.weihuan-info.tiger .live_title h2:after {
+    background: #ffc600;
+}
+.weihuan-info .OfferDetails_gz {
+    height: 378px;
+    overflow-y: auto;
+}
+.weihuan-info .OfferDetails_gz::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*详情页*/
+.weihuan-home-info .body{
+    background: #04041a;
+}
+.weihuan-home-info .body > img{
+    width: 100%;
+}
+.weihuan-home-info .body .pbd {
+    width: 70%;
+    margin: 0 auto;
+}
+.weihuan-home-info .body label {
+    color: #feb900;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 16px;
+    margin-left: 35px;
+}
+.weihuan-home-info .body p {
+    color: #ded3b9;
+    display: inline-block;
+}
+.weihuan-home-info .body table {
+    width: 100%;
+    margin: 10px 0 20px;
+    text-align: center;
+}
+.weihuan-home-info .body table tr {
+    background: #1e2948;
+}
+.weihuan-home-info .body table tr:first-child {
+    background: #e1af00;
+}
+.weihuan-home-info .body table td {
+    padding: 16px 0;
+    color: #ded3b9;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #131c36;
+}
+.weihuan-home-info .body table tr:first-child td {
+    color: #000;
+}
+.weihuan-home-info .body table td:last-child {
+    color: #ffd307;
+}
+.weihuan-home-info .body ol {
+    margin: 10px 0 80px 50px;
+}
+.weihuan-home-info .body ol li {
+    list-style-type: decimal;
+    color: #ded3b9;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+/*홈페이지公告*/
+.weihuan-home-notice-pop .body{
+    padding: 0px 15px;
+}
+.weihuan-home-notice-pop h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 29px;
+    background: linear-gradient(#fd2525, #cd0303);
+}
+.weihuan-home-notice-pop .body li{
+    background: #f5f5f5;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #3a3a3a;
+    padding: 15px;
+}
+.weihuan-home-notice-pop .body li h2 {
+    color: #949494;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+.weihuan-home-notice-pop .body li h2 img{
+    vertical-align: -3px;
+    margin-right: 3px;
+}
+.weihuan-home-notice-pop .body li p{
+    text-decoration: none;
+    font-weight: normal;
+    padding: 10px 0 0;
+    font-size: 15px;
+    display: none;
+    color: #666;
+}
+.weihuan-home-game-video-pop{
+    background: transparent !important;
+    box-shadow: none !important;
+}
+.weihuan-home-game-video-pop .layui-layer-content {
+    height: inherit !important;
+}
+
+
+
+/*个人中心*/
+.weihuan-user {
+    margin: 30px 0;
+}
+.weihuan-user > .body{
+    width: 1384px;
+    margin: 0 auto;
+    background: #1b1b1b;
+}
+.weihuan-user .body .bar{
+    width: 200px;
+    border-radius: 5px 0 0 5px;
+    padding: 15px 0;
+    float: left;
+}
+.weihuan-user .body .bar li{
+    color: #fff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    position: relative;
+}
+.weihuan-user .body .bar li.on {
+    color: #feb32f;
+    background: url(/web/images/user/bar.png) no-repeat left;
+}
+.weihuan-user .body .bar li i{
+    width: 30px;
+    height: 30px;
+    margin-right: 23px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position-y: -3px;
+    background: url(/web/images/user/bar-i.png) no-repeat;
+}
+.weihuan-user .body .bar li.on i{
+    background: url(/web/images/user/bar-ii.png) no-repeat;
+}
+.weihuan-user .body .bar li:nth-child(2) i {
+    background-position-y: -64px;
+}
+.weihuan-user .body .bar li:nth-child(3) i {
+    background-position-y: -123px;
+}
+.weihuan-user .body .bar li:nth-child(4) i {
+    background-position-y: -182px;
+}
+.weihuan-user .body .bar li:nth-child(5) i {
+    background-position-y: -245px;
+}
+.weihuan-user .body .bar li:nth-child(6) i {
+    background-position-y: -305px;
+}
+.weihuan-user .body .bar li:nth-child(7) i {
+    background-position-y: -363px;
+}
+.weihuan-user .body .bar li:nth-child(8) i {
+    background-position-y: -423px;
+}
+.weihuan-user .body .bar li:nth-child(9) i {
+    background-position-y: -485px;
+}
+.weihuan-user .body .bar li:nth-child(10) i {
+    background-position-y: -545px;
+}
+.weihuan-user .body .box {
+    float: right;
+    width: 1180px;
+    min-height: 530px;
+    background: #fff;
+    border-left: none;
+    position: relative;
+    border: 1px solid #e8e8e8;
+}
+.weihuan-user .body .box-item {
+    display: none;
+}
+.weihuan-user .body .box-item:nth-child(1) {
+    display: block;
+}
+.weihuan-user .body .box .box-nav{
+    background: #f5f5f5;
+}
+.weihuan-user .body .box .box-nav li{
+    text-align: center;
+    line-height: 29px;
+    font-size: 18px;
+    width: 196.5px;
+    cursor: pointer;
+    height: 81px;
+    float: left;
+    color: #000;
+}
+.weihuan-user .body .box .box-nav li.on{
+    background: #fff;
+    color: #feb32f;
+}
+.weihuan-user .body .box .box-nav li span{
+    width: 70px;
+    height: 50px;
+    margin: -2px auto 2px;
+    display: block;
+    background-position-y: -4px;
+    background: url(/web/images/user/box-nav.png) no-repeat;
+}
+.weihuan-user .body .box .box-nav li.on span{
+    background: url(/web/images/user/box-nav-on.png) no-repeat;
+    background-position-y: -4px;
+}
+.weihuan-user .body .box .box-nav li:nth-child(2) span {
+    /*background-position-x: -592px;*/
+    background-position-y: -4px;
+}
+.weihuan-user .body .box .box-nav li:nth-child(3) span {
+    /*background-position-x: -392px;*/
+    background-position-x: -592px;
+}
+.weihuan-user .body .box .box-nav li:nth-child(4) span {
+    /*background-position-x: -986px;*/
+    /*background-position-x: -784px;*/
+    background-position-x: -392px;
+}
+.weihuan-user .body .box .box-nav li:nth-child(5) span {
+    /*background-position-x: -986px;*/
+    background-position-x: -784px;
+}
+.weihuan-user .box-content{
+    margin-top: 40px;
+}
+.weihuan-user .box-item .left {
+    width: 600px;
+    padding-left: 30px;
+}
+.weihuan-user .box-item .left .pay-tips {
+    padding: 16px 20px;
+    color: #444;
+    background: #f5f5f5;
+    margin-bottom: 25px;
+}
+.weihuan-user .box-item .right{
+    width: 420px;
+    margin-top: 42px;
+    padding-right: 30px;
+}
+.weihuan-user .box-content .one li{
+    display: none;
+}
+.weihuan-user .box-content .one li:nth-child(1){
+    display: block;
+}
+.weihuan-user .box-item .title{
+    border-bottom: 1px solid #e41313;
+}
+.weihuan-user .box-item .title span{
+    color: #1b1b1b;
+    margin-top: 7px;
+    font-size: 24px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+.weihuan-user .box-item .title span.not-num{
+    display: block;
+    padding-bottom: 10px;
+}
+.weihuan-user .box-content .title img{
+    width: 62px;
+    height: 53px;
+}
+.weihuan-user .box-content select,
+.weihuan-record select{
+    width: 237px;
+    padding: 8px 9px;
+    background: #fff;
+    border-radius: 2px;
+    box-sizing: border-box;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #d2d2d2;
+    background-image: url(/web/images/user/arrow-down.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 207px;
+    margin: 30px 0 40px;
+}
+.weihuan-user .box-item .receipt-card-info {
+    text-align: center;
+    width: 100%;
+    background: #f5f5f5;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 35px;
+    font-size: 15px;
+}
+.weihuan-user .box-item .receipt-card-title{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 1px;
+    background: linear-gradient(#fd2525, #cd0303);
+}
+.weihuan-user .box-item .receipt-card-info tbody th{
+    font-weight: normal;
+    width: 50%;
+}
+.weihuan-user .box-item .left .pay-list{
+    display: none;
+}
+.weihuan-user .box-item .left .pay-list:nth-child(1) {
+    display: block;
+}
+.weihuan-user .box-content .card-num input,
+.weihuan-user .box-content .card-user input,
+.weihuan-user .box-content .username input,
+.weihuan-user .box-content .card-time input{
+    border: 1px solid #d2d2d2;
+    box-sizing: border-box;
+    margin: 30px 0 40px;
+    border-radius: 1px;
+    padding: 10px;
+    width: 237px;
+}
+.weihuan-user .box-content .three .steps{
+    margin: 30px 0 40px;
+}
+.weihuan-user .box-content .three .steps .amount{
+    display: inline-block;
+    vertical-align: middle;
+}
+.weihuan-user .box-content .three .steps .amount span{
+    background: url(/web/images/user/casino-chips.png) no-repeat;
+    margin: 0;
+    width: 67px;
+    height: 63px;
+    cursor: pointer;
+    display: inline-block;
+}
+.weihuan-user .box-content .three .steps .amount span:nth-child(2) {
+    background-position-x: -69px;
+}
+.weihuan-user .box-content .three .steps .amount span:nth-child(3) {
+    background-position-x: -140px;
+}
+.weihuan-user .box-content .three .steps .amount span:nth-child(4) {
+    background-position-x: -209px;
+}
+.weihuan-user .box-content .three .steps .amount span:nth-child(5) {
+    background-position-x: -278px;
+}
+.weihuan-user .box-content .three .steps .num input {
+    border: 1px solid #d2d2d2;
+    border-radius: 2px;
+    padding: 9px 15px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.weihuan-user .box-content .three .steps .num .cnt{
+    width: 60px;
+    height: 37px;
+    font-weight: 700;
+    background: #f1f1f1;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 8px;
+    margin-top: -3px;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+}
+.weihuan-user .box-content .three .steps .num p{
+    padding-left: 78px;
+    padding-top: 8px;
+    color: #666;
+}
+.weihuan-user .box-content .left .alipay {
+    cursor: pointer;
+    display: block;
+    margin: 25px 0 40px 9px;
+}
+.weihuan-user .box-content .left .alipay img{
+    width: 150px;
+}
+.weihuan-user .box-item .active-btn,
+.weihuan-addcrd-pop .addcrd-pop .pop-foot{
+    color: #fff;
+    width: 400px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    background: #000;
+    text-align: center;
+    line-height: 52px;
+    border-radius: 3px;
+    margin: 80px 0 35px;
+}
+.weihuan-user .box-item .active-btn span,
+.weihuan-addcrd-pop .addcrd-pop .pop-foot span{
+    background: -webkit-linear-gradient(155deg, #e7b478, #ffedd5, #eaae68);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.weihuan-user .box-content .right .body{
+}
+.weihuan-user .box-content .right .body > img{
+    width: 100%;
+}
+.weihuan-user .box-content .right  .head{
+    background: url(/web/images/user/right-head.jpg) no-repeat;
+    border-radius: 7px 7px 0 0;
+    background-size: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 9px 0;
+    color: #fff;
+}
+.weihuan-user .box-content .right .slider .head{
+    border-radius: 0;
+}
+.weihuan-user .box-content .right .head p{
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+.weihuan-user .box-content .right .swiper-slide img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+.weihuan-user .box-content .right .swiper-container{
+    background-size: 100% 100%;
+    padding: 20px 0;
+}
+.weihuan-user .right .tips{
+    padding: 20px 0;
+}
+.weihuan-user .right .tips p{
+    color: #1b1b1b;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.weihuan-user .right .tips li{
+    list-style-type: decimal;
+    font-size: 16px;
+    color: #888888;
+    padding: 10px 0;
+}
+.weihuan-user .right .service{
+    width: 145px;
+    background: #fff;
+    border: 1px solid #1b1b1b;
+    border-radius: 3px;
+    line-height: 45px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #1b1b1b;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.weihuan-user .right .service:hover{
+    background: #1b1b1b;
+    color: #fff;
+}
+.weihuan-user .box-item .addbankcard {
+    padding: 30px 30px 40px;
+}
+.weihuan-user .box-item .addbankcard label{
+    font-size: 16px;
+}
+.weihuan-user .box-item .addbankcard input{
+    font-weight: 400;
+    width: 280px;
+    padding: 8px 15px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    border: 1px solid #d6d6d6;
+}
+.weihuan-user .box-item .addbankcard .acct-name {
+    font-size: 16px;
+    margin-top: 23px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+.weihuan-user .box-item .addbankcard select {
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    border-radius: 2px;
+    padding: 8px 9px;
+    width: 279px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(/web/images/user/arrow-down.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 252px;
+    margin-bottom: 25px;
+}
+.weihuan-user .box-item .cards{
+    height: 56px;
+    width: 380px;
+    display: block;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #e31313;
+}
+.weihuan-user .box-item .cards p{
+    color: #1b1919;
+    text-align: right;
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 20px;
+    line-height: 52px;
+}
+.weihuan-user .box-item .bankcard span {
+    color: #888888;
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.weihuan-user .box-item .left .b .bankcard,
+.weihuan-user .box-item .left .b .deposit{
+    padding: 30px 0 40px;
+}
+.weihuan-user .box-item .left .b .deposit label{
+    font-size: 16px;
+}
+.weihuan-user .box-item .left .b .deposit p {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 30px;
+    color: #e41313;
+}
+.weihuan-user .box-item .left .b .deposit input {
+    border: 1px solid #d6d6d6;
+    margin: 25px 0;
+    border-radius: 2px;
+    padding: 9px 15px;
+    font-weight: 700;
+    width: 310px;
+}
+.weihuan-user .box-item .left > .a,
+.weihuan-user .box-item .left > .b,
+.weihuan-user .box-item .right{
+    margin-top: 30px;
+    width: 440px;
+}
+.weihuan-user .box-item .right .slider-body{
+    color: #000;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #fff;
+}
+.weihuan-user .box-item .right .slider-body .head{
+    background: #cf0404;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0;
+    color: #ffd800;
+    font-weight: 700;
+}
+.weihuan-user .box-item .right .slider-body .subhead {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 13px 30px 0;
+    font-size: 16px;
+    color: #fff;
+}
+.weihuan-user .box-item .right .slider-body .subhead .left{
+    width: 50%;
+    padding-left: 0;
+    text-align: center;
+}
+.weihuan-user .box-item .right .slider-body .subhead .left .left p:nth-child(2){
+    color: #ffc600;
+    margin-top: 10px;
+    text-align: center;
+}
+.weihuan-user .box-item .right .slider-body .subhead .left:nth-child(2) img{
+    width: 89px;
+    height: 80px;
+    margin-left: -15px;
+    margin-top: -11px;
+}
+.weihuan-user .box-item .right .slider-body .subhead > span{
+    background: #e1a71c;
+    height: 40px;
+    width: 1px;
+    display: inline-block;
+    margin-top: 13px;
+}
+.weihuan-user .box-item .right .slider-body .subhead .right {
+    width: 45%;
+    padding-right: 0;
+    margin-top: 0;
+    text-align: center;
+}
+.weihuan-user .box-item .right .slider-body .subhead .right .user-deposit {
+    height: 54px !important;
+    overflow: hidden;
+    background: transparent !important;
+}
+.weihuan-user .box-item .right .slider-body .subhead .right .user-deposit .slide{
+    cursor: pointer;
+    background: transparent !important;
+}
+.weihuan-user .box-item .right .slider-body .subhead .right .user-deposit ul{
+    margin-top: 9px;
+}
+.weihuan-user .box-item .right .slider-body .subhead .right .user-deposit li{
+    float: left;
+    text-align: center;
+    width: 50%;
+    color: #ffc000;
+}
+.weihuan-user .box-item .right .slider-body .subhead .right .layui-carousel>[carousel-item]:before{
+    display: none;
+}
+.weihuan-user .box-item .right .user-deposit-body{
+    height: 177px;
+    overflow: hidden;
+    border: 1px solid #ececec;
+}
+.weihuan-user .box-item .right .user-deposit-news{
+    height: 177px;
+    overflow: hidden;
+}
+.weihuan-user .box-item .right .user-deposit-nav{
+    justify-content: space-around;
+    background: #eaeaea;
+    overflow: hidden;
+    padding: 8px 0;
+    display: flex;
+}
+.weihuan-user .box-item .right .user-deposit-news ul{
+    display: flex;
+    justify-content: space-between;
+}
+.weihuan-user .box-item .right .user-deposit-news li{
+    width: 102px;
+    padding: 8px 0;
+    text-align: center;
+}
+.weihuan-user .box-item .right .user-deposit-bottom {
+    background: #cf0404;
+    overflow: hidden;
+    padding: 10px 0;
+    color: #fff;
+}
+.weihuan-user .box-item .right .user-deposit-bottom .left{
+    width: 50%;
+    padding-left: 0;
+    text-align: center;
+}
+.weihuan-user .box-item .right .user-deposit-bottom .left span{
+    font-weight: 600;
+    padding-top: 5px;
+    font-size: 15px;
+    display: block;
+}
+.weihuan-conversion .conversion .headconver {
+    background: #f5f5f5;
+    overflow: hidden;
+}
+.weihuan-conversion .headconver .mybalance {
+    float: left;
+    border: 1px solid #dedede;
+    width: 229px;
+    height: 846px;
+    text-align: center;
+    padding-top: 125px;
+    border-top: none;
+    border-left: 0;
+}
+.weihuan-conversion .headconver .converlist {
+    float: left;
+    border-right: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    width: 190px;
+    height: 108px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+.weihuan-conversion .headconver .mybalance img:nth-child(1){
+    display: block;
+    margin: 0 auto;
+}
+.weihuan-conversion .headconver .mybalance p {
+    font-size: 20px;
+    color: #1b1b1b;
+    font-weight: 700;
+    display: inline-block;
+}
+.weihuan-conversion .headconver .mybalance .refresh {
+    vertical-align: middle;
+    margin-left: 3px;
+    margin-top: -6px;
+    cursor: pointer;
+}
+.weihuan-conversion .conversion .headconver .mybalance span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #e41313;
+    line-height: 40px;
+    display: block;
+}
+.weihuan-conversion .headconver .mybalance .recycling {
+    background: #292f3f;
+    width: 192px;
+    height: 42px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weihuan-conversion .headconver .mybalance .recycling span {
+    background: -webkit-linear-gradient(155deg, #e7b478, #ffedd5, #eaae68);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.weihuan-conversion .headconver .converlist .refresh_centen img:nth-child(1){
+    width: 103px;
+    padding-bottom: 5px;
+}
+.weihuan-conversion .headconver .converlist p {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+}
+.weihuan-conversion .headconver .converlist .price {
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    color: rgb(228, 19, 19);
+}
+.weihuan-conversion .headconver .converlist .button-component {
+    margin-top: 11px;
+}
+.weihuan-conversion .headconver .converlist .button-component .btn {
+    border: 1px solid #000;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 5px 0 5px;
+    color: #000;
+}
+.weihuan-conversion .headconver .converlist .button-component .btn:first-child {
+    color: #feb32f;
+    border-color: #feb32f;
+}
+.weihuan-conversion .headconver .converlist > img {
+    position: absolute;
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    right: 12%;
+    top: 33%;
+}
+.weihuan-conversion .headconver .mybalance span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #e41313;
+    line-height: 40px;
+    display: block;
+}
+.weihuan-conversion .headconver{
+    background: #f5f5f5;
+}
+.weihuan-conversion .footconver {
+    padding: 40px 30px;
+    width: 500px;
+}
+.weihuan-conversion .footconver .form-deposit {
+    margin-top: 30px;
+    position: relative;
+}
+.weihuan-conversion .footconver label {
+    font-size: 16px;
+}
+.weihuan-conversion .footconver input {
+    color: #1b1b1b;
+    font-weight: 700;
+    padding: 9px 15px;
+    margin-bottom: 25px;
+    background: #eaeaea;
+    border: 1px solid #eaeaea;
+}
+.weihuan-conversion .footconver .form-deposit .switch {
+    position: absolute;
+    right: 26%;
+    top: 24%;
+    height: 18px;
+    margin-top: 6px;
+}
+.weihuan-conversion .footconver .form-deposit .switch:before {
+    top: -139%;
+    content: '';
+    width: 10px;
+    height: 24px;
+    position: absolute;
+    border-right: 1px solid #c6c6c6;
+    border-top: 1px solid #c6c6c6;
+}
+.weihuan-conversion .form-deposit .switch p {
+    background: #292f3f;
+    border-radius: 3px;
+    padding: 2px 5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #feb32f;
+}
+.weihuan-conversion .form-deposit .switch:after {
+    top: 129%;
+    content: '';
+    width: 10px;
+    height: 24px;
+    position: absolute;
+    border-right: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+}
+.weihuan-conversion .form-deposit select {
+    background: #fff;
+    border: 1px solid #dedede;
+    color: #0f0e0e;
+    border-radius: 2px;
+    padding: 8px 9px;
+    width: 237px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(/web/images/user/arrow-down.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 207px;
+    margin-bottom: 25px;
+}
+/*返利*/
+.weihuan-rebate .content {
+    padding: 30px 50px;
+}
+.weihuan-rebate .disc-level .disc-table {
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 6px 30px #f3f3f3;
+}
+.weihuan-rebate .content .title{
+    width: 150px;
+}
+.weihuan-rebate .disc-level .disc-tablemn {
+    float: left;
+    width: 26.66%;
+    text-align: center;
+    height: 155px;
+    box-sizing: border-box;
+    border-right: 1px solid #f0f0f0;
+}
+.weihuan-rebate .disc-level .disc-tablemn:last-child{
+    border-right: 0;
+}
+.weihuan-rebate .disc-level .disc-tablemn.ranks {
+    width: 20%;
+}
+.weihuan-rebate .disc-level .disc-tablemn .disc-title {
+    background: #f0f0f0;
+    font-weight: 700;
+    line-height: 50px;
+    font-size: 18px;
+    color: #000;
+    height: 50px;
+}
+.weihuan-rebate .disc-level .disc-tablemn .disc-title p {
+    font-size: 18px;
+    color: #000 !important;
+    font-family: inherit;
+    line-height: 50px;
+    font-weight: 700;
+    background: none;
+    -webkit-text-fill-color: #000;
+}
+.weihuan-rebate .disc-level .disc-tablemn.ranks .disc-title p {
+    line-height: 34px;
+}
+.weihuan-rebate .disc-level .disc-tablemn.ranks .disc-title p span {
+    display: block;
+    font-size: 12px;
+    line-height: 7px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.weihuan-rebate .disc-level .disc-tablemn.ranks img {
+    width: 110px;
+}
+.weihuan-rebate .disc-level .disc-tablemn > p {
+    color: #ea183e;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 108px;
+}
+.weihuan-rebate .steps.two{
+    padding-top: 30px;
+}
+.weihuan-rebate .recredit {
+    margin-top: 20px;
+}
+.weihuan-rebate .recredit .credbox {
+    width: 348px;
+    height: 103px;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+    box-shadow: 0 6px 30px #f3f3f3;
+    float: left;
+    margin-right: 15px;
+}
+.weihuan-rebate .recredit .credbox:last-child {
+    margin-right: 0;
+}
+.weihuan-rebate .recredit .cred-header {
+    background: #f0f0f0;
+    overflow: hidden;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 12px;
+}
+.weihuan-rebate .recredit .cred-header img {
+    margin-top: 3px;
+    float: left;
+}
+.weihuan-rebate .recredit .cred-header p {
+    float: left;
+    font-weight: 700;
+    font-size: 18px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.weihuan-rebate .recredit .cred-header .pull-right{
+    float: right;
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.weihuan-rebate .recredit .credbody .cdt {
+    border-right: 1px solid #ececec;
+    padding: 8px 14px 2px;
+    font-size: 16px;
+    width: 41%;
+}
+.weihuan-rebate .recredit .credbody .cdt span {
+    color: #e41313;
+    font-size: 20px;
+    line-height: 35px;
+}
+.weihuan-rebate .recredit .credbody .cdt:last-child {
+    border: none;
+}
+.weihuan-rebate .cred-submit {
+    margin-top: 45px;
+}
+.weihuan-rebate .cred-submit p{
+    display: inline-block;
+    font-size: 16px;
+}
+.weihuan-rebate .cred-submit > span {
+    font-size: 30px;
+    color: #e41313;
+    font-weight: 700;
+}
+.weihuan-rebate .cred-submit .active-btn{
+    margin-top: 10px !important;
+}
+.weihuan-record{
+    padding: 30px;
+}
+.weihuan-record .fundnavs p {
+    font-size: 14px;
+    color: #292f3f;
+    display: inline-block;
+}
+.weihuan-record .fundnavs ul {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+.weihuan-record .fundnavs ul li {
+    width: 65px;
+    height: 30px;
+    float: left;
+    font-size: 14px;
+    color: #1b1b1b;
+    background: #e0e0e0;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.weihuan-record .fundnavs ul li.on {
+    background: #feb32f;
+    color: #fff;
+}
+.weihuan-record .fundnavs.layui-form select {
+    margin: 0;
+    cursor: pointer;
+    width: 190px !important;
+    display: block !important;
+    background-position-x: 160px;
+    border-color: #e2e2e2 !important;
+}
+.weihuan-record .fundnavs .transacdate {
+    background: #000;
+    font-size: 16px;
+    color: #feb32f;
+    border: none;
+    width: 95px;
+    padding: 0;
+    cursor: pointer;
+    margin-bottom: 0;
+    margin-left: 10px;
+    border-radius: 3px;
+    line-height: 38px;
+    text-align: center;
+}
+.weihuan-record .tablebox table {
+    width: 100%;
+    padding: 25px;
+    text-align: left;
+    border-collapse: inherit;
+}
+.weihuan-record .tablebox table th {
+    background: #e5e5e5;
+    padding: 13px 18px;
+    color: #666;
+}
+.weihuan-record .tablebox table td {
+    color: #888;
+    padding: 13px 18px;
+    background: #f8f8f8;
+    border-left: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+.weihuan-record .tablebox table td:last-child {
+    border-right: 1px solid #eaeaea;
+}
+/*.weihuan-record .pagetable {
+    position: absolute;
+    bottom: 0;
+    right: 3.3%;
+}
+.weihuan-record .pagetable p {
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    color: #000;
+}
+.weihuan-record .pagetable ul {
+    margin: 0 12px;
+    vertical-align: middle;
+    }*/
+    /*역 뉴스*/
+    .weihuan-user-news{
+        padding: 40px 0 30px;
+    }
+    .weihuan-user-news .tabline {
+        width: 100%;
+        height: 21px;
+        border-bottom: 1px solid #1c85c3;
+        position: relative;
+        z-index: 1;
+    }
+    .weihuan-user-news .news-tab {
+        position: absolute;
+        top: -19px;
+        z-index: 2;
+        width: 100%;
+    }
+    .weihuan-user-news .news-tab ul li.on {
+        border: 1px solid #1c85c3;
+        border-bottom: 1px solid #fff;
+        color: #1c85c3;
+    }
+    .weihuan-user-news .news-tab ul li {
+        float: left;
+        border: 1px solid #e4e4e4;
+        background: #fff;
+        border-bottom: none;
+        width: 85px;
+        line-height: 39px;
+        text-align: center;
+        margin-right: 10px;
+        font-weight: 700;
+        cursor: pointer;
+        color: #797979;
+    }
+    .weihuan-user-news .news-tab ul li:nth-child(1){
+        margin-left: 30px;
+    }
+    .weihuan-user-news .user-news {
+        padding: 30px;
+    }
+    .weihuan-user-news .user-news h2{
+        align-items: center;
+        font-size: 13px;
+        color: #ababab;
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .weihuan-user-news .user-news h1 {
+        align-items: center;
+        font-size: 18px;
+        color: #000000;
+        display: flex;
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+    .weihuan-user-news .user-news h1 img {
+        width: 16px;
+        padding-right: 5px;
+    }
+    .weihuan-user-news .user-news p{
+        padding-top: 5px;
+    }
+    .weihuan-user-news .user-news .list{
+        display: none;
+    }
+    .weihuan-user-news .user-news .list:nth-child(1){
+        display: block;
+    }
+    .weihuan-user-news .user-news .list li {
+        background: #f6f7f8;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    /*개인 정보*/
+    .weihuan-personal{
+        padding: 40px;
+    }
+    .weihuan-personal .tab {
+        border: 1px solid #e8e8e8;
+        background: #f5f5f5;
+    }
+    .weihuan-personal .profilepic {
+        background: #1b1b1b;
+        width: 100px;
+        height: 100px;
+        margin-right: 18px;
+    }
+    .weihuan-personal .firstcontent .pull-left p {
+        color: #9a9a9a;
+        display: inline-block;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .weihuan-personal .alertperson {
+        padding: 12px;
+        margin-top: 30px;
+        background: #fff3ea;
+        border-radius: 2px;
+        border: 1px solid #ff9b57;
+    }
+    .weihuan-personal .alertperson img {
+        vertical-align: -5px;
+    }
+    .weihuan-personal .secondcontent.tab{
+        margin-top: 30px;
+        background: #fff;
+    }
+    .weihuan-personal .secondcontent .sec {
+        height: 215px;
+    }
+    .weihuan-personal .secondcontent .sec:first-child {
+        height: 190px;
+        border-bottom: 1px solid #e4e4e4;
+    }
+    .weihuan-personal .secondcontent .sec .pull-left:first-child {
+        background: #f5f5f5;
+        text-align: center;
+        width: 200px;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .weihuan-personal .secondcontent .sec .pull-left:first-child p {
+        font-size: 20px;
+        color: #5a5a5a;
+        margin-bottom: 0;
+        font-weight: 700;
+    }
+    .weihuan-personal .lsts {
+        border: 1px solid #515151;
+        border-radius: 2px;
+        padding: 0 15px;
+        width: 285px;
+        float: left;
+        height: 145px;
+        margin-left: 15px;
+        position: relative;
+        margin-top: 22px;
+    }
+    .weihuan-personal .lsts.choose:before {
+        content: '';
+        background: url(/web/images/user/card-tag.png) no-repeat;
+        right: -0.5%;
+        top: -1.5%;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+    }
+    .weihuan-personal .lsts img {
+        width: 55%;
+        margin-top: 2px;
+    }
+    .weihuan-personal .lsts p {
+        font-weight: 700;
+    }
+    .weihuan-personal .lsts p.actnumber {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .weihuan-personal .lsts.addcrd {
+        border: 1px solid #b7b7b7;
+        cursor: pointer;
+    }
+    .weihuan-personal .lsts.addcrd p {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 63px;
+        font-size: 18px;
+    }
+    .weihuan-personal .lsts.addcrd p:before {
+        content: '';
+        width: 28px;
+        height: 28px;
+        display: block;
+        padding-right: 5px;
+        background: url(/web/images/user/plus.png) no-repeat;
+        background-size: 100%;
+    }
+    .weihuan-personal .sec:last-child .pull-left:last-child {
+        padding: 0;
+        padding-top: 20px;
+        padding-left: 30px;
+    }
+    .weihuan-personal .secondcontent .sec:last-child p {
+        display: inline-block;
+        color: #9d9d9d;
+        margin-bottom: 12px;
+    }
+    .weihuan-personal .personal {
+        border: 1px solid #d0d0d0;
+        border-radius: 2px;
+        padding: 6px 13px;
+        font-weight: 100;
+        margin-bottom: 8px;
+        width: 200px;
+    }
+    .weihuan-personal #personal {
+        border: 1px solid #c6c6c6;
+        border-radius: 3px;
+        color: #1b1b1b;
+        font-weight: 700;
+        margin-bottom: 11px;
+        bottom: 54px;
+        width: 90px;
+        padding: 0;
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+        background: #f5f5f5;
+    }
+    .weihuan-personal .firstcontent.tab.clear {
+        padding: 20px;
+    }
+    /*암호 수정*/
+    .weihuan-pass .form-settings {
+        width: 40%;
+        margin: 80px auto;
+        text-align: center;
+    }
+    .weihuan-pass .settings label {
+        color: #666666;
+        width: 85px;
+        text-align: right;
+        margin-right: 7px;
+        display: inline-block;
+        font-size: 16px;
+    }
+    .weihuan-pass input {
+        border: 1px solid #d4d4d4;
+        border-radius: 0;
+        padding: 9px 15px;
+        color: #1b1b1b;
+        font-weight: 700;
+        margin-bottom: 5px;
+        margin-top: 20px;
+        width: 285px;
+    }
+    .weihuan-pass .wronged input {
+        border: 1px solid #f34235;
+    }
+    .weihuan-pass .setbtn {
+        background: #2772ee;
+        border-radius: 3px;
+        width: 155px;
+        height: 45px;
+        line-height: 45px;
+        color: #fff;
+        text-align: center;
+        display: block;
+        margin-top: 40px;
+        margin-left: 164px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .weihuan-pass .form-settings label {
+        width: 90px;
+        display: inline-block;
+    }
+
+
+    /*우리에 대해*/
+    .weihuan-about {
+        padding: 30px 60px;
+    }
+    .weihuan-about h1{
+        font-size: 23px;
+        font-weight: 900;
+        padding-bottom: 20px;
+    }
+    .weihuan-about .about p {
+        color: #333;
+        line-height: 23px;
+        letter-spacing: 0.5px;
+        padding-bottom: 7px;
+    }
+
+
+    /*帮助中心*/
+    .weihuan-help > h1{
+        background-color: #f0f0f0;
+        line-height: 50px;
+        padding-left: 40px;
+        font-size: 14px;
+    }
+    .weihuan-help > h1 span{
+        color: #d61616;
+        font-weight: 900;
+    }
+    .weihuan-help .help > div{
+        padding: 0 40px;
+    }
+    .weihuan-help .help .btn {
+        margin: 10px 0 20px;
+    }
+    .weihuan-help .help .btn a{
+        display: inline-block;
+        background-color: #222222;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #feb32f;
+        border: 0;
+        height: 34px;
+        padding: 0 20px;
+        margin-top: 10px;
+        line-height: 34px;
+        margin-right: 20px;
+    }
+    .weihuan-help .help .info {
+        border-top: 1px solid #dadada;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    .weihuan-help .help .info .title {
+        display: flex;
+        font-size: 24px;
+        font-weight: 900;
+        border-bottom: 0;
+        align-items: center;
+    }
+    .weihuan-help .help .info .title .line {
+        width: 5px;
+        height: 26px;
+        margin-right: 10px;
+        background-image: linear-gradient(180deg, #ffffff 0%, #080808 100%), linear-gradient(#d10606, #d10606);
+    }
+    .weihuan-help .help .info h3{
+        font-size: 23px;
+        padding-top: 5px;
+    }
+    .weihuan-help .help .info p {
+        margin-left: 16px;
+        margin-top: 10px;
+    }
+    .weihuan-help .help .info a {
+        color: #00a2ff;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    .weihuan-help .help .info p img {
+        max-width: 100%;
+    }
+    .weihuan-user.help .body:nth-child(1){
+        display: block;
+    }
+    .weihuan-help .help.sb .info p{
+        font-family: SimHei;
+        font-size: 14px;
+        color: #666;
+    }
+    .weihuan-help .help.sb .info .info-title{
+        color: #de0f0f;
+    }
+    .weihuan-user.help .browser{
+        display: block;
+        padding: 40px;
+        background: #fff;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+    }
+    .weihuan-user.help .body.browser img{
+        display: block;
+        margin: auto;
+    }
+    .weihuan-user.help .body{
+        display: none;
+    }
+
+
+    /*加盟*/
+    .weihuan-join-head .head {
+        display: flex;
+        height: 101px;
+        font-size: 16px;
+        align-items: center;
+        background: -o-linear-gradient(#363636 20%, #191919);
+        background: -moz-linear-gradient(#363636 20%, #191919);
+        background-image: linear-gradient(360deg, #cd0303 10%, #e41313 50%);
+    }
+    .weihuan-join-head .head .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: none;
+    }
+    .weihuan-join-head .head .logo {
+        padding-top: 6px;
+    }
+    .weihuan-join-head .head .logo img{
+        width: 202px;
+    }
+    .weihuan-join-head .head .menu li {
+        float: left;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        width: 135px;
+        height: 101px;
+        color: #fff;
+        line-height: 101px;
+        text-align: center;
+    }
+    .weihuan-join-head .head .menu li.on {
+        background: linear-gradient(360deg, #cd0303 10%, #e41313 50%);
+        border-bottom: 3px solid #ffc938;
+        color: #ffc938;
+    }
+    .weihuan-join .body .swiper-slide img {
+        width: 100%;
+    }
+    .weihuan-join .body{
+        display: none;
+    }
+    .weihuan-join .body:nth-child(1){
+        display: block;
+    }
+    .weihuan-join .body .join {
+        width: 1200px;
+        margin: auto;
+        padding: 40px 0;
+    }
+    .weihuan-join .body .join h1 {
+        text-align: center;
+        font-size: 23px;
+        font-weight: 600;
+        padding: 30px 0 20px;
+    }
+    .weihuan-join .body .join p {
+        color: #333;
+        letter-spacing: 1px;
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .weihuan-join .body .join a.btn {
+        color: #fff;
+        cursor: pointer;
+        margin-top: 50px;
+        padding: 10px 25px;
+        border-radius: 2px;
+        background: #e41313;
+        display: inline-block;
+    }
+    .weihuan-join .body .join table {
+        width: 50%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .weihuan-join .body table tr:first-child {
+        background: linear-gradient(360deg, #cd0303 10%, #e41313 50%);
+    }
+    .weihuan-join .body table tr:first-child td {
+        color: #fff;
+    }
+    .weihuan-join .body table td {
+        border: 1px solid #e01010;
+        line-height: 30px;
+        font-size: 15px;
+    }
+    .weihuan-join .body.login{
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 700px;
+    }
+    .weihuan-join .body .login-container,
+    .weihuan-join .body .reg-container{
+        color: #fff;
+        width: 390px;
+        margin: 70px auto;
+        text-align: center;
+        border-radius: 4px;
+        padding: 33px 0 20px;
+        box-sizing: border-box;
+        background: rgba(8, 8, 8, 0.6);
+    }
+    .weihuan-join .body .login-container h2,
+    .weihuan-join .body .reg-container h2{
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .weihuan-join .body .login-container .textbox {
+        background: #e2e2e2;
+        width: 300px;
+        height: 40px;
+        border-radius: 2px;
+        margin: 20px auto;
+        line-height: 40px;
+        text-align: left;
+    }
+    .weihuan-join .body .login-container .textbox img {
+        width: 30px;
+        margin: 0 8px;
+        vertical-align: middle;
+    }
+    .weihuan-join .body .login-container .textbox label {
+        color: #999;
+    }
+    .weihuan-join .body .login-container .textbox input,
+    .weihuan-join .body .reg-container .textbox input {
+        background: transparent;
+        border: none;
+        padding-left: 20px;
+        width: 65%;
+    }
+    .weihuan-join .body .login-container .textbox input:focus .weihuan-join .body .reg-container .textbox,
+    .weihuan-join .body .reg-container .textbox input:focus .weihuan-join .body .reg-container .textbox{
+        border: 1px solid #f2f2f2;
+    }
+    .weihuan-join .body .submitlogin {
+        background: #2e71eb;
+        text-align: center;
+        line-height: 45px;
+        width: 77%;
+        color: #fff;
+        height: 45px;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+        border-radius: 2px;
+        border: none;
+    }
+    .weihuan-join .body .login-container span {
+        color: #5e93f3;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+        padding-bottom: 3px;
+        display: inline-block;
+        border-bottom: 1px solid #5e93f3;
+    }
+    .weihuan-join .body .reg-container .textbox {
+        width: 90%;
+        border-radius: 2px;
+        margin: 20px auto;
+        line-height: 43px;
+        text-align: left;
+        position: relative;
+        background: #ffffff0d;
+        border: 1px solid #9bbbf6;
+    }
+    .weihuan-join .body .reg-container .textbox label {
+        width: 100px;
+        color: #f2f2f2;
+        text-align: center;
+        display: inline-block;
+    }
+    .weihuan-join .body .reg-container .textbox i {
+        width: 1px;
+        height: 15px;
+        background: #ad9dec;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    input#regsub-a {
+        vertical-align: -2px;
+    }
+    .weihuan-join .body .reg-container .regsubmit {
+        background: #2e71eb;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+        width: 90%;
+        font-size: 18px;
+        margin: 25px auto 15px;
+        border-radius: 2px;
+        display: block;
+        cursor: pointer;
+    }
+    span#gologin {
+        cursor: pointer;
+        color: #bdbdbd;
+    }
+
+
+    /*个人中心예금*/
+    .weihuan-deposit-pop .layui-layer-content {
+        background: #f5f5f5;
+    }
+    .weihuan-deposit-pop .deposit-pop {
+        text-align: center;
+        padding: 20px;
+    }
+    .weihuan-deposit-pop .deposit-pop .pop-header {
+        background: #fff;
+        padding: 10px;
+    }
+    .weihuan-deposit-pop .deposit-pop .pop-header img {
+        width: 135px;
+    }
+    .weihuan-deposit-pop .deposit-pop .pop-body {
+        margin-top: 20px;
+        padding: 20px 0;
+        background: #fff;
+    }
+    .weihuan-deposit-pop .deposit-pop .balamt h1 {
+        font-size: 50px;
+    }
+    .weihuan-deposit-pop .deposit-pop .balamt p{
+        font-size: 18px;
+        padding-top: 8px;
+        color: red;
+    }
+    .weihuan-deposit-pop .deposit-pop .balamt img{
+        width: 310px;
+        padding: 15px 0;
+    }
+    .weihuan-deposit-pop .deposit-pop .pop-body > p {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 23px;
+    }
+    .weihuan-deposit-pop .deposit-pop .pop-foot{
+        border-top: 1px dashed #e5e5e5;
+        background: #fff;
+        padding: 10px 0;
+        font-size: 15px;
+    }
+    .weihuan-addcrd-pop .addcrd-pop .pop-header{
+        background: linear-gradient(#fd2525, #cd0303);
+        background: -o-linear-gradient(#fd2525, #cd0303);
+        background: -moz-linear-gradient(#fd2525, #cd0303);
+        background: linear-gradient(#fd2525, #cd0303);
+        padding: 11px 0;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 4px 4px 0 0;
+        color: #fff;
+    }
+    .weihuan-addcrd-pop .addcrd-pop .pop-body {
+        padding: 30px 38px;
+        font-size: 0;
+    }
+    .weihuan-addcrd-pop .addcrd-pop .pop-body span{
+        width: 60px;
+        font-size: 15px;
+        font-weight: 700;
+        display: inline-block;
+    }
+    .weihuan-addcrd-pop .addcrd-pop .pop-body p{
+        width: 230px;
+        padding: 10px;
+        font-size: 15px;
+        color: #2196F3;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    .weihuan-addcrd-pop .addcrd-pop input, .weihuan-addcrd-pop .addcrd-pop select {
+        font-weight: 400;
+        width: 252px;
+        border-radius: 2px;
+        padding: 13px;
+        background: #f3f3f3;
+        border: 0;
+        margin-left: 10px;
+        margin-bottom: 15px;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+    .weihuan-addcrd-pop .addcrd-pop .pop-foot{
+        width: 80%;
+        margin: auto;
+    }
+
+
+
+
+    /*侧边栏*/
+    .weihuan-aside{
+        z-index: 5;
+        width: 203px;
+        right: -203px;
+        position: fixed;
+        text-align: center;
+        top: calc(50% - 110px);
+        transition: right 0.4s ease-out;
+    }
+    .weihuan-aside:hover{
+        right: 0;
+    }
+    .weihuan-aside .content{
+        position: relative;
+        padding:0;
+    }
+    .weihuan-aside .call{
+        left: -45px;
+        top: -34px;
+        width: 24.3%;
+        height: 215px;
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .weihuan-aside .call span{
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        letter-spacing: 6px;
+        position: absolute;
+        cursor: default;
+        font-size: 16px;
+        color: #fed52f;
+        right: 27%;
+        top: 42%;
+    }
+    .weihuan-aside .list {
+        padding: 10px;
+        background: #1b1b1b;
+        border-radius: 0 0 0 5px;
+    }
+    .weihuan-aside .list li{
+        width: 180px;
+        color: #fed52f;
+        font-size: 12px;
+        cursor: pointer;
+        position: relative;
+        line-height: 34px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: solid 1px #8f8585;
+        background-color: transparent;
+    }
+    .weihuan-aside .list li:last-child{
+        margin-bottom: 0;
+    }
+    .weihuan-aside .list li img.icon{
+        position: absolute;
+        left: 6px;
+        top: 8px;
+    }
+    .weihuan-aside .list li .qr-code{
+        width: 80%;
+        padding: 20px 0;
+    }
+    .weihuan-aside-red{
+        z-index: 5;
+        width: 200px;
+        right: 0;
+        position: fixed;
+        text-align: center;
+        top: calc(50% + 100px);
+    }
+    .weihuan-aside-red img{
+        z-index: 5;
+        width: 55px;
+        right: 0;
+        position: fixed;
+        text-align: center;
+        top: calc(50% + 100px);
+    }
+
+
+    /*제시登录*/
+    .weihuan-pop-login .pop-header{
+        padding: 10px 0;
+        text-align: center;
+        background: linear-gradient(#fd2525, #cd0303);
+    }
+    .weihuan-pop-login .pop-header img{
+        width: 85px;
+    }
+    .weihuan-pop-login .pop-body{
+        background-image: url(/web/images/pop-login-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 60px 85px 50px;
+    }
+    .weihuan-pop-login .pop-body .list{
+        height: 35px;
+        border: none;
+        display: block;
+        font-size: 14px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        background: rgba(6, 4, 5, 0.05);
+    }
+    .weihuan-pop-login .pop-body .list .pull-left img {
+        vertical-align: middle;
+        margin-top: -6px;
+        margin-left: 10px;
+        margin-right: 2px;
+    }
+    .weihuan-pop-login .pop-body .list .pull-left label {
+        line-height: 36px;
+        color: rgba(14, 14, 14, 0.49);
+    }
+    .weihuan-pop-login .pop-body .list input {
+        border: 0;
+        float: right;
+        margin-top: 4px;
+        margin-right: 10px;
+        background: transparent;
+        text-align: left;
+        padding: 5px;
+    }
+    .weihuan-pop-login .pop-body .switch {
+        width: 29px;
+        height: 18px;
+        margin-top: 6px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .weihuan-pop-login .pop-body .switch input{
+        display: none;
+    }
+    .weihuan-pop-login .pop-body .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: .4s;
+        width: 100%;
+        height: 100%;
+        background: #ccc;
+        border-radius: 25px;
+        display: inline-block;
+    }
+    .weihuan-pop-login .pop-body .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: -8px;
+        bottom: -2px;
+        transition: .4s;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid #e2e2e2;
+    }
+    .weihuan-pop-login .pop-body .toggle-checked:checked + .slider{
+        background: #eab950;
+    }
+    .weihuan-pop-login .pop-body .toggle-checked:checked + .slider:before{
+        transform: translateX(23px);
+    }
+    .weihuan-pop-login .pop-body .switch-text {
+        color: #1c1c1c;
+        display: inline-block;
+        font-size: 14px;
+        margin-left: 10px;
+        vertical-align: middle;
+        margin-top: 5px;
+    }
+    .weihuan-pop-login .pop-body .jazzbtn {
+        background: #ce0000;
+        border-radius: 4px;
+        text-align: center;
+        margin: 30px auto 10px;
+        width: 200px;
+        height: 45px;
+        color: #fff;
+        line-height: 45px;
+        font-size: 16px;
+        display: block;
+        cursor: pointer;
+    }
+    .weihuan-pop-login .pop-login-code {
+        width: 68px;
+        cursor: pointer;
+        margin-top: 5px !important;
+    }
+
+
+
+
+
+    /*底部*/
+    .weihuan-footer{
+        padding: 50px 0;
+        background-color: #f2f2f2;
+        border-top: 1px solid #ececec;
+    }
+    .weihuan-footer h1{
+        color: #424242;
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .weihuan-footer p{
+        text-align: justify;
+        margin-top: 25px;
+        font-size: 14px;
+        color: #424242;
+        line-height: 26px;
+    }
+    .weihuan-footer .left{
+        width: 325px;
+    }
+    .weihuan-footer .right img{
+        width: 100%;
+        margin-top: 25px;
+    }
+    .weihuan-footernav{
+        font-size: 12px;
+        height: 32px;
+        background-color: #1d160c;
+        color: #f2f2f2;
+        line-height: 32px;
+        text-align: center;
+    }
+    .weihuan-footernav a{
+        color: #f2f2f2;
+        font-weight: 700;
+    }
+    /* 资金녹음分页 */
+    .tcdPageCode,.ttcdPageCode,.msg-page {
+        padding: 0 20px 15px;
+        text-align: left;
+        color: #ccc;
+        text-align: center;
+    }
+    .tcdPageCode span.disabled,.ttcdPageCode span.disabled ,.msg-page span.disabled{
+        display: inline-block;
+        height: 25px;
+        line-height: 25px;
+        padding: 0 10px;
+        margin: 0 2px;
+        color: #bfbfbf;
+        background: #f2f2f2;
+        border: 1px solid #bfbfbf;
+        border-radius: 4px;
+        vertical-align: middle;
+    }
+    .tcdPageCode span.current,.ttcdPageCode span.current,.msg-page span.current{
+        display: inline-block;
+        height: 25px;
+        line-height: 25px;
+        padding: 0 10px;
+        margin: 0 2px;
+        color: #fff;
+        background-color: #d30707;
+        border: 1px solid #d30707;
+        border-radius: 4px;
+        vertical-align: middle;
+    }
+    .msg-page a {
+    display: inline-block;
+    color: #333;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+    border-radius: 4px;
+    vertical-align: middle;}
+    /*layui相关*/
+    .layui-layer-title{
+        background: linear-gradient(#fd2525, #cd0303) !important;
+        color: #fff !important;
+    }
+    .layui-layer-btn a{
+        border: none !important;
+        background: linear-gradient(#fd2525, #cd0303) !important;
+    }
+
+
+    #pay-h {
+        width: 100px;
+        -webkit-appearance: menulist;
+
+    }
+    #pay-f {
+        width: 100px;
+        -webkit-appearance: menulist;
+
+    }
+    #pay-m {
+        width: 100px;
+        -webkit-appearance: menulist;
+
+    }
+    textarea.litextbox {
+        height: 100px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        overflow: hidden;
+        width: 333px;
+        resize: none;
+    }
+    .idfisjafijaskj{
+       border: none !important;
+       line-height: normal !important;
+   }
+   /*自适应*/
+   @media screen and (max-width: 1366px){
+    .container {
+        max-width: 1158px;
+        padding:0;
+    }
+    .weihuan-header .nav .container li{
+        margin-right: 34px;
+        line-height: 34px;
+    }
+    .weihuan-gf .fishing{
+        top: 9%;
+        left: 11%;
+    }
+    .weihuan-lt img.button{
+        top: 45%;
+        right: 19%;
+        width: 12%;
+    }
+}
+
+
+@media (max-width: 1920px) and (min-width: 1900px){
+    .weihuan-vip .grade{
+        width: 1575px;
+        margin: 80px auto 0;
+        margin-right: 100px;
+    }
+}
+
+
+
+@media screen and (min-width: 1330px){
+    .iui-header-a{
+        padding: 0 50px;
+    }
+}
+
+
+/*动画*/
+@keyframes line-grow {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 75%;
+    }
+}
+/*后加*/
+table.receipt-card-info>tbody {
+    border-bottom: 1px solid #c7c7c7
+}
+.weihuan-join-head .join-home .menu {
+   float:right;
+}
+.weihuan-join-head .join-home > li {
+    font-weight: 700;
+    float: left;
+    width: 135px;
+    height: 101px;
+    line-height: 101px;
+    text-align: center;
+}
+.weihuan-join-head .join-home > li a{
+    color: #fff;
+    display: block;
+}
+.exchange > .game-api {
+    margin: 10px 7px 5px 7px;
+    border: 1px solid #050505;
+    width: 31%;
+    height: 90px;
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.game-api .clearfix {
+    border-top: 1px solid #050505;
+}
+.pull-left {
+    float: left!important;
+}
+.primary {
+    color: #2772ee;
+}
+.game-api p.game-left {
+    float: left;
+    display: inline-block;
+    margin-right: 38px;
+}
+.game-api p.game-right {
+    max-width: 180px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.game-api p.game-right > .title {
+    max-width: 75px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    border-bottom: none;
+}
+.exchange > .game-api:hover {
+    border: 1px solid #d0dcf0;
+}
+.game-api .clearfix a {
+    display: inline-block;
+    margin-top: 6px;
+}
+.info-container .info {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ECE8E9;
+    border-radius: 5px;
+    background-color: #F8F8F8;
+    margin-bottom: 20px;
+}
+.info-container {
+    color: #333;
+}
+.turn-action {
+    margin: 15px auto;
+}
+.text-center {
+    text-align: center;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px
+    12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px
+    solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+.turn-action a.active {
+    color: #fff;
+    background-color: #221d1f;
+}
+.btn-primary {
+    /* background-color: #9e0808 !important; */
+    background-color: #221d1f !important;
+    border-color: #5e0b05 !important;
+    color: #fff;
+}

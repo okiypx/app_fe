@@ -1,0 +1,239 @@
+﻿/* 서브 공용 */
+.subLayerPop {width: 100%;min-width:1000px;height: 1097px;position:absolute;top:0px;left:0;/* margin-left: -500px; */overflow: hidden;}
+.subBg {width:100%;height: 1100px;background-color:#000;opacity:0.8;position:absolute;top:0;left:0;}
+.subWrap {width: 1000px;height: 720px;margin: 100px auto;position: relative;background: url(img/bg_sub.png) no-repeat top left;}
+.subMain {font-size: 14px;color: #fff;}
+.subHeaderWrap {width: 100%;height: 96px;position:relative;}
+.subTitle {height: 32px;font-size: 24px;position:absolute;top:46px;left: 440px;}
+.subDesc {position:absolute;bottom: 10px;right:78px;font-size: 12px;text-align: right;}
+.subCont {width: 846px;height:560px;background-color: #292422;color: #fff;border: 1px solid #ffa800;box-sizing: border-box;}
+.dash {width: 14px;height:18px;display: inline-block;font-size: 30px;vertical-align: text-bottom;text-align:center;}
+.notice {font-size: 12px;font-weight:bold;letter-spacing: -1px;}
+.red {color: #f50000;}
+.yellow {color: #ffde00;}
+select {background-color:#000;border: 0 none;}
+/* 페이징 */
+.paging {width: 160px;height: 20px;font-size: 16px;margin: 20px auto;}
+.paging li {float: left;width: 20px;text-align:center;}
+.paging li a{display: block;}
+.paging li.on a{color: #e9d10b;}
+.btnClose {position:absolute;top:18px;right:16px;}
+
+/* //서브 공용 */
+
+/* 쿠폰사용 */
+.couponWrap .subCont tbody{text-align: center;}
+.couponWrap .subCont th{height: 58px;font-size: 16px;text-align:center;border-bottom: 1px solid #ffa800;}
+.couponWrap .subCont th span{height: 22px;display: block;line-height: 20px;border-left: 1px solid #fff;}
+.couponWrap .subCont th:first-child span{border-left: 0 none;}
+.couponWrap .subCont td{height: 50px;font-size: 14px;}
+.couponWrap .subCont .notUseCoupon {color: #e9d10b;}
+.couponWrap .subCont .date {display: block;}
+
+/* 이벤트신청 */
+.eventWrap .subCont tbody{}
+.eventWrap .subCont th, .eventWrap .subCont td{height: 58px;padding-left: 20px;border-bottom: 1px solid #ffa800;box-sizing:border-box;}
+.eventWrap .subCont th{font-size: 16px;}
+.eventWrap .subCont td{font-size: 14px;}
+.eventWrap .subCont td select, .eventWrap .subCont td input {width: 160px;height: 30px;padding-left: 14px;}
+.eventWrap .subCont td select{color:#fff;}
+.eventWrap .subCont td select#gameSel{width:160px;margin-right: 20px;}
+.eventWrap .subCont td select#phone{width:80px;}
+.eventWrap .subCont td input[type="text"]{border: 0 none;background-color: #fff;box-sizing: border-box;}
+.eventWrap .subCont td input.phone{width:130px;}
+.eventWrap .subCont td input#phoneLast{margin-right: 10px;}
+.eventWrap .subCont .txt {vertical-align:top;}
+.eventWrap .subCont .txt textarea{width: 560px;height: 100px;}
+.eventWrap .subCont .txt th, .eventWrap .subCont .txt td{height: 173px;padding-top:22px;}
+.eventWrap .subCont .btnArea{width: 152px;height: 205px;margin: 52px auto 0;text-align:center;}
+
+
+/* 입금신청 */
+.moneyInWrap .subCont tbody{}
+.moneyInWrap .subCont th, .moneyInWrap .subCont td{height: 58px;padding-left: 20px;border-bottom: 1px solid #ffa800;box-sizing:border-box;}
+.moneyInWrap .subCont th{font-size: 16px;}
+.moneyInWrap .subCont td{font-size: 14px;}
+.moneyInWrap .subCont td select {width: 160px;height: 30px;}
+.moneyInWrap .subCont td select{color:#fff;}
+.moneyInWrap .subCont td select#gameSel{width:160px;margin-right: 20px;}
+.moneyInWrap .subCont td select#phone{width:80px;}
+.moneyInWrap .subCont td input[type="text"]{width: 160px;height: 30px;padding: 0 14px;border: 0 none;background-color: #fff;box-sizing: border-box;}
+.moneyInWrap .subCont td input[type="button"] {width: 60px;height: 30px;font-size: 12px;font-weight:bold;text-align:center;}
+.moneyInWrap .subCont td input.phone{width:100px;}
+.moneyInWrap .subCont td input.cash{margin-right: 4px;background: url(img/bg_btn.gif) no-repeat 0 0;}
+.moneyInWrap .subCont td input#phoneLast{margin-right: 10px;}
+.moneyInWrap .subCont .txt, .moneyInWrap .subCont .money {vertical-align:top;}
+.moneyInWrap .subCont .txt textarea{width: 560px;height: 100px;}
+.moneyInWrap .subCont .txt th, .moneyInWrap .subCont .txt td{height: 173px;padding-top:22px;}
+.moneyInWrap .subCont .money th, .moneyInWrap .subCont .money td{height: 80px;padding-top:16px;}
+.moneyInWrap .subCont .btnArea{width: 152px;height: 66px;margin: 20px auto 0;text-align:center;}
+
+/* 출금신청 */
+.moneyOutWrap .subCont tbody{}
+.moneyOutWrap .subCont th, .moneyOutWrap .subCont td{height: 58px;padding-left: 20px;border-bottom: 1px solid #ffa800;box-sizing:border-box;}
+.moneyOutWrap .subCont th{font-size: 16px;}
+.moneyOutWrap .subCont td{font-size: 14px;}
+.moneyOutWrap .subCont td select {width: 160px;height: 30px;}
+.moneyOutWrap .subCont td select{color:#fff;}
+.moneyOutWrap .subCont td select#gameSel{width:160px;margin-right: 20px;}
+.moneyOutWrap .subCont td select#phone{width:80px;}
+.moneyOutWrap .subCont td input[type="text"]{width: 160px;height: 30px;padding: 0 14px;border: 0 none;background-color: #fff;box-sizing: border-box;}
+.moneyOutWrap .subCont td input[type="button"] {width: 60px;height: 30px;font-size: 12px;font-weight:bold;text-align:center;}
+.moneyOutWrap .subCont td input.phone{width:100px;}
+.moneyOutWrap .subCont td input.cash{margin-right: 4px;background: url(img/bg_btn.gif) no-repeat 0 0;}
+.moneyOutWrap .subCont td input#phoneLast{margin-right: 10px;}
+.moneyOutWrap .subCont td input#bankNum{width: 200px;}
+.moneyOutWrap .subCont .txt, .moneyOutWrap .subCont .money {vertical-align:top;}
+.moneyOutWrap .subCont .txt textarea{width: 560px;height: 100px;}
+.moneyOutWrap .subCont .txt th, .moneyOutWrap .subCont .txt td{height: 140px;padding-top:18px;}
+.moneyOutWrap .subCont .money th, .moneyOutWrap .subCont .money td{height: 80px;padding-top:16px;}
+.moneyOutWrap .subCont .btnArea{width: 152px;height: 60px;margin: 14px auto 0;text-align:center;}
+
+/* 체험머니신청 */
+.moneySamWrap .subCont tbody{}
+.moneySamWrap .subCont th, .moneySamWrap .subCont td{height: 58px;padding-left: 20px;border-bottom: 1px solid #ffa800;box-sizing:border-box;}
+.moneySamWrap .subCont th{font-size: 16px;}
+.moneySamWrap .subCont td{font-size: 14px;}
+.moneySamWrap .subCont td select {width: 160px;height: 30px;}
+.moneySamWrap .subCont td select{color:#fff;}
+.moneySamWrap .subCont td select#phone{width:80px;}
+.moneySamWrap .subCont td input[type="text"]{width: 160px;height: 30px;padding: 0 14px;border: 0 none;background-color: #fff;box-sizing: border-box;}
+.moneySamWrap .subCont td input.phone{width:100px;}
+.moneySamWrap .subCont td input#phoneLast{margin-right: 10px;}
+.moneySamWrap .subCont .txt textarea{width: 560px;height: 100px;}
+.moneySamWrap .subCont .txt th, .moneySamWrap .subCont .txt td{height: 120px;vertical-align: top;padding-top: 28px;}
+.moneySamWrap .subCont .btnArea{width: 152px;height: 190px;margin: 14px auto 0;text-align:center;}
+
+
+/* 머니이동 */
+.moneyMoveWrap .subCont tbody{}
+.moneyMoveWrap .subCont th, .moneyMoveWrap .subCont td{height: 58px;padding-left: 20px;border-bottom: 1px solid #ffa800;box-sizing:border-box;}
+.moneyMoveWrap .subCont th{font-size: 16px;}
+.moneyMoveWrap .subCont td{font-size: 14px;}
+.moneyMoveWrap .subCont td select {width: 160px;height: 30px;color:#fff;}
+.moneyMoveWrap .subCont td select#gameSel{width:160px;margin-right: 20px;}
+.moneyMoveWrap .subCont td select#phone{width:80px;}
+.moneyMoveWrap .subCont td input[type="text"]{width: 160px;height: 30px;padding: 0 14px;border: 0 none;background-color: #fff;box-sizing: border-box;}
+.moneyMoveWrap .subCont td input[type="button"] {width: 60px;height: 30px;font-size: 12px;font-weight:bold;text-align:center;}
+.moneyMoveWrap .subCont td input.phone{width:100px;}
+.moneyMoveWrap .subCont td input.cash{margin-right: 4px;background: url(img/bg_btn.gif) no-repeat 0 0;}
+.moneyMoveWrap .subCont td input#phoneLast{margin-right: 10px;}
+.moneyMoveWrap .subCont td input#bankNum{width: 200px;}
+.moneyMoveWrap .subCont .notice.double {display:inline-block;vertical-align: middle;}
+.moneyMoveWrap .subCont .txt, .moneyMoveWrap .subCont .money {vertical-align:top;}
+.moneyMoveWrap .subCont .txt textarea{width: 560px;height: 100px;}
+.moneyMoveWrap .subCont .txt th, .moneyMoveWrap .subCont .txt td{height: 140px;padding-top:18px;}
+.moneyMoveWrap .subCont .money th, .moneyMoveWrap .subCont .money td{height: 80px;padding-top:16px;}
+.moneyMoveWrap .subCont .btnArea{width: 152px;height: 250px;margin: 54px auto 0;text-align:center;}
+
+/* 거래내역 */
+.moneyListWrap .subCont tbody{text-align: center;}
+.moneyListWrap .subCont th{height: 48px;font-size: 16px;text-align:center;border-bottom: 1px solid #ffa800;}
+.moneyListWrap .subCont th span{height: 22px;display: block;line-height: 20px;border-left: 1px solid #fff;}
+.moneyListWrap .subCont th:first-child span{border-left: 0 none;}
+.moneyListWrap .subCont td{height: 50px;font-size: 14px;}
+.moneyListWrap .subCont td select{width: 70px;height: 30px;padding: 0 4px;color:#fff;}
+.moneyListWrap .subCont td #moneyList{margin: 0 10px 0 22px;}
+.moneyListWrap .subCont td .notice.time{margin-right: 2px;}
+.moneyListWrap .subCont .notUseCoupon {color: #e9d10b;}
+.moneyListWrap .subCont .date {display: block;}
+
+/* 다운로드 */
+.downloadWrap{}
+.downloadWrap .subCont {padding:30px 40px;}
+.downloadWrap .subCont dd{margin:16px 0;}
+.downloadWrap .subCont dd a{display:inline-block;margin-right:14px;}
+
+/* 친구추천 */
+.recommWrap{}
+.recommWrap .subCont {}
+.recommWrap .subCont li{padding:22px;font-size: 12px;border-bottom: 1px solid #ffa800;}
+.recommWrap .subCont li.last{border-bottom: 0 none;}
+.recommWrap .subCont li .title{margin-bottom: 14px;}
+.recommWrap .subCont li .btnArea{width: 152px;margin: 12px auto 0;text-align:center;}
+.recommWrap .subCont li select {width: 80px;height: 30px;}
+.recommWrap .subCont li input[type="text"]{width: 120px;height: 30px;padding: 0 14px;border: 0 none;background-color: #fff;box-sizing: border-box;}
+.recommWrap .subCont dd a{display:inline-block;margin-right:14px;}
+
+/* 마이페이지 */
+.myPageWrap{}
+.myPageWrap .subCont {}
+.myPageWrap .subCont dt, .myPageWrap .subCont dd{padding:16px 22px;box-sizing:border-box;}
+.myPageWrap .subCont dt{border-bottom: 1px solid #686359;}
+.myPageWrap .subCont dd{border-bottom: 1px solid #ffa800;}
+.myPageWrap .subCont dd ul{width: 630px;display:inline-block;}
+.myPageWrap .subCont dd li {margin-bottom: 10px;}
+.myPageWrap .subCont dd li .leftTxt {width: 150px;display: inline-block;}
+.myPageWrap .subCont dd li select{color:#fff;}
+.myPageWrap .subCont dd li input[type="text"]{width: 160px;height: 22px;padding: 0 6px;border: 0 none;background-color: #fff;box-sizing: border-box;}
+.myPageWrap .subCont dd li .notice{margin-left: 10px;}
+.myPageWrap .subCont dd li input[type="text"].phone{width:70px;text-align:center;}
+.myPageWrap .subCont dd li input[type="text"].currPhone{width:40px;}
+.myPageWrap .subCont dd .btnArea{width: 152px;display:inline-block;vertical-align: top;}
+.myPageWrap .subCont dd #phoneNum01{margin-right:8px;}
+.myPageWrap .subCont dd #phoneNum02{margin-left:8px;}
+.myPageWrap .subCont li .title{margin-bottom: 14px;}
+.myPageWrap .subCont li select {width: 60px;height: 22px;padding-left: 8px;}
+.myPageWrap .subCont li.bank select {width: 160px;}
+.myPageWrap .subCont dd a{display:inline-block;}
+
+/* 파트너 제휴 */
+.partnerWrap{}
+.partnerWrap .subCont {font-size:12px;}
+.partnerWrap .subCont > li{padding:16px 22px;box-sizing:border-box;}
+.partnerWrap .subCont > li:first-child{border-bottom: 1px solid #ffa800;}
+.partnerWrap .subCont > li .leftTxt {width: 80px;display: inline-block;font-size: 14px;}
+.partnerWrap .subCont > li input[type="text"]{width: 160px;height: 30px;padding: 0 6px;border: 0 none;background-color: #fff;box-sizing: border-box;}
+.partnerWrap .subCont > li input[type="text"].phone{width:70px;text-align:center;}
+.partnerWrap .subCont > li ul.notice {width: 300px;display: inline-block;vertical-align: top;}
+.partnerWrap .subCont > li .partnerPhone {margin-bottom:10px;}
+.partnerWrap .subCont > li .partnerTxt .leftTxt {vertical-align:top;}
+.partnerWrap .subCont > li textarea{width: 400px;height: 100px;margin-right: 10px;}
+.partnerWrap .subCont > li .btnArea{width: 152px;display:inline-block;margin-left: 310px;}
+.partnerWrap .subCont .title {margin-bottom: 14px;}
+.partnerWrap .subCont .desc {margin-bottom: 20px;}
+
+/* 1인 보안 계좌 */
+.personalWrap{}
+.personalWrap .subCont {padding:16px 22px;font-size:12px;line-height: 17px;box-sizing:border-box;}
+.personalWrap .subCont .title{font-size:14px;font-weight:bold;margin-bottom: 14px;}
+.personalWrap .subCont .desc {margin-bottom: 20px;}
+.personalWrap .subCont .desc .red {font-weight:bold;}
+
+/* 1:1 원격 지원 */
+.remoteWrap{}
+.remoteWrap .subCont {padding:16px 22px;font-size:12px;box-sizing:border-box;}
+.remoteWrap .subCont .title{font-size:14px;font-weight:bold;margin-bottom: 14px;}
+.remoteWrap .subCont .remoteLink {margin: 50px 0 60px;text-align:center;}
+.remoteWrap .subCont .notice {font-weight:bold;text-align:center;}
+
+/* 사이트 맵 */
+.sitemapWrap{}
+.sitemapWrap .subCont {font-size:12px;}
+.sitemapWrap .subCont dt, .sitemapWrap .subCont dd{padding:20px 22px;}
+.sitemapWrap .subCont dd{padding:0 0 30px;box-sizing:border-box;}
+.sitemapWrap .subCont dd.first{border-bottom: 1px solid #ffa800;}
+.sitemapWrap .subCont dd ul{border-top: 1px solid #686359;}
+.sitemapWrap .subCont dd li{padding: 7px 22px;border-bottom: 1px solid #686359;box-sizing:border-box;}
+.sitemapWrap .subCont li a{display: inline-block;}
+.sitemapWrap .subCont li .leftTxt {width: 120px;display: inline-block;}
+
+/* 게임룰 */
+.ruleWrap{}
+.ruleWrap .subHeaderWrap .subDescTxt a{display:inline-block;}
+.ruleWrap .subHeaderWrap .subDescTxt a.on {color: #ffde00;font-weight:bold;}
+.ruleWrap .subCont {font-size:12px;padding:16px 22px;box-sizing:border-box;overflow-y: scroll;-ms-overflow-y: scroll;}
+.ruleWrap .subCont .title {margin-bottom: 10px;}
+.ruleWrap .subCont .desc {margin-bottom: 26px;}
+.ruleWrap .subCont .desc span{display:block;margin-bottom:5px;}
+.ruleWrap .subCont .desc table{width: 600px;margin-bottom:6px;border-left: 1px solid #aaa;border-top: 1px solid #aaa;}
+.ruleWrap .subCont .desc th, .ruleWrap .subCont .desc td{padding: 4px;text-align:center;border-right: 1px solid #aaa;border-bottom: 1px solid #aaa;}
+.ruleWrap .subCont .desc th {background: #333;}
+.ruleWrap .subCont .desc td {background: #444;}
+.ruleWrap .rull .subCont .desc td {background: #333;}
+.ruleWrap .sik .subCont .desc table {width: 700px;}
+.ruleWrap .carr .subCont .desc table {width: 700px;}
+.ruleWrap .ma .subCont .desc table {margin:6px 0;}
+.ruleWrap li {display:none;}
+/* .ruleWrap li.ma {display:block;} */
+

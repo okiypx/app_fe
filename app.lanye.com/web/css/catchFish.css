@@ -1,0 +1,106 @@
+#catch {
+    margin: 0;
+    background: #014184 url('../images/catchFish/bg_y.jpg') repeat-y center;
+}
+.fish-game {
+    min-height: 724px;
+    text-align: center;
+    background: url(../images/catchFish/bg.jpg) no-repeat center top;
+}
+.fish-game #logo {
+    height: 235px;
+    background: url(../images/catchFish/logo.png) no-repeat center;
+}
+#game-list {
+    display: inline-block;
+    margin: 65px auto 0;
+    padding: 0 0 20px;
+    max-width: 900px;
+}
+#game-list li {
+    position: relative;
+    display: inline-block;
+    margin: 10px 15px;
+    top: 0;
+    cursor: pointer;
+    -webkit-transition: top 0.4s;
+    -o-transition: top 0.4s;
+    -moz-transition: top 0.4s;
+    transition: top 0.4s;
+}
+#game-list li img{
+	width:150px;
+	height:150px;	
+}
+#game-list .game-text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #000;
+}
+#game-list li:hover {
+    top: -10px;
+    /*background-color: #2B2B2B;*/
+
+}
+
+
+#game-list li .game-logo:hover:before {
+    content:"";
+    display: inline-block;
+    position: absolute;
+    left: 1px;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#game-list li:hover .game-text {
+    color: #ff0;
+}
+#game-list li .game-logo:hover > .game-btn {
+    display: block;
+
+}
+
+/** 더하다游戏按钮 **/
+.game-btn {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    left: 10%;
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF;
+    color: #2B2B2B;
+    font-size: 16px;
+    text-decoration: none;
+}
+.try-btn:hover {
+    color: rgb(238,119,52);
+    background: rgb(255,255,255);
+    border: 1px solid rgb(255,255,255);
+}
+.play-btn:hover {
+    color: rgb(202,2,50);
+    background: rgb(255,255,255);
+    border: 1px solid rgb(255,255,255);
+}
+.try-btn{
+    border: 1px solid rgb(238,119,52);
+    background: rgb(238,119,52);
+    top: 55%;
+    color: #FFFFFF;
+}
+.play-btn {
+    border: 1px solid rgb(202,2,50);
+    background: rgb(202,43,57);
+    top: 25%;
+    color: #FFFFFF;
+}
+

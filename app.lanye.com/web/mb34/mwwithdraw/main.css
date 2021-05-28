@@ -1,0 +1,95 @@
+﻿@charset "utf-8";
+@import url(earlyaccess/nanumgothic.css);
+
+.alignCenter {margin: 0 auto;}
+.mgr10 {margin-right:10px;}
+.mgt4 {margin-top:4px;}
+.mgt10 {margin-top:10px;}
+.mgt20 {margin-top:20px;}
+.mgt25 {margin-top:25px;}
+.mgt30 {margin-top:30px;}
+body{background-color: #000;font-family: '나눔고딕', 'Nanum Gothic', sans-serif;}
+.wrap {width: 100%;height: 100%;background:#000;} 
+.wrap > div {}
+
+.header {width: 1224px;height: 120px;}
+.header > div {display: inline-block;}
+.header .headerCont {float: right;position:relative;text-align:right;vertical-align: top;}
+.header .headerCont .logoG1 {position:absolute;top:16px;left:0px;}
+.header .headerCont .userInfoWrap{margin:20px 0 15px;}
+.header .headerCont .userInfoWrap li{display:none;}
+.header .headerCont .userInfoWrap .loginWrap{display:block;}
+.header .headerCont .userInfoWrap .logoutWrap .welcom{color: #ffe117;font-size:16px;}
+.header .headerCont .userInfoWrap a{display:inline-block;text-align: center;}
+.header .headerCont .userInfoWrap input {margin-left: 10px;color:#fff;}
+.header .headerCont .userInfoWrap .input{width: 156px;height:32px;padding:8px;background-color:#1a1403;border:1px solid #856700;box-sizing:border-box;}
+.header .headerCont .userInfoWrap .btn{width: 80px;height:32px;margin-left: 10px;padding:8px;font-weight:bold;line-height: 16px;box-sizing:border-box;cursor:pointer;vertical-align: middle;}
+.header .headerCont .userInfoWrap .btn.login{background-color:#f43003;color:#fff;border:1px solid #fc0;}
+.header .headerCont .userInfoWrap .btn.join{background-color:#ffe133;color:#000;border:1px solid #898989;}
+
+.header .gnb li{float:left;width:120px;height:40px;margin-left: 2px;line-height:40px;font-size:16px;text-align:center;}
+.header .gnb li a{color:#fffbcc;background: url(img/img_menuBg_off.gif) no-repeat 0 0;}
+.header .gnb li a:hover, .header .gnb li.on a{background: url(img/img_menuBg_on.gif) no-repeat 0 0;}
+
+.contents {width: 100%; height: 1100px;box-sizing: border-box;}
+.contents .notice {width: 1177px;height: 222px;color:#fff;position: relative;margin: 23px auto 32px;box-sizing:border-box;}
+.contents .notice .kakao{width:160px;height: 180px;padding: 20px;text-align: center;}
+.contents .notice .kakao div span{width: 100%;display:inline-block;vertical-align: top;}
+.contents .notice .kakao div.custom div{width: 110px;height: 70px;display:inline-block;margin-right: 8px;vertical-align: top;}
+.contents .notice .kakao .custom .out, .contents .notice .kakao .partner .out{display:none;}
+/* .contents .notice .kakao div.custom div.out{display:inline-block;} */
+/* .contents .notice .kakao div.partner span{width:100%;} */
+.contents .notice .kakao .title{display:block;margin-bottom:10px;padding-bottom:5px;font-size:16px;border-bottom: 1px solid #ff0;}
+.contents .notice .img{/* width: 56px; */}
+.contents .notice .slideWrap{width: 950px;height: 194px;position: absolute;top: 18px;right:9px;}
+
+.contents .gamelink {width: 900px;height: 682px;padding: 28px 0px;box-sizing:border-box;}
+.contents .gamelink > div {display: inline-block;}
+.contents .gamelink div.btnGame {margin-left:-6px;}
+.contents .gamelink div.btnGame:first-child {margin-left:20px;}
+
+.contents .guestBook {width: 1177px;height: 246px;margin-top: 9px;padding: 10px;box-sizing:border-box;color:#fff;}
+.contents .guestBook > div{display:inline-block;vertical-align: top;}
+.contents .guestBook .title{width: 100%;text-align:center;font-size:16px;font-weight:bold;line-height: 36px;}
+.contents .guestBook .title a{border-left: 1px solid #000;}
+.contents .guestBook .title a:first-child{border-left: 0 none;}
+.contents .guestBook .title a:hover, .contents .guestBook .title a.on{background:url(img/guest_sel.png) repeat-x top left / 100% 100%;}
+.contents .guestBook .howtodown{width: 364px;height: 227px;}
+.contents .guestBook .howtodown .title{height: 36px;}
+.contents .guestBook .howtodown li{width: 100%;padding-top:10px;line-height: 16px;}
+.contents .guestBook .howtodown li > div{display:inline-block;vertical-align:top;}
+.contents .guestBook .howtodown li > div:first-child{margin-left: 24px;}
+.contents .guestBook .howtodown li > div.txt{margin:0 20px;}
+.contents .guestBook .howtodown li > div.img{padding-top:12px;text-align:center;}
+.contents .guestBook .howtodown li > div.img .down{font-size:10px;}
+.contents .guestBook .howtodown li > div.img .down span{display:block;}
+
+.contents .guestBook .OutMoney{width: 316px;height: 227px;margin: 0px 0px 0px 5px;}
+.contents .guestBook .OutMoney .title a{width:49.5%;height: 37px;line-height: 36px;display:inline-block;margin-top: -1px;}
+.contents .guestBook .OutMoney li{height: 18px;margin: 10px 0;}
+.contents .guestBook .OutMoney li span{width: 100px;display:inline-block;text-align:center;}
+.contents .guestBook .OutMoney li .time{width: 70px;text-align:left;margin-left:28px;padding-left: 10px;background: url(img/icon_bullet.gif) no-repeat 0 8px;}
+.contents .guestBook .OutMoney li .name{}
+.contents .guestBook .OutMoney li .money{}
+
+.contents .guestBook .listWrap{width: 455px;height: 227px;margin: 0px 0px 0px 6px;}
+.contents .guestBook .listWrap .title a{width:33.1%;height: 37px;line-height: 36px;display:inline-block;margin-top: -1px;}
+.contents .guestBook .listWrap li{height: 18px;margin: 10px 0;}
+.contents .guestBook .listWrap li span{display:inline-block;text-align:center;}
+.contents .guestBook .listWrap li .desc{width: 70%;text-align:left;margin-left:16px;padding-left: 10px;background: url(img/icon_bullet.gif) no-repeat 0 8px;}
+.contents .guestBook .listWrap li .date{width: 20%;text-align:right;}
+
+.footer {width: 1224px; height: 260px;padding-top: 15px;color:#fff;}
+.footer .customMenu {font-size:16px;}
+.footer .customMenu ul{width: 428px;height: 18px;}
+.footer .customMenu li{float: left;padding: 0 10px;border-left: 2px solid #a49f8c;}
+.footer .customMenu li:first-child{border-left: 0;}
+.footer .customMenu li a{color: #a49f8c;}
+.footer .copyright {width: 326px;height: 20px;margin: 18px auto 30px;}
+.footer .copyright img{margin-right:4px;}
+.footer .copyright span{vertical-align: middle;}
+.footer .gameRules ul {width: 786px;height: 12px;margin:0 auto;}
+.footer .gameRules li {float: left;padding: 0 10px;line-height: 12px;border-left: 1px solid #999;}
+.footer .gameRules li:first-child{border-left: 0;}
+.footer .gameRules li a{color:#999;}
+.footer .footerLogo {margin-top: 44px;text-align: center;}

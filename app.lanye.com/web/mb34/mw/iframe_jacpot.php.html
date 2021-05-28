@@ -1,0 +1,127 @@
+﻿<link rel="stylesheet" href="css/odometer-theme-default.css">
+<script src="js/jquery.min.js"></script>
+
+<script src="js/odometer.min.js"></script>
+<script type='text/javascript' src="js/countUp.min.js?v=1"></script>
+
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+	<td width="800" height="50" style="text-align:right;float:right;"><span class="style1" id="JackpotMoney" style="display: block;letter-spacing: 5px;font-family: 'Open Sans', sans-serif;font-size: 55px;font-style: normal;font-weight: 1000;line-height: 50px;width: 800px;text-align: right;color:#eee;text-shadow:2px 2px 2px rgb(0,0,0);">0</span></td>
+  </tr>
+</table>
+  
+  <script type="text/javascript"> 
+	
+	var HouseMoneyFst = 5038407400;
+	var jackPotMoneyFst = 4331111.99;
+	var jackPotMoneyUd = 0;
+	var HouseMoneyExt = 0;
+	GetHouseMoneyInit();
+	
+	
+	setInterval(function(){ GetHouseMoney(); }, 60 * 5000);
+	setInterval(function(){ GetHouseMoneyExtra(); }, 60 * 5000);
+	
+	var hm_prefix = 0;
+	var jp_prefix = 0;
+	var hsMn;
+	var hm_options = {
+	    startVal: 0,
+	    separator: ',',
+		//prefix: hm_prefix,
+	};
+	
+	
+	function GetHouseMoney(){ 
+		$.ajax({
+	        type: "GET",
+	        url: "./_check_housemoney.html",
+	        cache: false,
+	        dataType: "JSON",
+	        success: function(result, sts){
+		        hsMn.update(result + RealtimeHouseMoney + parseInt(HouseMoneyExt));
+		    },
+	        error: function(err, xhr){
+		        
+	        }
+	    });
+	}
+	
+	function GetHouseMoneyInit(){ 
+		$.ajax({
+	        type: "GET",
+	        url: "./_read_house_money.asp",
+	        cache: false,
+	        success: function(result, sts){
+		        result = result.replace(/[^0-9]/g,"");
+		        HouseMoneyExt = parseInt(result);
+		        hsMn = new CountUp('HouseMoney', parseInt(HouseMoneyFst) + parseInt(result), hm_options);
+				if (!hsMn.error) {
+				  hsMn.start();
+				} else {
+				  console.error(hsMn.error);
+				}
+		    },
+	        error: function(err, xhr){
+		        
+	        }
+	    });
+	}
+	
+	function GetHouseMoneyExtra(){ 
+		$.ajax({
+	        type: "GET",
+	        url: "./_read_house_money.asp",
+	        cache: false,
+	        success: function(result, sts){
+		        result = result.replace(/[^0-9]/g,"");
+		        HouseMoneyExt = parseInt(result);
+		        hsMn.update(parseInt(HouseMoneyFst) + parseInt(HouseMoneyExt));
+
+		    },
+	        error: function(err, xhr){
+		        
+	        }
+	    });
+	}
+	
+	var jppp = (new Date).getTime() + "";
+    jppp = jppp.substring(2, 12) / 100 + -3000000 + "",
+    0 === parseInt(jppp.substr(0, -1)) && console.log("0");
+	
+	function GetJP(){
+		var get_jp = Math.floor(new Date().getTime() / 100);
+		var str_length = Math.floor(new Date().getTime() / 100).toString().length;
+		var jp_add = get_jp.toString().substr(str_length-7, 6);
+		jackPotMoneyUd = jp_add;
+		var new_jp = parseInt(jackPotMoneyFst) + parseInt(jackPotMoneyUd);
+		return new_jp;
+	}
+	
+	setInterval(function(){ 
+		var jppp = (new Date).getTime() + "";
+	    jppp = jppp.substring(2, 12) / 100 + -3000000 + "",
+	    0 === parseInt(jppp.substr(0, -1)) && console.log("0");
+		jp_om.update(jppp + 50000000);
+	}, 2200);
+	
+	var jp_e = document.querySelector("#JackpotMoney");
+	var jp_om = new Odometer({
+        el: jp_e,
+        value: 0,
+        format: "(,ddd).dd",
+    });
+    
+    setTimeout(function(){ 
+		var jppp = (new Date).getTime() + "";
+	    jppp = jppp.substring(2, 12) / 100 + -3000000 + "",
+	    0 === parseInt(jppp.substr(0, -1)) && console.log("0");
+		jp_om.update(jppp - 50000000);
+	}, 1000);
+    //jp_om.update(jppp - 50000000);
+	
+</script>
+    
