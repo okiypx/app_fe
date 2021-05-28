@@ -1,0 +1,2548 @@
+<div class="header">
+    <p class="slot_name title"><img src="images/icon/CQ9.png"> 씨큐9</p>
+    <button type="button" class="slot-open" data-dismiss="modal"></button>
+</div>
+<div class="nav">
+    <button id=".po" type="button" class=" active "><img src="images/icon/check.png">인기</button>
+    <button id=".al" type="button" class=""><img src="images/icon/check.png">전체</button>
+    <button id=".sl" type="button"><img src="images/icon/check.png">슬롯</button>
+    <button id=".s3" type="button"><img src="images/icon/check.png">3D슬롯</button>
+    <button id=".dt" type="button"><img src="images/icon/check.png">드래곤타이거</button>
+    <button id=".bc" type="button"><img src="images/icon/check.png">바카라</button>
+    <button id=".bj" type="button"><img src="images/icon/check.png">블랙잭</button>
+    <button id=".pk" type="button"><img src="images/icon/check.png">포커</button>
+    <button id=".sb" type="button"><img src="images/icon/check.png">식보</button>
+    <button id=".rl" type="button"><img src="images/icon/check.png">룰렛</button>
+    <button id=".et" type="button"><img src="images/icon/check.png">기타</button>
+</div>
+<div class="body">
+    <div class="center slot-content po-game ">
+                        <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/118_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_118')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>스컬스컬</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/89_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_89')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>토르</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/64_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_64')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>제우스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/59_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_59')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>섬머 무드</p>
+            </div>
+        </div>
+                    </div>
+
+    <div class="center slot-content al-game  hidden ">
+                        <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11806.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_214')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>닌자 라쿤</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11805.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_212')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>버닝 시-요우</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11804.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_210')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>오 가 차 카</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11714.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_209')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>더 큐피즈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11580.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_200')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>엘리스 런</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11501.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_199')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>송크란 페스티발</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11502.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_197')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>드래곤스 트레져</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11500.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_196')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>텐폴드 에그스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11390.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_195')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>로드 가네샤</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11389.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AT101')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>슈퍼카</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11377.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_194')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>포츈 드래곤</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11289.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_186')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파이어 퀸 2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11202.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AT06')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>워터마진</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11201.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_GO169')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>드래곤 빠칭코</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10947.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_188')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>크리켓 피버</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10946.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_187')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>윙 츈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10945.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_184')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>식스 가챠</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10078.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AT05')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>럭키피싱</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10077.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_183')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>울프 디스코</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10044.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_182')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>토르 2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10022.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_179')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>점프 하이 2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/9835.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_180')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>구구구3</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS08_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS08')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>골든 마얀</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS04_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS04')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>포츈스피릿</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS02_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS02')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>써큐더포우스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/163_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_163')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>네자 어드벤트</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/154_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_154')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>크로노스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/152_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_152')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>더블플라이</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/150_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_150')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>슈어-신</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/138_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_138')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>무브 엔 점프</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS01_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS01')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>부츠 오브 럭</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/153_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_153')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>식스 캔디</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/146_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_146')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>스카이 랜턴</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/147_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_147')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>플라워 포츈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/148_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_148')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>포츈 토템</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/144_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_144')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>다이아몬드 트레져</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/157_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_157')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>5 복싱</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/143_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_143')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파 차이 푸 와</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/142_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_142')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>헤파스타스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/136_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_136')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>러닝 애니멀스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/132_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_132')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>미오우</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS03_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS03')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>드래곤 헌터스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS33_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS33')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>피그 오브 럭</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/140_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_140')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파이어치비2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/130_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_130')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>골드스틸러</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/124_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_124')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>인빈츠블 엘러펀트</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/115_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_115')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>스노우 퀸</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/112_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_112')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>피라미드 레이더</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/122_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_122')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>주마 와일드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/118_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_118')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>스컬스컬</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/116_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_116')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>원더랜드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/113_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_113')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>플라잉 카이 쉔</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS19_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS19')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>크리스마스 테일스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS20_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS20')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>퀸 오브 데드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS18_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS18')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>와일드 퍼지</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS17_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS17')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>트레져 오브 세티</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS09_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS09')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>헐리우드 펫</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS10_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS10')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>럭키 3</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/221_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_221')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>디텍티브 디 2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/99_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_99')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>점프 하이어</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/89_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_89')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>토르</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/86_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_86')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>러닝토로</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/205_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_205')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>디스코나이트</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/204_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_204')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>럭키박시스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/203_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_203')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>레이브하이</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/202_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_202')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>오리엔탈뷰티</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/201_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_201')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>무에타이</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/98_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_98')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>올스타 팀</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/96_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_96')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>풋볼 베이비</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/95_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_95')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>풋볼 부츠</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/92_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_92')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>월드컵 러시아 2018</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/79_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_79')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>카멜레온</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/83_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_83')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파이어 퀸</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/81_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_81')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>트레져 아일랜드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/80_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_80')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>포세이돈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/78_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_78')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>아폴로</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/77_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_77')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>레드 피닉스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/74_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_74')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>트레저보울</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/72_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_72')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>해피리치이어</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/68_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_68')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>우콩&amp;피치스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/35_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_35')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>크레이지누오자</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/61_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_61')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>미스터 빈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/60_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_60')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>정글파티</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/76_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_76')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>원 원 원</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/69_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_69')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파사이센</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/67_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_67')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>골든 에그스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AB1_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AB1')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파라다이스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/70_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_70')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>완바오다이노</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/66_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_66')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파이어 777</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/54_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_54')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>퍼니 알파카</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/64_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_64')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>제우스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/55_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_55')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>드래곤 하트</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/36_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_36')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>펍타이쿤</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/59_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_59')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>섬머 무드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/57_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_57')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>더 비스트 워</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/58_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_58')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>구구구 2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/52_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_52')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>점프 하이</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/51_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_51')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>액스타틱 서커스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/50_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_50')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>굿 포츈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/49_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_49')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>론리 플레닛</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/47_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_47')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파라오스 골드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/46_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_46')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>울프 문</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/44_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_44')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>후루츠 킹 II</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/42_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_42')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>셜록 홈즈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/39_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_39')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>압사라스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/38_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_38')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>올 와일즈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/34_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_34')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>고퍼스 워</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/33_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_33')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파이어 취비</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/32_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_32')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>디텍티브 디</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/31_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_31')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>갓 오브 워</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/29_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_29')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>워터 월드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/27_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_27')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>매직 월드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/26_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_26')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>777</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/24_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_24')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>레이브 점프 2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/23_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_23')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>유나 바오</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/22_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_22')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>몽키 오피스 레전드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/21_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_21')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>빅 울프</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/20_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_20')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>888</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/19_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_19')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>핫 스핀</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/17_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_17')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>그레이트 라이온</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/16_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_16')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>슈퍼 5</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/15_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_15')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>구구구</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/13_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_13')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>사쿠라 레전드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/12_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_12')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>트레져 하우스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_10')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>럭키 뱃</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/9_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_9')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>종 쿨</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/8_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_8')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>쏘 스위트</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/7_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_7')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>레이브 점프</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/5_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_5')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>미스터 리치</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/4_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_4')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>와일드 타잔</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/3_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_3')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>벰파이어 키스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/2_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_2')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>갓 오브 체스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://i.imgur.com/BxuLlq4.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_1')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>후루츠 킹</p>
+            </div>
+        </div>
+                    </div>
+
+    <div class="center slot-content sl-game hidden">
+                        <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11806.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_214')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>닌자 라쿤</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11805.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_212')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>버닝 시-요우</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11804.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_210')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>오 가 차 카</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11714.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_209')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>더 큐피즈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11501.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_199')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>송크란 페스티발</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11502.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_197')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>드래곤스 트레져</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11390.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_195')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>로드 가네샤</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11377.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_194')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>포츈 드래곤</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11289.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_186')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파이어 퀸 2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10947.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_188')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>크리켓 피버</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10946.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_187')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>윙 츈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10945.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_184')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>식스 가챠</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10077.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_183')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>울프 디스코</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10044.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_182')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>토르 2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10022.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_179')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>점프 하이 2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/9835.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_180')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>구구구3</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS08_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS08')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>골든 마얀</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS04_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS04')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>포츈스피릿</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS02_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS02')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>써큐더포우스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/163_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_163')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>네자 어드벤트</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/154_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_154')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>크로노스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/152_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_152')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>더블플라이</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/150_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_150')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>슈어-신</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/138_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_138')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>무브 엔 점프</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS01_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS01')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>부츠 오브 럭</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/153_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_153')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>식스 캔디</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/146_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_146')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>스카이 랜턴</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/147_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_147')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>플라워 포츈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/148_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_148')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>포츈 토템</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/144_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_144')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>다이아몬드 트레져</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/157_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_157')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>5 복싱</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/143_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_143')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파 차이 푸 와</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/142_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_142')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>헤파스타스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/136_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_136')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>러닝 애니멀스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/132_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_132')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>미오우</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS03_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS03')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>드래곤 헌터스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS33_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS33')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>피그 오브 럭</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/140_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_140')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파이어치비2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/130_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_130')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>골드스틸러</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/124_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_124')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>인빈츠블 엘러펀트</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/115_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_115')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>스노우 퀸</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/112_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_112')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>피라미드 레이더</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/122_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_122')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>주마 와일드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/118_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_118')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>스컬스컬</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/116_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_116')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>원더랜드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/113_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_113')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>플라잉 카이 쉔</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS19_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS19')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>크리스마스 테일스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS20_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS20')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>퀸 오브 데드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS18_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS18')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>와일드 퍼지</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS17_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS17')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>트레져 오브 세티</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS09_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS09')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>헐리우드 펫</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AS10_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AS10')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>럭키 3</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/221_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_221')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>디텍티브 디 2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/99_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_99')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>점프 하이어</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/89_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_89')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>토르</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/86_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_86')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>러닝토로</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/205_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_205')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>디스코나이트</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/204_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_204')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>럭키박시스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/203_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_203')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>레이브하이</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/202_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_202')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>오리엔탈뷰티</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/201_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_201')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>무에타이</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/98_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_98')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>올스타 팀</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/96_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_96')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>풋볼 베이비</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/95_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_95')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>풋볼 부츠</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/92_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_92')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>월드컵 러시아 2018</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/79_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_79')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>카멜레온</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/83_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_83')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파이어 퀸</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/81_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_81')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>트레져 아일랜드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/80_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_80')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>포세이돈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/78_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_78')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>아폴로</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/77_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_77')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>레드 피닉스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/74_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_74')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>트레저보울</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/72_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_72')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>해피리치이어</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/68_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_68')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>우콩&amp;피치스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/35_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_35')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>크레이지누오자</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/61_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_61')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>미스터 빈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/60_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_60')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>정글파티</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/76_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_76')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>원 원 원</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/69_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_69')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파사이센</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/67_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_67')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>골든 에그스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/AB1_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AB1')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파라다이스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/70_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_70')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>완바오다이노</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/66_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_66')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파이어 777</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/54_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_54')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>퍼니 알파카</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/64_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_64')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>제우스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/55_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_55')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>드래곤 하트</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/36_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_36')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>펍타이쿤</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/59_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_59')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>섬머 무드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/57_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_57')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>더 비스트 워</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/58_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_58')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>구구구 2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/52_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_52')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>점프 하이</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/51_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_51')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>액스타틱 서커스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/50_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_50')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>굿 포츈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/49_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_49')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>론리 플레닛</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/47_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_47')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파라오스 골드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/46_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_46')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>울프 문</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/44_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_44')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>후루츠 킹 II</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/42_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_42')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>셜록 홈즈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/39_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_39')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>압사라스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/38_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_38')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>올 와일즈</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/34_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_34')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>고퍼스 워</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/33_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_33')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>파이어 취비</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/32_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_32')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>디텍티브 디</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/31_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_31')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>갓 오브 워</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/29_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_29')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>워터 월드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/27_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_27')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>매직 월드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/26_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_26')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>777</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/24_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_24')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>레이브 점프 2</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/23_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_23')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>유나 바오</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/22_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_22')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>몽키 오피스 레전드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/21_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_21')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>빅 울프</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/20_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_20')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>888</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/19_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_19')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>핫 스핀</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/17_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_17')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>그레이트 라이온</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/16_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_16')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>슈퍼 5</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/15_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_15')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>구구구</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/13_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_13')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>사쿠라 레전드</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/12_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_12')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>트레져 하우스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_10')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>럭키 뱃</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/9_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_9')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>종 쿨</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/8_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_8')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>쏘 스위트</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/7_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_7')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>레이브 점프</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/5_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_5')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>미스터 리치</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/4_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_4')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>와일드 타잔</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/3_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_3')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>벰파이어 키스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/2_EN.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_2')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>갓 오브 체스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://i.imgur.com/BxuLlq4.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_1')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>후루츠 킹</p>
+            </div>
+        </div>
+                    </div>
+
+    <div class="center slot-content s3-game hidden">
+                <div class="slot_sp_game" >
+            <div class="overlay">
+            </div>
+            <div class="foot">
+                <p>데이터가 없습니다.</p>
+            </div>
+        </div>
+            </div>
+
+    <div class="center slot-content dt-game hidden">
+                <div class="slot_sp_game" >
+            <div class="overlay">
+            </div>
+            <div class="foot">
+                <p>데이터가 없습니다.</p>
+            </div>
+        </div>
+            </div>
+
+    <div class="center slot-content bc-game hidden">
+                <div class="slot_sp_game" >
+            <div class="overlay">
+            </div>
+            <div class="foot">
+                <p>데이터가 없습니다.</p>
+            </div>
+        </div>
+            </div>
+
+    <div class="center slot-content bj-game hidden">
+                <div class="slot_sp_game" >
+            <div class="overlay">
+            </div>
+            <div class="foot">
+                <p>데이터가 없습니다.</p>
+            </div>
+        </div>
+            </div>
+
+    <div class="center slot-content pk-game hidden">
+                <div class="slot_sp_game" >
+            <div class="overlay">
+            </div>
+            <div class="foot">
+                <p>데이터가 없습니다.</p>
+            </div>
+        </div>
+            </div>
+
+    <div class="center slot-content sb-game hidden">
+                <div class="slot_sp_game" >
+            <div class="overlay">
+            </div>
+            <div class="foot">
+                <p>데이터가 없습니다.</p>
+            </div>
+        </div>
+            </div>
+
+    <div class="center slot-content rl-game hidden">
+                <div class="slot_sp_game" >
+            <div class="overlay">
+            </div>
+            <div class="foot">
+                <p>데이터가 없습니다.</p>
+            </div>
+        </div>
+            </div>
+
+    <div class="center slot-content et-game hidden">
+                        <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11580.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_200')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>엘리스 런</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11500.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_196')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>텐폴드 에그스</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11389.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AT101')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>슈퍼카</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11202.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AT06')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>워터마진</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/11201.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_GO169')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>드래곤 빠칭코</p>
+            </div>
+        </div>
+                <div class="slot_sp_game" >
+            <img src="https://resource.fdsigaming.com/thumbnail/slot/cq/en/10078.png" alt="thumbnail" class="slot-thumbnail">
+            <div class="overlay">
+                                <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AT05')">PLAY</button>
+                            </div>
+            <div class="foot">
+                <p>럭키피싱</p>
+            </div>
+        </div>
+                    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.slot-view .nav button').click(function () {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+            $('.slot-content').addClass('hidden');
+            $($(this).attr('id') + '-game').removeClass('hidden');
+        });
+
+        $('.slot-open').click(function () {
+            $('.slot-pg').addClass('active');
+            $('.slot-pg').siblings().removeClass('active');
+            $('.category-modal .header .btn-grp button.slot-open').addClass('active');
+            $('.category-modal .header .btn-grp button.slot-open').siblings().removeClass('active');
+        });
+    });
+</script>

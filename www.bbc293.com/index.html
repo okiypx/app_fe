@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MGM CASINO</title>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="kV8gflgGbQ8reX40MoSvJixB1iQoozckvXikq3Ef">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.number.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/parsley.min.js"></script>
+    <script type="text/javascript" src="js/parsley.remote.min.js"></script>
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css?v=1622197046">
+    <link rel="stylesheet" href="css/fdsi_common.css?v=1622197046">
+
+    <script type="text/javascript" src="js/jquery.vticker.min.js"></script>
+    <script type="text/javascript" src="js/fdsi.min.js?v=1622197046"></script>
+    <script type="text/javascript" src="//js.pusher.com/4.1/pusher.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(document).bind("contextmenu", function(e) {
+                return false;
+            });
+
+
+
+            var isLogin = "1";
+            var newMsgCount = '0';
+            if (parseInt(newMsgCount) > 0 && parseInt(isLogin)) {
+                $('#message2Player').html('새로운 쪽지가 ' + newMsgCount + '개 있습니다. [쪽지함]에서 확인하세요.');
+                $('#modal-alert-message').modal();
+            }
+        });
+
+        $(document).bind('selectstart', function() {
+            return false;
+        });
+        $(document).bind('dragstart', function() {
+            return false;
+        });
+
+        window.onload = function() {
+            if (getCookie('popupID520') === "master_done") {
+
+            } else {
+                addPopup('popupID520', '160', '510', '360', '510');
+            }
+            if (getCookie('popupID784') === "master_done") {
+
+            } else {
+                addPopup('popupID784', '160', '880', '360', '510');
+            }
+            if (getCookie('popupID1026') === "master_done") {
+
+            } else {
+                addPopup('popupID1026', '160', '1250', '360', '420');
+            }
+            if (getCookie('popupID1359') === "master_done") {
+
+            } else {
+                addPopup('popupID1359', '160', '140', '360', '510');
+            }
+        };
+    </script>
+
+    <script>
+        var isLogin = "1";
+        var iMinute = "120";
+        var iSecond = parseInt(iMinute) * 60;
+        var timerChecker = null;
+
+        $(document).ready(function() {
+            initTimer();
+            wagerCheck();
+        });
+
+        $(document).click(function() {
+            initTimer();
+        });
+
+        $(document).keydown(function() {
+            initTimer();
+        });
+    </script>
+
+</head>
+
+<body>
+    <audio id="newMSG">
+    <source src="sound/message.mp3" type="audio/mpeg"/>
+</audio>
+    <audio id="alertMSG">
+    <source src="sound/alert.wav" type="audio/mpeg"/>
+</audio>
+    <div class='wrapper_loading hidden'>
+        <img src="images/loading.gif" class="wrapper_loading_img" alt="">
+    </div>
+
+    <div class="wrapper">
+        <div class="nav-main">
+            <div class="center">
+                <div class="logo_cont" onclick="javascript:location.href='/'">
+                    <div>
+                        <img class="icon" src="images/logo/logo.png" alt="logo-image">
+                        <img class="name" src="images/logo/name.png" alt="logo-image">
+                        <img class="sub" src="images/logo/sub.png" alt="logo-image">
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="/">
+                        <p class="kr">HOME</p>
+                    </a>
+                    <a data-toggle="modal" data-target=".depositModal">
+                        <p class="kr">입금신청</p>
+                        <p class="en">DEPOSIT</p>
+                    </a>
+                    <a data-toggle="modal" data-target=".withdrawModal">
+                        <p class="kr">출금신청</p>
+                        <p class="en">WITHDRAW</p>
+                    </a>
+                    <a data-toggle="modal" data-target=".noticeModal" class="popup">
+                        <p class="kr">공지사항</p>
+                        <p class="en">NOTICE</p>
+                    </a>
+                    <a data-toggle="modal" data-target=".eventModal" class="popup">
+                        <p class="kr">이벤트</p>
+                        <p class="en">EVENT</p>
+                    </a>
+
+                    <a href="#" class="contact first">
+                <img src="images/icon/tele.png">
+                @mgmtopmaster
+            </a>
+                    <a href="#" class="contact">
+                <img src="images/icon/kakao.png">
+                mgmtopmaster
+            </a>
+                    <a href="#" class="contact">
+                <img src="images/icon/skype.png">
+                <span class="__cf_email__" data-cfemail="bed3d9d3cad1ced3dfcdcadbccfed9d3dfd7d290ddd1d3">[email&#160;protected]</span>
+            </a>
+
+
+                </div>
+                <div class="star">
+                    <img src="images/icon/star.png" alt="star-image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Notice -->
+        <div class="notice-main">
+            <div class="notice-carousel">
+                <span>
+			<img class="bell" src="images/icon/bell.png" alt="bell-image">
+			<div class="carousel" data-ride="carousel" data-interval="3000">
+			  	<div class="carousel-inner">
+                                                                                <div class="item active">
+				      	<p>▶ MGM_CASINO 이용전 꼭 공지사항 확인 부탁드립니다.</p>
+				    </div>
+                                                                                <div class="item">
+				      	<p>▶저희 MGM_CASINO는 실제 카지노와 시스템이 같습니다.</p>
+				    </div>
+                                                                                <div class="item">
+				      	<p>기존 계좌로 잘못 입금 하신건에 대한건 당사에서 책임을 지지 않고 있사오니 이점 유의 하시기 바랍니다.</p>
+				    </div>
+                                                                                <div class="item">
+				      	<p>입금계좌가 수시로 변경 되고 있습니다. 입금 전 고객센터에 문의 하시기 바랍니다.</p>
+				    </div>
+                                                            
+			  	</div>
+			</div>
+			</span>
+            </div>
+        </div>
+        <div class="banner-main">
+            <img class="bg" src="images/banner/banner.png" alt="banner-image">
+            <div class="center-cont">
+                <div class="carousel" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+
+                        <div class="item active">
+                            <div class="text-cont">
+                                <span class="text">
+                            <p>
+                                실제 카지노와 같은 시스템
+                            </p>
+                            <p>
+                                최대 0.75% 롤링 포인트 지급
+                            </p>
+                        </span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="text-cont">
+                                <span class="text">
+                            <p>
+                                롤링 100% 제재 없음
+                            </p>
+                            <p>
+                                신규 첫입금 10% 매입금 8%
+                            </p>
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="login-pan">
+                    <div class="after-login-container">
+                        <div class="my-account">
+                            <div class="level" data-toggle="modal" data-target=".mypageModal" onclick="initMyInfo('point')">
+                                <div class="icon-cont">
+                                    <div>
+                                        <span>
+                            <img style="max-width: 26px;" src="https://resource.fdsigaming.com/uploads/level/level_image1552114590.png" alt="level-icon">
+                        </span>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <label>lv</label>
+                                    <label>1</label>
+                                </div>
+                            </div>
+                            <div class="money">
+                                <div data-toggle="modal" data-target=".mypageModal">
+                                    <i class="glyphicon glyphicon-user" style="top: 5px; cursor: pointer;"></i>
+                                    <p class="label nick">엎어쳐야제맛 님</p>
+                                </div>
+                                <div>
+                                    <p class="label"><i>&#8361;</i> 보유머니</p>
+                                    <p class="amount"><span class="yellow player-balance">로딩중···</span> 원</p>
+                                </div>
+                                <div>
+                                    <p class="label"><i>P</i> 포인트</p>
+                                    <p class="amount">
+                                        <span class="blue player-point-top" data-toggle="modal" data-target=".mypageModal" onclick="initMyInfo('point')">로딩중···</span> P</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-progress">
+                            <p class="label">롤링현황</p>
+                            <span>
+                <div class="progress-bar-cont">
+                    <div></div>
+                </div>
+            </span>
+                            <p class="percent progress-percent">0%</p>
+                        </div>
+                        <div class="shortcut-links">
+                            <button type="button" onclick="initMyInfo('message')" data-toggle="modal" data-target=".mypageModal">
+                <i class="fa fa-envelope"></i>쪽지
+            </button>
+                            <button type="button" onclick="mustSignIn('라이브챗을 이용하세요.')">
+                <i class="fa fa-comments"></i>문의
+            </button>
+                            <button type="button" data-toggle="modal" data-target=".depositModal">
+                <i class="fa fa-plus-square"></i>입금
+            </button>
+                            <button type="button" data-toggle="modal" data-target=".withdrawModal">
+                <i class="fa fa-minus-square"></i>출금
+            </button>
+                            <button type="button" class="logout-btn">
+                <i class="glyphicon glyphicon-off"></i>
+            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                <script>
+                    var lf = $("#loginForm");
+                    lf.submit(function() {
+                        $(this).parsley().validate();
+                        if ($(this).parsley().isValid()) {
+                            $('.wrapper_loading').removeClass('hidden');
+                        } else {
+                            mustSignIn('아이디와 비밀번호를 입력하세요.');
+                        }
+                    });
+                </script>
+
+            </div>
+        </div>
+        <div class="category-main">
+            <div class="center">
+                <div class="category-btn casino active">
+                    <div class="cont-btn">
+                        <div class="icon-cont">
+                            <img src="images/icon/casino.png" alt="slot">
+                        </div>
+                    </div>
+                    <p>카지노게임</p>
+                </div>
+                <div class="category-btn hotel">
+                    <div class="cont-btn">
+                        <div class="icon-cont">
+                            <img src="images/icon/hotel.png">
+                        </div>
+                    </div>
+                    <p>호텔카지노</p>
+                </div>
+                <div class="category-btn slot ">
+                    <div class="cont-btn">
+                        <div class="icon-cont">
+                            <img src="images/icon/slot.png" alt="slot">
+                        </div>
+                    </div>
+                    <p>슬롯게임</p>
+                </div>
+
+                <div class="category-btn sports">
+                    <div class="cont-btn">
+                        <div class="icon-cont">
+                            <img src="images/icon/sports.png" alt="sports">
+                        </div>
+                    </div>
+                    <p>스포츠배팅</p>
+                </div>
+
+                <div class="category-btn minigame">
+                    <div class="cont-btn">
+                        <div class="icon-cont">
+                            <img src="images/icon/minigame.png" alt="mini">
+                        </div>
+                    </div>
+                    <p>미니게임</p>
+                </div>
+
+                <div class="category-btn" data-toggle="modal" data-target=".depositModal">
+                    <div class="cont-btn">
+                        <div class="icon-cont">
+                            <img src="images/icon/bank.png" alt="bank">
+                        </div>
+                    </div>
+                    <p>입금신청</p>
+                </div>
+                <div class="category-btn" data-toggle="modal" data-target=".withdrawModal">
+                    <div class="cont-btn">
+                        <div class="icon-cont">
+                            <img src="images/icon/chips.png" alt="chips">
+                        </div>
+                    </div>
+                    <p>출금신청</p>
+                </div>
+            </div>
+            <div class="deco-bg"></div>
+        </div>
+        <div class="main-body">
+            <div class="company-main">
+                <div class="header">
+                    <div>
+                        <p class="cc-title casino active">MGM <span>카지노게임</span></p>
+                        <p class="cc-title hotel">MGM <span>호텔카지노</span></p>
+                        <p class="cc-title slot ">MGM <span>슬롯게임</span></p>
+                        <p class="cc-title sports">MGM <span>스포츠배팅</span></p>
+                        <p class="cc-title minigame">MGM <span>미니게임</span></p>
+                    </div>
+                </div>
+                <div class="company-container">
+                    <div class="cc-center casino active">
+                        <!-- *** *** REVOLUTION LIVE *** *** -->
+
+                        <!--<div class="company-btn">
+            <img class="deco" src="images/bg/c_btn_deco.png">
+            <img class="main-img" src="images/banner/casino/pragmatic_live.png">
+            <span class="name">
+                <p>프라그매틱플레이</p>
+                <img src="images/icon/casino/pragmatic.png">
+            </span>
+            <button type="button"
+                    onclick="mustSignIn('준비중입니다.')">PLAY
+            </button>
+        </div>-->
+
+                        <div class="company-btn">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/casino/evolution.png">
+                            <span class="name">
+                <p>에볼루션게이밍</p>
+                <img src="images/icon/casino/evolution.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'HTML5', 45)">PLAY
+            </button>
+                        </div>
+
+                        <div class="company-btn ho">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/casino/wm.png">
+                            <span class="name">
+                <p>WM카지노</p>
+                <img src="images/icon/casino/wm.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'HTML5', 12)">PLAY
+            </button>
+                        </div>
+
+                        <div class="company-btn">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/casino/allbet.png">
+                            <span class="name">
+                <p>올벳</p>
+                <img src="images/icon/casino/allbet.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'FLASH', 4)">PLAY
+            </button>
+                        </div>
+
+                        <div class="company-btn dream">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/casino/dream.png">
+                            <span class="name">
+                <p>드림게이밍</p>
+                <img src="images/icon/casino/dream.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'FLASH', 28)">PLAY
+            </button>
+                        </div>
+
+                        <div class="company-btn micro">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/casino/micro.png">
+                            <span class="name">
+                <p>마이크로게이밍</p>
+                <img src="images/icon/casino/micro.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'FLASH', 21)">PLAY
+            </button>
+                        </div>
+
+                        <div class="company-btn sexy">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/casino/sexygaming.png">
+                            <span class="name">
+                <p>섹시게이밍</p>
+                <img src="images/icon/casino/sexygaming.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'FLASH', 3)">PLAY
+            </button>
+                        </div>
+
+                        <div class="company-btn">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/casino/ag.png">
+                            <span class="name">
+                <p>아시아게이밍</p>
+                <img src="images/icon/casino/ag.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'FLASH', 44)">PLAY
+            </button>
+                        </div>
+
+                        <div class="company-btn ho">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/casino/og_plus.png">
+                            <span class="name">
+                <p>오리엔탈플러스</p>
+                <img src="images/icon/casino/og_plus.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'HTML5', 9)">PLAY
+            </button>
+                        </div>
+                        <!--<div class="company-btn">
+            <img class="deco" src="images/bg/c_btn_deco.png">
+            <img class="main-img" src="images/banner/casino/oriental.png">
+            <span class="name">
+                <p>오리엔탈</p>
+                <img src="images/icon/casino/oriental.png">
+            </span>
+            <button type="button"
+                                        onclick="openGame('live', 'FLASH', 5)"
+                    >PLAY
+            </button>
+        </div>-->
+
+                        <div class="company-btn bbin">
+                            <img class="deco" src="images/bg/c_btn_deco.png" alt="deco">
+                            <img class="main-img" src="images/banner/casino/bbin.png" alt="main">
+                            <span class="name">
+                <p>BBIN</p>
+                <img src="images/icon/casino/bbin.png" alt="bbin">
+            </span>
+                            <button type="button" onclick="openGame('live', 'FLASH', 15, 'bbin_live')">PLAY
+            </button>
+                        </div>
+
+                        <div class="company-btn">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/casino/vivo.png">
+                            <span class="name">
+                <p>비보게이밍</p>
+                <img src="images/icon/casino/vivo.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'FLASH', 1)">PLAY
+            </button>
+                        </div>
+
+                        <div class="company-btn taishan">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/casino/taishan.png">
+                            <span class="name">
+                <p>타이산</p>
+                <img src="images/icon/casino/taishan.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'FLASH', 16)">PLAY
+            </button>
+                        </div>
+
+                        <div class="company-btn lotus">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/casino/lotus.png">
+                            <span class="name">
+                <p>로터스</p>
+                <img src="images/icon/casino/lotus.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'FLASH', 7)">PLAY
+            </button>
+                        </div>
+
+                        <div class="company-btn ho">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/casino/hogaming.png">
+                            <span class="name">
+                <p>호게이밍</p>
+                <img src="images/icon/casino/ho.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'FLASH', 22)">PLAY
+            </button>
+                        </div>
+
+                    </div>
+
+
+                    <div class="cc-center hotel">
+                        <div class="company-btn hotel">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/hotel/midas.png">
+                            <span class="name">
+            <p>마이다스</p>
+            <img src="images/icon/hotel/midas.png">
+        </span>
+                            <button onclick="alert('준비중입니다.')">PLAY</button>
+                        </div>
+                        <div class="company-btn hotel">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/hotel/okada.png">
+                            <span class="name">
+            <p>오카다</p>
+            <img src="images/icon/hotel/okada.png">
+        </span>
+                            <button onclick="alert('준비중입니다.')">PLAY</button>
+                        </div>
+                        <div class="company-btn hotel">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/hotel/solaire.png">
+                            <span class="name">
+            <p>솔레이어</p>
+            <img src="images/icon/hotel/solaire.png">
+        </span>
+                            <button onclick="alert('준비중입니다.')">PLAY</button>
+                        </div>
+                        <div class="company-btn hotel">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/hotel/macau.png">
+                            <span class="name">
+            <p>뉴월드</p>
+            <img src="images/icon/hotel/macau.png">
+        </span>
+                            <button onclick="alert('준비중입니다.')">PLAY</button>
+                        </div>
+                    </div>
+
+                    <!-- *** *** REVOLUTION SLOT *** *** -->
+                    <div class="cc-center slot ">
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('CQ9')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/cq9.png">
+                            <span class="name">
+                <p>시큐9</p>
+                <img src="images/icon/slot/cq9.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('PragmaticPlay_NEW')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/pragmatic.png">
+                            <span class="name">
+                <p>프라그매틱플레이</p>
+                <img src="images/icon/slot/pragmatic.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('BNG')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/bng.png">
+                            <span class="name">
+                <p>부운고</p>
+                <img src="images/icon/slot/bng.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('RTG')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/rtg.png">
+                            <span class="name">
+                <p>알티지</p>
+                <img src="images/icon/slot/rtg.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('THE_SHOW')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/aristocrat.png">
+                            <span class="name">
+                <p>아리스토크랏</p>
+                <img src="images/icon/slot/aristocrat.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('MG_DASHUR_TC')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/micro.png">
+                            <span class="name">
+                <p>마이크로게이밍</p>
+                <img src="images/icon/casino/micro.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('AsiaGaming_NEW')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/ag.png">
+                            <span class="name">
+                <p>아시아게이밍</p>
+                <img src="images/icon/casino/ag.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('HANEBARO')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/habanero.png">
+                            <span class="name">
+                <p>하바네로</p>
+                <img src="images/icon/slot/habanero.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('EVOPLAY')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/evoplay.png">
+                            <span class="name">
+                <p>에보플레이</p>
+                <img src="images/icon/slot/evoplay.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('PLAYSON_NEW')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/playson.png">
+                            <span class="name">
+                <p>플레이슨</p>
+                <img src="images/icon/slot/playson.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('PLAYSTAR')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/playstar.png">
+                            <span class="name">
+                <p>플레이스타</p>
+                <img src="images/icon/slot/star.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('GAMEART')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/gameart.png">
+                            <span class="name">
+                <p>게임아트</p>
+                <img src="images/icon/slot/gameart.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('GENESIS')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/genesis.png">
+                            <span class="name">
+                <p>제네시스</p>
+                <img src="images/icon/slot/genesis.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('TTG')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/toptrend.png">
+                            <span class="name">
+                <p>탑트렌드</p>
+                <img src="images/icon/slot/toptrend.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <div class="company-btn" data-toggle="modal" data-target=".spModal" onclick="getSlotGames('iSOFTBET')">
+                            <img class="deco" src="images/bg/c_btn_deco.png">
+                            <img class="main-img" src="images/banner/slot/isoftbet.png">
+                            <span class="name">
+                <p>아이소프트벳</p>
+                <img src="images/icon/slot/isoftbet.png">
+            </span>
+                            <button type="button">PLAY</button>
+                        </div>
+
+                        <!--<div class="company-btn" data-toggle="modal" data-target=".spModal">
+            <img class="deco" src="images/bg/c_btn_deco.png">
+            <img class="main-img" src="images/banner/slot/bgaming.png">
+            <span class="name">
+                <p>비게이밍</p>
+                <img src="images/icon/slot/bgaming.png">
+            </span>
+            <button type="button" onclick="getSlotGames('BGAMING')">PLAY</button>
+        </div>-->
+
+                        <!--
+        <div class="company-btn">
+            <img class="deco" src="images/bg/c_btn_deco.png">
+            <img class="main-img" src="images/banner/slot/bbin.png">
+            <span class="name">
+                <p>BBIN</p>
+                <img src="images/icon/casino/bbin.png">
+            </span>
+            <button type="button"
+                     onclick="openGame('live', 'FLASH', 15, 'bbin_game')"
+                    >PLAY</button>
+        </div>
+
+        <div class="company-btn" data-toggle="modal" data-target=".spModal">
+            <img class="deco" src="images/bg/c_btn_deco.png">
+            <img class="main-img" src="images/banner/slot/tpg.png">
+            <span class="name">
+                <p>TPG</p>
+                <img src="images/icon/slot/tpg.png">
+            </span>
+            <button type="button" onclick="getSlotGames('TPG')">PLAY</button>
+        </div>
+        -->
+
+                    </div>
+
+                    <!-- *** *** MGM SPORTS *** *** -->
+
+                    <div class="cc-center sports">
+                        <div class="company-btn sports">
+                            <img class="deco" src="images/bg/c_btn_deco.png" alt="deco">
+                            <img class="main-img" src="images/banner/sports/bbin.png" alt="bbin">
+                            <span class="name">
+                <p>BBIN</p>
+                <img src="images/icon/casino/bbin.png">
+            </span>
+                            <button type="button" onclick="openGame('live', 'FLASH', 15, 'bbin_ball')">PLAY</button>
+                        </div>
+                        <div class="company-btn sports">
+                            <img class="deco" src="images/bg/c_btn_deco.png" alt="deco">
+                            <img class="main-img" src="images/banner/sports/ag.png" alt="ag">
+                            <span class="name">
+                <p>아시아게이밍</p>
+                <img src="images/icon/casino/ag.png">
+            </span>
+                            <button type="button" onclick="mustSignIn('준비중입니다.')">PLAY</button>
+                        </div>
+                    </div>
+
+                    <!-- *** *** MGM MINIGAME *** *** -->
+
+                    <div class="cc-center minigame">
+                        <div class="company-btn sports">
+                            <div class="deco minigame"></div>
+                            <img class="main-img" src="images/banner/minigame/powerball.png" alt="power ball">
+                            <span class="name">
+                <p>파워볼</p>
+                <img src="images/icon/casino/powerball.png" alt="power ball">
+            </span>
+                            <button type="button" onclick="mustSignIn('준비중입니다.')">PLAY</button>
+                        </div>
+
+                        <div class="company-btn sports">
+                            <div class="deco minigame"></div>
+                            <img class="main-img" src="images/banner/minigame/cq9.png">
+                            <span class="name">
+			<p>시큐9 피싱</p>
+			<img src="images/icon/slot/cq9.png">
+		</span>
+                            <button type="button" onclick="openGame('slot', null, null, 'cq9_cq9_AB1')">PLAY</button>
+                        </div>
+
+                        <div class="company-btn sports">
+                            <div class="deco minigame"></div>
+                            <img class="main-img" src="images/banner/minigame/genesis.png">
+                            <span class="name">
+			<p>제네시스피싱</p>
+			<img src="images/icon/slot/genesis.png">
+		</span>
+                            <button type="button" onclick="openGame('slot', null, null, 'genesis_M4-0075')">PLAY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-main">
+                <span>
+        <img src="images/icon/tele.png" alt="telegram">
+        @mgmtopmaster
+    </span>
+                <span>
+        <img src="images/icon/kakao.png" alt="kakao">
+        mgmtopmaster
+    </span>
+                <span>
+		<img src="images/icon/skype.png">
+		<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3b565c564f544b565a484f5e497b5c565a525715585456">[email&#160;protected]</a>
+	</span>
+                <p><span class="cu">[파트너 제휴 문의]</span> 24시간 실시간제보 및 정보공유해 드립니다.!!</p>
+            </div>
+
+            <div class="contact-main">
+                <span style="cursor: pointer;" onclick="window.open('https://www.google.com/intl/ko/chrome/')">
+		<img src="images/icon/chrome.png">
+        크롬 다운로드
+	</span>
+            </div>
+
+
+            <div class="board-main">
+                <div class="board not-eve">
+                    <div class="menu">
+                        <div class="center">
+
+                            <div class="ne-menu-btn notice active">
+                                <span>
+                        <img src="images/icon/spade.png" alt="spade">
+                        공지사항
+                    </span>
+                                <p>NOTICE</p>
+                            </div>
+
+                            <div class="ne-menu-btn event ">
+                                <span>
+                        <img src="images/icon/spade.png" alt="spade">
+                        이벤트
+                    </span>
+                                <p>EVENT</p>
+                            </div>
+
+                            <div class="ne-menu-btn faq">
+                                <span>
+                        <img src="images/icon/spade.png" alt="spade">
+                        자주 묻는 질문
+                    </span>
+                                <p>FAQ</p>
+                            </div>
+                        </div>
+                        <img class="board-menu-bg" src="images/bg/board_nav_bg.png" alt="board navigate">
+                    </div>
+                    <div class="ne-table-cont">
+                        <div class="ne-table notice active">
+                            <div class="head">
+                                <p>=공지사항=</p>
+                                <a class="more popup" data-toggle="modal" data-target=".noticeModal">더보기 <i class="more"></i></a>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td class="text-left" onclick="boardPopup('notice', '997', '1')" data-toggle="modal" data-target=".noticeModal">
+                                        <a href="#noen">▶MGM_CASINO  에볼루션 라이트닝게임 안내 </a>
+                                    </td>
+                                    <td>2020-09-12</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" onclick="boardPopup('notice', '882', '2')" data-toggle="modal" data-target=".noticeModal">
+                                        <a href="#noen">▶MGM_CASINO  입금시 주의사항 안내</a>
+                                    </td>
+                                    <td>2020-06-04</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" onclick="boardPopup('notice', '878', '3')" data-toggle="modal" data-target=".noticeModal">
+                                        <a href="#noen">▶MGM_CASINO  더블유엠카지노 출시안내</a>
+                                    </td>
+                                    <td>2020-06-03</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" onclick="boardPopup('notice', '701', '4')" data-toggle="modal" data-target=".noticeModal">
+                                        <a href="#noen">▶MGM_CASINO 텔레그램 사칭 주의</a>
+                                    </td>
+                                    <td>2020-02-04</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" onclick="boardPopup('notice', '580', '5')" data-toggle="modal" data-target=".noticeModal">
+                                        <a href="#noen">▶MGM_CASINO 양빵배터 강력 재제 안내</a>
+                                    </td>
+                                    <td>2019-09-28</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="ne-table event ">
+                            <div class="head">
+                                <p>=이벤트=</p>
+                                <a class="more popup" data-toggle="modal" data-target=".eventModal">더보기 <i class="more"></i></a>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td class="text-left" onclick="boardPopup('event', '481', '1')" data-toggle="modal" data-target=".eventModal">
+                                        <a href="#noen">▶MGM_CASINO 점심시간 핫타임 이벤트(★···</a>
+                                    </td>
+                                    <td>2021-02-21</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" onclick="boardPopup('event', '393', '2')" data-toggle="modal" data-target=".eventModal">
+                                        <a href="#noen">►지인추천이벤트(★진행중★)</a>
+                                    </td>
+                                    <td>2020-04-07</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" onclick="boardPopup('event', '350', '3')" data-toggle="modal" data-target=".eventModal">
+                                        <a href="#noen">MGM_CASINO 2020 설날 첫입금 이벤트(마감)</a>
+                                    </td>
+                                    <td>2020-01-23</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" onclick="boardPopup('event', '331', '4')" data-toggle="modal" data-target=".eventModal">
+                                        <a href="#noen">MGM_CASINO 2020 신년맞이 출석 이벤트(···</a>
+                                    </td>
+                                    <td>2019-12-22</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" onclick="boardPopup('event', '318', '5')" data-toggle="modal" data-target=".eventModal">
+                                        <a href="#noen">►MGM_CASINO 출석 이벤트(★진행중★)</a>
+                                    </td>
+                                    <td>2019-11-10</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="ne-table faq">
+                            <div class="head">
+                                <p>=자주 묻는 질문=</p>
+                                <a class="more popup" data-toggle="modal" data-target=".faqModal">더보기 <i class="more popup"></i></a>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td><a style="text-decoration: none;">기본 FAQ 입니다.</a></td>
+                                    <td>2019-03-28</td>
+                                </tr>
+                                <tr>
+                                    <td><a style="text-decoration: none;">▶MGM_CASINO 입금,출금은 어떻게하나요?</a></td>
+                                    <td>2019-03-28</td>
+                                </tr>
+                                <tr>
+                                    <td><a style="text-decoration: none;">게임 FAQ 입니다.</a></td>
+                                    <td>2019-03-28</td>
+                                </tr>
+                                <tr>
+                                    <td><a style="text-decoration: none;">▶MGM_CASINO 입금/출금은 어떻게하나요?</a></td>
+                                    <td>2019-04-01</td>
+                                </tr>
+                                <tr>
+                                    <td><a style="text-decoration: none;">▶MGM_CASINO ※BBIN 스포츠 베팅규정※</a></td>
+                                    <td>2019-04-04</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="board bank dep-wid-contents">
+                    <div class="bank-table">
+                        <p class="title">실시간입금현황</p>
+                        <div class="table deposit">
+                            <ul>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 19:13</span>
+                                        <span>sup***</span>
+                                    </p>
+                                    <p class="amount">50,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 19:07</span>
+                                        <span>sup***</span>
+                                    </p>
+                                    <p class="amount">100,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 18:58</span>
+                                        <span>min***</span>
+                                    </p>
+                                    <p class="amount">500,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 18:51</span>
+                                        <span>sup***</span>
+                                    </p>
+                                    <p class="amount">200,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 18:43</span>
+                                        <span>sup***</span>
+                                    </p>
+                                    <p class="amount">300,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 18:39</span>
+                                        <span>dyeop***</span>
+                                    </p>
+                                    <p class="amount">250,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 18:31</span>
+                                        <span>sh***</span>
+                                    </p>
+                                    <p class="amount">1,000,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 18:29</span>
+                                        <span>sh***</span>
+                                    </p>
+                                    <p class="amount">1,000,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 18:27</span>
+                                        <span>qq***</span>
+                                    </p>
+                                    <p class="amount">1,000,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 18:26</span>
+                                        <span>dyeop***</span>
+                                    </p>
+                                    <p class="amount">210,000 원</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bank-table">
+                        <p class="title">실시간출금현황</p>
+                        <div class="table withdraw">
+                            <ul>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 18:58</span>
+                                        <span>dyeop***</span>
+                                    </p>
+                                    <p class="amount">1,040,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 18:45</span>
+                                        <span>qq***</span>
+                                    </p>
+                                    <p class="amount">4,710,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 18:12</span>
+                                        <span>dyeop***</span>
+                                    </p>
+                                    <p class="amount">480,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 18:02</span>
+                                        <span>vbeauti***</span>
+                                    </p>
+                                    <p class="amount">200,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 17:27</span>
+                                        <span>wa***</span>
+                                    </p>
+                                    <p class="amount">100,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 16:51</span>
+                                        <span>sky***</span>
+                                    </p>
+                                    <p class="amount">200,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 16:33</span>
+                                        <span>ekdud***</span>
+                                    </p>
+                                    <p class="amount">1,000,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 15:47</span>
+                                        <span>osung***</span>
+                                    </p>
+                                    <p class="amount">100,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 14:46</span>
+                                        <span>qkral***</span>
+                                    </p>
+                                    <p class="amount">100,000 원</p>
+                                </li>
+                                <li class="tr">
+                                    <p class="info">
+                                        <span>05-28 14:15</span>
+                                        <span>hansol***</span>
+                                    </p>
+                                    <p class="amount">410,000 원</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <img src="images/icon/star.png">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-main">
+            <div class="links-cont">
+                <div>
+                    <p>MGM카지노</p>
+                    <span>
+                <a >회원가입하기</a>
+                <a  data-toggle="modal" data-target=".depositModal" >입금신청</a>
+                <a  data-toggle="modal" data-target=".withdrawModal" >출금신청</a>
+                <a  data-toggle="modal" data-target=".eventModal" >이벤트</a>
+                <a  data-toggle="modal" data-target=".noticeModal" >공지사항</a>
+                <a  data-toggle="modal" data-target=".faqModal" >자주 묻는 질문</a>
+            </span>
+                </div>
+                <div>
+                    <p>라이브 카지노</p>
+                    <span>
+                <a                    onclick="openGame('live', 'HTML5', 45)"
+                   >에볼류션</a>
+                <a                    onclick="openGame('live', 'FLASH', 5)"
+                   >오리엔탈</a>
+                <a                    onclick="openGame('live', 'FLASH', 28)"
+                   >드림게이밍</a>
+                <a type="button"
+                                      onclick="openGame('live', 'FLASH', 21)"
+                   >마이크로게이밍</a>
+                <a                    onclick="openGame('live', 'FLASH', 22)"
+                   >호게임</a>
+                <a                    onclick="openGame('live', 'FLASH', 7)"
+                   >아시아게이밍</a>
+            </span>
+                    <span>
+                <a                    onclick="openGame('live', 'FLASH', 4)"
+                   >올벳</a>
+                <a                    onclick="openGame('live', 'FLASH', 15, 'bbin_live')"
+                   >BBIN</a>
+
+                <a                    onclick="openGame('live', 'FLASH', 1)"
+                   >비보</a>
+                <a                    onclick="openGame('live', 'FLASH', 16)"
+                   >타이산</a>
+            </span>
+                </div>
+                <div>
+                    <p>슬롯머신</p>
+                    <span>
+                <a data-toggle="modal" data-target=".spModal" onclick="getSlotGames('CQ9')">CQ9</a>
+                <a data-toggle="modal" data-target=".spModal" onclick="getSlotGames('PragmaticPlay_NEW')">프라그매틱플레이</a>
+                <a data-toggle="modal" data-target=".spModal" onclick="getSlotGames('Aristocrats')">아리스토크랏</a>
+                <a  onclick="openGame('live', 'FLASH', 15, 'bbin_game')"
+                   >BBIN</a>
+                <a data-toggle="modal" data-target=".spModal" onclick="getSlotGames('MG_DASHUR_TC')">마이크로</a>
+                <a data-toggle="modal" data-target=".spModal" onclick="getSlotGames('AsiaGaming')">아시아게이밍</a>
+            </span>
+                    <span>
+                <a data-toggle="modal" data-target=".spModal" onclick="getSlotGames('HANEBARO')">하바네로</a>
+                <a data-toggle="modal" data-target=".spModal" onclick="getSlotGames('PLAYSTAR')">플레이스타</a>
+                <a data-toggle="modal" data-target=".spModal" onclick="getSlotGames('GAMEART')">게임아트</a>
+                <a data-toggle="modal" data-target=".spModal" onclick="getSlotGames('GENESIS')">제네시스</a>
+                <a data-toggle="modal" data-target=".spModal" onclick="getSlotGames('TTG')">탑트랜드</a>
+                <a data-toggle="modal" data-target=".spModal" onclick="getSlotGames('TPG')">트리플프로핏</a>
+            </span>
+                </div>
+                <div>
+                    <p>스포츠</p>
+                    <span>
+                <a onclick="mustSignIn('중비중입니다.')">BBIN 스포츠</a>
+                <a onclick="mustSignIn('중비중입니다.')">AG 스포츠</a>
+            </span>
+                    <p>미니게임</p>
+                    <span>
+                <a onclick="mustSignIn('중비중입니다.')">POWERBALL</a>
+            </span>
+                </div>
+            </div>
+            <img class="logo-footer" src="images/logo/logo_footer.png">
+        </div>
+
+        <input type="hidden" id="key" value="kV8gflgGbQ8reX40MoSvJixB1iQoozckvXikq3Ef" />
+        <input type="hidden" id="page_limit" value="10" />
+        <input type="hidden" id="page_list_limit" value="5" />
+        <input type="hidden" id="is_sign_in" value="1" />
+        <input type="hidden" id="i_minute" value="120" />
+        <input type="hidden" id="val-idx" value="970556" />
+        <input type="hidden" id="is_level" value="Y" />
+        <input type="hidden" id="point_restrict" value="10000" />
+
+        <div class="modal" id="modal-alert-success" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true" style="top: 115px;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="defaultModalLabel">알림</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-success m-b-0">
+                            <h4><i class="fa fa-check-circle"></i> </h4>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-alert-danger" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true" style="top: 115px;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="defaultModalLabel">알림</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-danger m-b-0">
+                            <h4><i class="fa fa-check-circle"></i> </h4>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-alert-logout" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true" style="top: 115px;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="defaultModalLabel" style="color: #a94442;">경고</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-danger m-b-0">
+                            <h4><i class="fa fa-check-circle"></i> 자동 로그아웃까지 90초 남았습니다. 계속하려면 확인을 클릭하세요.</h4>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">확인</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="logOut()">
+                    로그아웃                </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-alert-loginOverlap" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true" style="top: 115px;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="defaultModalLabel" style="color: #a94442;">경고</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-danger m-b-0">
+                            <h4><i class="fa fa-check-circle"></i> 중복으로 로그인되어 현재 위치에서 로그아웃 합니다.</h4>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-alert-message" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true" style="top: 115px; z-index: 1916;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="defaultModalLabel">알림</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-success m-b-0" id="message2Player"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="depositModal modal fade" role="dialog">
+        <div class="dep_with_modal sc_modal modal-dialog">
+            <div class="header">
+                <div class="btn-grp">
+                    <button class="active deposit">입금신청</button>
+                    <button class="withdraw">출금신청</button>
+                </div>
+                <button class="close-btn" data-dismiss="modal"></button>
+            </div>
+            <div class="modal_body">
+                <form id="depositForm" action="/finance/deposit/process" method="post" data-parsley-validate>
+                    <input name="deposit_method" type="hidden" value="BANK">
+                    <input type="hidden" name="_token" value="kV8gflgGbQ8reX40MoSvJixB1iQoozckvXikq3Ef">
+                    <div class="form-group all-text">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 회원정보</p>
+                        </div>
+                        <div>
+                            <p>변성룡(엎어쳐야제맛)</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 입금자명</p>
+                        </div>
+                        <div>
+                            <input class="form-control w400" data-parsley-trigger="change" data-parsley-pattern="/^[ㄱ-ㅎ|가-힣|a-z|A-Z|]+$/" data-parsley-pattern-message="유효하지 않은 값입니다." data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다." placeholder="가입시 입력한 입금자명과 동일해야 합니다."
+                                readOnly name="deposit_req_name" type="text" value="변성룡">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 휴대폰번호</p>
+                        </div>
+                        <div>
+                            <input class="form-control w400" readOnly name="_deposit_req_mobile" type="text" value="010-7773-5688">
+                            <input name="deposit_req_mobile" type="hidden" value="01077735688">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 보너스선택</p>
+                        </div>
+                        <div>
+                            <select class="form-control w400" role="menu" name="deposit_bonus_id"><option selected="selected" value="">보너스선택(미선택 시 기본롤링)</option><option value="964">신규 첫 충전 10% 보너스(롤링300%)</option><option value="963">매입금 8% 보너스(롤링300%)</option></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 입금금액</p>
+                        </div>
+                        <div>
+                            <input class="form-control w400" id="depositAmount" data-parsley-type="digits" data-parsley-type-message="유효하지 않은 값입니다." data-parsley-pattern="/^[0-9]*$/" data-parsley-pattern-message="유효하지 않은 값입니다." data-parsley-trigger="focusin change" data-parsley-required="true"
+                                data-parsley-required-message="필수입력 항목입니다." data-parsley-min="30000" data-parsley-min-message="최소입금 30,000원 이상" placeholder="최소입금 30,000원 부터가능(만원단위입금)" name="deposit_amount" type="text" value="">
+                            <div class="btn_grp" style="margin-top: 22px;">
+                                <button type="button" onclick="addAmount(1,3)">3만</button>
+                                <button type="button" onclick="addAmount(1,5)">5만</button>
+                                <button type="button" onclick="addAmount(1,10)">10만</button>
+                                <button type="button" onclick="addAmount(1,50)">50만</button>
+                                <button type="button" onclick="addAmount(1,100)">100만</button>
+                                <button type="button" onclick="resetAmount(1)">정정하기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal_btn_grp">
+                        <button type="submit">입금하기</button>
+                        <button type="reset" data-dismiss="modal">취소하기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        var df = $("#depositForm");
+
+        df.on('keyup keypress', function(e) {
+            var keyCode = e.keyCode || e.which;
+            if (keyCode === 13) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        df.submit(function(e) {
+            var amount = parseInt($("[name=deposit_amount]").val());
+            if (amount % 10000 > 0) {
+                mustSignIn('입금금액은 만원단위로 입력하세요.');
+                e.preventDefault();
+            } else {
+                $(this).parsley().validate();
+                if ($(this).parsley().isValid()) {
+                    $('.wrapper_loading').removeClass('hidden');
+                }
+            }
+        });
+    </script>
+
+    <div class="withdrawModal modal fade" role="dialog">
+        <div class="dep_with_modal sc_modal modal-dialog">
+            <div class="header">
+                <div class="btn-grp">
+                    <button class="deposit">입금신청</button>
+                    <button class="active withdraw">출금신청</button>
+                </div>
+                <button class="close-btn" data-dismiss="modal"></button>
+            </div>
+            <div class="modal_body">
+                <form form id="withdrawalForm" action="/finance/withdrawal/process" method="post" data-parsley-validate>
+                    <input name="withdraw_method" type="hidden" value="BANK">
+                    <input name="withdraw_classification" type="hidden" value="">
+                    <input type="hidden" name="_token" value="kV8gflgGbQ8reX40MoSvJixB1iQoozckvXikq3Ef">
+                    <div class="form-group all-text">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 보유금액</p>
+                        </div>
+                        <div>
+                            <p class="player-balance">로딩중···</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 은행명</p>
+                        </div>
+                        <div>
+                            <input class="form-control w400" readOnly name="_withdraw_bank_name" type="text" value="KEB하***">
+                            <input name="withdraw_bank_name" type="hidden" value="KEB하나은행">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 출금자명</p>
+                        </div>
+                        <div>
+                            <input class="form-control w400" placeholder="입금자명과 출금자명은 동일해야 합니다." readOnly name="_withdraw_req_name" type="text" value="변성*">
+                            <input name="withdraw_req_name" type="hidden" value="변성룡">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 계좌번호</p>
+                        </div>
+                        <div>
+                            <input class="form-control w400" readOnly name="_withdraw_bank_number" type="text" value="50174722****">
+                            <input name="withdraw_bank_number" type="hidden" value="501747226381">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 출금금액</p>
+                        </div>
+                        <div>
+                            <input class="form-control w400 withdrawal_amount" id="withdrawalAmount" data-parsley-type="digits" data-parsley-type-message="유효하지 않은 값입니다." data-parsley-pattern="/^[0-9]*$/" data-parsley-pattern-message="유효하지 않은 값입니다." data-parsley-trigger="focus change"
+                                data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다." data-parsley-min="50000" data-parsley-min-message="최소출금 50,000원 이상" placeholder="최소출금 50,000원 부터 가능(만원단위출금)" name="withdrawal_amount" type="text" value="">
+                            <div class="btn_grp" style="margin-top: 22px;">
+                                <button type="button" onclick="addAmount(2,5)">5만</button>
+                                <button type="button" onclick="addAmount(2,10)">10만</button>
+                                <button type="button" onclick="addAmount(2,30)">30만</button>
+                                <button type="button" onclick="addAmount(2,50)">50만</button>
+                                <button type="button" onclick="addAmount(2,100)">100만</button>
+                                <button type="button" onclick="resetAmount(2)">정정하기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal_btn_grp">
+                        <button type="submit">출금하기</button>
+                        <button type="reset" data-dismiss="modal">취소하기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var wf = $("#withdrawalForm");
+
+        wf.on('keyup keypress', function(e) {
+            var keyCode = e.keyCode || e.which;
+            if (keyCode === 13) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        wf.submit(function(e) {
+            var amount = parseInt($("[name=withdrawal_amount]").val());
+            if (amount % 10000 > 0) {
+                mustSignIn('출금금액은 만원단위로 입력하세요.');
+                e.preventDefault();
+            } else {
+                $(this).parsley().validate();
+                if ($(this).parsley().isValid()) {
+                    $('.wrapper_loading').removeClass('hidden');
+                }
+            }
+        });
+    </script>
+    <div class="noticeModal modal fade" role="dialog">
+        <div class="board_modal sc_modal modal-dialog">
+            <div class="header">
+                <div class="btn-grp">
+                    <button type="button" class="active notice">공지사항</button>
+                    <button type="button" class="event">이벤트</button>
+                </div>
+                <button class="close-btn" data-dismiss="modal"></button>
+            </div>
+            <div class="modal_body">
+                <div class="board_event">
+                    <div class="board_event_list notice-section">
+                        <table class="board_table notice_table">
+                            <colgroup>
+                                <col width="10%" />
+                                <col width="50%" />
+                                <col width="40%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>작성일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center" colspan="3">데이터를 가져오는 중입니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="board_event_see notice-view-section">
+                    </div>
+                </div>
+
+                <!--<div class="board_event">
+                <div class="board_event_list">
+                    <table class="board_table">
+                        <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성일</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td>★★★★레불류션카지노카지노에서 입금보너스 50% 쏜다.★★★★ <img src="images/icon/new.png"></td>
+                            <td>2019-01-30</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>★★★★레불류션카지노카지노에서 입금보너스 50% 쏜다.★★★★ <img src="images/icon/hot.png"</td>
+                            <td>2019-01-30</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>★★★★레불류션카지노카지노에서 입금보너스 50% 쏜다.★★★★</td>
+                            <td>2019-01-30</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>★★★★레불류션카지노카지노에서 입금보너스 50% 쏜다.★★★★</td>
+                            <td>2019-01-30</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>★★★★레불류션카지노카지노에서 입금보너스 50% 쏜다.★★★★</td>
+                            <td>2019-01-30</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>★★★★레불류션카지노카지노에서 입금보너스 50% 쏜다.★★★★</td>
+                            <td>2019-01-30</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>★★★★레불류션카지노카지노에서 입금보너스 50% 쏜다.★★★★</td>
+                            <td>2019-01-30</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>★★★★레불류션카지노카지노에서 입금보너스 50% 쏜다.★★★★</td>
+                            <td>2019-01-30</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>★★★★레불류션카지노카지노에서 입금보너스 50% 쏜다.★★★★</td>
+                            <td>2019-01-30</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>★★★★레불류션카지노카지노에서 입금보너스 50% 쏜다.★★★★</td>
+                            <td>2019-01-30</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <ul class="pagination">
+                        <li class="turn-pg"><a href="#"><span aria-hidden="true">&laquo;</span></a></li>
+                        <li class="turn-pg space-r"><a href="#"><span aria-hidden="true">&lsaquo;</span></a></li>
+                        <li><a href="#" class="active">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li class="turn-pg space-l"><a href="#"><span aria-hidden="true">&rsaquo;</span></a></li>
+                        <li class="turn-pg"><a href="#"><span aria-hidden="true">&raquo;</span></a></li>
+                    </ul>
+                </div>
+                <div class="board_event_see">
+                    <table class="board_table">
+                        <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성일</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="active">
+                            <td>10</td>
+                            <td>★★★★레불류션카지노카지노에서 입금보너스 50% 쏜다.★★★★</td>
+                            <td>2019-01-30</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="view_event">
+                        <div class="scroll_cont">
+                            <div>
+                                <p>★★★★레불류션카지노카지노에서 입금보너스 50% 쏜다.★★★★★</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_btn_grp">
+                        <button class="go_elist_btn">목록가기</button>
+                        <button>이전글보기</button>
+                        <button>다음글보기</button>
+                    </div>
+                </div>
+            </div>-->
+            </div>
+        </div>
+    </div>
+    <div class="eventModal modal fade" role="dialog">
+        <div class="board_modal sc_modal modal-dialog">
+            <div class="header">
+                <div class="btn-grp">
+                    <button type="button" class="notice">공지사항</button>
+                    <button type="button" class="active event">이벤트</button>
+                </div>
+                <button class="close-btn" data-dismiss="modal"></button>
+            </div>
+            <div class="modal_body">
+                <div class="board_event">
+                    <div class="board_event_list event-section">
+                        <table class="board_table event_table">
+                            <colgroup>
+                                <col width="10%" />
+                                <col width="50%" />
+                                <col width="40%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>작성일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center" colspan="3">데이터를 가져오는 중입니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="board_event_see event-view-section">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mypageModal modal fade" role="dialog">
+        <div class="mypage_modal sc_modal modal-dialog">
+            <div class="header">
+                <div class="btn-grp my_page_menu">
+                    <button type="button" class="active">나의정보</button>
+                    <button type="button" id="FC">입출금리스트</button>
+                    <button type="button" id="BH">보너스내역</button>
+                    <button type="button" class="messageTab">쪽지</button>
+                    <button type="button" id="BW">배팅/윈</button>
+                    <button type="button" id="CP">쿠폰정보</button>
+                    <button type="button" class="pointTab">레벨정보/포인트</button>
+                </div>
+                <button type="button" class="close-btn" data-dismiss="modal"></button>
+            </div>
+            <div class="modal_body mypage">
+                <div class="mypage_content">
+                    <div class="mp_cont active">
+                        <form id="passwordChangeForm" action="/player/change/password" method="POST" data-parsley-validate>
+                            <input type="hidden" name="_token" value="kV8gflgGbQ8reX40MoSvJixB1iQoozckvXikq3Ef">
+                            <div class="myinfo_notice">
+                                <p>상담이나 궁금한 점, 그외 변경은 1:1 상담을 이용하세요.</p>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <p><i class="fa fa-circle"></i> 아이디</p>
+                                </div>
+                                <div>
+                                    <p class="white">qus118</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <p><i class="fa fa-circle"></i> 이름</p>
+                                </div>
+                                <div>
+                                    <p class="white">변성룡</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <p><i class="fa fa-circle"></i> 닉네임</p>
+                                </div>
+                                <div>
+                                    <p class="white">엎어쳐야제맛</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <p class="green"><i class="fa fa-circle"></i> 기존비밀번호</p>
+                                </div>
+                                <div>
+                                    <input type="password" name="current_password" class="" autocomplete="off" data-parsley-trigger="focusout" data-parsley-remote-message="패스워드가 일치하지 않습니다." data-parsley-remote-validator="reverse" data-parsley-remote="/player/current/password" data-parsley-required="true"
+                                        data-parsley-required-message="필수입력 항목입니다.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <p class="green"><i class="fa fa-circle"></i> 새로운 비밀번호</p>
+                                </div>
+                                <div>
+                                    <input type="password" id="new_password" autocomplete="off" name="new_password" class=" " data-parsley-trigger="focusout" data-parsley-minlength="6" data-parsley-minlength-message="6 자 이상 입력하세요." data-parsley-maxlength="12" data-parsley-maxlength-message="12 자 이하로 입력하세요."
+                                        data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <p class="green"><i class="fa fa-circle"></i> 비밀번호 재입력</p>
+                                </div>
+                                <div>
+                                    <input type="password" name="new_password_confirm" autocomplete="off" class=" " data-parsley-trigger="focusout" data-parsley-equalto="#new_password" data-parsley-equalto-message="패스워드가 일치하지 않습니다." data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <p><i class="fa fa-circle"></i> 전화번호</p>
+                                </div>
+                                <div>
+                                    <p class="white">
+                                        010-7773-5688
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <p><i class="fa fa-circle"></i> 은행명</p>
+                                </div>
+                                <div>
+                                    <p class="white">KEB하***</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <p><i class="fa fa-circle"></i> 계좌번호</p>
+                                </div>
+                                <div>
+                                    <p class="white">50174722****</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <p><i class="fa fa-circle"></i> 예금주</p>
+                                </div>
+                                <div>
+                                    <p class="white">변성*</p>
+                                </div>
+                            </div>
+                            <div class="mypage_bottom">
+                                <div class="modal_btn_grp mypage">
+                                    <button type="submit">수정하기</button>
+                                    <button type="reset" data-dismiss="modal">취소하기</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mp_cont finance-list">
+                        <table class="mp_table">
+                            <colgroup>
+                                <col width="15%" />
+                                <col width="15%" />
+                                <col width="30%" />
+                                <col width="15%" />
+                                <col width="25%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>수단</th>
+                                    <th>금액</th>
+                                    <th>상태</th>
+                                    <th>날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="5">로딩중···</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mp_cont bonuses-list">
+                        <table class="mp_table">
+                            <colgroup>
+                                <col width="26%" />
+                                <col width="12%" />
+                                <col width="20%" />
+                                <col width="12%" />
+                                <col width="10%" />
+                                <col width="20%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>보너스내역</th>
+                                    <th>종류</th>
+                                    <th>금액</th>
+                                    <th>롤링</th>
+                                    <th>상태</th>
+                                    <th>날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="6">로딩중···</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mp_cont">
+                        <div class="note_list message-list">
+                            <div class="inquiry_table">
+                                <div class="head">
+                                    <p>쪽지함</p>
+                                </div>
+                                <div class="row_tr note">
+                                    <div class="row_td note">
+                                        <p> <span class="label label-warning" style="padding-bottom: 1px;">필독</span>&nbsp; 안녕하세요 MGM운영진 입니다.
+                                        </p>
+                                        <div>
+                                            <button type="button" class="note_btn" onclick="readMessage('88078', 'A', '2', $(this))">열기</button>
+                                            <button type="button" class="delete_btn" onclick="deleteMessage('88078', 'A')"></button>
+                                        </div>
+                                    </div>
+                                    <div class="td_view note">
+                                        <p>입금계좌 문의 없이 입금하실경우</p>
+                                        <p>입금처리가 안되오니 꼭 입금하시기 전에 문의 먼저 부탁드리겠습니다.</p>
+                                        <p>기존 엉클젠 계좌는 확인이 안되오니 삭제 부탁드리겠습니다.</p>
+                                        <p>기존 계좌로 입금하실경우 본사측에선 보상을 해드릴수가 없습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="row_tr note">
+                                    <div class="row_td note">
+                                        <p> <span class="label label-warning" style="padding-bottom: 1px;">필독</span>&nbsp; 7월9일 입금 계좌 변경 안내
+                                        </p>
+                                        <div>
+                                            <button type="button" class="note_btn" onclick="readMessage('87049', 'A', '2', $(this))">열기</button>
+                                            <button type="button" class="delete_btn" onclick="deleteMessage('87049', 'A')"></button>
+                                        </div>
+                                    </div>
+                                    <div class="td_view note">
+                                        <p>입금계좌 변경 되었습니다.</p>
+                                        <p>입금 하시기 전에 꼭 입금계좌 문의 먼저 부탁드립니다.</p>
+                                        <p><br></p>
+                                    </div>
+                                </div>
+                                <div class="row_tr note">
+                                    <div class="row_td note">
+                                        <p> <span class="label label-warning" style="padding-bottom: 1px;">필독</span>&nbsp; 계좌변경 안내
+                                        </p>
+                                        <div>
+                                            <button type="button" class="note_btn" onclick="readMessage('87029', 'A', '2', $(this))">열기</button>
+                                            <button type="button" class="delete_btn" onclick="deleteMessage('87029', 'A')"></button>
+                                        </div>
+                                    </div>
+                                    <div class="td_view note">
+                                        <p>계좌 변경 되었습니다.</p>
+                                        <p>입금하시기전 꼭 계좌 문의 부탁드리겟습니다.&nbsp;</p>
+                                    </div>
+                                </div>
+                                <div class="row_tr note">
+                                    <div class="row_td note">
+                                        <p> <span class="label label-warning" style="padding-bottom: 1px;">필독</span>&nbsp; 계좌변경 안내
+                                        </p>
+                                        <div>
+                                            <button type="button" class="note_btn" onclick="readMessage('87028', 'A', '2', $(this))">열기</button>
+                                            <button type="button" class="delete_btn" onclick="deleteMessage('87028', 'A')"></button>
+                                        </div>
+                                    </div>
+                                    <div class="td_view note">
+                                        <p>계좌 변경 되었습니다.</p>
+                                        <p>입금하시기전 꼭 계좌 문의 부탁드리겟습니다.&nbsp;</p>
+                                    </div>
+                                </div>
+                                <div class="row_tr note">
+                                    <div class="row_td note">
+                                        <p> <span class="label label-warning" style="padding-bottom: 1px;">필독</span>&nbsp; 계좌 변경 안내
+                                        </p>
+                                        <div>
+                                            <button type="button" class="note_btn" onclick="readMessage('75614', 'A', '2', $(this))">열기</button>
+                                            <button type="button" class="delete_btn" onclick="deleteMessage('75614', 'A')"></button>
+                                        </div>
+                                    </div>
+                                    <div class="td_view note">
+                                        <p>안녕하세요 MGM운영진 입니다.</p>
+                                        <p>입금 계좌가 변경되었습니다.</p>
+                                        <p>입금하시기전에 꼭 입금 계좌 문의후 입금 하시기 바라겠습니다.&nbsp;</p>
+                                    </div>
+                                </div>
+                                <div class="row_tr note">
+                                    <div class="row_td note">
+                                        <p> <span class="label label-warning" style="padding-bottom: 1px;">필독</span>&nbsp; 긴급 계좌 변경
+                                        </p>
+                                        <div>
+                                            <button type="button" class="note_btn" onclick="readMessage('18350', 'A', '2', $(this))">열기</button>
+                                            <button type="button" class="delete_btn" onclick="deleteMessage('18350', 'A')"></button>
+                                        </div>
+                                    </div>
+                                    <div class="td_view note">
+                                        <p>계좌 변경 되었습니다 꼭 채팅창으로 계좌 확인후 입금 바람니다</p>
+                                    </div>
+                                </div>
+                                <div class="row_tr note">
+                                    <div class="row_td note">
+                                        <p> <span class="label label-warning" style="padding-bottom: 1px;">필독</span>&nbsp; 긴급 계좌 변경
+                                        </p>
+                                        <div>
+                                            <button type="button" class="note_btn" onclick="readMessage('18349', 'A', '2', $(this))">열기</button>
+                                            <button type="button" class="delete_btn" onclick="deleteMessage('18349', 'A')"></button>
+                                        </div>
+                                    </div>
+                                    <div class="td_view note">
+                                        <p>계좌 변경 되었습니다 꼭 채팅창으로 계좌 확인후 입금 바람니다</p>
+                                    </div>
+                                </div>
+                                <div class="row_tr note">
+                                    <div class="row_td note">
+                                        <p> <span class="label label-warning" style="padding-bottom: 1px;">필독</span>&nbsp; 긴급 계좌 변경
+                                        </p>
+                                        <div>
+                                            <button type="button" class="note_btn" onclick="readMessage('18348', 'A', '2', $(this))">열기</button>
+                                            <button type="button" class="delete_btn" onclick="deleteMessage('18348', 'A')"></button>
+                                        </div>
+                                    </div>
+                                    <div class="td_view note">
+                                        <p>계좌 변경 되었습니다 꼭 채팅창으로 계좌 확인후 입금 바람니다</p>
+                                    </div>
+                                </div>
+                                <div class="row_tr note">
+                                    <div class="row_td note">
+                                        <p> <span class="label label-warning" style="padding-bottom: 1px;">필독</span>&nbsp; 긴급 계좌 변경
+                                        </p>
+                                        <div>
+                                            <button type="button" class="note_btn" onclick="readMessage('18347', 'A', '2', $(this))">열기</button>
+                                            <button type="button" class="delete_btn" onclick="deleteMessage('18347', 'A')"></button>
+                                        </div>
+                                    </div>
+                                    <div class="td_view note">
+                                        <p>계좌 변경 되었습니다 꼭 채팅창으로 계좌 확인후 입금 바람니다</p>
+                                    </div>
+                                </div>
+                                <div class="row_tr note">
+                                    <div class="row_td note">
+                                        <p> <span class="label label-warning" style="padding-bottom: 1px;">필독</span>&nbsp; 긴급 계좌 변경
+                                        </p>
+                                        <div>
+                                            <button type="button" class="note_btn" onclick="readMessage('18346', 'A', '2', $(this))">열기</button>
+                                            <button type="button" class="delete_btn" onclick="deleteMessage('18346', 'A')"></button>
+                                        </div>
+                                    </div>
+                                    <div class="td_view note">
+                                        <p>계좌 변경 되었습니다 꼭 채팅창으로 계좌 확인후 입금 바람니다</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my_page_bottom message-view">
+                            <div class="modal_btn_grp message">
+                                <button type="button" onclick="messageWrite();">문의작성</button>
+                                <button type="button" style="display: none;"></button>
+                            </div>
+                        </div>
+
+                        <form id="writeForm" action="/player/message/write.info" method="POST" data-parsley-validate>
+                            <input name="send_idx" type="hidden" value="970556">
+                            <input name="send_id" type="hidden" value="qus118">
+                            <input name="receive_type" type="hidden" value="M">
+                            <input type="hidden" name="_token" value="kV8gflgGbQ8reX40MoSvJixB1iQoozckvXikq3Ef">
+                            <div class="inquiry_form message-write hidden">
+                                <input class="" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다." data-parsley-maxlength="30" data-parsley-maxlength-message="30 자 이하로 입력하세요." placeholder="제목을 입력하세요." name="subject" type="text" value="">
+                                <textarea class="" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다." data-parsley-maxlength="1000" data-parsley-maxlength-message="message.maxLength1000" placeholder="내용을 입력하세요. (1000 자 이내)" name="message"
+                                    cols="50" rows="10"></textarea>
+                            </div>
+                            <div class="my_page_bottom message-write hidden">
+                                <div class="modal_btn_grp message" style="padding-top: 10px">
+                                    <button type="submit">작성완료</button>
+                                    <button type="button" onclick="writeCancel();">취소하기</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mp_cont bet-win-list">
+                        <table class="mp_table bet_win">
+                            <colgroup>
+                                <col width="30%" />
+                                <col width="10%" />
+                                <col width="20%" />
+                                <col width="40%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>게임사</th>
+                                    <th>벳/윈</th>
+                                    <th>금액</th>
+                                    <th>날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4">로딩중···</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mp_cont coupon-list">
+                        <table class="mp_table">
+                            <colgroup>
+                                <col width="40%" />
+                                <col width="23%" />
+                                <col width="23%" />
+                                <!--<col width="12%"/>-->
+                                <col width="14%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>쿠폰</th>
+                                    <th>금액</th>
+                                    <th>유효일자</th>
+                                    <!--<th>상태</th>-->
+                                    <th>상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="5">로딩중···</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mp_cont">
+                        <div class="level_notice">
+                            <div class="center">
+                                <span>
+								<i class="fa fa-circle"></i>
+								나의 현재 레벨
+								<button><img src="https://resource.fdsigaming.com/uploads/level/level_image1552114590.png">1</button>
+							</span>
+                                <span>
+								<i class="fa fa-circle"></i>
+								나의 포인트
+								<button type="button">
+                                    <span class="player-point-info">로딩중···</span>
+                                </button>
+                                </span>
+                                <button type="button" class="use_point_btn" onclick="usePoint()">> 포인트사용</button>
+                            </div>
+                        </div>
+
+                        <table class="mp_table level_table">
+                            <colgroup>
+                                <col width="22%" />
+                                <col width="18%" />
+                                <col width="30%" />
+                                <col width="30%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>레벨</th>
+                                    <th>베팅혜택</th>
+                                    <th>베팅누계</th>
+                                    <th>입금누계</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <img src="https://resource.fdsigaming.com/uploads/level/level_image1552114590.png" class="level-icon" alt="icon">
+                                        <b>1</b>
+                                    </td>
+                                    <td class="text-center">0.20%
+                                    </td>
+                                    <td class="text-right" style="padding-right: 30px;">
+                                        0
+                                    </td>
+                                    <td class="text-right" style="padding-right: 30px;">
+                                        0
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <img src="https://resource.fdsigaming.com/uploads/level/level_image1552114615.png" class="level-icon" alt="icon">
+                                        <b>2</b>
+                                    </td>
+                                    <td class="text-center">0.25%
+                                    </td>
+                                    <td class="text-right" style="padding-right: 30px;">
+                                        50,000,000
+                                    </td>
+                                    <td class="text-right" style="padding-right: 30px;">
+                                        10,000,000
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <img src="https://resource.fdsigaming.com/uploads/level/level_image1552114637.png" class="level-icon" alt="icon">
+                                        <b>3</b>
+                                    </td>
+                                    <td class="text-center">0.35%
+                                    </td>
+                                    <td class="text-right" style="padding-right: 30px;">
+                                        300,000,000
+                                    </td>
+                                    <td class="text-right" style="padding-right: 30px;">
+                                        50,000,000
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <img src="https://resource.fdsigaming.com/uploads/level/level_image1552114666.png" class="level-icon" alt="icon">
+                                        <b>4</b>
+                                    </td>
+                                    <td class="text-center">0.45%
+                                    </td>
+                                    <td class="text-right" style="padding-right: 30px;">
+                                        700,000,000
+                                    </td>
+                                    <td class="text-right" style="padding-right: 30px;">
+                                        250,000,000
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <img src="https://resource.fdsigaming.com/uploads/level/level_image1553739830.png" class="level-icon" alt="icon">
+                                        <b>5</b>
+                                    </td>
+                                    <td class="text-center">0.55%
+                                    </td>
+                                    <td class="text-right" style="padding-right: 30px;">
+                                        1,500,000,000
+                                    </td>
+                                    <td class="text-right" style="padding-right: 30px;">
+                                        700,000,000
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <img src="https://resource.fdsigaming.com/uploads/level/level_image1553739959.png" class="level-icon" alt="icon">
+                                        <b>VIP</b>
+                                    </td>
+                                    <td class="text-center">0.75%
+                                    </td>
+                                    <td class="text-right" style="padding-right: 30px;">
+                                        5,000,000,000
+                                    </td>
+                                    <td class="text-right" style="padding-right: 30px;">
+                                        2,000,000,000
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var spr = $('.wrapper_loading');
+
+        var pf = $("#passwordChangeForm");
+        pf.submit(function() {
+            $(this).parsley().validate();
+            if ($(this).parsley().isValid()) {
+                spr.removeClass('hidden');
+            }
+        });
+
+        var mf = $("#writeForm");
+        mf.submit(function() {
+            var pel = $('.parsley-errors-list');
+            $(this).parsley().validate();
+            if ($(this).parsley().isValid()) {
+                spr.removeClass('hidden');
+            } else {
+                pel.css('left', '60px');
+                pel.css('margin-top', '0px');
+            }
+        });
+    </script>
+    <div class="joinModal modal fade" role="dialog">
+        <div class="join_modal sc_modal modal-dialog">
+            <div class="header">
+                <div class="btn-grp">
+                    <button class="join active">회원가입</button>
+                </div>
+                <button class="close-btn" data-dismiss="modal"></button>
+            </div>
+            <div class="modal_body">
+                <form id="signUpForm" action="/signUp" method="post" data-parsley-validate="" novalidate="">
+                    <input id="certified_number" name="certified_number" type="hidden" value="">
+                    <input type="hidden" name="_token" value="kV8gflgGbQ8reX40MoSvJixB1iQoozckvXikq3Ef">
+
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 아이디</p>
+                        </div>
+                        <div>
+                            <input class="form-control " id="mb_login_id_signup" data-parsley-trigger="change" data-parsley-pattern="/^[a-z]+[a-z0-9]{5,12}$/g" data-parsley-pattern-message="유효하지 않은 값입니다." maxlength="12" data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다."
+                                data-parsley-minlength="5" data-parsley-minlength-message="5 자 이상 입력하세요." data-parsley-maxlength="12" data-parsley-maxlength-message="12 자 이하로 입력하세요." data-parsley-remote="/duplicateLoginId" data-parsley-remote-message="이미 사용 중입니다."
+                                data-parsley-remote-validator="reverse" placeholder="6자이상 영문, 숫자만 가능" autocomplete="off" name="mb_login_id" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 이름</p>
+                        </div>
+                        <div>
+                            <input class="form-control " id="mb_player_name" data-parsley-trigger="input change" data-parsley-pattern="/^[ㄱ-ㅎ|가-힣|a-z|A-Z|]+$/" data-parsley-pattern-message="유효하지 않은 값입니다." data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다." data-parsley-minlength="2"
+                                data-parsley-minlength-message="2 자 이상 입력하세요." data-parsley-maxlength="6" data-parsley-maxlength-message="6 자 이하로 입력하세요." placeholder="2자이상 한글,영문만 가능(예금주와 동일해야 함)" autocomplete="off" name="mb_name1" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 닉네임</p>
+                        </div>
+                        <div>
+                            <input class="form-control " data-parsley-trigger="input change" data-parsley-pattern="/^[ㄱ-ㅎ|가-힣|a-z|A-Z|0-9|\*]+$/" data-parsley-pattern-message="유효하지 않은 값입니다." data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다." data-parsley-minlength="2"
+                                data-parsley-minlength-message="2 자 이상 입력하세요." data-parsley-maxlength="6" data-parsley-maxlength-message="6 자 이하로 입력하세요." placeholder="2자이상 한글,영문 및 숫자 가능" autocomplete="off" name="mb_nick" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 비밀번호</p>
+                        </div>
+                        <div>
+                            <input class="form-control " id="password2" maxlength="12" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다." data-parsley-maxlength="12" data-parsley-maxlength-message="12 자 이하로 입력하세요." data-parsley-minlength="6"
+                                data-parsley-minlength-message="6 자 이상 입력하세요." autocomplete="off" name="password" type="password" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 비밀번호확인</p>
+                        </div>
+                        <div>
+                            <input class="form-control " data-parsley-equalto="#password2" data-parsley-equalto-message="비밀번호가 일치하지 않습니다." maxlength="12" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다." data-parsley-minlength="6"
+                                data-parsley-minlength-message="6 자 이상 입력하세요." autocomplete="off" name="password_confirm" type="password" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 전화번호</p>
+                        </div>
+                        <div class="w_btn">
+                            <input class="form-control" id="mb_tel" data-parsley-type="digits" data-parsley-type-message="이 값은 숫자만 입력 가능합니다." data-parsley-pattern="/^[0-9]*$/" data-parsley-pattern-message="유효하지 않은 값입니다." maxlength="15" data-parsley-trigger="change" data-parsley-required="true"
+                                data-parsley-required-message="필수입력 항목입니다." data-parsley-maxlength="15" data-parsley-maxlength-message="15 자 이하로 입력하세요." data-parsley-minlength="9" data-parsley-minlength-message="9 자 이상 입력하세요." placeholder="&#039;-&#039;없이 숫자 만 입력"
+                                data-parsley-remote="/duplicateLoginTel" data-parsley-remote-message="이미 등록된 전화번호 입니다." data-parsley-remote-validator="reverse" autocomplete="off" name="mb_tel" type="text" value="">
+                            <button type="button" onclick="requestCertifyNumber()">인증요청</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 인증번호</p>
+                        </div>
+                        <div class="w_btn">
+                            <input class="form-control" data-parsley-type="digits" data-parsley-type-message="이 값은 숫자만 입력 가능합니다." data-parsley-pattern="/^[0-9]*$/" data-parsley-pattern-message="유효하지 않은 값입니다." data-parsley-trigger="change input focusin" data-parsley-required="true"
+                                data-parsley-equalto="#certified_number" data-parsley-equalto-message="버튼을 눌러 인증번호를 확인하세요." data-parsley-required-message="필수입력 항목입니다." autocomplete="off" placeholder="문자 미수신 시 관리자문의" name="certify_number" type="text" value="">
+                            <button type="button" onclick="requestCertifyCheck()">인증확인</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div style=" color: red;  font-weight: bold; ">인증번호 미수신 시 채팅으로 문의해주세요.</div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 은행명</p>
+                        </div>
+                        <div>
+                            <select id="mb_bank_name" class="form-control " data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다." name="mb_bank_name"><option value="" selected="selected">선택하세요.</option><option value="KB국민은행">KB국민은행</option><option value="KB증권">KB증권</option><option value="신한은행">신한은행</option><option value="우리은행">우리은행</option><option value="KEB하나은행">KEB하나은행</option><option value="카카오뱅크">카카오뱅크</option><option value="카카오증권">카카오증권</option><option value="KDB산업은행">KDB산업은행</option><option value="IBK기업은행">IBK기업은행</option><option value="NH농협은행">NH농협은행</option><option value="NH증권">NH증권</option><option value="수협은행">수협은행</option><option value="대구은행">대구은행</option><option value="BNK부산은행">BNK부산은행</option><option value="BNK경남은행">BNK경남은행</option><option value="광주은행">광주은행</option><option value="전북은행">전북은행</option><option value="제주은행">제주은행</option><option value="농·축협">농·축협</option><option value="농협">농협</option><option value="축협">축협</option><option value="새마을금고">새마을금고</option><option value="우체국">우체국</option><option value="신용협동조합">신용협동조합</option><option value="산림조합">산림조합</option><option value="HSBC은행">HSBC은행</option><option value="한국스탠다드차타드은행">한국스탠다드차타드은행</option><option value="신한금융투자">신한금융투자</option><option value="하나금융투자">하나금융투자</option><option value="DB금융투자">DB금융투자</option><option value="유안타증권">유안타증권</option><option value="한국투자증권">한국투자증권</option><option value="상호저축은행중앙회">상호저축은행중앙회</option><option value="미래애셋">미래에셋</option><option value="삼성증권">삼성증권</option></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 계좌번호</p>
+                        </div>
+                        <div>
+                            <input id="mb_bank_account" class="form-control " data-parsley-type="digits" data-parsley-type-message="이 값은 숫자만 입력 가능합니다." data-parsley-pattern="/^[0-9]*$/" data-parsley-pattern-message="유효하지 않은 값입니다." maxlength="30" data-parsley-trigger="change" data-parsley-maxlength="30"
+                                data-parsley-maxlength-message="30 자 이하로 입력하세요." data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다." placeholder="&#039;-&#039;없이 숫자 만 입력" autocomplete="off" name="mb_bank_account" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <p><i class="fa fa-circle"></i> 예금주</p>
+                        </div>
+                        <div>
+                            <input id="mb_account_name" class="form-control" data-parsley-trigger="change" data-parsley-pattern="/^[ㄱ-ㅎ|가-힣|a-z|A-Z|]+$/" data-parsley-pattern-message="유효하지 않은 값입니다." maxlength="12" data-parsley-minlength="2" data-parsley-minlength-message="3 자 이상 입력하세요."
+                                data-parsley-maxlength="12" data-parsley-maxlength-message="12 자 이하로 입력하세요." data-parsley-required="true" data-parsley-required-message="필수입력 항목입니다." placeholder="2자이상 한글, 영문만 가능(예금주는 수정불가/고객센터문의)" autocomplete="off" name="mb_account_name"
+                                type="text" value="">
+                        </div>
+                    </div>
+                    <div class="modal_btn_grp">
+                        <button type="submit">회원가입</button>
+                        <button type="reset" data-dismiss="modal">취소하기</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        //spinner action
+        var sf = $("#signUpForm");
+        sf.submit(function() {
+            $(this).parsley().validate();
+            if ($(this).parsley().isValid()) {
+                $('.wrapper_loading').removeClass('hidden');
+            }
+        });
+    </script>
+    <div class="spModal modal fade" role="dialog">
+        <div class="slot-games sc_modal modal-dialog slot-view">
+            <div class="header">
+                <p class="slot_name title"><img src="images/icon/casino/micro_big.png"> 마이크로</p>
+                <button type="button" data-dismiss="modal"></button>
+            </div>
+            <div class="nav">
+                <button id=".po" type="button" class="active"><img src="images/icon/check.png">인기</button>
+                <button id=".al" type="button"><img src="../images/icon/check.png">전체</button>
+                <button id=".sl" type="button"><img src="../images/icon/check.png">슬롯</button>
+                <button id=".s3" type="button"><img src="../images/icon/check.png">3D슬롯</button>
+                <button id=".dt" type="button"><img src="../images/icon/check.png">드래곤타이거</button>
+                <button id=".bc" type="button"><img src="../images/icon/check.png">바카라</button>
+                <button id=".bj" type="button"><img src="../images/icon/check.png">블랙잭</button>
+                <button id=".pk" type="button"><img src="../images/icon/check.png">포커</button>
+                <button id=".sb" type="button"><img src="../images/icon/check.png">식보</button>
+                <button id=".rl" type="button"><img src="../images/icon/check.png">룰렛</button>
+                <button id=".et" type="button"><img src="../images/icon/check.png">기타</button>
+            </div>
+            <div class="body">
+                <div class="center">
+                    <div class="slot_sp_game">
+                        <img src="images/banner/games/game_1.png">
+                        <div class="overlay">
+                            <button>게임시작하기</button>
+                        </div>
+                        <div class="foot">
+                            <p>게임명타이틀</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="faqModal modal fade" role="dialog">
+        <div class="faq_modal sc_modal modal-dialog">
+            <div class="header">
+                <div class="btn-grp">
+                    <button class="active">자주 묻는 질문</button>
+                </div>
+                <button class="close-btn" data-dismiss="modal"></button>
+            </div>
+            <div class="modal_body">
+                <div class="faq-head">
+                    <button type="button" id="Basic" class="active">기본</button>
+                    <button type="button" id="Deposit & Withdrawal">입출금</button>
+                    <button type="button" id="Game">게임</button>
+                </div>
+
+                <div class="faq-container basic active">
+                    <table class="faq-table">
+                        <tbody>
+                            <tr>
+                                <td>로딩중···</td>
+                                <td>
+                                    <button class="open-btn">OPEN</button>
+                                    <i class="oc-icon glyphicon glyphicon-menu-down"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="faq-content">
+                        <p>데이터가 없습니다.</p>
+                    </div>
+                </div>
+
+                <div class="faq-container money">
+
+                    <table class="faq-table">
+                        <tbody>
+                            <tr>
+                                <td>로딩중···</td>
+                                <td>
+                                    <button class="open-btn">OPEN</button>
+                                    <i class="oc-icon glyphicon glyphicon-menu-down"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="faq-content">
+                        <p>데이터가 없습니다.</p>
+                    </div>
+                </div>
+
+                <div class="faq-container game">
+
+                    <table class="faq-table">
+                        <tbody>
+                            <tr>
+                                <td>로딩중···</td>
+                                <td>
+                                    <button class="open-btn">OPEN</button>
+                                    <i class="oc-icon glyphicon glyphicon-menu-down"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="faq-content">
+                        <p>데이터가 없습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup div -->
+    <div id="popupID520" class="popup_window" style="width:360px; height:510px;">
+        <table width="100%" height="100%" style="border:1px solid #EAEAEA; background-color:white;">
+            <tbody style="vertical-align: middle;">
+                <tr>
+                    <td><img src='https://resource.fdsigaming.com/uploads/popup/popup_img1604735435.png' alt="popup" style="vertical-align:middle;width:360px; height:510px; max-width: 100%; max-height: 100%;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td height="22" align="right" valign="middle" bgcolor="#D5D5D5">
+                        <div align="right" style="width:100%">
+                            <input type="checkbox" name="chkbox" value="" onclick="hidePopup('popupID520', 'master_done', '1');" />
+                            <font size="1" color="#000000">오늘 하루 이창을 열지않음</font>
+                            <a href="javascript:popupClose('popupID520');"><b><font size="2" color="#000000">[닫기]</font></b></a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="popupID784" class="popup_window" style="width:360px; height:510px;">
+        <table width="100%" height="100%" style="border:1px solid #EAEAEA; background-color:white;">
+            <tbody style="vertical-align: middle;">
+                <tr>
+                    <td><img src='https://resource.fdsigaming.com/uploads/popup/popup_img1585736892.png' alt="popup" style="vertical-align:middle;width:360px; height:510px; max-width: 100%; max-height: 100%;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td height="22" align="right" valign="middle" bgcolor="#D5D5D5">
+                        <div align="right" style="width:100%">
+                            <input type="checkbox" name="chkbox" value="" onclick="hidePopup('popupID784', 'master_done', '1');" />
+                            <font size="1" color="#000000">오늘 하루 이창을 열지않음</font>
+                            <a href="javascript:popupClose('popupID784');"><b><font size="2" color="#000000">[닫기]</font></b></a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="popupID1026" class="popup_window" style="width:360px; height:420px;">
+        <table width="100%" height="100%" style="border:1px solid #EAEAEA; background-color:white;">
+            <tbody style="vertical-align: middle;">
+                <tr>
+                    <td><img src='https://resource.fdsigaming.com/uploads/popup/popup_img1599892521.jpg' alt="popup" style="vertical-align:middle;width:360px; height:420px; max-width: 100%; max-height: 100%;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td height="22" align="right" valign="middle" bgcolor="#D5D5D5">
+                        <div align="right" style="width:100%">
+                            <input type="checkbox" name="chkbox" value="" onclick="hidePopup('popupID1026', 'master_done', '1');" />
+                            <font size="1" color="#000000">오늘 하루 이창을 열지않음</font>
+                            <a href="javascript:popupClose('popupID1026');"><b><font size="2" color="#000000">[닫기]</font></b></a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="popupID1359" class="popup_window" style="width:360px; height:510px;">
+        <table width="100%" height="100%" style="border:1px solid #EAEAEA; background-color:white;">
+            <tbody style="vertical-align: middle;">
+                <tr>
+                    <td><img src='https://resource.fdsigaming.com/uploads/popup/popup_img1613998707.png' alt="popup" style="vertical-align:middle;width:360px; height:510px; max-width: 100%; max-height: 100%;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td height="22" align="right" valign="middle" bgcolor="#D5D5D5">
+                        <div align="right" style="width:100%">
+                            <input type="checkbox" name="chkbox" value="" onclick="hidePopup('popupID1359', 'master_done', '1');" />
+                            <font size="1" color="#000000">오늘 하루 이창을 열지않음</font>
+                            <a href="javascript:popupClose('popupID1359');"><b><font size="2" color="#000000">[닫기]</font></b></a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+    <script type="text/javascript">
+        window.__lc = window.__lc || {};
+        window.__lc.license = 10747632;
+        (function() {
+            var lc = document.createElement('script');
+            lc.type = 'text/javascript';
+            lc.async = true;
+            lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(lc, s);
+        })();
+    </script>
+    <noscript>
+    <a href="https://www.livechatinc.com/chat-with/10747632/" rel="nofollow">Chat with us</a>,
+    powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+</noscript>
+    <!-- End of LiveChat code -->
+
+</body>
+
+</html>
