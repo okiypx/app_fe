@@ -1,1 +1,733 @@
-No Content: https://ywy55.com/asset/css/media-q.css?ver=89746541
+@charset "utf-8";
+
+@media screen and (max-width: 1803px) {
+    .game-list ul li {
+        width: 21%;
+        height: 220px;
+    }
+
+    .game-list {
+        width: 1500px;
+        margin: 0 auto;
+    }
+
+    .container {
+        width: 1300px;
+        padding-left: 30px;
+        margin: 0 auto;
+    }
+
+    .slot-list {
+        width: 100%;
+    }
+
+    .slot-mimg01 {
+        width: 38.0%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .slot-mimg02 {
+        width: 38%;
+    }
+
+    .slot-mimg03 {
+        width: 38%;
+    }
+
+    .slot-mimg img {
+        width: 100%;
+        height: auto;
+        min-height: 235px;
+    }
+
+    .slot-accarea {
+        width: 35%;
+        padding-left: 30px;
+    }
+
+    .slot-accarea button {
+        width: 31%;
+    }
+
+    .slot-accarea button:hover {
+        width: 31%;
+    }
+
+    .thumbnail-slot {
+        margin-left: 20px;
+        float: right;
+        width: 295px;
+    }
+
+
+    .slot-accarea .t01 {
+        width: 100%;
+    }
+
+    .slot-accarea .t02 {
+        width: 100%;
+    }
+
+    .slot-accarea .t03 {
+        width: 100%;
+    }
+
+    .list-b {
+        width: 32%;
+    }
+
+
+
+    .third-bl {
+        margin-left: 0%;
+        float: left;
+    }
+
+    .third-bl div {
+        padding: 10px;
+    }
+
+    .bx-wrapper .bx-pager,
+    .bx-wrapper .bx-controls-auto {
+        position: absolute;
+        bottom: -60px;
+        width: 100%;
+    }
+
+    .bxslider img{width:1500px;}
+
+
+}
+
+
+@media screen and (max-width: 1608px) {
+    .game-list ul li {
+        width: 20%;
+        height: 200px;
+    }
+
+    .login {
+        height: 70px;
+    }
+
+    .game-list ul li img {
+        width: 250px;
+    }
+
+    .game-list ul li h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .slider img {
+        width: 100%;
+
+    }
+
+    .thum-01 {
+        width: 75%;
+        transition-duration: 0.2s;
+    }
+
+    .thum-02 {
+        width: 75%;
+        transition-duration: 0.2s;
+    }
+
+    .thum-03 {
+        width: 75%;
+        transition-duration: 0.2s;
+    }
+
+    .list-b {
+        width: 30.5%;
+    }
+
+    .sub-wrap {
+        width: 100%;
+    }
+
+    .subscr {
+        width: 900px;
+        margin-left: 6%;
+    }
+
+    .subtitle h1 {
+        font-size: 20px;
+    }
+
+    .subtitle span {
+        font-size: 11px;
+    }
+
+    .subscr table tr td .typedotum {
+        padding-right: 50px;
+    }
+
+    .rem_back {
+        height: 370px;
+    }
+
+    .rem_wrap p:last-child {
+        font-size: 20px;
+        margin-top: 5%;
+    }
+
+    .partner-wrap img {
+        width: 98%;
+    }
+
+    .bx-wrapper .bx-pager,
+    .bx-wrapper .bx-controls-auto {
+        position: absolute;
+        bottom: -20px;
+        left:3%;
+        width: 100%;
+    }
+
+    .bxslider img{width:1300px;}
+
+}
+
+
+
+
+
+@media screen and (max-width: 1422px) {
+
+    .game-list ul li {
+        width: 33%;
+        height: 180px;
+    }
+
+    .login {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .login-box {
+        margin-right: 0px;
+        min-width: 550px;
+        margin-top: 0px;
+    }
+
+
+    .login-box input {
+        height: 25px;
+        width: 140px;
+    }
+
+    .login-box button {
+        height: 30px;
+        font-size: 14px;
+        width: 100px;
+    }
+
+    .login-box button:last-child {
+        height: 30px;
+        font-size: 14px;
+        width: 100px;
+    }
+
+    .game-list ul li h2 {
+        left: 270px;
+        bottom: 55px;
+    }
+
+    .slider img {
+        width: 100%;
+        min-width: 1200px;
+    }
+
+    .thumbnail-slot {
+        position: absolute;
+        margin-left: 0;
+        top: 5px;
+        width: 100%;
+    }
+
+    .thum-01 {
+        width: 25%;
+        transition-duration: 0.2s;
+        margin-right: 5px;
+        display: inline-block;
+    }
+
+    .thum-02 {
+        width: 25%;
+        transition-duration: 0.2s;
+        margin-right: 5px;
+        display: inline-block;
+    }
+
+    .thum-03 {
+        width: 25%;
+        transition-duration: 0.2s;
+        margin-right: 5px;
+        display: inline-block;
+    }
+
+    .slot-mimg01 {
+        margin-top: 80px;
+    }
+
+    .slot-mimg02 {
+        margin-top: 80px;
+    }
+
+    .slot-mimg03 {
+        margin-top: 80px;
+    }
+
+    .slot-accarea {
+        margin-top: 80px;
+    }
+
+    .list-b {
+        width: 24.5%;
+    }
+
+    .list-b .col01 {
+        width: 70%;
+        font-size: 11px;
+    }
+
+    .list-b .col01 {
+        font-size: 11px;
+    }
+
+    .list-b table tr {
+        height: 20px;
+    }
+
+    .list-b table tr:last-child {
+        border-bottom: none;
+    }
+
+    .list-b table tr td:first-child {
+        display: inline-block;
+        font-size: 11px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 200px;
+        white-space: nowrap;
+        line-height: 40px;
+    }
+
+    .list-b table tr td:last-child {
+        display: inline-block;
+        font-size: 11px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 80px;
+        white-space: nowrap;
+    }
+
+    .list-b table {
+        margin-left: 15px;
+    }
+
+    .subscr table {
+        font-size: 14px;
+    }
+
+    .sub-wrap {
+        width: 100%;
+    }
+
+    .subscr {
+        width: 750px;
+        padding-left: 0%;
+    }
+
+    .subtitle h1 {
+        font-size: 20px;
+    }
+
+    .subtitle span {
+        font-size: 11px;
+    }
+
+    .subscr table tr td .typedotum {
+        padding-right: 10px;
+        width: 350px;
+    }
+
+
+
+
+    .second-bl {
+        width: 40%;
+        margin-top: 0px;
+        height: 100px;
+        float: left;
+
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: -0.01em;
+        font-weight: 700;
+        color: #656565;
+        overflow: hidden;
+        height: auto;
+        transition-duration: 0.2s;
+        position: absolute;
+        top: 30px;
+        right: 349px
+    }
+
+    .second-bl h1 {
+        float: left;
+        font-size: 14px;
+        width: 100px;
+        height: 25px;
+    }
+
+    .second-bl h1 span {
+        color: #ff7800;
+    }
+
+    icon {
+        transition-duration: 0.3s;
+        width: 21%;
+        float: left;
+        margin-right: 10px;
+        height: 40px;
+        line-height: 40px;
+        background: #262626;
+        border: 1px solid #343434;
+        display: block;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    icon:hover {
+        background: #ff7800;
+        color: #fff;
+        transition-duration: 0.3s;
+    }
+
+    icon p {
+        font-size: 14px;
+        text-align: center;
+        margin: 0;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: bold;
+    }
+
+    .ico-01 {
+        position: absolute;
+        top: 10;
+        background: none;
+        width: 0px;
+        height: 0px;
+        float: left;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .ico-02 {
+
+        background: none;
+        width: 0px;
+        float: left;
+        height: 0px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .ico-03 {
+        background: none;
+        width: 0px;
+        height: 0px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .third-bl {
+        margin-left: 3%;
+        position: absolute;
+        right: 400px;
+    }
+
+    .first-bl h1 img {
+        width: 70%;
+    }
+
+    .first-bl h2 {
+        font-size: 10px;
+        width: 70%;
+    }
+
+    .first-bl h3 img {
+        width: 80%;
+    }
+    .bx-wrapper .bx-pager,
+    .bx-wrapper .bx-controls-auto {
+        position: absolute;
+        bottom: 5px;
+        left:3%;
+        width: 100%;
+    }
+    .bxslider img{width:1200px;}
+
+
+}
+
+
+@media screen and (max-width: 1080px) {
+
+    .game-list {
+        width: 80%;
+        margin: 0;
+    }
+
+    .game-list ul li {
+        width: 35.5%;
+        height: 180px;
+    }
+
+    .game-list ul li img {
+        width: 200px;
+        margin-top: 20px;
+    }
+
+    .game-list ul li h2 {
+        left: 200px;
+        bottom: 55px;
+        font-size: 30px;
+    }
+
+    .slider img {
+        width: 100%;
+        /*min-width: 1050px;*/
+    }
+
+    .left-container {
+        width: 200px;
+    }
+
+    .left-container h1 img {
+        width: 170px;
+    }
+
+    .l-menu-wrap {
+        width: 200px;
+        font-size: 13px;
+        height: 330px;
+        padding-bottom: 4px;
+    }
+
+    .l-menu {
+        width: 150px;
+        padding-top: 7px;
+    }
+
+    .left-container h1 {
+        height: 50px;
+    }
+
+    .customer-container {
+        width: 200px;
+        min-height: 210px;
+    }
+
+    .customer-text-wrap {
+        width: 140px;
+    }
+
+    .customer-text-wrap h2 {
+        font-size: 17px;
+    }
+
+    .customer-text-wrap h3 {
+        font-size: 17px;
+    }
+
+    .customer-text-wrap h3:last-child {
+        font-size: 17px;
+    }
+
+    .contents {
+        width: calc(100% - 230px) !important;
+    }
+
+    .board-container {
+        width: 200px;
+    }
+
+    .list {
+        font-size: 11px;
+    }
+
+    .tabm span {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .list table {
+        width: 180px;
+    }
+
+    .live-casino-wrap h1 {
+        height: 40px;
+
+    }
+
+    .live-casino-wrap img {
+        width: 230px;
+    }
+
+    .thumbnail-slot {
+        position: absolute;
+        margin-left: 0;
+        top: 5px;
+        width: 100%;
+    }
+
+    .thum-01 {
+        width: 18.7%;
+        transition-duration: 0.2s;
+        margin-right: 5px;
+        display: inline-block;
+    }
+
+    .thum-02 {
+        width: 18.7%;
+        transition-duration: 0.2s;
+        margin-right: 5px;
+        display: inline-block;
+    }
+
+    .thum-03 {
+        width: 18.7%;
+        transition-duration: 0.2s;
+        margin-right: 5px;
+        display: inline-block;
+    }
+
+    .slot-mimg01 {
+        margin-top: 80px;
+        width: 21%;
+        background-size: 260%;
+        transition-duration: 0.2s;
+    }
+
+    .slot-mimg02 {
+        margin-top: 80px;
+        width: 21%;
+        background-size: 160%;
+        background-position: center bottom 0px;
+        transition-duration: 0.2s;
+    }
+
+    .slot-mimg03 {
+        margin-top: 80px;
+        width: 21%;
+        height: 229px;
+        background-size: 160%;
+        background-position: center bottom 0px;
+        transition-duration: 0.2s;
+    }
+
+    .slot-accarea {
+        margin-top: 80px;
+    }
+
+    .list-b {
+        width: 18.5%;
+        margin-right: 10px;
+        height: 230px;
+    }
+
+    .list-b h1 {
+        font-size: 15px;
+        height: 20px;
+    }
+
+    .list-b table tr td:first-child {
+        display: inline-block;
+        font-size: 11px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 200px;
+        white-space: nowrap;
+        line-height: 40px;
+    }
+
+    .list-b table tr td:last-child {
+        display: inline-block;
+        font-size: 11px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 0px;
+        white-space: nowrap;
+    }
+
+    .list-b table {
+        margin-left: 15px;
+    }
+
+    .first-bl {
+        width: 23%
+    }
+
+    .second-bl {
+        width: 35%;
+        position: absolute;
+        top: 30px;
+        right: 530px;
+
+    }
+
+    .third-bl {
+        margin-left: 3%;
+        position: absolute;
+        right: 555px;
+        font-size: 12px;
+    }
+
+    .third-bl h1 {
+        font-size: 12px;
+    }
+
+    .third-bl span ul li {
+        font-size: 11px;
+    }
+
+    icon {
+        width: 23%;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 5px;
+    }
+
+    icon p {
+        font-size: 12px;
+    }
+
+    .subscr {
+        width: 750px;
+        margin: 0;
+        margin-left: 0;
+    }
+
+
+    .bx-wrapper .bx-pager,
+    .bx-wrapper .bx-controls-auto {
+        position: absolute;
+        bottom: 20px;
+        left: 100px;
+        width: 100%;
+    }
+
+
+    .bxslider img{width:1150px;}
+
+
+
+
+
+
+
+}
