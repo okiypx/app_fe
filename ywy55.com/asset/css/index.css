@@ -155,51 +155,51 @@ input::placeholder {
 }
 
 .l-menu ul .ico01 {
-    background: url(/asset/img/icon_menu.png)no-repeat top -2px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -2px left -5px;
 
     filter: grayscale(100%)
 }
 
 .l-menu ul .ico01:hover {
-    background: url(/asset/img/icon_menu.png)no-repeat top -2px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -2px left -5px;
     color: #ff7800;
     filter: grayscale(0)
 }
 
 .l-menu ul .ico02 {
-    background: url(/asset/img/icon_menu.png)no-repeat top -44px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -44px left -5px;
 
     filter: grayscale(100%)
 }
 
 .l-menu ul .ico02:hover {
-    background: url(/asset/img/icon_menu.png)no-repeat top -44px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -44px left -5px;
     color: #ff7800;
     filter: grayscale(0)
 }
 
 
 .l-menu ul .ico03 {
-    background: url(/asset/img/icon_menu.png)no-repeat top -90px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -90px left -5px;
 
     filter: grayscale(100%)
 }
 
 .l-menu ul .ico03:hover {
-    background: url(/asset/img/icon_menu.png)no-repeat top -90px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -90px left -5px;
     color: #ff7800;
     filter: grayscale(0)
 }
 
 
 .l-menu ul .ico04 {
-    background: url(/asset/img/icon_menu.png)no-repeat top -135px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -135px left -5px;
 
     filter: grayscale(100%)
 }
 
 .l-menu ul .ico04:hover {
-    background: url(/asset/img/icon_menu.png)no-repeat top -135px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -135px left -5px;
     color: #ff7800;
     filter: grayscale(0)
 }
@@ -208,26 +208,26 @@ input::placeholder {
 
 
 .l-menu ul .ico05 {
-    background: url(/asset/img/icon_menu.png)no-repeat top -180px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -180px left -5px;
 
     filter: grayscale(100%)
 }
 
 .l-menu ul .ico05:hover {
-    background: url(/asset/img/icon_menu.png)no-repeat top -180px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -180px left -5px;
     color: #ff7800;
     filter: grayscale(0)
 }
 
 
 .l-menu ul .ico06 {
-    background: url(/asset/img/icon_menu.png)no-repeat top -223px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -223px left -5px;
 
     filter: grayscale(100%)
 }
 
 .l-menu ul .ico06:hover {
-    background: url(/asset/img/icon_menu.png)no-repeat top -223px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -223px left -5px;
     color: #ff7800;
     filter: grayscale(0)
 }
@@ -235,13 +235,13 @@ input::placeholder {
 
 
 .l-menu ul .ico07 {
-    background: url(/asset/img/icon_menu.png)no-repeat top -223px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -223px left -5px;
 
     filter: grayscale(100%)
 }
 
 .l-menu ul .ico07:hover {
-    background: url(/asset/img/icon_menu.png)no-repeat top -223px left -5px;
+    background: url(/app_fe/ywy55.com/asset/img/icon_menu.png?ver=89746543)no-repeat top -223px left -5px;
     color: #ff7800;
     filter: grayscale(0)
 }
@@ -254,7 +254,7 @@ input::placeholder {
 
 
 .customer-container {
-    background: url(/asset/img/back_customer.jpg);
+    background: url(/app_fe/ywy55.com/asset/img/back_customer.jpg?ver=89746543);
     margin: 0 auto;
     width: 240px;
     min-height: 235px;
@@ -532,7 +532,7 @@ input::placeholder {
     width: 24.2%;
     height: auto;
     padding-bottom: 30px;
-    background: url(/asset/img/live_back.jpg);
+    background: url(/app_fe/ywy55.com/asset/img/live_back.jpg?ver=89746543);
     background-size: 120%;
     filter: grayscale(0%);
     position: relative;
@@ -619,7 +619,7 @@ input::placeholder {
     cursor: pointer;
     border: 1px solid #4f4f4f;
     float: left;
-    background: url(/asset/img/slot_img01.jpg);
+    background: url(/app_fe/ywy55.com/asset/img/slot_img01.jpg?ver=89746543);
     transition-duration: 0.3s;
 }
 .slot-mimg01:hover{border: 1px solid #ff7800;
@@ -634,7 +634,7 @@ transition-duration: 0.3s;}
     cursor: pointer;
     border: 1px solid #4f4f4f;
     float: left;
-    background: url(/asset/img/slot_img02.jpg) -50px -22px;
+    background: url(/app_fe/ywy55.com/asset/img/slot_img02.jpg?ver=89746543) -50px -22px;
     transition-duration: 0.3s;
 }
 .slot-mimg02:hover{border: 1px solid #ff7800;}
@@ -646,7 +646,7 @@ transition-duration: 0.3s;}
     border: 1px solid #4f4f4f;
     cursor: pointer;
     float: left;
-    background: url(/asset/img/slot_img03.jpg)-50px -22px;
+    background: url(/app_fe/ywy55.com/asset/img/slot_img03.jpg?ver=89746543)-50px -22px;
     transition-duration: 0.3s;
 }
 
@@ -769,7 +769,7 @@ transition-duration: 0.3s;}
     width: 99%;
     height: 70px;
     border-radius: 6px;
-    background: url(/asset/img/slot_img01.jpg);
+    background: url(/app_fe/ywy55.com/asset/img/slot_img01.jpg?ver=89746543);
     background-size: 100%;
     !*filter: grayscale(100);*!
     margin-top: 0px;
@@ -863,7 +863,7 @@ transition-duration: 0.3s;}
     width: 99%;
     height: 70px;
     border-radius: 6px;
-    background: url(/asset/img/slot_img02.jpg);
+    background: url(/app_fe/ywy55.com/asset/img/slot_img02.jpg?ver=89746543);
     background-size: 100%;
     !*filter: grayscale(100);*!
     margin-top: 0px;
@@ -876,7 +876,7 @@ transition-duration: 0.3s;}
     width: 99%;
     height: 70px;
     border-radius: 6px;
-    background: url(/asset/img/slot_img03.jpg);
+    background: url(/app_fe/ywy55.com/asset/img/slot_img03.jpg?ver=89746543);
     background-size: 100%;
     !*filter: grayscale(100);*!
     margin-top: 0px;
@@ -909,7 +909,7 @@ transition-duration: 0.3s;}
     width: 99%;
     height: 70px;
     border-radius: 6px;
-    background: url(/asset/img/slot_img01.jpg);
+    background: url(/app_fe/ywy55.com/asset/img/slot_img01.jpg?ver=89746543);
     background-size: 100%;
     /*filter: grayscale(100);*/
     margin-top: 0px;
@@ -1003,7 +1003,7 @@ transition-duration: 0.3s;}
     width: 99%;
     height: 70px;
     border-radius: 6px;
-    background: url(/asset/img/slot_img02.jpg);
+    background: url(/app_fe/ywy55.com/asset/img/slot_img02.jpg?ver=89746543);
     background-size: 100%;
     /*filter: grayscale(100);*/
     margin-top: 0px;
@@ -1016,7 +1016,7 @@ transition-duration: 0.3s;}
     width: 99%;
     height: 70px;
     border-radius: 6px;
-    background: url(/asset/img/slot_img03.jpg);
+    background: url(/app_fe/ywy55.com/asset/img/slot_img03.jpg?ver=89746543);
     background-size: 100%;
     /*filter: grayscale(100);*/
     margin-top: 0px;
@@ -1176,7 +1176,7 @@ icon p {
 }
 
 .ico-01 {
-    background: url(/asset/img/footer_icon.png)no-repeat;
+    background: url(/app_fe/ywy55.com/asset/img/footer_icon.png?ver=89746543)no-repeat;
     width: 60px;
     height: 70px;
     margin: 0 auto;
@@ -1184,7 +1184,7 @@ icon p {
 }
 
 .ico-02 {
-    background: url(/asset/img/footer_icon.png)no-repeat left -65px;
+    background: url(/app_fe/ywy55.com/asset/img/footer_icon.png?ver=89746543)no-repeat left -65px;
     width: 60px;
     height: 70px;
     margin: 0 auto;
@@ -1192,7 +1192,7 @@ icon p {
 }
 
 .ico-03 {
-    background: url(/asset/img/footer_icon.png)no-repeat left -120px;
+    background: url(/app_fe/ywy55.com/asset/img/footer_icon.png?ver=89746543)no-repeat left -120px;
     width: 60px;
     height: 70px;
     margin: 0 auto;
