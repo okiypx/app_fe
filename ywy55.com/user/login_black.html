@@ -1,0 +1,315 @@
+<!doctype html>
+<html style="background:#000 url(/asset/img/login_back.jpg)no-repeat; background-size: 100%;
+min-width:900px; background-position:top; ">
+
+<head>
+    <title>Welcome Merit Casino</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link href="assets/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/index.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+    <script>
+        var HTTP_HOST = 'ywy55.com';
+        var loginYN = 'N';
+        var MEM_TST_YN = '';
+    </script>
+    <script type="text/javascript" src="/asset/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="/asset/js/common/menu.js?ver=89746541"></script>
+    <script type='text/javascript' src="/asset/js/common/common.js?ver=89746541"></script>
+
+    <script type="text/javascript" src="/asset/js/plugin/fingerprint2.js"></script>
+
+    <style>
+        .login-back {
+            width: 700px;
+            margin: 0 auto;
+            height: 600px;
+            margin-top: 100px;
+            position: relative;
+        }
+
+        .login-backimg {
+            background: url(/asset/img/login_topimg.png)no-repeat;
+            height: 450px;
+            width: 630px;
+            background-position: center;
+        }
+
+        .login-area {
+            width: 575px;
+            height: auto;
+            overflow: hidden;
+            padding: 20px 0px 20px 0px;
+            background: #1c1c1c;
+            position: absolute;
+            bottom: 30px;
+            border: 1px solid #bb8a34;
+        }
+
+        .input-area {
+            margin: 0 auto;
+            width: 490px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .input-area input {
+            height: 50px;
+            width: 90%;
+            background: #333333;
+            color: #bb8a34;
+            font-size: 20px;
+            padding-left: 10px;
+            border: 1px solid #616161;
+            margin-top: 5px;
+        }
+
+        .input-area button {
+            width: 93%;
+            background: #616161;
+            transition-duration: 0.2s;
+            height: 70px;
+            margin-top: 5px;
+            border: none;
+            text-align: center;
+            color: #fff;
+            font-size: 25px;
+            letter-spacing: -0.03em;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .input-area button:hover {
+            width: 93%;
+            background: #bb8a34;
+            transition-duration: 0.2s;
+            height: 70px;
+            margin-top: 5px;
+            border: none;
+            text-align: center;
+            color: #fff;
+            font-size: 25px;
+            letter-spacing: -0.03em;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        @media (max-width: 640px) {
+            .login-back {
+                width: 100%;
+                margin: 0 auto;
+                margin-top: 10px;
+                position: relative;
+            }
+            .login-backimg {
+                background: url(/asset/img/login_topimg.png)no-repeat;
+                background-size: 90%;
+                height: 450px;
+                width: 400px;
+                background-position: center;
+            }
+            .login-area {
+                width: 93%;
+                height: auto;
+                overflow: hidden;
+                padding: 10px 0px 10px 0px;
+                background: #1c1c1c;
+                margin: 15px;
+                border: 1px solid #bb8a34;
+            }
+            .input-area {
+                margin: 0 auto;
+                width: 90%;
+                text-align: center;
+            }
+            .input-area input {
+                height: 50px;
+                width: 90%;
+                background: #333333;
+                color: #bb8a34;
+                font-size: 20px;
+                border: 1px solid #616161;
+                margin-top: 5px;
+            }
+            .input-area button {
+                width: 93%;
+                background: #bb8a34;
+                transition-duration: 0.2s;
+                height: 70px;
+                margin-top: 5px;
+                border: none;
+                text-align: center;
+                color: #fff;
+                font-size: 25px;
+                letter-spacing: -0.03em;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .login-back {
+                width: 100%;
+                margin: 0 auto;
+                margin-top: 10px;
+                position: relative;
+            }
+            .login-backimg {
+                background: url(/asset/img/login_topimg.png)no-repeat;
+                background-size: 90%;
+                height: 450px;
+                width: 400px;
+                background-position: center;
+            }
+            .login-area {
+                width: 98%;
+                height: auto;
+                overflow: hidden;
+                padding: 10px 0px 10px 0px;
+                background: #1c1c1c;
+                margin: 15px;
+                border: 1px solid #bb8a34;
+            }
+            .input-area {
+                margin: 0 auto;
+                width: 90%;
+                text-align: center;
+            }
+            .input-area input {
+                height: 50px;
+                width: 90%;
+                background: #333333;
+                color: #bb8a34;
+                font-size: 20px;
+                border: 1px solid #616161;
+                margin-top: 5px;
+            }
+            .input-area button {
+                width: 93%;
+                background: #bb8a34;
+                transition-duration: 0.2s;
+                height: 70px;
+                margin-top: 5px;
+                border: none;
+                text-align: center;
+                color: #fff;
+                font-size: 25px;
+                letter-spacing: -0.03em;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .login-back {
+                width: 100%;
+                margin: 0 auto;
+                margin-top: 0px;
+                position: relative;
+            }
+            .login-backimg {
+                background: url(/asset/img/login_topimg.png)no-repeat;
+                background-size: 100%;
+                height: 450px;
+                width: 320px;
+                background-position: center;
+            }
+            .login-area {
+                width: 90%;
+                height: auto;
+                overflow: hidden;
+                padding: 10px 0px 10px 0px;
+                background: #1c1c1c;
+                margin: 15px;
+                position: absolute;
+                bottom: 80px;
+                border: 1px solid #bb8a34;
+            }
+            .input-area {
+                margin: 0 auto;
+                width: 90%;
+                text-align: center;
+            }
+            .input-area input {
+                height: 40px;
+                width: 90%;
+                background: #333333;
+                color: #bb8a34;
+                font-size: 20px;
+                border: 1px solid #616161;
+                margin-top: 5px;
+            }
+            .input-area button {
+                width: 95%;
+                background: #bb8a34;
+                transition-duration: 0.2s;
+                height: 50px;
+                margin-top: 5px;
+                border: none;
+                text-align: center;
+                color: #fff;
+                font-size: 18px;
+                letter-spacing: -0.03em;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://ywy55.com/user/login_black" method="post" accept-charset="utf-8" id="loginfrm" name="loginfrm">
+        <div style="display:none">
+            <input type="hidden" name="csrf_test_name" value="642e5a679f4a9270338a76491cc98e92" />
+        </div><input type='hidden' name='fp' id='fp'>
+        <div class="login-back">
+            <div class="login-backimg"></div>
+            <div class="login-area">
+                <div class="input-area">
+                    <input name="userid" id="userid" tabindex="1" placeholder="아이디를 입력해 주세요">
+                    <input name="password" id="password" tabindex="2" placeholder="패스워드를 입력해 주세요" type="password" onkeyup="KeyCapEvent_GO(loginfrm);">
+                    <button type="button" onclick="loginSubmit(loginfrm);">회원로그인</button>
+                </div>
+            </div>
+
+
+
+            <div style="position: absolute; right:26%; bottom:35px; font-size:17px; color:#ffffff;">고객서비스센터 :
+                <span style="font-weight: 500;">070-7678-7834</span>
+            </div>
+
+
+        </div>
+
+
+    </form>
+
+    <script>
+        var fingerprintReport = function() {
+            Fingerprint2.get(function(components) {
+                var murmur = Fingerprint2.x64hash128(components.map(function(pair) {
+                    return pair.value
+                }).join(), 31)
+                $("#fp").val(murmur);
+            })
+        }
+
+        var cancelId
+        var cancelFunction
+
+        // see usage note in the README
+        if (window.requestIdleCallback) {
+            cancelId = requestIdleCallback(fingerprintReport)
+            cancelFunction = cancelIdleCallback
+        } else {
+            //cancelId = setTimeout(fingerprintReport, 500)
+            //cancelFunction = clearTimeout
+        }
+    </script>
+
+
+</body>
+
+</html>
