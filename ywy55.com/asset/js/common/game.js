@@ -1,294 +1,605 @@
+var gameRunStatus = false;
 
-function ajaxContents(getUrl,getDiv) {
-
-    var dataString = "";
-
-    $.ajax({
-        type: 'GET',
-        url: getUrl,
-        async  : true,
-        dataType: 'html',                   //데이터 유형
-        data: dataString,
-        beforeSend: function(){
-
-            $('#centerLoading').show();
-
-        },
-        success: function(msg){
-            //console.log(getDiv);
-            $("#"+getDiv).html(msg);
-            if(getDiv=="msgTxt" && msg != ""){
-                //console.log(msg+"aaa");
-                loginMessage();
-            }
-        },
-        error: function(msg){
-            //alert("error");
-        }
-    });
-
+function miniGame()
+{
+    var url = "/miniGame/roullete";
+    window.open(url,"mini",'top=0,left=50,width=900,height=765,menubar=no,scrollbars=yes,status=no,toolbar=no,resizable=yes,location=no');
 }
 
-
-function popWin(URL,width,height) {
-
-   var left = Math.ceil( (window.screen.width  - width) / 2 );
-   var top = Math.ceil( (window.screen.height - height) / 2 );   
-   
-	window.open(URL, 'pop', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=no,width='+ width + ',height='+ height + ', left='+ left + ',top=' + top + ''); 
-
+//추가
+function goSP(){
+	gameStart('SPCD', 'slot');
 }
 
-function writeObject(Ftrans,wid,hei) {
-	mainbody = "<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0' id='"+Ftrans+"'  width='"+ wid +"' height='"+ hei +"'>";
-	mainbody += "<param name='movie' value= '"+ Ftrans +"'>";
-	mainbody += "<param name='quality' value='high'>";
-	mainbody += "<param name='wmode' value='transparent'>";
-	mainbody += "<param name='menu' value='false'>";
-	mainbody += "<param name='allowScriptAccess' value='sameDomain'>";
-	mainbody += "<embed src='"+ Ftrans +"' quality='high' pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash' width='"+ wid +"' height='"+ hei +"'  wmode='transparent'></embed>"
-	mainbody += "</object>";
-	//document.body.innerHTML = mainbody;
-	document.write(mainbody);
-	return;
-}
-
-//레이어 팝업 닫기
-function popClose(){
-	$('.tbox').hide();
-}
-
-//로그인
-function loginSubmit(frm){
-    if(frm.userid.value == "") {
-    	alert("로그인 아이디를 입력해 주세요");
-    	frm.userid.focus();
-        return;
-    }
-    if(frm.password.value == "") {
-        alert("비밀번호를 입력해 주세요");
-        frm.password.focus();
-        return;
-    }
-    frm.action="/user/login/";
-    frm.submit();   
-}
-
-function KeyCapEvent_GO(type){
-	if(event.keyCode==13){
-    	loginSubmit(type);
- 	}
-}
-
-//공백이 있는지 없는지 체크
-function Space_chk(chk_val) {
-  var val_len;
-  var spc = 0;
-  val_len = chk_val.length;
-  
-  if (val_len == 0 ) {
-    return true;
-  } else {
-      for(i=0 ; i < val_len; i++) {
-        if (chk_val.charAt(i) == " ") {         
-          return true;
-        }
-      }
-  }    
-  
-  return false;
-}
-
-//숫자와 영문자 체크
-function isChk(str) {
-    
-    var chkStr = str;
-
-    var re =  /(^([a-z0-9]+)([a-z0-9_]+$))/;
-    
-    if (re.test(chkStr)) {
-        return false;
-    } else {
-        return true;
-    }
-}
-
-// 숫자만체크
-function isNums(strNums){  
-    var id_ck = strNums;  
-    if ( isNaN(id_ck) == false ) {  
-                return true;
-            } else {
-                return false;
-            }
-}
-
-//계좌번호 숫자 체크
-function isAccNum(str){
-	var strVal = "0123456789" ;
-	for (i=0; i< str.length; i++){
-		ch = str.charAt(i) ;
-		
-		for(j=0; j< strVal.length; j++)
-			if(ch == strVal.charAt(j))
-				break;
-			if(j == strVal.length)
-				return false;
+//SPCD 게임 실행
+function goSPExec(gameType){
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
 	}
-	return true;
-}   
+	gameRunStatus = true;
 
-//한글 및 영문만 포함 되었는지 체크
-function kor_eng_chk(instr){
-	   
-	for (kk=0; kk<instr.length; kk++)
-    {
-		mmstr = instr.substr(kk,1).charCodeAt(0);
-		if (mmstr < 65 || mmstr > 90 && mmstr < 97 || mmstr > 122 && mmstr < 44032 || mmstr > 63086){
-          return false;
-          break;
-       }
-    }
-	return true;
-	
-}
-
-function Add_MoneyComma( Name ){
-    var src;
-    var i; 
-    var factor; 
-    var su; 
-    var SpaceSize = 0;
-    var chkValue;
-
-    chkValue = "";
-    su = Name.value.length;
-    for(i=0; i < su ; i++){
-                src = Name.value.substring(i,i+1);
-        if (src != ","){
-            factor = parseInt(src);
-            if (isNaN(factor)) // < 0 || src > 9)^M
-            {
-                alert("숫자가 아닌 값이 입력되었습니다. 숫자만 입력해주세요.");
-                Name.focus();
-                //return false;
-            } else {
-                chkValue += src;
-            } 
-        } 
-    }
-    Name.value = chkValue;
-
-    factor = Name.value.length % 3; 
-    su = (Name.value.length - factor) / 3;
-    src = Name.value.substring(0,factor);
-
-    for(i=0; i < su ; i++)  {
-        if((factor == 0) && (i == 0)) // "XXX" 인경우
-        {
-            src += Name.value.substring(factor+(3*i), factor+3+(3*i)); 
-        } else {
-            src += "," ;
-            src += Name.value.substring(factor+(3*i), factor+3+(3*i));
-        }
-    }
-    Name.value = src; 
-
-    return true; 
-}
-
-//centering popup
-function centerPopup(divname){
-	//request data for centering
-	var windowWidth = document.documentElement.clientWidth;
-	var windowHeight = document.documentElement.clientHeight;
-	var popupHeight = $("#"+divname).height();
-	var popupWidth = $("#"+divname).width();
-	//centering
-	$("#"+divname).css({
-		"position": "absolute",
-		"top": windowHeight/2-popupHeight/2,
-		"left": windowWidth/2-popupWidth/2
-	});	
-}
-
-//centering popup
-function centerWidthPopup(divname,topPos){
-	//request data for centering
-	var windowWidth = document.documentElement.clientWidth;
-	var popupWidth = $("#"+divname).width();
-	//centering
-	$("#"+divname).css({
-		"position": "absolute",
-		"top": topPos,
-		// "left": windowWidth/2-popupWidth/2
-		"left": "15%"
+	$.ajax({
+		type:"GET",
+		url:"/game/sp_start",
+		data:{"game_code":'SPCD'},
+		dataType:"text",
+		success:function(data, textStatus) {
+			gameRunStatus = false;
+			eval(data);
+		},
+		error:function(data, textStatus) {
+			alert('게임접속이 원할하지 않습니다.');
+		}
 	});
 }
 
 
 
-//centering popup
-function centerWidthPopup_new(divname,topPos){
-	//request data for centering
-
-	
-                    var obj = $('#'+divname);
-                    var iHeight = (document.body.clientHeight / 2) - obj.height() / 2 + document.body.scrollTop;
-                    // var iWidth = (document.body.clientWidth / 2) - obj.width() / 2 + document.body.scrollLeft;
-                    var iWidth = "15%";
-
-
-
-	var windowWidth = document.documentElement.clientWidth;
-	var popupWidth = $("#"+divname).width();
-	//centering
-	$("#"+divname).css({
-		"position": "absolute",
-		"top": topPos,
-		"left": iWidth
-	});	
+function goRT(){
+	gameStart('RTCD', '');
 }
 
-
-
-function comma_add_return(n) {
-    var reg = /(^[+-]?\d+)(\d{3})/;   // 정규식
-     n += '';                          // 숫자를 문자열로 변환
-
-    while (reg.test(n))
-     n = n.replace(reg, '$1' + ',' + '$2');
-
-   return n;
- }
-
-//금액 소숫점 표시
-function number_change_sosu(num){
-	num = String(num);
-	num = num.replace(",","");
-	num = num.replace(".","");
-	num = num.substring(0,num.length-2) + "." + num.substring(num.length-2,num.length);
-	num = comma_add_return(num);
-	
-	return num;
-}
-
-//잭팟 금액 이미지 표시
-function jackpot_image_echo(jackpot, jackpotImageUrl, commaImageUrl, sosuImageUrl){
-	str = "";
-	
-	for (i=0;i<jackpot.length;i++) {
-		jackpot_str = jackpot.substring(i, i+1);
-		
-		if(jackpot_str == ","){
-			jackpot_img = commaImageUrl;
-		}else if(jackpot_str == "."){
-			jackpot_img = sosuImageUrl;
-		}else{
-			jackpot_img = jackpotImageUrl.replace("%s",jackpot_str);
-		}
-		str += "<img src='"+jackpot_img+"'>";
+//RTCD 게임 실행
+function goRTExec(){
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
 	}
-	
-	return str;
+	gameRunStatus = true;
+      $.ajax({
+              type:"GET",
+              url:"/game/rt_start",
+              data:{"game_code":'RTCD'},
+              dataType:"text",
+              success:function(data, textStatus) {
+				  gameRunStatus = false;
+                      eval(data);
+              },
+              error:function(data, textStatus) {
+                      alert('게임접속이 원할하지 않습니다.');
+              }
+      });
+}
+
+//호게이밍
+function goHgame(){gameStart('HCD','');}
+//VIP
+function goVipgame(){gameStart('VCD','');}
+//호게이밍
+function goSuncity(){gameStart('SCD','');}
+//마이크로 라이브
+function goMicroLive(){gameStart('NMCD','live');}
+//마이크로 슬롯
+function goMicroSlot(){gameStart('NMSCD','slot');}
+//마이크로 프로그래시브
+function goMicroSlotPv(){gameStart('MPCD','slotpv');}
+//W게임
+
+function goWawa(){
+	if(MEM_TST_YN == 'Y'){ //체험 아이디 일때
+		gameStart('WCD','');
+	}else{
+		gameStart('WCD','');
+		//goWawaNotice();
+		//goWawaSelect();
+	}
+}
+
+function goGgame(){gameStart('GCD','');}
+
+function goSA(){
+	gameStart('SAG', '');
+}
+
+function clientDown(){
+	location.href="https://w-img.oss-ap-northeast-1.aliyuncs.com/download/wawa.exe";
+	$('#wawa_select').hide();
+
+}
+
+function goEbet(){
+    gameStart('EBCD');
+}
+
+function goEbetExec(gameType){
+
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
+	}
+	gameRunStatus = true;
+
+	$.ajax({
+        type:"GET",
+        url:"/game/ebet_start",
+        data:{"game_code":'EBCD'},
+        dataType:"text",
+        success:function(data, textStatus) {
+			gameRunStatus = false;
+            eval(data);
+        },
+        error:function(data, textStatus) {
+            alert('게임접속이 원할하지 않습니다.');
+        }
+    });
+}
+
+function goN2CD(){
+    gameStart('N2CD', '');
+}
+
+//n2cd 게임 실행
+function goN2CDExec(){
+
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
+	}
+	gameRunStatus = true;
+
+    $.ajax({
+        type:"GET",
+        url:"/game/n2live_start",
+        data:{"game_code":'N2CD'},
+        dataType:"text",
+        success:function(data, textStatus) {
+			gameRunStatus = false;
+            eval(data);
+        },
+        error:function(data, textStatus) {
+            alert('게임접속이 원할하지 않습니다.');
+        }
+    });
+}
+
+
+//추가
+function goSASlot(){
+    gameStart('SAG', 'slot');
+}
+
+//추가 : SA Slot 게임 실행
+function goSASlotExec(gameType, gameId){
+
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
+	}
+	gameRunStatus = true;
+
+    $.ajax({
+        type:"GET",
+        url:"/game/sagame_start",
+        data:{"game_code":'SAG',"gameType":gameType,"gameId":gameId},
+        dataType:"text",
+        success:function(data, textStatus) {
+			gameRunStatus = false;
+            eval(data);
+        },
+        error:function(data, textStatus) {
+            alert('게임접속이 원할하지 않습니다.');
+        }
+    });
+}
+
+
+
+
+
+
+//플래시 버전 체크
+function flashVerCheck(){
+	/*var chk = onLoad();
+    chk = 28;
+  	if(chk < 11){
+  		if(confirm('게임을 실행하기 위해서는 회원님의 PC에 Adobe Flash Player 11버전 이상이 설치되어있어야 합니다.\n\n[확인]을 누르시면 다운로드페이지로 이동합니다.')){
+        	domain='http://get.adobe.com/kr/flashplayer/'; //설치전 페이지
+          	window.open(domain,'flashdown','');
+      	}else{
+      		alert('취소하였습니다.');
+      	}
+
+      	return false;
+  	}*/
+  	return true;
+}
+
+var gamecount = 0;
+
+//게임 실행하기
+function gameStart(game_code, type){
+    if(loginYN == "N"){
+    	if(gamecount == 0){
+    		gamecount += 1;
+	    	if(!alert("로그인 후 이용해주세요."))
+	    	{
+	    		gamecount += -1;
+	    	}
+    	}
+    }else{
+		$.ajax({
+			type:"GET",
+			url:"/game/game_check",
+			data:{"game_code":game_code},
+			dataType:"text",
+			success:function(data, textStatus) {
+	            var retdata = data;
+	            var array_data = retdata.split("|");
+	            if(array_data[0] == 'Y'){
+	            	alert(array_data[1]);
+	            }else if(array_data[0] == 'L'){
+	            	alert('로그인 후 이용해주세요.');
+	            	location.href = "/";
+	            } else {
+	                if(game_code == 'HCD'){
+	                	goHgameExec();
+	                } else if(game_code == 'SCD'){
+	                	goSuncityExec();
+	                } else if (game_code == 'NMCD'){
+	                	if(type == "live"){
+	                		goMicroExec(type, '');
+	                	}else if(type == "slot"){
+	                		goMicroExec(type, '');
+	                	}
+	                } else if (game_code == 'NMSCD'){
+	                		goMicroExec(type, '');
+
+	                } else if (game_code == 'MPCD'){
+	                	goMicroExec(type, '');
+	                } else if (game_code == 'VCD'){
+	                	goVipgameExec();
+	                } else if(game_code == 'WCD'){
+	                	goWawaExec();
+	                } else if(game_code == 'GCD'){
+	                	goGoldExec();
+                    }else if(game_code == 'EBCD'){
+                        goEbetExec();
+                    }else if(game_code == 'N2CD'){
+                        goN2CDExec();
+                    }else if(game_code == 'SAG'){
+                        if(type == "slot"){
+                            goSASlotExec(type);
+                        }else{
+                            goSAExec();
+                        }
+                    }else if(game_code == 'RTCD'){
+	                	goRTExec();
+					}else if(game_code == 'SPCD'){
+						goSPExec('slot');
+					}else if(game_code == 'DMCD'){
+						goMicroExec3(type, '');
+
+					}else if(game_code == 'EAS2CD'){
+						goEas2Exec();
+
+					}else if(game_code == 'QMCD'){
+						goQmExec();
+
+                    } else{
+	                	alert('게임코드가 올바르지 않습니다.');
+	                }
+	            }
+			},
+			error:function(data, textStatus) {
+				alert('게임접속이 원할하지 않습니다.[GAMESTART]');
+			}
+		});
+    }
+}
+
+//G 실행
+function goGoldExec(){
+
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
+	}
+	gameRunStatus = true;
+
+	$.ajax({
+		type:"GET",
+		url:"/game/gold_game_start",
+		data:{"game_code":'GCD'},
+		dataType:"text",
+		success:function(data, textStatus) {
+
+			gameRunStatus = false;
+			eval(data);
+		},
+		error:function(data, textStatus) {
+			alert('게임접속이 원할하지 않습니다.');
+		}
+	});
+}
+
+//SA 게임 실행
+function goSAExec(){
+
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
+	}
+	gameRunStatus = true;
+
+	$.ajax({
+		type:"GET",
+		url:"/game/sagame_start",
+		data:{"game_code":'SAG'},
+		dataType:"text",
+		success:function(data, textStatus) {
+
+			gameRunStatus = false;
+			eval(data);
+		},
+		error:function(data, textStatus) {
+			alert('게임접속이 원할하지 않습니다.');
+		}
+	});
+}
+
+
+//호게이밍 실행
+function goHgameExec(){
+
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
+	}
+	gameRunStatus = true;
+
+
+	$.ajax({
+		type:"GET",
+		url:"/game/hgame_start",
+		data:{"game_code":'HCD'},
+		dataType:"text",
+		success:function(data, textStatus) {
+			gameRunStatus = false;
+			eval(data);
+		},
+		error:function(data, textStatus) {
+			alert('게임접속이 원할하지 않습니다.');
+		}
+	});
+}
+
+//VIP 게임 실행
+function goVipgameExec(){
+
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
+	}
+	gameRunStatus = true;
+
+	$.ajax({
+		type:"GET",
+		url:"/game/hgame_start",
+		data:{"game_code":'VCD'},
+		dataType:"text",
+		success:function(data, textStatus) {
+			gameRunStatus = false;
+			eval(data);
+		},
+		error:function(data, textStatus) {
+			alert('게임접속이 원할하지 않습니다.');
+		}
+	});
+}
+
+google.load("swfobject", "2.1");
+google.setOnLoadCallback(onLoad);
+
+function onLoad(){
+	var flashVersion = swfobject.getFlashPlayerVersion();
+    return flashVersion.major;
+}
+
+//선시티 게임 실행
+function goSuncityExec(){
+	if(loginYN == "N"){
+    	alert("로그인 후 이용하세요.");
+        return ;
+	}else{
+		if(flashVerCheck() == false){
+			return;
+		}
+
+
+		if(gameRunStatus == true) {
+			alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+			return;
+		}
+		gameRunStatus = true;
+
+    	$.ajax({
+    		type:"GET",
+    		url:"/game/suncity_start",
+    		data:"",
+    		dataType:"text",
+    		success:function(data, textStatus) {
+				gameRunStatus = false;
+    			eval(data);
+    		},
+    		error:function(data, textStatus) {
+    			alert('게임접속이 원할하지 않습니다.');
+    		}
+    	});
+	}
+}
+
+//마이크로 게임 실행
+function goMicroExec(gameType, gameId){
+	if(flashVerCheck() == false){
+		return;
+	}
+
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
+	}
+	gameRunStatus = true;
+
+	$.ajax({
+		type:"GET",
+		url:"/game/micro_start",
+		data:{"gameType":gameType,"gameId":gameId},
+		dataType:"text",
+		success:function(data, textStatus) {
+			gameRunStatus = false;
+			eval(data);
+		},
+		error:function(data, textStatus) {
+			alert('게임접속이 원할하지 않습니다.');
+		}
+	});
+}
+
+//와와 게임 공지
+function goWawaNotice(){
+	if(loginYN == "N"){
+    	alert("로그인 후 이용하세요.");
+        return ;
+	}else{
+		if(flashVerCheck() == false){
+			return;
+		}
+
+		centerWidthPopup_new("wawa_notice",10);
+		$("#wawa_notice").show();
+	}
+}
+
+//와와 게임 선택
+function goWawaSelect(){
+	if(loginYN == "N"){
+    	alert("로그인 후 이용하세요.");
+        return ;
+	}else{
+		if(flashVerCheck() == false){
+			return;
+		}
+
+		centerWidthPopup_new("wawa_select",10);
+		$("#wawa_select").show();
+	}
+}
+
+
+//와와 게임 실행
+function goWawaExec(){
+
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
+	}
+	gameRunStatus = true;
+
+	$.ajax({
+		type:"GET",
+		url:"/game/wawa_start",
+		data:"",
+		dataType:"text",
+		success:function(data, textStatus) {
+			gameRunStatus = false;
+			eval(data);
+		},
+		error:function(data, textStatus) {
+			alert('게임접속이 원할하지 않습니다.');
+		}
+	});
+}
+
+
+//추가
+function goMicroLive3(type){
+	gameStart('DMCD', type);
+}
+
+//추가
+function goMicroSlot3(type, gameId){
+	goMicroExec3(type, gameId);
+}
+
+//추가
+function goMicroExec3(gameType, gameId){
+
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
+	}
+	gameRunStatus = true;
+
+	$.ajax({
+		type:"GET",
+		url:"/game/micro_start3",
+		data:{"gameType":gameType, "gameId":gameId},
+		dataType:"text",
+		success:function(data, textStatus) {
+			gameRunStatus = false;
+			eval(data);
+		},
+		error:function(data, textStatus) {
+			alert('게임접속이 원할하지 않습니다.');
+		}
+	});
+}
+
+
+//추가
+function goEas2(){
+	gameStart('EAS2CD', '');
+}
+
+//EAS2CD 게임 실행
+function goEas2Exec(){
+
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
+	}
+	gameRunStatus = true;
+
+	$.ajax({
+		type:"GET",
+		url:"/game/eas2_start",
+		data:{"game_code":'EAS2CD'},
+		dataType:"text",
+		success:function(data, textStatus) {
+			gameRunStatus = false;
+			eval(data);
+		},
+		error:function(data, textStatus) {
+			alert('게임접속이 원할하지 않습니다.');
+		}
+	});
+}
+
+function goQm(){
+	gameStart('QMCD', '');
+}
+
+//QMCD 게임 실행
+function goQmExec(){
+
+	if(gameRunStatus == true) {
+		alert('게임이 실행중입니다. 잠시만 기다려 주시기 바랍니다.');
+		return;
+	}
+	gameRunStatus = true;
+
+	$.ajax({
+		type:"GET",
+		url:"/game/qm_start",
+		data:{"game_code":'QMCD'},
+		dataType:"text",
+		success:function(data, textStatus) {
+			gameRunStatus = false;
+			eval(data);
+		},
+		error:function(data, textStatus) {
+			alert('게임접속이 원할하지 않습니다.');
+		}
+	});
 }

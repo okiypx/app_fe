@@ -1,0 +1,38 @@
+@charset 'utf-8';
+
+/*store_insta_list*/
+.store_insta_list li{width:25%;}
+.store_insta_list li img{width:148px; height:148px;}
+
+/*cg_market_list*/
+.cg_market_list ul{float:left; width:100%; margin-top:-20px;}
+.cg_market_list li{float:left; width:33.3%; overflow:hidden;}
+.cg_market_list li img{width:200px; height:132px;}
+.cg_market_list li span{max-width:200px;}
+.cg_market_list li .free{max-width:160px;}
+
+/*intro_main_conts*/
+.intro_main_conts .left_wr{float:left; width:50%;}
+
+/*cg_event_list*/
+.cg_event_list li{width:33.3%;}
+.cg_event_list li img{width:200px; height:200px;}
+.cg_event_list li span{width:200px;}
+
+/*cg_celeb_slide*/
+.cg_celeb_slide{width:610px;}
+.cg_celeb_slide .slider1{width:620px;}
+
+/*cg_celeb_snsconts*/
+.cg_celeb_snsconts{margin-left:5px; margin-right:5px;}
+.celeb_snsconts_wr{width:630px;}
+.cg_celeb_snsconts .element{float:left; width:50%;}
+.cg_celeb_snsconts .element a{margin:0 5px;}
+
+/*news_conts*/
+.news_conts_wr{width:630px;}
+.news_conts .element{width:33.3%;}
+
+/*cg_main_contsslide*/
+.cg_main_contsslide{width:630px;}
+.main_contsslide .list_inner{width:33.3%;}
