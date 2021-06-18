@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AGST Casino</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--    <script src="js/owl.carousel.min.js"></script>-->
+    <!--    <script src="js/jquery.vticker.min.js"></script>-->
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--    <link href="css/owl.carousel.min.css" rel="stylesheet">-->
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/script.js?v=1623998996"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper_loading hidden">
+        <img src="img/loading.gif" class="wrapper_loading_img" alt="loading">
+    </div>
+
+    <div class="wrapper">
+        <div class="neon-light">
+            <img class="shapes" src="img/bg/neon-lights.png">
+        </div>
+        <section class="logo-section">
+            <a href="/" class="agst-logo">
+            <img class="pattern" src="img/logo/pattern.png">
+            <img class="star" src="img/logo/star.png">
+            <img class="agst" src="img/logo/agst.png">
+            <div class="casino-text">
+                <img src="img/logo/casino.png">
+            </div>
+        </a>
+        </section>
+
+        <section class="banner-section">
+            <div class="banner-main">
+                <img class="banner-bg" src="img/bg/banner-bg.png">
+                <div class="banner-content">
+                    <div class="header">
+                        <p data-text="최대규모 카지노/슬롯/스포츠 서비스">최대규모 카지노/슬롯/스포츠 서비스</p>
+                    </div>
+                    <div class="images-container">
+                        <div class="tilt-container">
+                            <img class="pattern" src="img/bg/characters.png">
+                            <img class="roulette" src="img/bg/roulette.png">
+                            <img class="sun" src="img/bg/sun.png">
+                            <img class="casino-girl" src="img/bg/casino-girl.png">
+                            <img class="fairy" src="img/bg/fairy.png">
+                            <img class="slot-girl" src="img/bg/slot-girl.png">
+                            <img class="slot-item" src="img/bg/slot-item.png">
+                            <img class="sports-player" src="img/bg/sports-player.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-border">
+                    <div class="borders left">
+                        <img src="img/bg/banner-border-l-on.png">
+                    </div>
+                    <div class="borders right">
+                        <img src="img/bg/banner-border-r-on.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="menu-section">
+            <div class="menu-main">
+                <a href="javascript:void(0);" class="link-a casino-link open-subpage">
+                    <div class="icon-container">
+                        <img src="img/icon/casino-off.png">
+                    </div>
+                    <p class="text">라이브카지노</p>
+                </a>
+                <a href="javascript:void(0);" class="link-a slot-link open-subpage">
+                    <div class="icon-container">
+                        <img src="img/icon/slot-off.png">
+                    </div>
+                    <p class="text">슬롯게임</p>
+                </a>
+                <a href="javascript:void(0);" class="link-a sports-link open-subpage">
+                    <div class="icon-container">
+                        <img src="img/icon/sports-off.png">
+                    </div>
+                    <p class="text">스포츠</p>
+                </a>
+                <a href="javascript:void(0);" class="link-a minigame-link">
+                    <div class="icon-container">
+                        <img src="img/icon/minigame-off.png">
+                    </div>
+                    <p class="text">미니게임</p>
+                </a>
+            </div>
+        </section>
+        <section class="about-agst text-center">
+            <div class="title">
+                <span>업계최초 롤링콤프적립기능</span>
+            </div>
+            <p>AGST는 수년간의 서비스로 인한</p>
+            <p>슬롯 카지노 미니게임을 제공 및 운영노하우가 있습니다.</p>
+            <p>차별화된 서비스를 받으세요!</p>
+        </section>
+
+    </div>
+    <footer class="footer-main">
+        <span>ⓒ COPYRIGHT  AGST  2018 ALL RIGHTS RECEIVE.</span>
+    </footer>
+
+    <!-- SUB PAGE -->
+
+    <div class="subpg-modal">
+        <div class="subpg-menu">
+            <div class="container-center">
+                <a href="javascript:void(0);" class="link-a casino-link current">
+                    <div class="icon-container">
+                        <img src="img/icon/casino-off.png">
+                    </div>
+                    <p class="text">라이브카지노</p>
+                </a>
+                <a href="javascript:void(0);" class="link-a slot-link open-subpage">
+                    <div class="icon-container">
+                        <img src="img/icon/slot-off.png">
+                    </div>
+                    <p class="text">슬롯게임</p>
+                </a>
+                <a href="javascript:void(0);" class="link-a sports-link open-subpage">
+                    <div class="icon-container">
+                        <img src="img/icon/sports-off.png">
+                    </div>
+                    <p class="text">스포츠</p>
+                </a>
+                <a href="javascript:void(0);" class="link-a minigame-link disabled">
+                    <div class="icon-container">
+                        <img src="img/icon/minigame-off.png">
+                    </div>
+                    <p class="text">미니게임 <span class="soon-tag">준비중</span></p>
+                </a>
+                <button class="subpg-close"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+        <div class="subpg-body">
+            <!-- CASINO CONTAINER -->
+            <div class="category-container casino-container active">
+                <a href="javascript:openGame('live', 'HTML5', 45)" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/evolution.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/evolution.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>에볼루션</span>
+                    </div>
+                </a>
+                <a href="javascript:openGame('live', 'FLASH', 44)" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/ag.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/ag.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>아시아게이밍</span>
+                    </div>
+                </a>
+                <a href="javascript:openGame('live', 'HTML5', 12)" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/wmgaming.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/wmgaming.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>WM 카지노</span>
+                    </div>
+                </a>
+                <a href="javascript:openGame('live', 'HTML5', 9)" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/oriental.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/oriental.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>오리엔탈플러스</span>
+                    </div>
+                </a>
+                <a href="javascript:openGame('live', 'FLASH', 4)" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/allbet.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/allbet.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>올벳</span>
+                    </div>
+                </a>
+                <a href="javascript:openGame('live', 'FLASH', 21)" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/microgaming.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/microgaming.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>마이크로게이밍</span>
+                    </div>
+                </a>
+                <a href="javascript:openGame('live', 'FLASH', 15, 'bbin_live');" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/bbin.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/bbin.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>비비아이엔</span>
+                    </div>
+                </a>
+                <a href="javascript:openGame('live', 'FLASH', 1)" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/vivo.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/vivo.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>비보게이밍</span>
+                    </div>
+                </a>
+                <a href="javascript:void (0);" onclick="alert('점검중입니다.')" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/lotus.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/lotus.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>로터스</span>
+                    </div>
+                </a>
+                <a href="javascript:openGame('live', 'FLASH', 3)" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/sexygaming.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/sexygaming.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>섹시바카라</span>
+                    </div>
+                </a>
+                <a href="javascript:openGame('live', 'FLASH', 28)" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/dreamgaming.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/dreamgaming.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>드림게이밍</span>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" onclick="alert('점검중입니다.')" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/taishan.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/taishan.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>타이산</span>
+                    </div>
+                </a>
+                <a href="javascript:openGame('live', 'HTML5', 8);" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/pragmaticplay.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/casino/pragmaticplay.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>프라그매틱플레이</span>
+                    </div>
+                </a>
+            </div>
+            <!-- SLOT CONTAINER -->
+            <div class="category-container slot-container">
+                <a href="javascript:getSlotGames('THE_SHOW');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/theshow.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/theshow.png">
+                    </div>
+                    <div class="footer">
+                        <span>더 쇼</span>
+                    </div>
+                </a>
+
+                <a href="javascript:getSlotGames('PragmaticPlay_NEW');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/pragmatic.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/pragmatic.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>프로그매틱 플레이</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('BNG');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/bng.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/bng.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>부운고</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('CQ9');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/cq9.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/cq9.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>시큐9</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('iSOFTBET');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/isoftbet.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/isoftbet.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>아이소프트벳</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('PLAYNGO');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/playngo.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/playngo.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>플레이엔고</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('HANEBARO');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/habanero.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/habanero.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>하바네로</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('Aristocrats');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/aristocrat.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/aristocrat.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>아리스토크랏</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('AsiaGaming_NEW');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/ag.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/ag.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>아시아게이밍</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('MG_DASHUR_TC');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/microgaming.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/microgaming.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>마이크로게이밍</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('PLAYSTAR');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/playstar.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/playstar.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>플레이스타</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('GAMEART');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/gameart.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/gameart.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>게임아트</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('BBETCH');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/bbtech.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/bbtech.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>섹시슬롯</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('PLAYSON_NEW');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/playson.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/playson.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>플레이슨</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('BBIN');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/bbin.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/bbin.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>비비아이인</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('DREAMTECH');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/dreamtech.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/dreamtech.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>드림테크</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('RTG');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/realtime.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/realtime.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>리얼타임게이밍</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('BETSOFT');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/betsoft.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/betsoft.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>벳소프트</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('GENESIS');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/genesis.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/genesis.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>제네시스</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('BGAMING');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/bgaming.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/bgaming.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>비게이밍</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('EVOPLAY');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/evoplay.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/evoplay.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>에보플레이</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('TTG');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/toptrend.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/toptrend.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>탑트렌드게이밍</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('TPG');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/tpg.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/tpg.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>트리플프로핏게임</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('StarGame');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/stargames.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/stargames.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>스타게임</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('Coolfire');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/novomatic.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/novomatic.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>노보매틱</span>
+                    </div>
+                </a>
+                <a href="javascript:getSlotGames('PGSoft');" class="company-btn">
+                    <div class="header">
+                        <img src="img/slot-logo/pg_logo.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/slot/pg.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>포켓게임즈</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- SPORTS CONTAINER -->
+            <div class="category-container sports-container">
+                <a href="javascript:openGame('live', 'FLASH', 15, 'bbin_ball');" class="company-btn">
+                    <div class="header">
+                        <img src="img/casino-logo/bbin.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/sports/bbin.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>비비아이인</span>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="company-btn" onclick="alert('준비중입니다.');">
+                    <div class="header">
+                        <img src="img/casino-logo/ag.png">
+                    </div>
+                    <div class="main-cont">
+                        <img class="main-img" src="img/sports/ag.jpg">
+                    </div>
+                    <div class="footer">
+                        <span>아시아게이밍</span>
+                    </div>
+                </a>
+            </div>
+            <!-- GAMELIST -->
+            <div class="category-container gamelist-container">
+                <div class="gamelist-header">
+                    <span class="title">Loading···</span>
+                    <button class="gl-back"><i class="fa fa-caret-square-left"></i> BACK</button>
+                </div>
+                <div class="gamelist-menu">
+                    <a href="javascript:void(0);" class="active" data-target=".all">
+                    전체
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                    <a href="javascript:void(0);" data-target=".pop">
+                    인기
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                    <a href="javascript:void(0);" data-target=".slt">
+                    슬롯
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                    <a href="javascript:void(0);" data-target=".tbl">
+                    테이블
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                    <a href="javascript:void(0);" data-target=".etc">
+                    기타
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                </div>
+                <div class="games-list">
+                    <a href="javascript:void(0);" class="game-btn">
+                        <div class="main-container">
+                            <img class="main-img" src="img/games/game-01.jpg">
+                            <button class="play-btn"><i class="fa fa-play"></i><span class="loader"></span></button>
+                        </div>
+                        <p class="game-name">Loading···</p>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
