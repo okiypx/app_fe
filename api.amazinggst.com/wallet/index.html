@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+
+<html class="no-js css-menubar" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap admin template">
+    <meta name="author" content="">
+
+    <title>Ximax Manager</title>
+
+    <link rel="apple-touch-icon" href="/wallet/resources/remark/assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/wallet/resources/img/favicon.png">
+
+    <link rel="stylesheet" href="/wallet/resources/compiled/compiled_login.min.css?v=2017082401">
+    <script src="/wallet/resources/compiled/compiled_login.min.js?v=2017082401"></script>
+</head>
+
+<body class="layout-full page-dark">
+
+    <!-- Page -->
+    <div class="page animsition vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">>
+        <div class="page-content vertical-align-middle">
+            <div class="brand">
+                <img class="brand-img" src="/wallet/resources/img/logo250.png" width="250" alt="...">
+
+                <h2 class="brand-text">MANAGER</h2>
+            </div>
+
+            <form id="loginForm" method="post" action="/wallet/j_spring_security_check_member">
+                <div class="form-group">
+                    <select id="select_currency" class="form-control" style=" text-align-last: center">
+                    <option value="USD" style=" text-align-last:center;">USD</option>
+                    <option value="KRW">KRW</option>
+                    <option value="CNY">CNY</option>
+                    <option value="JPY">JPY</option>
+                    <option value="MYR">MYR</option>
+                </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="sr-only" for="inputId">ID</label>
+                    <input type="text" class="form-control" id="inputId" name="j_username" placeholder="ID" />
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" name="j_password" placeholder="Password" />
+                </div>
+                <div class="form-group clearfix">
+                    <div class="checkbox-custom checkbox-inline checkbox-primary pull-left">
+                        <input type="checkbox" id="remember-me" name="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                </div>
+                <button type="submit" name="submitButton" class="btn btn-primary btn-block">Login</button>
+            </form>
+
+            <footer class="page-copyright page-copyright-inverse">
+                <p>Copyright © <a href="#" target="_blank"> Ximax </a>, Ltd. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+    <!-- End Page -->
+
+    <script>
+        (function(document, window, $) {
+            'use strict';
+
+            var Site = window.Site;
+            $(document).ready(function() {
+                Site.run();
+            });
+        })(document, window, jQuery);
+
+        $('#select_currency').val("KRW");
+
+        $('#select_currency').change(function() {
+            var currency = $('#select_currency').val();
+            switch (currency) {
+                case 'KRW':
+                    location.href = '/wallet/wallet';
+                    break;
+                case 'CNY':
+                    location.href = '/wallet/wallet';
+                    break;
+                case 'JPY':
+                    location.href = '/wallet/wallet';
+                    break;
+                case 'USD':
+                    location.href = '/wallet/wallet';
+                    break;
+                case 'MYR':
+                    location.href = '/wallet/wallet';
+                    break;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
