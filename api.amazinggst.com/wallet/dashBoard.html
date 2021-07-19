@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+
+<html class="no-js css-menubar">
+
+<head>
+    <!-- Meta -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap admin template">
+    <meta name="author" content="">
+    <title>Ximax Manager</title>
+    <link rel="apple-touch-icon" href="/wallet/resources/remark/assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/wallet/resources/img/favicon.png">
+    <link rel="stylesheet" href="/wallet/resources/compiled/compiled_meta.css?v=2018081601">
+    <script src="/wallet/resources/compiled/compiled_meta.js?v=2018081601"></script>
+    <script>
+        Breakpoints();
+    </script>
+</head>
+
+<body class="dashboard">
+    <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega bg-grey-600" role="navigation">
+
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle hamburger hamburger-close navbar-toggle-left hided" data-toggle="menubar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger-bar"></span>
+    </button>
+            <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-collapse" data-toggle="collapse">
+        <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+    </button>
+            <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+                <img class="navbar-brand-logo" src="/wallet/resources/img/logo25.png" title="logo">
+                <div class="navbar-brand-text" style="text-overflow:ellipsis; overflow:hidden;float: right;">ccdd11</div>
+            </div>
+        </div>
+        <div class="navbar-container container-fluid">
+            <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+                <ul class="nav navbar-toolbar">
+                    <li class="hidden-float" id="toggleMenubar">
+                        <a data-toggle="menubar" href="#" role="button">
+                    <i class="icon hamburger hamburger-arrow-left">
+                        <span class="sr-only">Toggle menubar</span>
+                        <span class="hamburger-bar"></span>
+                    </i>
+                </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+                    <li id="headerOperatorPointRoot">
+                        <div class="input-group input-group-icon" style="padding-top:20px; width:150px;" align="right">
+                            <span class="input-group-addon" style="height: 12px; padding: 3px 7px 3px 7px;"><span class="icon fa-money" style="" aria-hidden="true"></span></span>
+                            <input id="txtHeaderOperatorPoint" style="height: 25px; text-align: right; padding-right:4px; padding-left:4px;" class="form-control" />
+                        </div>
+                    </li>
+                    <li>
+                        <a class="icon wb-reload" aria-hidden="true" href="#" role="button" onclick="g_tilesHeaderModalObj.onClickRefreshOperatorPoint()"></a>
+                    </li>
+                    <li id="toggleFullscreen">
+                        <a class="icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button"><span class="sr-only">Toggle fullscreen</span></a>
+                    </li>
+                    <li class="dropdown">
+                        <a style="width:44px;padding-left:8px" class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
+                  <span class="avatar avatar-online">
+                    <img src="/wallet/resources/img/Avatar-blank.jpg" alt="...">
+                    <i></i>
+                  </span>
+                </a>
+                        <ul class="dropdown-menu" role="menu">
+
+                            <li role="presentation">
+                                <a href="/wallet/logout" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            var g_tilesHeaderClickManager = {
+                isEnabled: true,
+                enable: function() {
+                    this.isEnabled = true;
+                },
+                disable: function() {
+                    this.isEnabled = false;
+                },
+                printState: function() {
+                    console.log('g_tilesHeaderClickManager.isEnabled : ' + this.isEnabled);
+                },
+                clone: function() {
+                    var copy = g_tilesHeaderClickManager.constructor();
+                    for (var attr in g_tilesHeaderClickManager) {
+                        if (g_tilesHeaderClickManager.hasOwnProperty(attr)) {
+                            copy[attr] = this[attr];
+                        }
+                    }
+                    return copy;
+                }
+            };
+            var g_tilesHeaderModalObj = {
+                clickManager: {
+                    isEnabled: true,
+                    enable: function() {
+                        this.isEnabled = true;
+                    },
+                    disable: function() {
+                        this.isEnabled = false;
+                    }
+                },
+                intervalId: null,
+                onClickRefreshOperatorPoint: function() {
+                    console.log('refresh operator point');
+                    window.location.reload(true);
+                },
+                requestCurrentOperatorPoint: function() {
+                    $("#txtHeaderOperatorPoint").val('');
+
+                    var param = '';
+                    var targetUrl = "/wallet/api/managerApi/getOperatorPoint";
+                    $.ajax({
+                        accepts: {
+                            text: "application/json"
+                        },
+                        type: 'POST',
+                        url: targetUrl,
+                        data: param,
+                        success: function(data) {
+                            if (data.returnCode == 0) {
+                                var operatorPoint = data.operatorPoint;
+                                if (data.operatorPoint) {
+                                    try {
+                                        $("#txtHeaderOperatorPoint").val(mcjsUtils.getFormattedPointString(operatorPoint.toFixed(2), 2));
+                                    } catch (e) {
+                                        $("#txtHeaderOperatorPoint").val(data.operatorPoint);
+                                    }
+                                } else
+                                    $("#txtHeaderOperatorPoint").val(data.operatorPoint);
+                            } else {
+                                console.log(data);
+                                if (g_tilesHeaderModalObj.intervalId) {
+                                    clearInterval(g_tilesHeaderModalObj.intervalId);
+                                }
+                                $("#txtHeaderOperatorPoint").val('Error');
+                            }
+                        },
+                        error: function(e) {
+                            console.log(e);
+                            if (g_tilesHeaderModalObj.intervalId) {
+                                clearInterval(g_tilesHeaderModalObj.intervalId);
+                            }
+                        }
+                    });
+                },
+                requestUnresolvedTransfer: function() {
+                    var param = '';
+                    var targetUrl = "/wallet/api/managerApi/getUnresolvedTransferCount";
+                    $.ajax({
+                        accepts: {
+                            text: "application/json"
+                        },
+                        type: 'POST',
+                        url: targetUrl,
+                        data: param,
+                        success: function(data) {
+                            if (data.returnCode == 0) {
+                                try {
+                                    if (data.count == 0 || data.count == '0')
+                                        $("#txtMenuUnresolvedTransferCount")[0].innerHTML = '';
+                                    else
+                                        $("#txtMenuUnresolvedTransferCount")[0].innerHTML = data.count;
+                                } catch (e) {
+                                    console.log(e);
+                                    console.log(data);
+                                }
+                            } else {
+                                console.log(data);
+                            }
+                        },
+                        error: function(e) {
+                            console.log(e);
+                        }
+                    });
+                }
+            };
+            $(document).ready(function() {
+                g_tilesHeaderModalObj.requestCurrentOperatorPoint();
+                g_tilesHeaderModalObj.requestUnresolvedTransfer();
+            });
+        </script>
+    </nav>
+    <!-- Menu -->
+
+
+
+
+
+    <div class="site-menubar" id="siteMenuBar">
+        <div class="site-menubar-body">
+            <div>
+                <div>
+                    <ul class="site-menu">
+                        <!-- Start General -->
+                        <li class="site-menu-category">General</li>
+                        <li class="site-menu-item" id="menu-dashBoard">
+                            <a class="animsition-link" href="/wallet/dashboard" data-slug="angular">
+                            <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+                            <span class="site-menu-title">Dashboard</span>
+                        </a>
+                        </li>
+
+                        <li class="site-menu-item" id="menu-operator-information">
+                            <a class="animsition-link" href="/wallet/operator/info" data-slug="angular">
+                            <i class="site-menu-icon wb-info" aria-hidden="true"></i>
+                            <span class="site-menu-title">Information</span>
+                        </a>
+                        </li>
+                        <!-- End General-->
+
+                        <!-- Start Management -->
+                        <li class="site-menu-category">Management</li>
+
+
+                        <li class="site-menu-item" id="menu-operator">
+                            <a class="animsition-link" href="/wallet/management/operator" data-slug="angular">
+                                <i class="site-menu-icon wb-user" aria-hidden="true"></i>
+                                <span class="site-menu-title">Operator</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item" id="menu-member">
+                            <a class="animsition-link" href="/wallet/management/member" data-slug="angular">
+                                <i class="site-menu-icon wb-users" aria-hidden="true"></i>
+                                <span class="site-menu-title">Member</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item" id="menu-game">
+                            <a class="animsition-link" href="/wallet/management/operatorGames" data-slug="angular">
+                                <i class="site-menu-icon fa-gamepad" aria-hidden="true"></i>
+                                <span class="site-menu-title">Game</span>
+                                
+                                    <div class="site-menu-badge">
+                                        <span class="badge badge-success">20</span>
+                                    </div>
+                                
+                            </a>
+                        </li>
+
+
+                        <li class="site-menu-item">
+                            <a class="animsition-link" href="/wallet/management/unresolvedTransfer" data-slug="angular">
+                            <i class="site-menu-icon wb-alert-circle" aria-hidden="true"></i>
+                            <span class="site-menu-title">Unresolved Transfer</span>
+                            <div class="site-menu-badge">
+                                <span class="badge badge-success" id="txtMenuUnresolvedTransferCount"></span>
+                            </div>
+                        </a>
+                        </li>
+                        <!-- End Management -->
+
+                        <!-- Start Report -->
+                        <li class="site-menu-category">Report</li>
+                        <li class="site-menu-item" id="menu-reportMonthly">
+                            <a class="animsition-link" href="/wallet/report/transaction/monthly" data-slug="angular">
+                            <i class="site-menu-icon wb-calendar" aria-hidden="true"></i>
+                            <span class="site-menu-title">Monthly</span>
+                        </a>
+                        </li>
+                        <li class="site-menu-item" id="menu-reportDaily">
+                            <a class="animsition-link" href="/wallet/report/transaction/daily" data-slug="angular">
+                            <i class="site-menu-icon wb-calendar" aria-hidden="true"></i>
+                            <span class="site-menu-title">Daily</span>
+                        </a>
+                        </li>
+                        <!--
+                    <li class="site-menu-item" id="menu-reportHourly">
+                        <a class="animsition-link" href="/wallet/report/transaction/hourly" data-slug="angular">
+                            <i class="site-menu-icon wb-calendar" aria-hidden="true"></i>
+                            <span class="site-menu-title">Hourly</span>
+                        </a>
+                    </li>
+                    -->
+                        <li class="site-menu-item" id="menu-reportPerOperator">
+                            <a class="animsition-link" href="/wallet/report/transaction/byOperator" data-slug="angular">
+                            <i class="site-menu-icon wb-user" aria-hidden="true"></i>
+                            <span class="site-menu-title">by Operator</span>
+                        </a>
+                        </li>
+                        <li class="site-menu-item" id="menu-reportPerGame">
+                            <a class="animsition-link" href="/wallet/report/transaction/byThirdParty" data-slug="angular">
+                            <i class="site-menu-icon fa-gamepad" aria-hidden="true"></i>
+                            <span class="site-menu-title">by ThirdParty</span>
+                        </a>
+                        </li>
+                        <!-- End Report -->
+
+                        <!-- Start Search -->
+                        <li class="site-menu-category">Search</li>
+                        <li class="site-menu-item" id="menu-popularGame">
+                            <a class="animsition-link" href="/wallet/ranking/byHit" data-slug="angular">
+                            <i class="site-menu-icon fa-gamepad" aria-hidden="true"></i>
+                            <span class="site-menu-title">Game Hit Ranking</span>
+                        </a>
+                        </li>
+                        <li class="site-menu-item" id="menu-operatortransaction">
+                            <a class="animsition-link" href="/wallet/report/operatorTransaction" data-slug="angular">
+                            <i class="site-menu-icon fa-credit-card" aria-hidden="true"></i>
+                            <span class="site-menu-title">Operator Transaction</span>
+                        </a>
+                        </li>
+                        <li class="site-menu-item" id="menu-transactionSearch">
+                            <a class="animsition-link" href="/wallet/report/transaction/search" data-slug="angular">
+                            <i class="site-menu-icon fa-credit-card" aria-hidden="true"></i>
+                            <span class="site-menu-title">Transaction Search</span>
+                        </a>
+                        </li>
+                        <!--
+                    <li class="site-menu-item"id="menu-transactionRealTime">
+                        <a class="animsition-link"href="/wallet/report/transaction/summary"data-slug="angular">
+                            <i class="site-menu-iconfa-credit-card"aria-hidden="true"></i>
+                        <span class="site-menu-title">TransactionSummary</span>
+                        </a>
+                    </li>
+                    -->
+                        <li class="site-menu-item" id="menu-gameHistory">
+                            <a class="animsition-link" href="/wallet/report/gameHistory" data-slug="angular">
+                            <i class="site-menu-icon wb-clipboard" aria-hidden="true"></i>
+                            <span class="site-menu-title">Game History</span>
+                        </a>
+                        </li>
+                        <!-- End Search -->
+
+
+
+                        <!-- API Test Menu -->
+                        <li class="site-menu-category">API</li>
+
+                        <li class="site-menu-item" id="menu-apiTest">
+                            <a class="animsition-link" href="/wallet/apiManager/test" data-slug="angular">
+                                <i class="site-menu-icon wb-hammer" aria-hidden="true"></i>
+                                <span class="site-menu-title">API Test</span>
+                            </a>
+                        </li>
+
+
+                        <!-- End API Test Menu -->
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page -->
+    <div class="page">
+        <div class="loading" id="mc_tiles_body_loading" style="display:none">
+            <div style="height:500px;width:100%;display:table;">
+                <div style="display:table-cell;vertical-align: middle;">
+                    <div class="spinner">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <link rel="stylesheet" href="/wallet/resources/lib/ax5ui-grid/dist/ax5grid.css">
+
+        <div class="page-content container-fluid">
+            <div class="row" data-plugin="matchHeight" data-by-row="true">
+                <!-- First Row -->
+                <div class="col-lg-3 col-sm-6 col-xs-12 info-panel">
+                    <div class="widget widget-shadow">
+                        <div class="widget-content bg-white padding-20">
+                            <button type="button" class="btn btn-floating btn-sm btn-warning">
+                        <i class="icon wb-user-circle"></i>
+                    </button>
+                            <span class="margin-left-15 font-weight-400">OPERATORS</span></span>
+                            <div class="content-text text-center margin-bottom-0">
+                                <span class="font-size-40 font-weight-100">4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-xs-12 info-panel">
+                    <div class="widget widget-shadow">
+                        <div class="widget-content bg-white padding-20">
+                            <button type="button" class="btn btn-floating btn-sm btn-danger">
+                        <i class="icon wb-users"></i>
+                    </button>
+                            <span class="margin-left-15 font-weight-400">MEMBERS</span>
+
+                            <div class="content-text text-center margin-bottom-0">
+                                <span class="font-size-40 font-weight-100">34</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-xs-12 info-panel">
+                    <div class="widget widget-shadow">
+                        <div class="widget-content bg-white padding-20">
+                            <button type="button" class="btn btn-floating btn-sm btn-success">
+                        <i class="icon wb-plugin"></i>
+                    </button>
+                            <span class="margin-left-15 font-weight-400">THIRD PARTIES</span>
+
+                            <div class="content-text text-center margin-bottom-0">
+                                <span class="font-size-40 font-weight-100">31</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-xs-12 info-panel">
+                    <div class="widget widget-shadow">
+                        <div class="widget-content bg-white padding-20">
+                            <button type="button" class="btn btn-floating btn-sm btn-primary">
+                        <i class="icon fa-gamepad"></i>
+                    </button>
+                            <span class="margin-left-15 font-weight-400">GAMES</span>
+
+                            <div class="content-text text-center margin-bottom-0">
+                                <span class="font-size-40 font-weight-100">3451</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End First Row -->
+            </div>
+
+            <div class="row" data-plugin="matchHeight" data-by-row="true">
+
+                <div class="col-xlg-6 col-md-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Top Bet
+                            </h3>
+
+                            <div class="page-header-actions">
+                                <button type="button" class="btn btn-sm btn-icon btn-default btn-outline" data-toggle="tooltip" data-original-title="3 Hours" id="btn_grid_3_search_1" onclick="fnObj.grid.searchThirdGrid(3,1);"> 3H
+                        </button>
+                                <button type="button" class="btn btn-sm btn-icon btn-default btn-outline" data-toggle="tooltip" data-original-title="24 Hour" id="btn_grid_3_search_2" onclick="fnObj.grid.searchThirdGrid(24,2);"> 24H
+                        </button>
+                                <button type="button" class="btn btn-sm btn-icon btn-default btn-outline" data-toggle="tooltip" data-original-title="7 Day" id="btn_grid_3_search_3" onclick="fnObj.grid.searchThirdGrid(168,3);"> 7D
+                        </button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div data-ax5grid="AXGridTarget_3" data-ax5grid-config="{}"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xlg-6 col-md-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Top Return
+                            </h3>
+
+                            <div class="page-header-actions">
+                                <button type="button" class="btn btn-sm btn-icon btn-default btn-outline" data-toggle="tooltip" data-original-title="3 Hours" id="btn_grid_4_search_1" onclick="fnObj.grid.searchThirdGrid(3,1);"> 3H
+                        </button>
+                                <button type="button" class="btn btn-sm btn-icon btn-default btn-outline" data-toggle="tooltip" data-original-title="24 Hour" id="btn_grid_4_search_2" onclick="fnObj.grid.searchThirdGrid(24,2);"> 24H
+                        </button>
+                                <button type="button" class="btn btn-sm btn-icon btn-default btn-outline" data-toggle="tooltip" data-original-title="7 Day" id="btn_grid_4_search_3" onclick="fnObj.grid.searchThirdGrid(168,3);"> 7D
+                        </button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div data-ax5grid="AXGridTarget_4" data-ax5grid-config="{}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" data-plugin="matchHeight" data-by-row="true">
+
+                <div class="col-xlg-6 col-md-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Monthly
+                                <div class="btn-group dropdown chart-menu" style="visibility: hidden">
+                                    <button type="button" class="btn btn-outline btn-default dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                                </div>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="chart_c3_03"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xlg-6 col-md-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                by Operator
+                                <div class="btn-group dropdown chart-menu" style="visibility: hidden">
+                                    <button type="button" class="btn btn-outline btn-default dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                                </div>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="chart_c3_01"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" data-plugin="matchHeight" data-by-row="true">
+                <div class="col-xlg-6 col-md-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                by ThirdParty
+                                <div class="page-header-actions">
+                                    <button type="button" class="btn btn-sm btn-icon btn-default btn-outline" data-toggle="tooltip" data-original-title="1 Month" onclick="fnObj.chart_donut_tp.selectArea(30);"> 1M
+                            </button>
+                                    <button type="button" class="btn btn-sm btn-icon btn-default btn-outline" data-toggle="tooltip" data-original-title="3 Month" onclick="fnObj.chart_donut_tp.selectArea(60);"> 3M
+                            </button>
+                                </div>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="chart_c3_02"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xlg-6 col-md-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Recent Transaction
+                            </h3>
+
+                            <div class="page-header-actions">
+                                <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round" data-toggle="tooltip" data-original-title="Search Page" onclick="fnObj.grid.moveToListPage();">
+                            <i class="icon wb-list" aria-hidden="true"></i>
+                        </button>
+                                <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round" data-toggle="tooltip" data-original-title="Refresh" onclick="fnObj.search();">
+                            <i class="icon wb-refresh" aria-hidden="true"></i>
+                        </button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div data-ax5grid="AXGridTarget_1" data-ax5grid-config="{}"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" data-plugin="matchHeight" data-by-row="true">
+                <div class="col-xlg-6 col-md-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Bet-Win AreaChart
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="chart_container">
+                                <div id="y_axis"></div>
+                                <div id="area_chart_target"></div>
+                            </div>
+                            <div id="area_chart_legend"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/wallet/resources/lib/ax5core/dist/ax5core.min.js"></script>
+        <script src="/wallet/resources/lib/ax5ui-grid/dist/ax5grid.min.js"></script>
+        <script>
+            var fnObj = {
+                init: function() {
+                    fnObj.grid.init();
+                    this.search();
+                },
+                search: function() {
+                    //this.grid.searchFirstGrid();
+                    //this.grid.searchThirdGrid();
+                    fnObj.chart_line_operator.drawChart();
+                    fnObj.chart_donut_tp.drawChart();
+                    fnObj.chart_line_monthly.drawChart();
+                },
+                grid: {
+                    gridFirst: new ax5.ui.grid(),
+                    gridThird: new ax5.ui.grid(),
+                    gridFourth: new ax5.ui.grid(),
+                    dialogObjectRef: null,
+                    init: function() {
+                        ax5.ui.grid.tmpl.page_status = function() {
+                            return '';
+                        };
+
+                        var toDayDate = new Date();
+                        $("input[name=startDate]").val(toDayDate.format("yyyy-MM-dd"));
+
+                        this.initFirstGrid();
+                        this.initThirdGrid();
+                        this.initFourthGrid();
+                    },
+                    initFirstGrid: function() {
+                        this.gridFirst.setConfig({
+                            target: $('[data-ax5grid="AXGridTarget_1"]'),
+                            loading: {
+                                icon: '<i class="fa fa-spinner fa-pulse fa-2x fa-fw margin-bottom" aria-hidden="true"></i>',
+                                text: '<div>Now Loading</div>'
+                            },
+                            virtualScrollX: false,
+                            virtualScrollY: false,
+                            multipleSelect: false,
+                            sortable: false,
+                            height: 300,
+                            columns: [{
+                                    key: "targetHour",
+                                    label: "Time",
+                                    width: 80,
+                                    align: "center",
+                                    formatter: function() {
+                                        return this.item.targetHour.substring(5) + ':00';
+                                    }
+                                },
+                                {
+                                    key: "betWin",
+                                    label: "Bet-Win",
+                                    width: 100,
+                                    align: "right",
+                                    formatter: function() {
+                                        var profit = mcjsUtils.subFloatMethod(this.item.bet, this.item.win);
+                                        if (Number(profit) >= 0)
+                                            return "<span style='font-weight:bold;'>" + mcjsUtils.getFormattedPointString(profit, 2) + "</span>";
+                                        else
+                                            return "<span style='font-weight:bold;color:red;'>" + mcjsUtils.getFormattedPointString(profit, 2) + "</span>";
+                                    }
+                                },
+                                {
+                                    key: "mbOp",
+                                    label: "MB<->Game",
+                                    width: 100,
+                                    align: "right",
+                                    formatter: function() {
+                                        var profit = mcjsUtils.subFloatMethod(this.item.mbToGame, this.item.gameToMb);
+                                        if (Number(profit) >= 0)
+                                            return mcjsUtils.getFormattedPointString(profit, 2);
+                                        else
+                                            return "<span style='color:red;'>" + mcjsUtils.getFormattedPointString(profit, 2) + "</span>";
+                                    }
+                                },
+                                {
+                                    key: "mbOp",
+                                    label: "OP<->MB",
+                                    width: 100,
+                                    align: "right",
+                                    formatter: function() {
+                                        var profit = mcjsUtils.subFloatMethod(this.item.opToMb, this.item.mbToOp);
+                                        if (Number(profit) >= 0)
+                                            return mcjsUtils.getFormattedPointString(profit, 2);
+                                        else
+                                            return "<span style='color:red;'>" + mcjsUtils.getFormattedPointString(profit, 2) + "</span>";
+                                    }
+                                },
+                                {
+                                    key: "betCount",
+                                    label: "Count",
+                                    width: 60,
+                                    align: "right",
+                                    formatter: function() {
+                                        return mcjsUtils.getFormattedPointString(this.item.betCount, 0);
+                                    }
+                                },
+                                {
+                                    key: "bet",
+                                    label: "Bet",
+                                    width: 100,
+                                    align: "right",
+                                    formatter: function() {
+                                        return mcjsUtils.getFormattedPointString(this.item.bet, 2);
+                                    }
+                                },
+                                {
+                                    key: "win",
+                                    label: "Win",
+                                    width: 100,
+                                    align: "right",
+                                    formatter: function() {
+                                        return mcjsUtils.getFormattedPointString(this.item.win, 2);
+                                    }
+                                }
+                            ],
+                            footSum: [
+                                [{
+                                        label: "Sum",
+                                        colspan: 1,
+                                        align: "center"
+                                    },
+                                    {
+                                        key: "betWin",
+                                        collector: function() {
+                                            var value = 0;
+                                            this.list.forEach(function(n) {
+                                                if (!n.__isGrouping) {
+                                                    value = mcjsUtils.addFloatMethod(value, n.bet);
+                                                    value = mcjsUtils.subFloatMethod(value, n.win);
+                                                }
+                                            });
+                                            if (value >= 0)
+                                                return "<span style='font-weight:bold;'>" + mcjsUtils.getFormattedPointString(value, 2) + "</span>";
+                                            else
+                                                return "<span style='font-weight:bold;color:red;'>" + mcjsUtils.getFormattedPointString(value, 2) + "</span>";
+                                        },
+                                        align: "right"
+                                    },
+                                    {
+                                        key: "mbToGame",
+                                        collector: function() {
+                                            var value = 0;
+                                            this.list.forEach(function(n) {
+                                                if (!n.__isGrouping) {
+                                                    value = mcjsUtils.addFloatMethod(value, n.mbToGame);
+                                                    value = mcjsUtils.subFloatMethod(value, n.gameToMb);
+                                                }
+                                            });
+                                            if (value >= 0)
+                                                return mcjsUtils.getFormattedPointString(value, 2);
+                                            else
+                                                return "<span style='color:red;'>" + mcjsUtils.getFormattedPointString(value, 2) + "</span>";
+                                        },
+                                        align: "right"
+                                    },
+                                    {
+                                        key: "opToMb",
+                                        collector: function() {
+                                            var value = 0;
+                                            this.list.forEach(function(n) {
+                                                if (!n.__isGrouping) {
+                                                    value = mcjsUtils.addFloatMethod(value, n.opToMb);
+                                                    value = mcjsUtils.subFloatMethod(value, n.mbToOp);
+                                                }
+                                            });
+                                            if (value >= 0)
+                                                return mcjsUtils.getFormattedPointString(value, 2);
+                                            else
+                                                return "<span style='color:red;'>" + mcjsUtils.getFormattedPointString(value, 2) + "</span>";
+                                        },
+                                        align: "right"
+                                    },
+                                    {
+                                        key: "betCount",
+                                        collector: "sum",
+                                        formatter: "money",
+                                        align: "right"
+                                    },
+                                    {
+                                        key: "bet",
+                                        collector: function() {
+                                            var value = 0;
+                                            this.list.forEach(function(n) {
+                                                if (!n.__isGrouping) {
+                                                    value = mcjsUtils.addFloatMethod(value, n.bet);
+                                                }
+                                            });
+                                            return mcjsUtils.getFormattedPointString(value, 2);
+                                        },
+                                        align: "right"
+                                    },
+                                    {
+                                        key: "win",
+                                        collector: function() {
+                                            var value = 0;
+                                            this.list.forEach(function(n) {
+                                                if (!n.__isGrouping) {
+                                                    value = mcjsUtils.addFloatMethod(value, n.win);
+                                                }
+                                            });
+                                            return mcjsUtils.getFormattedPointString(value, 2);
+                                        },
+                                        align: "right"
+                                    }
+                                ]
+                            ],
+                            header: {
+                                align: "center",
+                                columnHeight: 20
+                            },
+                            body: {
+                                columnHeight: 20,
+                                onClick: function() {
+                                    this.self.select(this.dindex);
+                                }
+                            },
+                            page: {
+                                height: 30,
+                                display: false
+                            }
+                        });
+                    },
+                    searchFirstGrid: function() {
+                        fnObj.grid.gridFirst.setData([]);
+                        var reqParam = "count=12&currency=KRW";
+                        var reqUrl = "/wallet/report/transaction/getSummaryHourlyRecent";
+                        mcjsUtils.requestForAx5ui('POST', 'application/json', true, reqUrl, reqParam, fnObj.grid.gridFirst);
+                    },
+                    initThirdGrid: function() {
+                        this.gridThird.setConfig({
+                            target: $('[data-ax5grid="AXGridTarget_3"]'),
+                            loading: {
+                                icon: '<i class="fa fa-spinner fa-pulse fa-2x fa-fw margin-bottom" aria-hidden="true"></i>',
+                                text: '<div>Now Loading</div>'
+                            },
+                            virtualScrollX: false,
+                            virtualScrollY: false,
+                            multipleSelect: false,
+                            sortable: false,
+                            height: 177,
+                            columns: [{
+                                    key: "opId",
+                                    label: "Operator",
+                                    width: 80,
+                                    align: "left"
+                                },
+                                {
+                                    key: "mbLoginId",
+                                    label: "Member",
+                                    width: 80,
+                                    align: "left"
+                                },
+                                {
+                                    key: "trBetAmount",
+                                    label: "Bet",
+                                    width: 100,
+                                    align: "right",
+                                    formatter: function() {
+                                        return "<span style='font-weight:bold;'>" + mcjsUtils.getFormattedPointString(this.item.trBetAmount, 2);
+                                    }
+                                },
+                                {
+                                    key: "trWinAmount",
+                                    label: "Win",
+                                    width: 100,
+                                    align: "right",
+                                    formatter: function() {
+                                        return mcjsUtils.getFormattedPointString(this.item.trWinAmount, 2);
+                                    }
+                                },
+                                {
+                                    key: "trReturned",
+                                    label: "Returned",
+                                    width: 100,
+                                    align: "right",
+                                    formatter: function() {
+                                        return mcjsUtils.getFormattedPointString(this.item.trReturned, 2);
+                                    }
+                                },
+                                {
+                                    key: "trBetCount",
+                                    label: "Count",
+                                    width: 50,
+                                    align: "right",
+                                    formatter: "money"
+                                }
+                            ],
+                            header: {
+                                align: "center",
+                                columnHeight: 20
+                            },
+                            body: {
+                                columnHeight: 20,
+                                onClick: function() {
+                                    this.self.select(this.dindex);
+                                }
+                            },
+                            page: {
+                                display: false
+                            }
+                        });
+                    },
+                    searchThirdGrid: function(hour, buttonIndex) {
+                        fnObj.grid.gridThird.setData([]);
+                        fnObj.grid.gridFourth.setData([]);
+
+                        if (buttonIndex == null && buttonIndex == undefined)
+                            buttonIndex = 1;
+
+                        if (buttonIndex == 1) {
+                            $('#btn_grid_3_search_' + buttonIndex).addClass('btn-primary');
+                            $('#btn_grid_4_search_' + buttonIndex).addClass('btn-primary');
+                        }
+                        if (this.priorButtonIndex == undefined) {
+                            this.priorButtonIndex = buttonIndex;
+                        } else {
+                            var priorButton1 = $('#btn_grid_3_search_' + this.priorButtonIndex);
+                            priorButton1.removeClass('btn-primary');
+                            priorButton1.addClass('btn-default');
+                            var priorButton2 = $('#btn_grid_4_search_' + this.priorButtonIndex);
+                            priorButton2.removeClass('btn-primary');
+                            priorButton2.addClass('btn-default');
+
+                            this.priorButtonIndex = buttonIndex;
+                        }
+
+                        var selectedButton1 = $('#btn_grid_3_search_' + buttonIndex);
+                        selectedButton1.removeClass('btn-default');
+                        selectedButton1.addClass('btn-primary');
+                        var selectedButton2 = $('#btn_grid_4_search_' + buttonIndex);
+                        selectedButton2.removeClass('btn-default');
+                        selectedButton2.addClass('btn-primary');
+
+                        if (hour == null && hour == undefined)
+                            hour = 3;
+                        var reqParam = "currency=KRW&h=" + hour + "&isIncludeChild=true&count=7";
+                        var reqUrl = "/wallet/ranking/topBetBySearch";
+                        mcjsUtils.requestServer('POST', 'application/json', true, reqUrl, reqParam, fnObj.grid.onCallbackThirdGrid);
+                    },
+                    initFourthGrid: function() {
+                        this.gridFourth.setConfig({
+                            target: $('[data-ax5grid="AXGridTarget_4"]'),
+                            loading: {
+                                icon: '<i class="fa fa-spinner fa-pulse fa-2x fa-fw margin-bottom" aria-hidden="true"></i>',
+                                text: '<div>Now Loading</div>'
+                            },
+                            virtualScrollX: false,
+                            virtualScrollY: false,
+                            multipleSelect: false,
+                            sortable: false,
+                            height: 177,
+                            columns: [{
+                                    key: "opId",
+                                    label: "Operator",
+                                    width: 80,
+                                    align: "left"
+                                },
+                                {
+                                    key: "mbLoginId",
+                                    label: "Member",
+                                    width: 80,
+                                    align: "left"
+                                },
+                                {
+                                    key: "trBetAmount",
+                                    label: "Bet",
+                                    width: 100,
+                                    align: "right",
+                                    formatter: function() {
+                                        return mcjsUtils.getFormattedPointString(this.item.trBetAmount, 2);
+                                    }
+                                },
+                                {
+                                    key: "trWinAmount",
+                                    label: "Win",
+                                    width: 100,
+                                    align: "right",
+                                    formatter: function() {
+                                        return mcjsUtils.getFormattedPointString(this.item.trWinAmount, 2);
+                                    }
+                                },
+                                {
+                                    key: "trReturned",
+                                    label: "Returned",
+                                    width: 100,
+                                    align: "right",
+                                    formatter: function() {
+                                        return "<span style='font-weight:bold;'>" + mcjsUtils.getFormattedPointString(this.item.trReturned, 2);
+                                    }
+                                },
+                                {
+                                    key: "trBetCount",
+                                    label: "Count",
+                                    width: 50,
+                                    align: "right",
+                                    formatter: "money"
+                                }
+                            ],
+                            header: {
+                                align: "center",
+                                columnHeight: 20
+                            },
+                            body: {
+                                columnHeight: 20,
+                                onClick: function() {
+                                    this.self.select(this.dindex);
+                                }
+                            },
+                            page: {
+                                display: false
+                            }
+                        });
+                    },
+                    onCallbackThirdGrid: function(response) {
+                        fnObj.grid.gridThird.setData(response.bet);
+                        fnObj.grid.gridFourth.setData(response.win);
+                    },
+                    moveToListPage: function() {
+                        var url = "/wallet/report/transaction/hourly";
+                        $(location).attr('href', url);
+                    }
+                },
+                chart_line_monthly: {
+                    drawChart: function() {
+                        this.chartData = [];
+
+                        var targetUrl = "/wallet/report/transaction/getSummaryMonthly";
+
+                        var toDayDate = new Date();
+                        toDayDate.setDate(toDayDate.getDate() - 1);
+                        var endDate = toDayDate.format("yyyy-MM-dd");
+
+                        toDayDate.setMonth(toDayDate.getMonth() - 3, 1);
+                        var startDate = toDayDate.format("yyyy-MM-dd");
+
+                        var reqParam = "searchStartDate=" + startDate + " 00:00:00";
+                        reqParam = reqParam + "&searchEndDate=" + endDate + " 23:59:59";
+                        reqParam = reqParam + "&currency=KRW&count=3&isIncludeChild=true";
+
+                        this.requestChart(targetUrl, reqParam);
+                    },
+                    generateChartData: function() {
+                        var result = [];
+                        var res = fnObj.chart_line_monthly.chartResponse;
+                        var pc_axisX = [];
+                        var mobile_axisX = [];
+                        pc_axisX.push('x');
+                        mobile_axisX.push('x');
+
+                        var i;
+                        var generatedData = [];
+                        generatedData.push('TOTAL');
+                        if (res.list.length > 0) {
+                            for (i = res.list.length - 1; i >= 0; i--) {
+                                var item = res.list[i];
+                                mobile_axisX.push(item.targetMonth.substring(5));
+                                pc_axisX.push(item.targetMonth);
+
+                                var bet = mcjsUtils.subFloatMethod(item.bet, item.cancelBet);
+                                var win = mcjsUtils.subFloatMethod(item.win, item.cancelWin);
+                                generatedData.push(mcjsUtils.subFloatMethod(bet, win));
+                            }
+                        }
+
+                        if (mcjsUtils.isMobileDevice() == true)
+                            result.push(mobile_axisX);
+                        else
+                            result.push(pc_axisX);
+                        result.push(generatedData);
+                        return result;
+                    },
+                    drawNow: function() {
+                        var chartData = fnObj.chart_line_monthly.generateChartData();
+                        c3.generate({
+                            size: {
+                                height: 240
+                            },
+                            bindto: "#chart_c3_03",
+                            data: {
+                                x: "x",
+                                columns: chartData
+                            },
+                            color: {
+                                pattern: [
+                                    '#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c',
+                                    '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5',
+                                    '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f',
+                                    '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
+                                ]
+                            },
+                            axis: {
+                                x: {
+                                    type: "category",
+                                    tick: {
+                                        outer: !1
+                                    }
+                                },
+                                y: {
+                                    tick: {
+                                        format: d3.format(',')
+                                    }
+                                }
+                            },
+                            grid: {
+                                x: {
+                                    show: !1
+                                },
+                                y: {
+                                    show: !0
+                                }
+                            }
+                        });
+                    },
+                    requestChart: function(targetUrl, reqParam) {
+                        $.ajax({
+                            async: true,
+                            accepts: {
+                                text: "application/json"
+                            },
+                            type: 'POST',
+                            url: targetUrl,
+                            data: reqParam,
+                            success: function(res) {
+                                fnObj.chart_line_monthly.chartResponse = res;
+                                fnObj.chart_line_monthly.drawNow();
+                            }
+                        });
+                    }
+                },
+                chart_line_operator: {
+                    drawChart: function() {
+                        this.chartData = [];
+
+                        var targetUrl = "/wallet/report/transaction/getChartForReportByOperator";
+
+                        var toDayDate = new Date();
+                        toDayDate.setDate(toDayDate.getDate() - 1);
+                        var endDate = toDayDate.format("yyyy-MM-dd");
+
+                        toDayDate.setMonth(toDayDate.getMonth() - 3, 1);
+                        var startDate = toDayDate.format("yyyy-MM-dd");
+
+                        var reqParam = "searchStartDate=" + startDate + " 00:00:00";
+                        reqParam = reqParam + "&searchEndDate=" + endDate + " 23:59:59";
+                        reqParam = reqParam + "&currency=KRW&isIncludeChild=true";
+
+                        this.requestChart(targetUrl, reqParam);
+                    },
+                    appendChartData: function(chartDataTarget, res) {
+                        var pc_axisX = [];
+                        var mobile_axisX = [];
+                        pc_axisX.push('x');
+                        mobile_axisX.push('x');
+
+                        var generatedData = [];
+                        generatedData.push(res.itemId);
+                        if (res.list.length > 0) {
+                            var i;
+                            for (i = 0; i < res.list.length; i++) {
+                                var item = res.list[i];
+                                mobile_axisX.push(item.targetMonth.substring(5));
+                                pc_axisX.push(item.targetMonth);
+
+                                var bet = mcjsUtils.subFloatMethod(item.bet, item.cancelBet);
+                                var win = mcjsUtils.subFloatMethod(item.win, item.cancelWin);
+                                generatedData.push(mcjsUtils.subFloatMethod(bet, win));
+                            }
+                        }
+
+                        if (fnObj.chart_line_operator.chartData.length == 0) {
+                            if (mcjsUtils.isMobileDevice() == true)
+                                fnObj.chart_line_operator.chartData.push(mobile_axisX);
+                            else
+                                fnObj.chart_line_operator.chartData.push(pc_axisX);
+                        }
+
+                        fnObj.chart_line_operator.chartData.push(generatedData);
+
+                        c3.generate({
+                            bindto: "#chart_c3_01",
+                            size: {
+                                height: 240
+                            },
+                            data: {
+                                x: "x",
+                                columns: fnObj.chart_line_operator.chartData
+                            },
+                            color: {
+                                pattern: [
+                                    '#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
+                                ]
+                            },
+                            axis: {
+                                x: {
+                                    type: "category",
+                                    tick: {
+                                        outer: !1
+                                    }
+                                },
+                                y: {
+                                    tick: {
+                                        format: d3.format(",.2f")
+                                    }
+                                }
+                            },
+                            grid: {
+                                x: {
+                                    show: !1
+                                },
+                                y: {
+                                    show: !0
+                                }
+                            }
+                        });
+                    },
+                    requestChart: function(targetUrl, reqParam) {
+                        $.ajax({
+                            async: true,
+                            accepts: {
+                                text: "application/json"
+                            },
+                            type: 'POST',
+                            url: targetUrl,
+                            data: reqParam,
+                            success: function(res) {
+                                var i;
+                                for (i = 0; i < res.length; i++) {
+                                    fnObj.chart_line_operator.appendChartData('', res[i]);
+                                }
+                                fnObj.chart_line_operator.drawAreaChart(res);
+                            }
+                        });
+                    },
+                    drawAreaChart: function(res) {
+                        var xAxisValuesByName = [];
+                        var xAxisValuesByVal = [];
+
+                        var palette = new Rickshaw.Color.Palette();
+                        var seriesData = [];
+                        var i;
+                        var k;
+                        for (i = res.length - 1; i >= 0; i--) {
+                            var seriesItem = {};
+                            seriesItem.name = res[i].itemId;
+                            seriesItem.data = [];
+                            seriesItem.color = palette.color();
+
+                            for (k = 0; k < res[i].list.length; k++) {
+                                var calculated = mcjsUtils.subFloatMethod(res[i].list[k].bet, res[i].list[k].win);
+                                calculated = mcjsUtils.subFloatMethod(calculated, res[i].list[k].cancelBet);
+                                calculated = mcjsUtils.addFloatMethod(calculated, res[i].list[k].cancelWin);
+
+                                seriesItem.data.push({
+                                    x: new Date(res[i].list[k].targetMonth + '-01').getTime() / 1000,
+                                    y: calculated
+                                });
+
+                                if (i == 0) {
+                                    xAxisValuesByName.push(res[i].list[k].targetMonth);
+                                    xAxisValuesByVal.push(new Date(res[i].list[k].targetMonth + '-01').getTime() / 1000);
+                                }
+                            }
+                            seriesData.push(seriesItem);
+                        }
+                        var $element = $("#area_chart_target"),
+                            graph = new Rickshaw.Graph({
+                                element: $element.get(0),
+                                width: $element.width(),
+                                height: 300,
+                                renderer: "area",
+                                stroke: 0,
+                                series: seriesData
+                            });
+                        var x_axis = new Rickshaw.Graph.Axis.X({
+                            graph: graph,
+                            tickValues: xAxisValuesByVal,
+                            tickFormat: function(x) {
+                                return new Date(x * 1000).format("yyyy-MM");
+                            }
+                        });
+
+                        var legend = new Rickshaw.Graph.Legend({
+                            element: document.querySelector('#area_chart_legend'),
+                            graph: graph
+                        });
+
+                        var hoverDetail = new Rickshaw.Graph.HoverDetail({
+                            graph: graph,
+                            xFormatter: function(x) {
+                                return new Date(x * 1000).format("yyyy-MM");
+                            },
+                            yFormatter: function(y) {
+                                return mcjsUtils.getFormattedPointString(y, 0)
+                            }
+                        });
+
+                        new Rickshaw.Graph.Behavior.Series.Toggle({
+                            graph: graph,
+                            legend: legend
+                        });
+                        $(window).on("resize", function() {
+                            graph.configure({
+                                width: $element.width()
+                            }), graph.render()
+                        });
+
+                        graph.render();
+                    }
+                },
+                chart_donut_tp: {
+                    drawChart: function() {
+                        this.chartResponse = null;
+                        this.chartData = [];
+
+                        if (fnObj.chart_donut_tp.searchDayCount == undefined)
+                            fnObj.chart_donut_tp.searchDayCount = 30;
+
+                        var targetUrl = "/wallet/report/transaction/getDonutChartForReportByThirdParty";
+
+                        var toDayDate = new Date();
+                        var endDate = toDayDate.format("yyyy-MM-dd");
+
+                        toDayDate.setDate(toDayDate.getDate() - fnObj.chart_donut_tp.searchDayCount);
+                        var startDate = toDayDate.format("yyyy-MM-dd");
+
+                        var reqParam = "searchStartDate=" + startDate + " 00:00:00";
+                        reqParam = reqParam + "&searchEndDate=" + endDate + " 23:59:59";
+                        reqParam = reqParam + "&currency=KRW&isIncludeChild=true";
+
+                        this.requestChart(targetUrl, reqParam);
+                    },
+                    generateChartData: function(chartDataTarget) {
+                        var result = [];
+                        var dataRoot = fnObj.chart_donut_tp.chartResponse;
+                        var k;
+                        for (k = 0; k < dataRoot.length; k++) {
+                            var res = dataRoot[k];
+                            var i;
+                            var generatedData = [];
+                            generatedData.push(res.itemId);
+                            if (chartDataTarget == 'Bet-Win') {
+                                if (res.list.length > 0) {
+                                    for (i = 0; i < res.list.length; i++) {
+                                        var item = res.list[i];
+                                        var bet = mcjsUtils.subFloatMethod(item.bet, item.cancelBet);
+                                        var win = mcjsUtils.subFloatMethod(item.win, item.cancelWin);
+                                        generatedData.push(mcjsUtils.subFloatMethod(bet, win));
+                                    }
+                                }
+                            } else {
+                                if (res.list.length > 0) {
+                                    for (i = 0; i < res.list.length; i++) {
+                                        var item = res.list[i];
+                                        generatedData.push(item.betCount);
+                                    }
+                                }
+                            }
+                            result.push(generatedData);
+                        }
+                        return result;
+                    },
+                    selectArea: function(dayCount) {
+                        fnObj.chart_donut_tp.searchDayCount = dayCount;
+                        fnObj.chart_donut_tp.drawChart();
+                        if (dayCount == 30)
+                            $('#btn_chart_donut_1_search_range').text('1 Month');
+                        else
+                            $('#btn_chart_donut_1_search_range').text('3 Month');
+                    },
+                    drawNow: function(chartDataTarget) {
+                        if (fnObj.chart_donut_tp.selectedDataType == undefined)
+                            fnObj.chart_donut_tp.selectedDataType = 'Bet-Win';
+                        if (chartDataTarget)
+                            fnObj.chart_donut_tp.selectedDataType = chartDataTarget;
+                        var chartData = fnObj.chart_donut_tp.generateChartData(fnObj.chart_donut_tp.selectedDataType);
+                        c3.generate({
+                            bindto: "#chart_c3_02",
+                            size: {
+                                height: 300
+                            },
+                            data: {
+                                columns: chartData,
+                                type: "donut"
+                            },
+                            color: {
+                                pattern: [
+                                    '#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
+                                ]
+                            },
+                            legend: {
+                                position: "right"
+                            },
+                            donut: {
+                                label: {
+                                    show: !1
+                                },
+                                width: 40,
+                                title: fnObj.chart_donut_tp.selectedDataType,
+                                onclick: function(d, i) {},
+                                onmouseover: function(d, i) {},
+                                onmouseout: function(d, i) {}
+                            },
+                            tooltip: {
+                                format: {
+                                    value: function(value, ratio, id) {
+                                        var format = d3.format(",.2f");
+                                        return format(value);
+                                    }
+                                }
+                            }
+                        })
+                    },
+                    requestChart: function(targetUrl, reqParam) {
+                        $.ajax({
+                            async: true,
+                            accepts: {
+                                text: "application/json"
+                            },
+                            type: 'POST',
+                            url: targetUrl,
+                            data: reqParam,
+                            success: function(res) {
+                                fnObj.chart_donut_tp.chartResponse = res;
+                                fnObj.chart_donut_tp.drawNow();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+    </div>
+    <!-- End Page -->
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <span class="site-footer-legal">© COPYRIGHT Ximax 2016, ALL RIGHTS RESERVED.</span>
+
+        <div class="site-footer-right">
+            <a href="#">Ximax</a>
+        </div>
+    </footer>
+    <script src="/wallet/resources/compiled/compiled_layout.js?v=2018081601"></script>
+    <script>
+        $(document).ready(function() {
+            if (typeof fnObj != 'undefined') {
+                fnObj.init();
+            }
+            Site.run();
+            var requestPath = window.location.pathname;
+            if (requestPath) {
+                $('.site-menu').find('a.animsition-link').each(function() {
+                    if (requestPath.indexOf($(this).attr('href')) !== -1) {
+                        var activeMenu = $(this).parent();
+                        activeMenu.addClass('active');
+                        activeMenu.parents("li").each(function() {
+                            $(this).addClass("open");
+                        });
+                        return false;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
