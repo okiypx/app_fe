@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<html class="no-js css-menubar">
+
+<head>
+    <!-- Meta -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap admin template">
+    <meta name="author" content="">
+    <title>Ximax Manager</title>
+    <link rel="apple-touch-icon" href="/wallet/resources/remark/assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/wallet/resources/img/favicon.png">
+    <link rel="stylesheet" href="/wallet/resources/compiled/compiled_meta.css?v=2018081601">
+    <script src="/wallet/resources/compiled/compiled_meta.js?v=2018081601"></script>
+    <script>
+        Breakpoints();
+    </script>
+</head>
+
+<body class="dashboard">
+    <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega bg-grey-600" role="navigation">
+
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle hamburger hamburger-close navbar-toggle-left hided" data-toggle="menubar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger-bar"></span>
+    </button>
+            <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-collapse" data-toggle="collapse">
+        <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+    </button>
+            <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+                <img class="navbar-brand-logo" src="/wallet/resources/img/logo25.png" title="logo">
+                <div class="navbar-brand-text" style="text-overflow:ellipsis; overflow:hidden;float: right;"></div>
+            </div>
+        </div>
+        <div class="navbar-container container-fluid">
+            <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+                <ul class="nav navbar-toolbar">
+                    <li class="hidden-float" id="toggleMenubar">
+                        <a data-toggle="menubar" href="#" role="button">
+                    <i class="icon hamburger hamburger-arrow-left">
+                        <span class="sr-only">Toggle menubar</span>
+                        <span class="hamburger-bar"></span>
+                    </i>
+                </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+                    <li id="headerOperatorPointRoot">
+                        <div class="input-group input-group-icon" style="padding-top:20px; width:150px;" align="right">
+                            <span class="input-group-addon" style="height: 12px; padding: 3px 7px 3px 7px;"><span class="icon fa-money" style="" aria-hidden="true"></span></span>
+                            <input id="txtHeaderOperatorPoint" style="height: 25px; text-align: right; padding-right:4px; padding-left:4px;" class="form-control" />
+                        </div>
+                    </li>
+                    <li>
+                        <a class="icon wb-reload" aria-hidden="true" href="#" role="button" onclick="g_tilesHeaderModalObj.onClickRefreshOperatorPoint()"></a>
+                    </li>
+                    <li id="toggleFullscreen">
+                        <a class="icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button"><span class="sr-only">Toggle fullscreen</span></a>
+                    </li>
+                    <li class="dropdown">
+                        <a style="width:44px;padding-left:8px" class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
+                  <span class="avatar avatar-online">
+                    <img src="/wallet/resources/img/Avatar-blank.jpg" alt="...">
+                    <i></i>
+                  </span>
+                </a>
+                        <ul class="dropdown-menu" role="menu">
+
+                            <li role="presentation">
+                                <a href="/wallet/logout" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            var g_tilesHeaderClickManager = {
+                isEnabled: true,
+                enable: function() {
+                    this.isEnabled = true;
+                },
+                disable: function() {
+                    this.isEnabled = false;
+                },
+                printState: function() {
+                    console.log('g_tilesHeaderClickManager.isEnabled : ' + this.isEnabled);
+                },
+                clone: function() {
+                    var copy = g_tilesHeaderClickManager.constructor();
+                    for (var attr in g_tilesHeaderClickManager) {
+                        if (g_tilesHeaderClickManager.hasOwnProperty(attr)) {
+                            copy[attr] = this[attr];
+                        }
+                    }
+                    return copy;
+                }
+            };
+            var g_tilesHeaderModalObj = {
+                clickManager: {
+                    isEnabled: true,
+                    enable: function() {
+                        this.isEnabled = true;
+                    },
+                    disable: function() {
+                        this.isEnabled = false;
+                    }
+                },
+                intervalId: null,
+                onClickRefreshOperatorPoint: function() {
+                    console.log('refresh operator point');
+                    window.location.reload(true);
+                },
+                requestCurrentOperatorPoint: function() {
+                    $("#txtHeaderOperatorPoint").val('');
+
+                    var param = '';
+                    var targetUrl = "/wallet/api/managerApi/getOperatorPoint";
+                    $.ajax({
+                        accepts: {
+                            text: "application/json"
+                        },
+                        type: 'POST',
+                        url: targetUrl,
+                        data: param,
+                        success: function(data) {
+                            if (data.returnCode == 0) {
+                                var operatorPoint = data.operatorPoint;
+                                if (data.operatorPoint) {
+                                    try {
+                                        $("#txtHeaderOperatorPoint").val(mcjsUtils.getFormattedPointString(operatorPoint.toFixed(2), 2));
+                                    } catch (e) {
+                                        $("#txtHeaderOperatorPoint").val(data.operatorPoint);
+                                    }
+                                } else
+                                    $("#txtHeaderOperatorPoint").val(data.operatorPoint);
+                            } else {
+                                console.log(data);
+                                if (g_tilesHeaderModalObj.intervalId) {
+                                    clearInterval(g_tilesHeaderModalObj.intervalId);
+                                }
+                                $("#txtHeaderOperatorPoint").val('Error');
+                            }
+                        },
+                        error: function(e) {
+                            console.log(e);
+                            if (g_tilesHeaderModalObj.intervalId) {
+                                clearInterval(g_tilesHeaderModalObj.intervalId);
+                            }
+                        }
+                    });
+                },
+                requestUnresolvedTransfer: function() {
+                    var param = '';
+                    var targetUrl = "/wallet/api/managerApi/getUnresolvedTransferCount";
+                    $.ajax({
+                        accepts: {
+                            text: "application/json"
+                        },
+                        type: 'POST',
+                        url: targetUrl,
+                        data: param,
+                        success: function(data) {
+                            if (data.returnCode == 0) {
+                                try {
+                                    if (data.count == 0 || data.count == '0')
+                                        $("#txtMenuUnresolvedTransferCount")[0].innerHTML = '';
+                                    else
+                                        $("#txtMenuUnresolvedTransferCount")[0].innerHTML = data.count;
+                                } catch (e) {
+                                    console.log(e);
+                                    console.log(data);
+                                }
+                            } else {
+                                console.log(data);
+                            }
+                        },
+                        error: function(e) {
+                            console.log(e);
+                        }
+                    });
+                }
+            };
+            $(document).ready(function() {
+                g_tilesHeaderModalObj.requestCurrentOperatorPoint();
+                g_tilesHeaderModalObj.requestUnresolvedTransfer();
+            });
+        </script>
+    </nav>
+    <!-- Menu -->
+
+
+
+
+
+    <div class="site-menubar" id="siteMenuBar">
+        <div class="site-menubar-body">
+            <div>
+                <div>
+                    <ul class="site-menu">
+                        <!-- Start General -->
+                        <li class="site-menu-category">General</li>
+                        <li class="site-menu-item" id="menu-dashBoard">
+                            <a class="animsition-link" href="/wallet/dashboard" data-slug="angular">
+                            <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+                            <span class="site-menu-title">Dashboard</span>
+                        </a>
+                        </li>
+
+                        <li class="site-menu-item" id="menu-operator-information">
+                            <a class="animsition-link" href="/wallet/operator/info" data-slug="angular">
+                            <i class="site-menu-icon wb-info" aria-hidden="true"></i>
+                            <span class="site-menu-title">Information</span>
+                        </a>
+                        </li>
+                        <!-- End General-->
+
+                        <!-- Start Management -->
+                        <li class="site-menu-category">Management</li>
+
+
+                        <li class="site-menu-item" id="menu-operator">
+                            <a class="animsition-link" href="/wallet/management/operator" data-slug="angular">
+                                <i class="site-menu-icon wb-user" aria-hidden="true"></i>
+                                <span class="site-menu-title">Operator</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item" id="menu-member">
+                            <a class="animsition-link" href="/wallet/management/member" data-slug="angular">
+                                <i class="site-menu-icon wb-users" aria-hidden="true"></i>
+                                <span class="site-menu-title">Member</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item" id="menu-game">
+                            <a class="animsition-link" href="/wallet/management/operatorGames" data-slug="angular">
+                                <i class="site-menu-icon fa-gamepad" aria-hidden="true"></i>
+                                <span class="site-menu-title">Game</span>
+                                
+                            </a>
+                        </li>
+
+
+                        <li class="site-menu-item">
+                            <a class="animsition-link" href="/wallet/management/unresolvedTransfer" data-slug="angular">
+                            <i class="site-menu-icon wb-alert-circle" aria-hidden="true"></i>
+                            <span class="site-menu-title">Unresolved Transfer</span>
+                            <div class="site-menu-badge">
+                                <span class="badge badge-success" id="txtMenuUnresolvedTransferCount"></span>
+                            </div>
+                        </a>
+                        </li>
+                        <!-- End Management -->
+
+                        <!-- Start Report -->
+                        <li class="site-menu-category">Report</li>
+                        <li class="site-menu-item" id="menu-reportMonthly">
+                            <a class="animsition-link" href="/wallet/report/transaction/monthly" data-slug="angular">
+                            <i class="site-menu-icon wb-calendar" aria-hidden="true"></i>
+                            <span class="site-menu-title">Monthly</span>
+                        </a>
+                        </li>
+                        <li class="site-menu-item" id="menu-reportDaily">
+                            <a class="animsition-link" href="/wallet/report/transaction/daily" data-slug="angular">
+                            <i class="site-menu-icon wb-calendar" aria-hidden="true"></i>
+                            <span class="site-menu-title">Daily</span>
+                        </a>
+                        </li>
+                        <!--
+                    <li class="site-menu-item" id="menu-reportHourly">
+                        <a class="animsition-link" href="/wallet/report/transaction/hourly" data-slug="angular">
+                            <i class="site-menu-icon wb-calendar" aria-hidden="true"></i>
+                            <span class="site-menu-title">Hourly</span>
+                        </a>
+                    </li>
+                    -->
+                        <li class="site-menu-item" id="menu-reportPerOperator">
+                            <a class="animsition-link" href="/wallet/report/transaction/byOperator" data-slug="angular">
+                            <i class="site-menu-icon wb-user" aria-hidden="true"></i>
+                            <span class="site-menu-title">by Operator</span>
+                        </a>
+                        </li>
+                        <li class="site-menu-item" id="menu-reportPerGame">
+                            <a class="animsition-link" href="/wallet/report/transaction/byThirdParty" data-slug="angular">
+                            <i class="site-menu-icon fa-gamepad" aria-hidden="true"></i>
+                            <span class="site-menu-title">by ThirdParty</span>
+                        </a>
+                        </li>
+                        <!-- End Report -->
+
+                        <!-- Start Search -->
+                        <li class="site-menu-category">Search</li>
+                        <li class="site-menu-item" id="menu-popularGame">
+                            <a class="animsition-link" href="/wallet/ranking/byHit" data-slug="angular">
+                            <i class="site-menu-icon fa-gamepad" aria-hidden="true"></i>
+                            <span class="site-menu-title">Game Hit Ranking</span>
+                        </a>
+                        </li>
+                        <li class="site-menu-item" id="menu-operatortransaction">
+                            <a class="animsition-link" href="/wallet/report/operatorTransaction" data-slug="angular">
+                            <i class="site-menu-icon fa-credit-card" aria-hidden="true"></i>
+                            <span class="site-menu-title">Operator Transaction</span>
+                        </a>
+                        </li>
+                        <li class="site-menu-item" id="menu-transactionSearch">
+                            <a class="animsition-link" href="/wallet/report/transaction/search" data-slug="angular">
+                            <i class="site-menu-icon fa-credit-card" aria-hidden="true"></i>
+                            <span class="site-menu-title">Transaction Search</span>
+                        </a>
+                        </li>
+                        <!--
+                    <li class="site-menu-item"id="menu-transactionRealTime">
+                        <a class="animsition-link"href="/wallet/report/transaction/summary"data-slug="angular">
+                            <i class="site-menu-iconfa-credit-card"aria-hidden="true"></i>
+                        <span class="site-menu-title">TransactionSummary</span>
+                        </a>
+                    </li>
+                    -->
+                        <li class="site-menu-item" id="menu-gameHistory">
+                            <a class="animsition-link" href="/wallet/report/gameHistory" data-slug="angular">
+                            <i class="site-menu-icon wb-clipboard" aria-hidden="true"></i>
+                            <span class="site-menu-title">Game History</span>
+                        </a>
+                        </li>
+                        <!-- End Search -->
+
+
+
+                        <!-- API Test Menu -->
+                        <li class="site-menu-category">API</li>
+
+                        <li class="site-menu-item" id="menu-apiTest">
+                            <a class="animsition-link" href="/wallet/apiManager/test" data-slug="angular">
+                                <i class="site-menu-icon wb-hammer" aria-hidden="true"></i>
+                                <span class="site-menu-title">API Test</span>
+                            </a>
+                        </li>
+
+
+                        <!-- End API Test Menu -->
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page -->
+    <div class="page">
+        <div class="loading" id="mc_tiles_body_loading" style="display:none">
+            <div style="height:500px;width:100%;display:table;">
+                <div style="display:table-cell;vertical-align: middle;">
+                    <div class="spinner">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="page-content container-fluid">
+            <!-- Panel -->
+            <div class="row">
+                <div class="col-xlg-12 col-md-12">
+                    <!-- Example Panel With Heading -->
+                    <div class="panel panel-bordered">
+
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Operator Info</h3>
+
+                            <div class="page-header-actions">
+                                <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round" data-toggle="tooltip" data-original-title="Edit" onclick="fnObj.moveModifyPage();">
+                            <i class="icon wb-edit" aria-hidden="true"></i>
+                        </button>
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <form id="operatorVO" class="form-horizontal" action="/wallet/operator/info" method="post">
+                                <div id="printArea">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Type</label>
+
+                                        <div class="col-sm-9">
+                                            <input id="opType" name="opType" placeholder="Type" class="form-control" readonly="readonly" type="text" value="OPERATOR" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">State</label>
+
+                                        <div class="col-sm-9">
+                                            <input id="opState" name="opState" class="form-control" readonly="readonly" type="text" value="USE" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">ID</label>
+
+                                        <div class="col-sm-9">
+                                            <input id="opId" name="opId" placeholder="Operator ID" class="form-control" readonly="readonly" type="text" value="ccdd11" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Private key</label>
+
+                                        <div class="col-sm-9">
+                                            <input id="opPrivatekey" name="opPrivatekey" placeholder="Operator Private Key" class="form-control" readonly="readonly" type="text" value="60AB36B5801873061FA60357822F9FB8" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Name</label>
+
+                                        <div class="col-sm-9">
+                                            <input id="opName" name="opName" placeholder="Name" class="form-control" readonly="readonly" type="text" value="ccdd11" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Email</label>
+
+                                        <div class="col-sm-9">
+                                            <input id="opEmail" name="opEmail" placeholder="Email" class="form-control" readonly="readonly" type="text" value="" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Tel</label>
+
+                                        <div class="col-sm-9">
+                                            <input id="opTel" name="opTel" placeholder="Tel" class="form-control" readonly="readonly" type="text" value="" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">API URL</label>
+
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="apiURL" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Management URL</label>
+
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="managementURL" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Enable WhiteList</label>
+
+                                        <div class="col-sm-9">
+                                            <select id="opWhiteListOn" name="opWhiteListOn" class="form-control" disabled="disabled"><option value="0">Off</option><option value="1" selected="selected">On</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Enable Seamless Assist</label>
+
+                                        <div class="col-sm-9">
+                                            <select id="opSeamlessAssistOn" name="opSeamlessAssistOn" class="form-control" disabled="disabled"><option value="0">Off</option><option value="1" selected="selected">On</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Enable Prepaid</label>
+
+                                        <div class="col-sm-9">
+                                            <select id="opPrepaidOn" name="opPrepaidOn" class="form-control" disabled="disabled"><option value="0">N</option><option value="1" selected="selected">Y</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Enable Retry Transfer</label>
+
+                                        <div class="col-sm-9">
+                                            <select id="opRetryTransferOn" name="opRetryTransferOn" class="form-control" disabled="disabled"><option value="0" selected="selected">Y</option><option value="1">N</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">UserId Prefix</label>
+
+                                        <div class="col-sm-9">
+                                            <input id="opUserPrefix" name="opUserPrefix" placeholder="Name" class="form-control" readonly="readonly" type="text" value="ccd" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Profit Rate</label>
+
+                                        <div class="col-sm-9">
+                                            <input id="opProfitRate" name="opProfitRate" placeholder="Name" class="form-control" readonly="readonly" type="text" value="12.00" />
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var fnObj = {
+                init: function() {
+                    var apiURL = "http://" + window.location.host + "/api";
+                    $('#apiURL').val(apiURL);
+
+                    var managementURL = "http://" + window.location.host;
+                    $('#managementURL').val(managementURL);
+                },
+                moveModifyPage: function() {
+                    var url = "/wallet/operator/modifyMine";
+                    $(location).attr("href", url);
+                }
+            };
+        </script>
+    </div>
+    <!-- End Page -->
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <span class="site-footer-legal">© COPYRIGHT Ximax 2016, ALL RIGHTS RESERVED.</span>
+
+        <div class="site-footer-right">
+            <a href="#">Ximax</a>
+        </div>
+    </footer>
+    <script src="/wallet/resources/compiled/compiled_layout.js?v=2018081601"></script>
+    <script>
+        $(document).ready(function() {
+            if (typeof fnObj != 'undefined') {
+                fnObj.init();
+            }
+            Site.run();
+            var requestPath = window.location.pathname;
+            if (requestPath) {
+                $('.site-menu').find('a.animsition-link').each(function() {
+                    if (requestPath.indexOf($(this).attr('href')) !== -1) {
+                        var activeMenu = $(this).parent();
+                        activeMenu.addClass('active');
+                        activeMenu.parents("li").each(function() {
+                            $(this).addClass("open");
+                        });
+                        return false;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
