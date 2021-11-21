@@ -1,0 +1,15 @@
+angular.module('appComponents', [
+    'app.preloader',
+    'app.main',
+    'app.header-nav',
+    'app.promo-slick',
+    'app.transaction',
+    'app.guest',
+    'app.customer',
+    'app.coupon',
+    'app.gamebuttons',
+    'app.casino',
+    'app.footer',
+    'app.overlay',
+    'app.notice',
+]);

@@ -1,0 +1,12 @@
+<div class="mp-wrapper" ng-init="listLength = ngDialogData.lists.length">
+    <div class="mp-popup-container" ng-repeat="list in ngDialogData.lists" ng-if="!isShown(list.id)">
+        <img ng-src="/common/images/new-popup/{{ list.image }}" alt="" width="100%">
+
+        <div class="mp-close-btn-container" ng-click="hidePopup(list.id)">
+            <button class="btn mp-close-btn"><i class="fa fa-close"></i></button>
+        </div>
+        <div class="ngdialog-notice__content__footer clearfix" role="button">
+            <button class="btn btn-primary-bordered btn-block mp-not-today-btn pull-right" ng-click="notTodayMultiplePopup(list.id)" translate>Do Not Show This Message for Today</button>
+        </div>
+    </div>
+</div>

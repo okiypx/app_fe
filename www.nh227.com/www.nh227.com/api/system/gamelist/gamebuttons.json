@@ -1,0 +1,328 @@
+[
+  {
+    "gspNo": "1058",
+    "gspName": "Evolution Gaming Live",
+    "gspName_krw": "에볼루션",
+    "category": "live",
+    "gspClass": "live-button-1058",
+    "gameId": "baccarat",
+    "gameTheme": "2"
+  },
+  {
+    "gspNo": "1112",
+    "gspName": "Microgaming Live",
+    "gspName_krw": "마이크로게이밍",
+    "category": "live",
+    "gameId": "1930",
+    "gspClass": "live-button-1005"
+  },
+  {
+    "gspNo": "1012",
+    "gspName": "Asia Gaming Live",
+    "gspName_krw": "아시아게이밍",
+    "category": "live",
+    "gspClass": "live-button-1012"
+  },
+  {
+    "gspNo": "1009",
+    "gspName": "Vivo Gaming Live",
+    "gspName_krw": "비보게이밍",
+    "category": "live",
+    "gspClass": "live-button-1009"
+  },
+  {
+    "gspNo": "1027",
+    "gspName": "Gameplay Live",
+    "gspName_krw": "게임플레이",
+    "category": "live",
+    "gspClass": "live-button-1027"
+  },
+  {
+    "gspNo": "1051",
+    "gspName": "Allbet Live",
+    "gspName_krw": "올벳",
+    "category": "live",
+    "gspClass": "live-button-1051"
+  },
+  {
+    "gspNo": "1147",
+    "gspName": "Sexy Gaming Live",
+    "gspName_krw": "섹시게이밍",
+    "category": "live",
+    "gspClass": "live-button-1147"
+  },
+  {
+    "gspNo": "1052",
+    "gspName": "BBIN Live",
+    "gspName_krw": "비비아이엔",
+    "category": "live",
+    "gspClass": "live-button-1052"
+  },
+  {
+    "gspNo": "1047",
+    "gspName": "Playtech Live",
+    "gspName_krw": "플레이테크",
+    "category": "live",
+    "gspClass": "live-button-1047",
+    "gameId": "bal"
+  },
+  {
+    "gspNo": "1045",
+    "gspName": "WM Gaming",
+    "gspName_krw": "WM게이밍",
+    "category": "live",
+    "gspClass": "live-button-1045",
+    "gameId": "true"
+  },
+  {
+    "gspNo": "1060",
+    "gspName": "Pinnacle Sports",
+    "gspName_krw": "PINNACLE 스포츠",
+    "category": "sports",
+    "gspClass": "sports-button-1060"
+  },
+  {
+    "gspNo": "1044",
+    "gspName": "10Bet Sports",
+    "gspName_krw": "10BET 스포츠",
+    "category": "sports",
+    "gspClass": "sports-button-1044"
+  },
+  {
+    "gspNo": "1096",
+    "gspName": "SBOBet Sports",
+    "gspName_krw": "SBO BET 스포츠",
+    "category": "sports",
+    "gspClass": "sports-button-1096"
+  },
+  {
+    "gspNo": "1091",
+    "gspName": "IBCBet Sports",
+    "gspName_krw": "IBC 스포츠",
+    "category": "sports",
+    "gspClass": "sports-button-1054"
+  },
+  {
+    "gspNo": "1056",
+    "gspName": "UG Sports",
+    "gspName_krw": "UG 스포츠",
+    "category": "sports",
+    "gspClass": "sports-button-1056"
+  },
+  {
+    "gspNo": "1065",
+    "gspName": "Pragmatic",
+    "gspName_krw": "프라그마틱플레이",
+    "category": "slot",
+    "gspClass": "slot-button-1065"
+  },
+  {
+    "gspNo": "1112",
+    "gspName": "Microgaming",
+    "gspName_krw": "마이크로게이밍",
+    "category": "slot",
+    "gspClass": "slot-button-1005"
+  },
+  {
+    "gspNo": "1012",
+    "gspName": "Asia Gaming",
+    "gspName_krw": "아시아게이밍",
+    "category": "slot",
+    "gspClass": "slot-button-1012"
+  },
+  {
+    "gspNo": "1122",
+    "gspName": "PNG",
+    "gspName_krw": "플레이앤고",
+    "category": "slot",
+    "gspClass": "slot-button-1061"
+  },
+  {
+    "gspNo": "1027",
+    "gspName": "Gameplay",
+    "gspName_krw": "게임플레이",
+    "category": "slot",
+    "gspClass": "slot-button-1027"
+  },
+  {
+    "gspNo": "1123",
+    "gspName": "NetENT",
+    "gspName_krw": "넷엔트",
+    "category": "slot",
+    "gspClass": "slot-button-1053"
+  },
+  {
+    "gspNo": "1066",
+    "gspName": "Habanero",
+    "gspName_krw": "하바네로",
+    "category": "slot",
+    "gspClass": "slot-button-1066"
+  },
+  {
+    "gspNo": "1034",
+    "gspName": "Betsoft",
+    "gspName_krw": "벳소프트",
+    "category": "slot",
+    "gspClass": "slot-button-1034"
+  },
+  {
+    "gspNo": "1047",
+    "gspName": "Playtech",
+    "gspName_krw": "플레이테크",
+    "category": "slot",
+    "gspClass": "slot-button-1047"
+  },
+  {
+    "gspNo": "1008",
+    "gspName": "Dreamtech",
+    "gspName_krw": "드림테크",
+    "category": "slot",
+    "gspClass": "slot-button-1008"
+  },
+  {
+    "gspNo": "1124",
+    "gspName": "Quickspin",
+    "gspName_krw": "퀵스핀",
+    "category": "slot",
+    "gspClass": "slot-button-1062"
+  },
+  {
+    "gspNo": "1080",
+    "gspName": "Spade Gaming",
+    "gspName_krw": "스페이드게이밍",
+    "category": "slot",
+    "gspClass": "slot-button-1080"
+  },
+  {
+    "gspNo": "1099",
+    "gspName": "Ameba",
+    "gspName_krw": "아메바",
+    "category": "slot",
+    "gspClass": "slot-button-1099"
+  },
+  {
+    "gspNo": "1098",
+    "gspName": "TopTrend",
+    "gspName_krw": "탑트렌드게이밍",
+    "category": "slot",
+    "gspClass": "slot-button-1098"
+  },
+  {
+    "gspNo": "1052",
+    "gspName": "BBIN Live",
+    "gspName_krw": "비비아이엔",
+    "category2": "slot",
+    "gspClass2": "slot-button-1052"
+  },
+  {
+    "gspNo": "1115",
+    "gspName": "Maverick",
+    "gspName_krw": "매버릭",
+    "category": "slot",
+    "gspClass": "slot-button-1102"
+  },
+  {
+    "gspNo": "1100",
+    "gspName": "Gamatron",
+    "gspName_krw": "가마트론",
+    "category": "slot",
+    "gspClass": "slot-button-1100"
+  },
+  {
+    "gspNo": "1079",
+    "gspName": "Real Time Gaming",
+    "gspName_krw": "리얼타임게이밍",
+    "category": "slot",
+    "gspClass": "slot-button-1079"
+  },
+  {
+    "gspNo": "1131",
+    "gspName": "FGHUB Elk",
+    "gspName_krw": "이엘케이",
+    "category": "slot",
+    "gspClass": "slot-button-1131"
+  },
+  {
+    "gspNo": "1132",
+    "gspName": "FGHUB Playson",
+    "gspName_krw": "플레이손",
+    "category": "slot",
+    "gspClass": "slot-button-1132"
+  },
+  {
+    "gspNo": "1142",
+    "gspName": "Bustabit",
+    "gspName_krw": "부스타빗",
+    "category": "Others",
+    "gspClass": "mini-button-1142",
+    "gameId": "1"
+  },
+  {
+    "gspNo": "1004",
+    "gspName": "Gameplay RPS",
+    "gspName_krw": "게임플레이 가위바위보",
+    "category": "Others",
+    "gspClass": "mini-button-1004"
+  },
+  {
+    "gspNo": "1006",
+    "gspName": "Gameplay Ladder",
+    "gspName_krw": "게임플레이 사다리",
+    "category": "Others",
+    "gspClass": "mini-button-1006"
+  },
+  {
+    "gspNo": "1073",
+    "gspName": "SkyCity Mini Soccer",
+    "gspName_krw": "스카이시티 축구",
+    "category": "Others",
+    "gspClass": "mini-button-1073-football",
+    "gameId": "football"
+  },
+  {
+    "gspNo": "1073",
+    "gspName": "SkyCity Mini Baseball",
+    "gspName_krw": "스카이시티 야구",
+    "category": "Others",
+    "gspClass": "mini-button-1073-baseball",
+    "gameId": "baseball"
+  },
+  {
+    "gspNo": "1073",
+    "gspName": "SkyCity Mini Basketball",
+    "gspName_krw": "스카이시티 농구",
+    "category": "Others",
+    "gspClass": "mini-button-1073-basketball",
+    "gameId": "basketball"
+  },
+  {
+    "gspNo": "1073",
+    "gspName": "SkyCity Mini Cricket",
+    "gspName_krw": "스카이시티 크리켓",
+    "category": "Others",
+    "gspClass": "mini-button-1073-cricket",
+    "gameId": "cricket"
+  },
+  {
+    "gspNo": "1073",
+    "gspName": "SkyCity Mini Dice",
+    "gspName_krw": "스카이시티 주사위",
+    "category": "Others",
+    "gspClass": "mini-button-1073-dice",
+    "gameId": "dice"
+  },
+  {
+    "gspNo": "1052",
+    "gspName": "BBIN Arcade",
+    "gspName_krw": "비비아이엔",
+    "category": "Others",
+    "gspClass4": "mini-button-1052-ladder"
+  },
+  {
+    "gspNo": "1020",
+    "gspName": "Powerball",
+    "gspName_krw": "파워볼",
+    "category": "Powerball",
+    "gspClass5": "powerball-button-1020"
+  }
+]
