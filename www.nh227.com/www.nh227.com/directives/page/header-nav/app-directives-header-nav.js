@@ -3,7 +3,42 @@ var app = angular.module('app.header-nav', []);
 app.directive('headerNavPage', function() {
     return {
         restrict: "EA",
-        templateUrl: "/directives/page/header-nav/header-nav.php",
+        template: "<header class=\"header-nav\" ng-controller=\"NavController\">\n" +
+            "  <div class=\"header-nav__top\">\n" +
+            "    <div class=\"main-container\">\n" +
+            "      <div class=\"header-nav__top-item\">\n" +
+            "        <notice-page></notice-page>\n" +
+            "      </div>\n" +
+            "      <div class=\"header-nav__top-item\">\n" +
+            "        <nav class=\"sub-nav\">\n" +
+            "          <ul class=\"list-inline\">\n" +
+            "            <li><a href=\"\" ng-click=\"displayCustomer(2);\">자주 묻는 질문</a></li>\n" +
+            "            <li><a href=\"\" ng-click=\"displayCustomer(5);\">파트너 제휴 문의</a></li>\n" +
+            "          </ul>\n" +
+            "        </nav>\n" +
+            "      </div>\n" +
+            "    </div>\n" +
+            "  </div>\n" +
+            "  <div class=\"header-nav__menu\">\n" +
+            "    <div class=\"main-container\">\n" +
+            "      <div class=\"logo\">\n" +
+            "        <a href=\"/#/\">\n" +
+            "          <img src=\"/common/images/logo-blue-new.png\" alt=\"\">\n" +
+            "        </a>\n" +
+            "      </div>\n" +
+            "      <nav class=\"main-nav\">\n" +
+            "        <ul class=\"list-inline\">\n" +
+            "          <li ng-repeat=\"navItem in mainNav\">\n" +
+            "            <a href=\"\" ng-click=\"navClick(navItem.type, navItem.setTab)\">\n" +
+            "              <p class=\"classA {{navItem.classA\">{{navItem.title}}</p>\n" +
+            "              <p class=\"classB {{navItem.classB\">{{navItem.sub}}</p>\n" +
+            "            </a>\n" +
+            "          </li>\n" +
+            "        </ul>\n" +
+            "      </nav>\n" +
+            "    </div>\n" +
+            "  </div>\n" +
+            "</header>\n",
         controller: MainController
     };
 

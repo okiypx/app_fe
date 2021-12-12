@@ -3,7 +3,26 @@ var app = angular.module('app.gamebuttons', []);
 app.directive('gamebuttonsPage', function() {
     return {
         restrict: "EA",
-        templateUrl: "/directives/page/gamebuttons/gamebuttons.php",
+        template: "<div class=\"button-container\">\n" +
+            "  <div class=\"button-content\">\n" +
+            "    <div role=\"button\" ng-repeat=\"games in gameCatergory\" class=\"gamebutton\">\n" +
+            "      <div class=\"gamebuttons game-button-{{$index+1}} {{games.category}}\"\n" +
+            "           ng-class=\"games.category\">\n" +
+            "      </div>\n" +
+            "    </div>\n" +
+            "    <div role=\"button\" class=\"gamebutton\"\n" +
+            "    >\n" +
+            "      <div class=\"slots-jackpot-container click-disable\">\n" +
+            "        <div class=\"jackpot\" ng-init=\"loadCounter();\">\n" +
+            "          <div class=\"jackpot-odometer\">\n" +
+            "            <img src=\"/common/images/jackpot/won-sign.png\" alt=\"\"></div>\n" +
+            "        </div>\n" +
+            "        <div class=\"clearfix\"></div>\n" +
+            "      </div>\n" +
+            "    </div>\n" +
+            "    <div class=\"clearfix\"></div>\n" +
+            "  </div>\n" +
+            "</div>",
         controller: MainController
     }
 });
@@ -60,7 +79,7 @@ function MainController($rootScope, $http, $location, $scope) {
     }
     $rootScope.setActiveSportsGsp = function(gspNo) {
 
-        $http.get("/api/system/gamelist/gamebuttons.json")
+        $http.get("/v2/api/provider_list?domain=vipv88.com")
             .success(function(data) {
                 $rootScope.gameButtons = data;
             });
@@ -115,14 +134,6 @@ function MainController($rootScope, $http, $location, $scope) {
     }
 }
 
-
-/*button hover*/
-app.directive('buttonOverlayPage', function() {
-    return {
-        restrict: "EA",
-        templateUrl: "/directives/page/main/button-overlay.php"
-    }
-})
 
 app.directive('backImg', function() {
     return function(scope, element, attrs) {

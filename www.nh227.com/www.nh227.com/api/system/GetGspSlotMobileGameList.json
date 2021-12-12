@@ -1,0 +1,130 @@
+{
+  "1099": [
+    {
+      "game": "1099",
+      "GameCode": "25",
+      "GameName": "\uc774\uc9c0\ud30c",
+      "cat": "Mobile",
+      "GameNew": 0,
+      "top25": "41",
+      "mobile": "Y",
+      "gname": "easyfa.png",
+      "gimg": null,
+      "image": "https:\/\/dyegdfpg2ixgk.cloudfront.net\/1099\/vertical\/200\/easyfa.png"
+    }
+  ],
+  "1100": [
+    {
+      "game": "1100",
+      "GameCode": "pacquiao-gm",
+      "GameName": "\ud30c\ud034\uc544\uc624\uc6d0\ud380\uce58 KO",
+      "cat": "Mobile",
+      "GameNew": 0,
+      "top25": "41",
+      "mobile": "Y",
+      "gname": "",
+      "gimg": null,
+      "image": "https:\/\/dyegdfpg2ixgk.cloudfront.net\/1100\/vertical\/200\/pacquiao-gm.png"
+    }
+  ],
+  "1122": [
+    {
+      "game": "1122",
+      "GameCode": "5277",
+      "GameName": "\ubbf8\uc2a4\ud14c\ub9ac\uc870\ucee4",
+      "cat": "Mobile",
+      "GameNew": 0,
+      "top25": "41",
+      "mobile": "Y",
+      "gname": "",
+      "gimg": null,
+      "image": "https:\/\/dyegdfpg2ixgk.cloudfront.net\/1122\/vertical\/200\/5277.png"
+    }
+  ],
+  "1034": [
+    {
+      "game": "1034",
+      "GameCode": "772",
+      "GameName": "\uc2a4\ud0ec\ud504\ub4dc\uc0ac\ud30c\ub9ac",
+      "cat": "Mobile",
+      "GameNew": 0,
+      "top25": "52",
+      "mobile": "Y",
+      "gname": "",
+      "gimg": null,
+      "image": "https:\/\/dyegdfpg2ixgk.cloudfront.net\/1034\/vertical\/200\/game_772.png"
+    }
+  ],
+  "1131": [
+    {
+      "game": "1131",
+      "GameCode": "6645",
+      "GameName": "\ub2c8\ud2b8\ub85c\ud3f4\ub9ac\uc2a42",
+      "cat": "Mobile",
+      "GameNew": 0,
+      "top25": "83",
+      "mobile": "Y",
+      "gname": "ELK_Nitropolis2.png",
+      "gimg": null,
+      "image": "https:\/\/dyegdfpg2ixgk.cloudfront.net\/1131\/vertical\/200\/ELK_Nitropolis2.png"
+    }
+  ],
+  "1012": [
+    {
+      "game": "1012",
+      "GameCode": "WH40",
+      "GameName": "\uacbd\uadf9\uc758\ubc24",
+      "cat": "Mobile",
+      "GameNew": 0,
+      "top25": "99",
+      "mobile": "Y",
+      "gname": "",
+      "gimg": null,
+      "image": "https:\/\/dyegdfpg2ixgk.cloudfront.net\/1012\/vertical\/200\/WH40.png"
+    }
+  ],
+  "1132": [
+    {
+      "game": "1132",
+      "GameCode": "5775",
+      "GameName": "\ud6cc\ub8e8\uc640",
+      "cat": "Mobile",
+      "GameNew": 0,
+      "top25": "99",
+      "mobile": "Y",
+      "gname": "PLAY_100JokerStaxx.png",
+      "gimg": null,
+      "image": "https:\/\/dyegdfpg2ixgk.cloudfront.net\/1132\/vertical\/200\/PLAY_100JokerStaxx.png"
+    }
+  ],
+  "1052": [
+    {
+      "game": "1052",
+      "GameCode": "game",
+      "en_US": "Candy Party",
+      "zh_CN": "Candy Party",
+      "GameName": "Candy Party",
+      "ja_JP": "Candy Party",
+      "cat": "Slot",
+      "GameNew": "",
+      "top25": "",
+      "mobile": "",
+      "image": "01.png"
+    }
+  ],
+  "1071": [
+    {
+      "game": "1071",
+      "GameCode": "download",
+      "en_US": "Fresh Fruit",
+      "zh_CN": "Fresh Fruit",
+      "GameName": "Fresh Fruit",
+      "ja_JP": "Fresh Fruit",
+      "cat": "Slot",
+      "GameNew": "",
+      "top25": "",
+      "mobile": "",
+      "image": "1001L.png"
+    }
+  ]
+}

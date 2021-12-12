@@ -12841,7 +12841,7 @@ only screen and (min-resolution: 2dppx) {
     width: 20px;
     height: 15px;
     box-shadow: 0px 0px 1px 0px #888;
-    background-image: url("/common/images/flags.png");
+    background-image: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/flags.png");
     background-repeat: no-repeat;
     background-color: #DBDBDB;
     background-position: 20px 0;
@@ -12854,7 +12854,7 @@ only screen and (min-device-pixel-ratio: 2),
 only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx) {
     .iti-flag {
-        background-image: url("/common/images/flags@2x.png");
+        background-image: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/flags@2x.png");
     }
 }
 
@@ -23252,11 +23252,11 @@ body {
 }
 
 .bg-main {
-    background: url("/common/images/main/bg-main.jpg") top center no-repeat #fff;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/main/bg-main.jpg") top center no-repeat #fff;
 }
 
 .bg-viewsport {
-    background: url("/common/images/sports-header.jpg") 0 -13px no-repeat #fff;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/sports-header.jpg") 0 -13px no-repeat #fff;
     overflow: hidden;
 }
 
@@ -23430,7 +23430,7 @@ a.active {
 }
 
 .view-sports {
-    background: url("/common/images/preloader-main.gif") center #ffffff no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/preloader-main.gif") center #ffffff no-repeat;
 }
 
 /* width's */
@@ -23648,7 +23648,7 @@ select::-ms-expand {
 /*jackpot*/
 
 .slots-jackpot-container {
-    background: url("/common/images/jackpot/jackpot.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/jackpot/jackpot.jpg") no-repeat;
     height: 160px;
     /*padding: 53px 30px 0;*/
     cursor: pointer;
@@ -23656,7 +23656,7 @@ select::-ms-expand {
 }
 
 .slots-jackpot-container:hover {
-    background: url("/common/images/jackpot/jackpot-hover.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/jackpot/jackpot-hover.jpg") no-repeat;
 }
 
 .slots-jackpot-container .jackpot-odometer {
@@ -24201,7 +24201,7 @@ button.btn.btn-black.btn-point {
 /*microgaming popup*/
 
 .ngDialog-micro {
-    background: url("/common/images/micro-popup/bg-micro-live.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/micro-popup/bg-micro-live.jpg") no-repeat;
     width: 900px;
     height: 500px;
     margin-top: 100px;
@@ -24210,7 +24210,7 @@ button.btn.btn-black.btn-point {
 /*.ngdialog-microgaming.ngdialog.ngdialog-theme-default .ngdialog-close:before {
   right: -60px;
   top: 20px;
-  background: url("/common/images/close-white.png") no-repeat;
+  background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/close-white.png") no-repeat;
 }*/
 
 .ngDialog-micro .popup-content {
@@ -24236,25 +24236,25 @@ button.btn.btn-black.btn-point {
 }
 
 .old-micro {
-    background: url("/common/images/micro-popup/micro-live-button-old.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/micro-popup/micro-live-button-old.jpg") no-repeat;
     width: 305px;
     height: 336px;
     margin-right: 35px;
 }
 
 .old-micro:hover {
-    background: url("/common/images/micro-popup/micro-live-button-old-hover.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/micro-popup/micro-live-button-old-hover.jpg") no-repeat;
     cursor: pointer;
 }
 
 .new-micro {
-    background: url("/common/images/micro-popup/micro-live-button-new.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/micro-popup/micro-live-button-new.jpg") no-repeat;
     width: 305px;
     height: 336px;
 }
 
 .new-micro:hover {
-    background: url("/common/images/micro-popup/micro-live-button-new-hover.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/micro-popup/micro-live-button-new-hover.jpg") no-repeat;
     cursor: pointer;
 }
 
@@ -24642,11 +24642,11 @@ span.signup-inquiry.text-gray {
 }
 
 .ngdialog-login-page input[type='text'] {
-    /*background: rgba(255, 255, 255, .05) url("/common/images/user-icon.png") no-repeat top 8px left 11px;*/
+    /*background: rgba(255, 255, 255, .05) url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/user-icon.png") no-repeat top 8px left 11px;*/
 }
 
 .ngdialog-login-page input[type='password'] {
-    /*background: rgba(255, 255, 255, .05) url("/common/images/password-icon.png") no-repeat top 8px left 11px;*/
+    /*background: rgba(255, 255, 255, .05) url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/password-icon.png") no-repeat top 8px left 11px;*/
 }
 
 .ngdialog-login-page p.text-center.text-white {
@@ -24901,22 +24901,22 @@ span.signup-inquiry.text-gray {
 }
 
 .ngdialog-games-page.live {
-    background: url("/common/images/gamespopup/bg-live.jpg") right no-repeat center top #000000;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamespopup/bg-live.jpg") right no-repeat center top #000000;
     height: 788px;
 }
 
 .ngdialog-games-page.slot {
-    background: url("/common/images/gamespopup/bg-slot.jpg") right no-repeat center top #000000;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamespopup/bg-slot.jpg") right no-repeat center top #000000;
     height: 975px;
 }
 
 .ngdialog-games-page.sports {
-    background: url("/common/images/gamespopup/bg-sports.jpg") right no-repeat center top #000000;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamespopup/bg-sports.jpg") right no-repeat center top #000000;
     height: 570px;
 }
 
 .ngdialog-games-page.Others {
-    background: url("/common/images/gamespopup/bg-mini.jpg") right no-repeat center top #000000;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamespopup/bg-mini.jpg") right no-repeat center top #000000;
     /*height: 780px;*/
 }
 
@@ -25207,7 +25207,7 @@ span.signup-inquiry.text-gray {
     width: 40px;
     height: 40px;
     border: none;
-    background: url("/common/images/slots/sg_close.png") center center no-repeat transparent;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/slots/sg_close.png") center center no-repeat transparent;
     float: right;
     margin-top: 18px;
     margin-right: 21px;
@@ -25219,7 +25219,7 @@ span.signup-inquiry.text-gray {
 
 .slots-games-container .header button:hover,
 .slots-games-container .header button:focus {
-    background-image: url("/common/images/slots/sg_close_on.png");
+    background-image: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/slots/sg_close_on.png");
     outline: none;
     border: none;
 }
@@ -25503,107 +25503,107 @@ span.signup-inquiry.text-gray {
 }
 
 .header.slot-1053 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1053.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1053.jpg") right no-repeat;
 }
 
 .header.slot-1065 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1065.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1065.jpg") right no-repeat;
 }
 
 .header.slot-1061 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1061.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1061.jpg") right no-repeat;
 }
 
 .header.slot-1112 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1112.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1112.jpg") right no-repeat;
 }
 
 .header.slot-1012 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1012.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1012.jpg") right no-repeat;
 }
 
 .header.slot-1027 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1027.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1027.jpg") right no-repeat;
 }
 
 .header.slot-1034 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1034.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1034.jpg") right no-repeat;
 }
 
 .header.slot-1047 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1047.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1047.jpg") right no-repeat;
 }
 
 .header.slot-1052 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1052.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1052.jpg") right no-repeat;
 }
 
 .header.slot-1066 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1066.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1066.jpg") right no-repeat;
 }
 
 .header.slot-1071 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1071.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1071.jpg") right no-repeat;
 }
 
 .header.slot-1080 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1080.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1080.jpg") right no-repeat;
 }
 
 .header.slot-1062 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1062.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1062.jpg") right no-repeat;
 }
 
 .header.slot-1079 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1079.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1079.jpg") right no-repeat;
 }
 
 .header.slot-1099 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1099.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1099.jpg") right no-repeat;
 }
 
 .header.slot-1085 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1085.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1085.jpg") right no-repeat;
 }
 
 .header.slot-1008 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1008.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1008.jpg") right no-repeat;
 }
 
 .header.slot-1098 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1098.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1098.jpg") right no-repeat;
 }
 
 .header.slot-1100 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1100.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1100.jpg") right no-repeat;
 }
 
 .header.slot-1102 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1102.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1102.jpg") right no-repeat;
 }
 
 .header.slot-1115 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1102.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1102.jpg") right no-repeat;
 }
 
 .header.slot-1122 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1061.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1061.jpg") right no-repeat;
 }
 
 .header.slot-1123 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1053.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1053.jpg") right no-repeat;
 }
 
 .header.slot-1124 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1062.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1062.jpg") right no-repeat;
 }
 
 .header.slot-1131 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1131.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1131.jpg") right no-repeat;
 }
 
 .header.slot-1132 {
-    background: url("/common/images/game-buttons/slot-popup/header/slot-header-1132.jpg") right no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/slot-popup/header/slot-header-1132.jpg") right no-repeat;
 }
 
 .slot-open .fa-times-circle-o {
@@ -25635,11 +25635,11 @@ span.signup-inquiry.text-gray {
 
 /*
 .games-buttons-popup.live-1005{
-  background: url("/common/images/game-buttons/live-button-1005.jpg") right no-repeat;
+  background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/live-button-1005.jpg") right no-repeat;
 }
 
 .game-buttons-popup.live-1005:hover{
-  background: url("/common/images/game-buttons/live-button-1005-hover.jpg") right no-repeat;
+  background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/game-buttons/live-button-1005-hover.jpg") right no-repeat;
 }*/
 
 .ngdialog.ngdialog-theme-default.ngdialog-mulitple-popup {
@@ -25759,42 +25759,42 @@ span.signup-inquiry.text-gray {
 }
 
 .casino-page .gamebutton .gamebutton-1 {
-    background: url("/common/images/casino/live-button-1.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/casino/live-button-1.jpg") no-repeat;
     height: inherit;
 }
 
 .casino-page .gamebutton .gamebutton-2 {
-    background: url("/common/images/casino/live-button-2.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/casino/live-button-2.jpg") no-repeat;
     height: inherit;
 }
 
 .casino-page .gamebutton .gamebutton-3 {
-    background: url("/common/images/casino/live-button-3.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/casino/live-button-3.jpg") no-repeat;
     height: inherit;
 }
 
 .casino-page .gamebutton .gamebutton-4 {
-    background: url("/common/images/casino/live-button-4.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/casino/live-button-4.jpg") no-repeat;
     height: inherit;
 }
 
 .casino-page .gamebutton .gamebutton-1:hover {
-    background: url("/common/images/casino/live-button-1-hover.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/casino/live-button-1-hover.jpg") no-repeat;
     height: inherit;
 }
 
 .casino-page .gamebutton .gamebutton-2:hover {
-    background: url("/common/images/casino/live-button-2-hover.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/casino/live-button-2-hover.jpg") no-repeat;
     height: inherit;
 }
 
 .casino-page .gamebutton .gamebutton-3:hover {
-    background: url("/common/images/casino/live-button-3-hover.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/casino/live-button-3-hover.jpg") no-repeat;
     height: inherit;
 }
 
 .casino-page .gamebutton .gamebutton-4:hover {
-    background: url("/common/images/casino/live-button-4-hover.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/casino/live-button-4-hover.jpg") no-repeat;
     height: inherit;
 }
 
@@ -25805,7 +25805,7 @@ span.signup-inquiry.text-gray {
 }
 
 .main-page .jackpot-content {
-    background: url("/common/images/main/jackpot/coupon-banner.jpg") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/main/jackpot/coupon-banner.jpg") no-repeat;
     background-position-y: -1px;
     border: 1px solid #282828;
     height: 60px;
@@ -25826,7 +25826,7 @@ span.signup-inquiry.text-gray {
 }
 
 .main-page .jackpot-content form select.form-control {
-    background: url("/common/images/chevron-down.png") center right 15px no-repeat #000000;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/chevron-down.png") center right 15px no-repeat #000000;
     width: 235px;
     border: 1px solid #202020;
 }
@@ -26121,43 +26121,43 @@ span.signup-inquiry.text-gray {
 }
 
 .game-button-1 {
-    background: url("/common/images/gamebuttons/game-button-1.jpg");
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamebuttons/game-button-1.jpg");
 }
 
 .game-button-2 {
-    background: url("/common/images/gamebuttons/game-button-2.jpg");
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamebuttons/game-button-2.jpg");
 }
 
 .game-button-3 {
-    background: url("/common/images/gamebuttons/game-button-3.jpg");
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamebuttons/game-button-3.jpg");
 }
 
 .game-button-4 {
-    background: url("/common/images/gamebuttons/game-button-4.jpg");
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamebuttons/game-button-4.jpg");
 }
 
 .game-button-5 {
-    background: url("/common/images/gamebuttons/game-button-5.jpg");
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamebuttons/game-button-5.jpg");
 }
 
 .gamebutton:hover .game-button-1 {
-    background: url("/common/images/gamebuttons/game-button-1-hover.jpg");
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamebuttons/game-button-1-hover.jpg");
 }
 
 .gamebutton:hover .game-button-2 {
-    background: url("/common/images/gamebuttons/game-button-2-hover.jpg");
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamebuttons/game-button-2-hover.jpg");
 }
 
 .gamebutton:hover .game-button-3 {
-    background: url("/common/images/gamebuttons/game-button-3-hover.jpg");
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamebuttons/game-button-3-hover.jpg");
 }
 
 .gamebutton:hover .game-button-4 {
-    background: url("/common/images/gamebuttons/game-button-4-hover.jpg");
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamebuttons/game-button-4-hover.jpg");
 }
 
 .gamebutton:hover .game-button-5 {
-    background: url("/common/images/gamebuttons/game-button-5-hover.jpg");
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/gamebuttons/game-button-5-hover.jpg");
 }
 
 /*Right Container*/
@@ -26707,7 +26707,7 @@ span.signup-inquiry.text-gray {
 }
 
 .main-page.main-first .banner-container {
-    background: url("/common/images/main/main-banner.png") center bottom no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/main/main-banner.png") center bottom no-repeat;
     height: 337px;
     margin-top: 110px;
 }
@@ -26896,7 +26896,7 @@ iframe#sports3 {
 }
 
 .transaction-page .transaction-list {
-    background: url("/common/images/bg-event.png") bottom repeat-x;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/bg-event.png") bottom repeat-x;
 }
 
 .transaction-page .goldTxt {
@@ -28805,7 +28805,7 @@ ul.pagination li:last-child>a {
 }
 
 .icon-lang {
-    background: url("/common/images/lang-icons.png") no-repeat;
+    background: url("https://image.lanye1118.com/app_fe/www.nh227.com/www.nh227.com/common/images/lang-icons.png") no-repeat;
     display: inline-block;
     height: 24px;
     vertical-align: middle;

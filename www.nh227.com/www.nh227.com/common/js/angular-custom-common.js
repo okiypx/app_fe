@@ -12,16 +12,11 @@ var app = angular.module('casinoApp', [
     'internationalPhoneNumber'
 ]);
 
-app.config(['$routeProvider', 'RouteDataProvider', '$translateProvider', function($routeProvider, RouteDataProvider, $translateProvider) {
+app.config(['$routeProvider', 'RouteDataProvider', '$translateProvider', function ($routeProvider, RouteDataProvider, $translateProvider) {
     RouteDataProvider.applyConfig({
         bodyClass: 'bg-main'
     });
     RouteDataProvider.hookToRootScope(true);
-
-    $translateProvider.useStaticFilesLoader({
-        prefix: '/common/js/resources/locale-',
-        suffix: '.json'
-    });
 
     //default load when user already selected language from dropdown
     var jsCookieLang = document.cookie;
@@ -34,7 +29,7 @@ app.config(['$routeProvider', 'RouteDataProvider', '$translateProvider', functio
         }
     }
 
-    var languageSelector = function(langKey) {
+    var languageSelector = function (langKey) {
         var font = 'kr.css';
         var langName = " 한국어";
         var lang = langKey.substring(0, 2);
@@ -111,29 +106,13 @@ app.config(['$routeProvider', 'RouteDataProvider', '$translateProvider', functio
             RouteData: {
                 bodyClass: 'bg-main'
             },
-            templateUrl: 'pages/main.php',
+            template: '<main-page></main-page>',
             controller: '',
             activetab: 'main'
-        })
-        .when('/view-sports', {
-            RouteData: {
-                bodyClass: 'bg-viewsport'
-            },
-            templateUrl: 'pages/view-sports.php',
-            controller: '',
-            activetab: 'sports'
-        })
-        .otherwise({
-            redirectTo: '/',
-            RouteData: {
-                bodyClass: 'bg-main'
-            },
-            templateUrl: '../pages/main.php',
-            controller: ''
         });
 }]);
 
-app.config(['ngDialogProvider', function(ngDialogProvider) {
+app.config(['ngDialogProvider', function (ngDialogProvider) {
     ngDialogProvider.setDefaults({
         closeByEscape: false,
         showClose: true,
@@ -143,26 +122,26 @@ app.config(['ngDialogProvider', function(ngDialogProvider) {
     });
 }]);
 
-app.service('loggedInStatus', function($rootScope) {
+app.service('loggedInStatus', function ($rootScope) {
     return {
-        setLoggedInStatus: function() {
+        setLoggedInStatus: function () {
             $rootScope.loggedIn = true;
             $rootScope.loggedOut = false;
         },
-        setLoggedOutStatus: function() {
+        setLoggedOutStatus: function () {
             $rootScope.loggedIn = false;
             $rootScope.loggedOut = true;
         }
     };
 });
 
-app.config(function($provide) {
-    $provide.decorator('inputDirective', function($delegate, $log) {
+app.config(function ($provide) {
+    $provide.decorator('inputDirective', function ($delegate, $log) {
         $log.debug('Hijacking input directive');
         var directive = $delegate[0];
         angular.extend(directive.link, {
-            post: function(scope, element, attr, ctrls) {
-                element.on('compositionupdate', function(event) {
+            post: function (scope, element, attr, ctrls) {
+                element.on('compositionupdate', function (event) {
                     element.triggerHandler('compositionend');
                 })
             }
@@ -171,9 +150,9 @@ app.config(function($provide) {
     });
 });
 
-app.service('AmountService', function() {
+app.service('AmountService', function () {
     return {
-        sumAmount: function(amount, amountSum) {
+        sumAmount: function (amount, amountSum) {
             //console.log(amountSum);
             if (amount == "NaN" || amount == "") {
                 return parseFloat(amountSum);
@@ -181,14 +160,14 @@ app.service('AmountService', function() {
             amount = parseFloat(amount) + parseFloat(amountSum);
             return amount;
         },
-        resetAmount: function() {
+        resetAmount: function () {
             return 0;
         }
     };
 });
 
-app.filter('htmlToPlaintext', function() {
-    return function(text) {
+app.filter('htmlToPlaintext', function () {
+    return function (text) {
         /*REMOVE HTML TAGS*/
         var contents = String(text).replace(/<[^>]+>/gm, '');
         /*REMOVE NBSP*/
@@ -197,8 +176,8 @@ app.filter('htmlToPlaintext', function() {
     };
 });
 
-app.filter('customCurrency', ["$filter", function($filter) {
-    return function(amount, currencySymbol) {
+app.filter('customCurrency', ["$filter", function ($filter) {
+    return function (amount, currencySymbol) {
         //console.log(amount);
         var number = $filter('number');
         if (String(amount).charAt(0) === "-") {
@@ -212,8 +191,8 @@ app.filter('customCurrency', ["$filter", function($filter) {
     };
 }]);
 
-app.filter('userDateTimeTimeZone', function($filter) {
-    return function(input, format, offset) {
+app.filter('userDateTimeTimeZone', function ($filter) {
+    return function (input, format, offset) {
         if (input == null) {
             return "";
         }
@@ -224,8 +203,8 @@ app.filter('userDateTimeTimeZone', function($filter) {
     }
 });
 
-app.filter('userDateTime', function($filter) {
-    return function(input, format, offset) {
+app.filter('userDateTime', function ($filter) {
+    return function (input, format, offset) {
         if (input == null) {
             return "";
         }
@@ -236,8 +215,8 @@ app.filter('userDateTime', function($filter) {
     }
 });
 
-app.filter('userDate', function($filter) {
-    return function(input, format, offset) {
+app.filter('userDate', function ($filter) {
+    return function (input, format, offset) {
         if (input == null) {
             return "";
         }
@@ -248,25 +227,25 @@ app.filter('userDate', function($filter) {
     }
 });
 
-app.filter('nl2br', ['$sce', function($sce) {
-    return function(text) {
+app.filter('nl2br', ['$sce', function ($sce) {
+    return function (text) {
         return text ? $sce.trustAsHtml(text.replace(/\n/g, '<br/>')) : '';
     };
 }]);
 
-app.filter("trustUrl", ['$sce', function($sce) {
-    return function(recordingUrl) {
+app.filter("trustUrl", ['$sce', function ($sce) {
+    return function (recordingUrl) {
         return $sce.trustAsResourceUrl(recordingUrl);
     };
 }]);
 
 
-app.filter('unique', function() {
-    return function(collection, keyname) {
+app.filter('unique', function () {
+    return function (collection, keyname) {
         var output = [],
             keys = [];
 
-        angular.forEach(collection, function(item) {
+        angular.forEach(collection, function (item) {
             var key = item[keyname];
             if (keys.indexOf(key) === -1) {
                 keys.push(key);
@@ -277,9 +256,9 @@ app.filter('unique', function() {
     };
 });
 
-app.directive("addAmountList", function() {
+app.directive("addAmountList", function () {
     return {
-        link: function(scope, element, attrs) {
+        link: function (scope, element, attrs) {
             scope.data = scope[attrs["addAmountList"]];
         },
         restrict: "A",
@@ -288,16 +267,16 @@ app.directive("addAmountList", function() {
 });
 
 //Matched Password Filter
-app.directive('validPasswordC', function() {
+app.directive('validPasswordC', function () {
     return {
         require: 'ngModel',
-        link: function(scope, elm, attrs, ctrl) {
+        link: function (scope, elm, attrs, ctrl) {
             var original;
-            ctrl.$formatters.unshift(function(modelValue) {
+            ctrl.$formatters.unshift(function (modelValue) {
                 original = modelValue;
                 return modelValue;
             });
-            ctrl.$parsers.push(function(viewValue) {
+            ctrl.$parsers.push(function (viewValue) {
                 var noMatch = viewValue != scope.signUp.MemberPwd.$viewValue;
                 ctrl.$setValidity('noMatch', !noMatch);
                 return viewValue;
@@ -307,16 +286,16 @@ app.directive('validPasswordC', function() {
 });
 
 //Matched New Password Filter
-app.directive('validPasswordC2', function() {
+app.directive('validPasswordC2', function () {
     return {
         require: 'ngModel',
-        link: function(scope, elm, attrs, ctrl) {
+        link: function (scope, elm, attrs, ctrl) {
             var original;
-            ctrl.$formatters.unshift(function(modelValue) {
+            ctrl.$formatters.unshift(function (modelValue) {
                 original = modelValue;
                 return modelValue;
             });
-            ctrl.$parsers.push(function(viewValue) {
+            ctrl.$parsers.push(function (viewValue) {
                 var noMatch = viewValue != scope.changePwdForm.newPassword.$viewValue;
                 ctrl.$setValidity('noMatch', !noMatch);
                 return viewValue;
@@ -327,11 +306,11 @@ app.directive('validPasswordC2', function() {
 
 var SPECIAL_CHAR = /^[a-zA-Z0-9\!\@\#\$\%\^\\\&\*\(\)\-\_\=\+]*$/;
 //Password Special Character Filter
-app.directive('specialCharC', function() {
+app.directive('specialCharC', function () {
     return {
         require: 'ngModel',
-        link: function(scope, elm, attrs, ctrl) {
-            ctrl.$validators.specialCharC = function(modelValue, viewValue) {
+        link: function (scope, elm, attrs, ctrl) {
+            ctrl.$validators.specialCharC = function (modelValue, viewValue) {
                 ctrl.$setValidity('haveSpecialChar', SPECIAL_CHAR.test(viewValue));
 
                 if (ctrl.$isEmpty(modelValue)) {
@@ -351,17 +330,17 @@ app.directive('specialCharC', function() {
     }
 });
 
-app.directive('userNameDuplicated', function(CsrfToken, $http, $window) {
+app.directive('userNameDuplicated', function (CsrfToken, $http, $window) {
     return {
         require: 'ngModel',
-        link: function(scope, elm, attrs, ctrl) {
+        link: function (scope, elm, attrs, ctrl) {
             var original;
-            ctrl.$formatters.unshift(function(modelValue) {
+            ctrl.$formatters.unshift(function (modelValue) {
                 original = modelValue;
                 return modelValue;
             });
 
-            ctrl.$parsers.push(function(viewValue) {
+            ctrl.$parsers.push(function (viewValue) {
                 if (viewValue != undefined) {
                     if (viewValue.length >= 4) {
                         var url = "/api/player/CheckDuplicateName";
@@ -370,7 +349,7 @@ app.directive('userNameDuplicated', function(CsrfToken, $http, $window) {
                             MemberID: viewValue
                         }
 
-                        CsrfToken.HttpRequest('POST', url, param).success(function(data) {
+                        CsrfToken.HttpRequest('POST', url, param).success(function (data) {
                             if (data.result == 0) {
                                 if (data.csrf) {
                                     swal({
@@ -382,7 +361,7 @@ app.directive('userNameDuplicated', function(CsrfToken, $http, $window) {
                                         confirmButtonClass: "#7cd1f9",
                                         confirmButtonText: "OK",
                                         closeOnConfirm: false
-                                    }).then(function(confirm) {
+                                    }).then(function (confirm) {
                                         if (confirm) {
                                             $window.location.href = "/#/";
                                             $window.location.reload();
@@ -410,24 +389,24 @@ app.directive('userNameDuplicated', function(CsrfToken, $http, $window) {
     };
 });
 
-app.directive('referrerCheck', function(CsrfToken, $http) {
+app.directive('referrerCheck', function (CsrfToken, $http) {
     return {
         require: 'ngModel',
-        link: function(scope, elm, attrs, ctrl) {
+        link: function (scope, elm, attrs, ctrl) {
             var original;
-            ctrl.$formatters.unshift(function(modelValue) {
+            ctrl.$formatters.unshift(function (modelValue) {
                 original = modelValue;
                 return modelValue;
             });
 
-            ctrl.$parsers.push(function(viewValue) {
+            ctrl.$parsers.push(function (viewValue) {
                 if (viewValue != "") {
                     if (viewValue.length >= 4) {
                         var url = "/api/player/CheckDuplicateName";
                         var param = {
                             MemberID: viewValue
                         }
-                        CsrfToken.HttpRequest('POST', url, param).success(function(data) {
+                        CsrfToken.HttpRequest('POST', url, param).success(function (data) {
                             if (data.result == 0) {
                                 ctrl.$setValidity('duplicated', true);
                             } else {
@@ -449,18 +428,18 @@ app.directive('referrerCheck', function(CsrfToken, $http) {
     };
 });
 
-app.directive('format', ['$filter', function($filter) {
+app.directive('format', ['$filter', function ($filter) {
     return {
         require: '?ngModel',
-        link: function(scope, elem, attrs, ctrl) {
+        link: function (scope, elem, attrs, ctrl) {
             if (!ctrl) return;
 
-            ctrl.$formatters.unshift(function(a) {
+            ctrl.$formatters.unshift(function (a) {
                 if (attrs.format == "numberDecimal" || attrs.format == "number") {
                     return $filter("number")(ctrl.$modelValue)
                 }
             });
-            ctrl.$parsers.unshift(function(viewValue) {
+            ctrl.$parsers.unshift(function (viewValue) {
                 if (viewValue == "NaN") return 0;
                 if (attrs.format == "numberDecimal") {
                     var plainNumber = viewValue.replace(/[^\d|\-+|\d\.\d|\d\.+]/g, '');
@@ -477,16 +456,16 @@ app.directive('format', ['$filter', function($filter) {
     };
 }]);
 
-app.controller("NavController", function($scope, $rootScope, $location, $route, $window) {
-    $scope.isActive = function(viewLocation) {
+app.controller("NavController", function ($scope, $rootScope, $location, $route, $window) {
+    $scope.isActive = function (viewLocation) {
         return viewLocation === $location.path();
     };
     $scope.$route = $route;
-    $scope.getActiveClass = function(location) {
+    $scope.getActiveClass = function (location) {
         $scope.setActiveClass = location;
     };
 
-    $rootScope.gotoUrl = function(url) {
+    $rootScope.gotoUrl = function (url) {
         if (!$rootScope.loggedIn && (url == "/tv" || url == 'graph')) {
             return $scope.displayLogin();
         }
@@ -497,7 +476,7 @@ app.controller("NavController", function($scope, $rootScope, $location, $route, 
     }
 });
 
-app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $timeout, $window, $http, loggedInStatus, $interval, ngDialog, $cookies, $sce, SweetAlert, ccCurrencySymbol, $translate, $location, $filter) {
+app.controller('CommonController', function (CsrfToken, $scope, $rootScope, $timeout, $window, $http, loggedInStatus, $interval, ngDialog, $cookies, $sce, SweetAlert, ccCurrencySymbol, $translate, $location, $filter) {
     $rootScope.userCurrency = "KRW";
     $rootScope.cc_currency_symbol = ccCurrencySymbol;
     $rootScope.agentGspList = [];
@@ -519,9 +498,9 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
 
     // !!! Unique id required
     $scope.multiplePopup = [{
-            id: 'mp-01',
-            image: 'popup-banner-1.png'
-        },
+        id: 'mp-01',
+        image: 'popup-banner-1.png'
+    },
         {
             id: 'mp-02',
             image: 'popup-banner-2.png'
@@ -534,19 +513,20 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
 
     function getNotTodayCookie(listArr) {
         // Get popups that are in cookie list
-        var cookiesArr = listArr.map(function(list) {
+        var cookiesArr = listArr.map(function (list) {
             if ($cookies.get('notToday-' + list.id)) {
                 return list.id
             }
         });
 
         // Filter to remove empty elements from array
-        return cookiesArr.filter(function(x) {
+        return cookiesArr.filter(function (x) {
             return x
         });
     }
 
-    $scope.displayMultiplePopups = function(listArr) {
+    $scope.displayMultiplePopups = function (listArr) {
+        return;
         if (!listArr) {
             return
         }
@@ -566,13 +546,13 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
             data: {
                 lists: listArr
             },
-            preCloseCallback: function() {
+            preCloseCallback: function () {
                 window.scrollTo(0, 0);
             }
         });
     };
 
-    $rootScope.getBalance = function(reload) {
+    $rootScope.getBalance = function (reload) {
         if (reload) {
             $("#preloader").show();
         }
@@ -580,8 +560,8 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
             $scope.isProcessing = true;
             var url = "/api/finance/CheckMemberBalanceAsync";
             CsrfToken.HttpRequest('GET', url, '')
-                .success(function(data) {
-                    angular.forEach($rootScope.agentGspList, function(val) {
+                .success(function (data) {
+                    angular.forEach($rootScope.agentGspList, function (val) {
                         if (data.list[val.gspNo] != undefined) {
                             val.amount = data.list[val.gspNo].Balance;
                         } else {
@@ -591,16 +571,16 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
                     if ($rootScope.loggedIn) {
                         $rootScope.totalBalance = data.list['All'].Balance;
                     }
-                }).error(function(data, result) {
-                    console.error('Repos error', result, data);
-                })["finally"](function() {
-                    $scope.isProcessing = false;
-                    $("#preloader").hide();
-                });
+                }).error(function (data, result) {
+                console.error('Repos error', result, data);
+            })["finally"](function () {
+                $scope.isProcessing = false;
+                $("#preloader").hide();
+            });
         }
     };
 
-    $rootScope.checkUnreadComment = function(type, announceNo) {
+    $rootScope.checkUnreadComment = function (type, announceNo) {
         $scope.countUnread = 0;
         var url = "/api/operation/GetBoardComment?type=" + type + "&&code=" + announceNo;
         $http({
@@ -612,8 +592,8 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             } // set the headers so angular passing info as form data (not request payload)
-        }).success(function(data) {
-            angular.forEach(data.content, function(value, key) {
+        }).success(function (data) {
+            angular.forEach(data.content, function (value, key) {
                 if (value.WriteStatus == "N") {
                     $scope.countUnread++;
                 }
@@ -627,7 +607,7 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
         })
     }
 
-    $rootScope.readBoardContent = function(type, announceNo, comment, index) {
+    $rootScope.readBoardContent = function (type, announceNo, comment, index) {
         if (comment == undefined) {
             comment = false;
         }
@@ -656,7 +636,7 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
             "code": announceNo,
             "comment": comment
         }
-        CsrfToken.HttpRequest('POST', url, param).success(function(data) {
+        CsrfToken.HttpRequest('POST', url, param).success(function (data) {
             if (data.csrf) {
                 swal({
                     title: "캐시 및 쿠키 삭제 후",
@@ -687,9 +667,9 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
                     }
                 }
             }
-        }).error(function(data, status) {
+        }).error(function (data, status) {
             console.error('Repos error', status, data);
-        })["finally"](function() {
+        })["finally"](function () {
             $rootScope.isRead = true;
         });
     };
@@ -698,8 +678,8 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
     $scope.counter = 1;
 
     // POPUP 1
-    $rootScope.displayNoticeToday = function() {
-        angular.forEach($rootScope.announceList, function(val) {
+    $rootScope.displayNoticeToday = function () {
+        angular.forEach($rootScope.announceList, function (val) {
             if (val.PopUp == 'y' && !$scope.getNotice) {
                 $rootScope.anouncementPopup = val;
                 $scope.getNotice = true;
@@ -767,20 +747,20 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
         console.error('Repos error', result, data);
       })["finally"](function () {});*/
 
-    $scope.ShowDirectMessageDetail = function(DirectMessage) {
+    $scope.ShowDirectMessageDetail = function (DirectMessage) {
         $rootScope.DMHideNew[DirectMessage.DMStatusIDX] = true;
         $rootScope.showDirectMessageValues = DirectMessage;
         $http.get("/api/operation/GetDirectMessageDetail?code=" + DirectMessage.DMStatusIDX)
-            .success(function(data) {
+            .success(function (data) {
                 $rootScope.UnreadDM = data.list.UnreadDM;
                 $rootScope.DMReadDate[DirectMessage.DMStatusIDX] = data.list.DMReadDate;
-            }).error(function(data, result) {
-                console.error('Repos error', result, data);
-            })
+            }).error(function (data, result) {
+            console.error('Repos error', result, data);
+        })
     };
 
     $scope.trustAsHtml = $sce.trustAsHtml;
-    $scope.microPopup = function() {
+    $scope.microPopup = function () {
         if (!$rootScope.loggedIn) {
             $scope.displayLogin();
             return
@@ -792,13 +772,13 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
             showClose: true,
             closeByEscape: false,
             scope: $scope,
-            preCloseCallback: function() {
+            preCloseCallback: function () {
                 $scope.setActive = undefined;
             }
         });
     };
 
-    $rootScope.playGame = function(gspNo, productType, gameId, theme, gameName) {
+    $rootScope.playGame = function (gspNo, productType, gameId, theme, gameName) {
         if (gspNo == 9999) {
             $scope.comingSoon();
             return;
@@ -902,7 +882,8 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
                         size = "width=1024, height=768";
                     }
                 } else if (productType == "etc") {
-                    url = "/api/player/PlayGame?gspNo=" + gspNo + "&productType=" + productType + "&gameId=" + gameId;;
+                    url = "/api/player/PlayGame?gspNo=" + gspNo + "&productType=" + productType + "&gameId=" + gameId;
+                    ;
                     size = "width=1024, height=682";
                 }
 
@@ -981,7 +962,7 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
 
     };
 
-    $scope.setLang = function(langKey) { //selected language
+    $scope.setLang = function (langKey) { //selected language
         $rootScope.currentLang = langKey;
         $cookies.get("selectedLanguage");
         var now = new Date(),
@@ -995,7 +976,7 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
         $translate.use(langKey);
     };
 
-    $rootScope.languageSelector = function(langKey) {
+    $rootScope.languageSelector = function (langKey) {
         var font = 'kr.css';
         var langName = " 한국어";
         var lang = langKey.substring(0, 2);
@@ -1040,68 +1021,13 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
     };
 
     $scope.aff_user = "";
-    $scope.checkSession = function() {
-        $http.get("/api/player/GetNewMemberInfo")
-            .success(function(data) {
-                /*WILL DISABLE IF HAS DATA*/
-                $scope.aff_user = data.bonus.AffUser;
-                $rootScope.UnreadDM = data.bonus.UnreadDM;
-
-                if ($rootScope.agentGspList == undefined) {
-                    $scope.getBalance();
-                }
-
-                if ($rootScope.agentGspCount != data.GameList.count) {
-                    $rootScope.agentGspList = data.GameList.data;
-                    $rootScope.agentGspCount = data.GameList.count;
-                }
-
-                $scope.getBalance();
-                if (data.result != 1) {
-                    if (data.result == 207) {
-                        $http.get("/api/player/Logout").success(function(data) {
-                            if (data.result == 1) {
-                                if (bowser.msie && bowser.version <= 8) {
-                                    alert(data.message);
-                                } else {
-                                    $translate([data.message, "YouHaveBeenSignedOut"]).then(function(translations) {
-                                        SweetAlert.swal(translations.YouHaveBeenSignedOut, translations[data.message], "success");
-                                    });
-                                }
-                                loggedInStatus.setLoggedOutStatus();
-                                $window.location.reload();
-                            } else {
-                                loggedInStatus.setLoggedOutStatus();
-                                $window.location.reload();
-                            }
-                        });
-                    }
-                } else {
-                    if (data.alert) {
-                        if (bowser.msie && bowser.version <= 8) {
-                            alert(data.message);
-                        } else {
-                            $translate([data.message, "PleaseTryAgain"]).then(function(translations) {
-                                SweetAlert.swal(translations.PleaseTryAgain, translations[data.message], "success");
-                            });
-                        }
-                    }
-                }
-            }).error(function(data, result) {
-                console.error('Repos error', result, data);
-            })["finally"](function() {
-                $scope.isProcessing = false;
-            });
-    };
-
-
-    $rootScope.init = function(isLogin) {
+    $rootScope.init = function (isLogin) {
         $scope.displayMultiplePopups($scope.multiplePopup);
         $scope.setLang('ko_KR');
         if (isLogin) {
             loggedInStatus.setLoggedInStatus();
             $scope.checkSession();
-            $interval(function() {
+            $interval(function () {
                 $scope.checkSession();
             }, 60000); //1min
         }
@@ -1133,20 +1059,20 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
     };
 
     $scope.stopAlert = false;
-    $scope.DMPlayAlert = function() {
+    $scope.DMPlayAlert = function () {
         $scope.audio = new Audio('/common/audio/ko_KR.mp3');
-        $scope.playAudioPromise = function() {
+        $scope.playAudioPromise = function () {
             var promise = $scope.audio.play();
             if (promise !== undefined) {
-                promise.then(function() {
+                promise.then(function () {
                     // Autoplay started!
-                }).catch(function(error) {
+                }).catch(function (error) {
                     // Autoplay was prevented.
                 });
             }
         };
         //PLAY AUDIO EVERY MINUTE UNLESS STOP
-        setInterval(function() {
+        setInterval(function () {
             if ($scope.stopAlert == false) {
                 $scope.audio = new Audio('/common/audio/ko_KR.mp3');
                 $scope.audio.play();
@@ -1154,7 +1080,7 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
         }, 60000)
     };
 
-    $scope.DMStopAlert = function() {
+    $scope.DMStopAlert = function () {
         if (!$scope.audio) {
             return;
         }
@@ -1162,7 +1088,7 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
         $scope.audio.pause();
     };
 
-    $scope.formatDate = function(date) {
+    $scope.formatDate = function (date) {
         if (date) {
             var date = date.split("-").join("/");
             var dateOut = new Date(date);
@@ -1170,68 +1096,12 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
         }
     };
 
-    $scope.displayForgot = function() {
-        ngDialog.open({
-            template: 'popup/forgot-password.php',
-            controller: 'ForgotPasswordController',
-            className: 'ngdialog-theme-default ngdialog-forgot',
-            scope: $scope
-        });
-    };
-
-    $scope.displaySignUp = function() {
-        ngDialog.close();
-        ngDialog.open({
-            template: 'popup/signup.php',
-            controller: 'SignUpController',
-            className: 'ngdialog-theme-default ngdialog-signup',
-            scope: $scope,
-            closeByEscape: false,
-            closeByDocument: false,
-            showClose: true
-        });
-    };
-
-    $scope.closeThisDialogSignUp = function() {
+    $scope.closeThisDialogSignUp = function () {
         ngDialog.close();
     };
 
-
-    $scope.displayWallet = function(tabIndex) {
-        $scope.isLoadingPopup = true;
-        if (!$rootScope.loggedIn) {
-            return $scope.displayLogin();
-        }
-        if ($scope.isLoadingPopup == true) {
-            $('.main-nav ul li a').addClass('disable-event');
-            $('.wallet-page .wallet-button li').addClass('disable-event');
-            $scope.selectWalletTab = tabIndex;
-            ngDialog.open({
-                template: 'popup/wallet.php',
-                controller: 'WalletController',
-                className: 'ngdialog-theme-default ngdialog-main-default ngdialog-wallet',
-                closeByDocument: false,
-                scope: $scope,
-                preCloseCallback: function() {
-                    $scope.isLoadingPopup = false;
-                    $('.main-nav ul li a').removeClass('disable-event');
-                    $('.wallet-page .wallet-button li').removeClass('disable-event');
-                }
-            });
-        }
-    };
-
-    $http.get("/api/system/gamelist/gamebuttons.json")
-        .success(function(data) {
-            $scope.gameButtons = data;
-        });
-    $scope.gameButtonFilter = function(category) {
-        if (category.category == $scope.activeCategory || category.category2 == $scope.activeCategory || category.category3 == $scope.activeCategory) {
-            return true;
-        }
-    };
-
-    $scope.getActiveCategory = function(gspNo, category, gameId, gspName, theme) {
+    $scope.getActiveCategory = function (gspNo, category, gameId, gspName, theme) {
+        console.log("pc-getActiveCategory");
         if (gspNo == 1070) {
             return $rootScope.comingSoon();
         }
@@ -1260,11 +1130,8 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
             }
             return $scope.playGame(gspNo, 'live', gameId, theme);
         } else if (category == 'slot') {
-            $('.game-button-container').css("display", "none");
-            $('.slots-games-container').css("display", "block");
-            $rootScope.loadSlot(gspNo);
-            $rootScope.gspName = gspName;
-            return $rootScope.activeSlotGsp = gspNo;
+            window.open('https://api.vipv88.com/web_fone_game_list?provider=' + gspNo, 'mywindow', 'menubar=1,resizable=1,width=800,height=600');
+            return;
         } else if (category == 'sports') {
             ngDialog.close();
             return $rootScope.setActiveSportsGsp(gspNo);
@@ -1274,176 +1141,22 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
         }
     }
 
-    $scope.displayCustomer = function(tabIndex) {
-        $scope.isLoadingPopup = true;
-
-        if ($rootScope.loggedIn && $scope.isLoadingPopup == true) {
-            $('.main-nav ul li a').addClass('disable-event');
-            $('.transaction-page span').addClass('disable-event');
-            $('.customer-page .customer-buttons').addClass('disable-event');
-            $('.wallet-page .rigth-container-title i').addClass('disable-event');
-            $('.banner-container .slick-slide').addClass('disable-event');
-
-            $scope.selectCustomerTab = tabIndex;
-            ngDialog.open({
-                template: 'popup/customer.php',
-                controller: 'CustomerController',
-                className: 'ngdialog-theme-default ngdialog-main-default',
-                closeByDocument: false,
-                scope: $scope,
-                preCloseCallback: function() {
-                    $scope.isLoadingPopup = false;
-                    $('.main-nav ul li a').removeClass('disable-event');
-                    $('.transaction-page span').removeClass('disable-event');
-                    $('.customer-page .customer-buttons').removeClass('disable-event');
-                    $('.wallet-page .rigth-container-title i').removeClass('disable-event');
-                    $('.banner-container .slick-slide').removeClass('disable-event');
-                }
-            });
-        } else {
-            $scope.displayLogin();
-        }
-    };
-
-    $scope.displayLogin = function() {
-        $scope.isLoadingPopup = true;
-        if ($scope.isLoadingPopup == true) {
-            $('.main-nav ul li a').addClass('disable-event');
-            ngDialog.open({
-                template: 'popup/login.php',
-                controller: 'LoginController',
-                className: 'ngdialog-theme-default ngdialog-login',
-                closeByEscape: false,
-                scope: $scope,
-                preCloseCallback: function() {
-                    $scope.isLoadingPopup = false;
-                    $('.main-nav ul li a').removeClass('disable-event');
-                }
-            });
-        }
-    };
-
-    $scope.displayTerms = function(tabIndex) {
-        $scope.selectCustomerTab = tabIndex;
-        ngDialog.open({
-            template: 'popup/terms.php',
-            controller: '',
-            className: 'ngdialog-theme-default ngdialog-main-default',
-            closeByDocument: false,
-            scope: $scope
-        });
-    };
-
-    $scope.displayRules = function(tabIndex) {
-        $scope.isLoadingPopup = true;
-
-        if ($rootScope.loggedIn && $scope.isLoadingPopup == true) {
-            $('.main-nav ul li a').addClass('disable-event');
-            $scope.pageName = 'popup/rules-' + $rootScope.currentLang + '.php';
-            $scope.selectRulesTab = tabIndex;
-            ngDialog.open({
-                template: $scope.pageName,
-                controller: '',
-                className: 'ngdialog-theme-default ngdialog-main-default ngdialog-rules',
-                scope: $scope,
-                closeByDocument: false,
-                scope: $scope,
-                preCloseCallback: function() {
-                    $scope.isLoadingPopup = false;
-                    $('.main-nav ul li a').removeClass('disable-event');
-                }
-            });
-        } else {
-            $scope.displayLogin();
-        }
-    };
-
-    $rootScope.comingSoon = function() {
-        if (bowser.msie && bowser.version <= 8) {
-            alert("준비중입니다");
-        } else {
-            SweetAlert.swal("준비중입니다", "", "info");
-        }
-    };
-
-    $rootScope.contactCC = function() {
+    $rootScope.contactCC = function () {
         var message = 'AccessDenied';
         if (bowser.msie && bowser.version <= 8) {
             alert(message);
         } else {
-            $translate([message, "ContactCustomerCenter"]).then(function(translations) {
+            $translate([message, "ContactCustomerCenter"]).then(function (translations) {
                 SweetAlert.swal(translations.ContactCustomerCenter, '', "info");
             });
         }
     };
 
-    $scope.displayGames = function(category) {
-        $scope.isLoadingPopup = true;
-
-        if (category == '' || category === 'sports') {
-            return $rootScope.comingSoon();
-            console.log('sports')
-        }
-
-        if ($scope.isLoadingPopup == true) {
-            $('.click-disable').addClass('disable-event');
-            $rootScope.activeCategory = category;
-            ngDialog.open({
-                template: 'popup/games-popup.php',
-                controller: '',
-                className: 'ngdialog-theme-default ngdialog-gamespopup',
-                closeByEscape: false,
-                closeByDocument: false,
-                scope: $scope,
-                preCloseCallback: function() {
-                    $scope.isLoadingPopup = false;
-                    $('.click-disable').removeClass('disable-event');
-                }
-            });
-        }
-    }
-
-    $rootScope.setSlot = function(gspNo) {
+    $rootScope.setSlot = function (gspNo) {
         $rootScope.triggerLoadSlot = gspNo;
     };
 
-    $rootScope.loadCounter = function() {
-        $http.get("/api/marketing/getJackpot")
-            .success(function(data) {
-                $('.jackpot-odometer').jOdometer({
-                    increment: data.increment,
-                    counterStart: data.counterStart,
-                    counterEnd: false,
-                    numbersImage: 'common/images/jackpot/odometer.png',
-                    spaceNumbers: -3,
-                    formatNumber: true,
-                    widthNumber: 35,
-                    heightNumber: 74
-                });
-            }).error(function(data, status) {
-                console.error('Repos error', status, data);
-            });
-    };
-
-    $rootScope.loadIDNCounter = function() {
-        $http.get("/api/marketing/GetPokerJackpot")
-            .success(function(data) {
-                $('.jackpot-odometer').jOdometer({
-                    increment: 13.13,
-                    counterStart: data.total_jackpot + "." + (Math.floor(Math.random() * 9) + 1) + '' + (Math.floor(Math.random() * 9) + 1),
-                    counterEnd: false,
-                    numbersImage: 'common/images/jackpot/odometer.png',
-                    spaceNumbers: 1,
-                    formatNumber: true,
-                    widthNumber: 45,
-                    heightNumber: 60
-                });
-            }).error(function(data, status) {
-                console.error('Repos error', status, data);
-            });
-    };
-
-    $scope.combinedMaintenance = function(agentGsp) {
+    $scope.combinedMaintenance = function (agentGsp) {
         if (agentGsp.amount == '점검중') {
             return agentGsp.gspName + " - 점검중";
         } else {
@@ -1451,7 +1164,7 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
         }
     };
 
-    $scope.combinedMaintenanceByCurrency = function(agentGsp) {
+    $scope.combinedMaintenanceByCurrency = function (agentGsp) {
         if (agentGsp.Maintenance == 'Y') {
             return false;
 
@@ -1460,7 +1173,7 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
         }
     };
 
-    $scope.maintenanceFilter = function(agentGsp) {
+    $scope.maintenanceFilter = function (agentGsp) {
         if (agentGsp.amount == '점검중') {
             return false;
         } else {
@@ -1468,11 +1181,11 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
         }
     };
 
-    $rootScope.$on('$locationChangeSuccess', function() {
+    $rootScope.$on('$locationChangeSuccess', function () {
         $scope.currentPath = $location.path();
     });
 
-    $scope.translateWalletCategory = function(agentGsp) {
+    $scope.translateWalletCategory = function (agentGsp) {
         return $filter('translate')(agentGsp.category);
     };
     /*RIGHT PANEL GSP WALLET*/
@@ -1481,27 +1194,27 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
     $scope.showMore = true;
     $scope.showLess = false;
 
-    $scope.rightPanelShowMore = function() {
+    $scope.rightPanelShowMore = function () {
         $scope.rightPanelLimit = 1000;
         $scope.showMore = false;
         $scope.showLess = true;
     };
 
-    $scope.rightPanelShowLess = function() {
+    $scope.rightPanelShowLess = function () {
         $scope.rightPanelLimit = 5;
         $scope.showMore = true;
         $scope.showLess = false;
     };
 
-    $rootScope.setActiveInside = function(setTab) {
+    $rootScope.setActiveInside = function (setTab) {
         $rootScope.isActiveInside = setTab;
     };
     $scope.walletCategory = [{
-            "category": "Casino",
-            'categoryKrw': '스포츠 ',
-            "target": "live-wallet",
-            "img": "live"
-        },
+        "category": "Casino",
+        'categoryKrw': '스포츠 ',
+        "target": "live-wallet",
+        "img": "live"
+    },
         {
             "category": "Power Ball",
             'categoryKrw': '파워볼',
@@ -1528,7 +1241,7 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
         },
     ];
 
-    $scope.gspLogoUnique = function(footerLogo) {
+    $scope.gspLogoUnique = function (footerLogo) {
         if (footerLogo.gspNo == 1031 ||
             footerLogo.gspNo == 1006 || footerLogo.gspNo == 1004 ||
             footerLogo.gspNo == 1022 || footerLogo.gspNo == 1026 ||
@@ -1540,14 +1253,14 @@ app.controller('CommonController', function(CsrfToken, $scope, $rootScope, $time
     }
 });
 
-app.controller("LoginController", function(CsrfToken, $scope, $http, $window, SweetAlert, loggedInStatus) {
+app.controller("LoginController", function (CsrfToken, $scope, $http, $window, SweetAlert, loggedInStatus) {
     $scope.loginForm = {};
     $scope.isProcessing = false;
-    $scope.processForm = function() {
+    $scope.processForm = function () {
         if (!$scope.isProcessing) {
             $scope.isProcessing = true;
             var url = "/api/player/Login";
-            CsrfToken.HttpRequest('POST', url, $scope.loginForm).success(function(data) {
+            CsrfToken.HttpRequest('POST', url, $scope.loginForm).success(function (data) {
                 if (data.result == 1) {
                     $window.location.href = "/#/";
                     $window.location.reload();
@@ -1577,7 +1290,7 @@ app.controller("LoginController", function(CsrfToken, $scope, $http, $window, Sw
                                 confirmButtonClass: "#7cd1f9",
                                 confirmButtonText: "OK",
                                 closeOnConfirm: false
-                            }).then(function(confirm) {
+                            }).then(function (confirm) {
                                 if (confirm) {
                                     $window.location.href = "/#/";
                                     $window.location.reload();
@@ -1588,21 +1301,21 @@ app.controller("LoginController", function(CsrfToken, $scope, $http, $window, Sw
                         }
                     }
                 }
-            }).error(function(data, status) {
+            }).error(function (data, status) {
                 console.error('Repos error', status, data);
-            })["finally"](function() {
+            })["finally"](function () {
                 $scope.isProcessing = false;
             });
         }
     };
 });
 
-app.controller("LogoutController", function($scope, $rootScope, $http, $window, SweetAlert, loggedInStatus, $timeout) {
+app.controller("LogoutController", function ($scope, $rootScope, $http, $window, SweetAlert, loggedInStatus, $timeout) {
     $scope.isProcessing = false;
-    $rootScope.logout = function() {
+    $rootScope.logout = function () {
         $scope.isProcessing = true;
         $http.get("/api/player/Logout")
-            .success(function(data) {
+            .success(function (data) {
                 if (data.result == 1) {
                     if (bowser.msie && bowser.version <= 8) {
                         alert(data.message);
@@ -1610,7 +1323,7 @@ app.controller("LogoutController", function($scope, $rootScope, $http, $window, 
                         SweetAlert.swal("로그아웃 되었습니다", "", "success");
                     }
                     /*DELAY RELOAD AFTER LOGGING OUT*/
-                    $timeout(function() {
+                    $timeout(function () {
                         loggedInStatus.setLoggedOutStatus();
                         $window.location.href = "/#/";
                         $window.location.reload();
@@ -1624,24 +1337,24 @@ app.controller("LogoutController", function($scope, $rootScope, $http, $window, 
                         }
                     }
                 }
-            }).error(function(data, result) {
-                console.error('Repos error', result, data);
-            })["finally"](function() {
-                $scope.isProcessing = false;
-            });
+            }).error(function (data, result) {
+            console.error('Repos error', result, data);
+        })["finally"](function () {
+            $scope.isProcessing = false;
+        });
     }
 });
 
-app.controller('RulesController', function($scope, $rootScope) {
-    $scope.isSet = function(checkTab) {
+app.controller('RulesController', function ($scope, $rootScope) {
+    $scope.isSet = function (checkTab) {
         return $rootScope.customerTab == checkTab;
     };
-    $scope.setTab = function(setTab) {
+    $scope.setTab = function (setTab) {
         $rootScope.customerTab = setTab;
     };
 });
 
-app.controller('NoticeController', function($rootScope, $scope, $cookies, $http, $window, SweetAlert) {
+app.controller('NoticeController', function ($rootScope, $scope, $cookies, $http, $window, SweetAlert) {
     $rootScope.writeQuestion = {};
 
     /*  $scope.notToday = function (index) {
@@ -1651,7 +1364,7 @@ app.controller('NoticeController', function($rootScope, $scope, $cookies, $http,
         $scope.closeThisDialog();
       };*/
 
-    $scope.notToday = function() {
+    $scope.notToday = function () {
         var expireDate = new Date();
         expireDate.setDate(expireDate.getDate() + 1);
         $cookies.put('notToday', 'true', {
@@ -1660,7 +1373,7 @@ app.controller('NoticeController', function($rootScope, $scope, $cookies, $http,
         $scope.closeThisDialog();
     };
 
-    $scope.notTodayNotice = function() {
+    $scope.notTodayNotice = function () {
         var expireDate = new Date();
         expireDate.setDate(expireDate.getDate() + 1);
         $cookies.put('notToday-notice', 'true', {
@@ -1675,7 +1388,7 @@ app.controller('NoticeController', function($rootScope, $scope, $cookies, $http,
       $scope.closeThisDialog();
     };*/
 
-    $rootScope.processForm = function() {
+    $rootScope.processForm = function () {
         $rootScope.isProcessing = true;
         var url = "/api/operation/GetWriteBoard";
         $http({
@@ -1685,7 +1398,7 @@ app.controller('NoticeController', function($rootScope, $scope, $cookies, $http,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             } // set the headers so angular passing info as form data (not request payload)
-        }).success(function(data) {
+        }).success(function (data) {
             if (data.result == 1) {
                 if (bowser.msie && bowser.version <= 8) {
                     alert(data.message);
@@ -1701,9 +1414,9 @@ app.controller('NoticeController', function($rootScope, $scope, $cookies, $http,
                     }
                 }
             }
-        }).error(function(data, result) {
+        }).error(function (data, result) {
             console.error('Repos error', result, data);
-        })["finally"](function() {
+        })["finally"](function () {
             $rootScope.isProcessing = false;
         });
     }
